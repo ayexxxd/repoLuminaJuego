@@ -1,0 +1,1404 @@
+fileFormatVersion: 2
+guid: da4435489996f404cbc25055c31cf94d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -8909987091062915374
+    second: Puerta_0
+  - first:
+      213: -7747228335304461618
+    second: Puerta_1
+  - first:
+      213: 263546889747250665
+    second: Puerta_2
+  - first:
+      213: 7131687584790241893
+    second: Puerta_3
+  - first:
+      213: -3285834466948962405
+    second: Puerta_4
+  - first:
+      213: -7513432335898988133
+    second: Puerta_5
+  - first:
+      213: -6147494481093358120
+    second: Puerta_6
+  - first:
+      213: 5401585725015493348
+    second: Puerta_7
+  - first:
+      213: 4761549193995243658
+    second: Puerta_8
+  - first:
+      213: 2428071839482905886
+    second: Puerta_9
+  - first:
+      213: -1100728533558531573
+    second: Puerta_10
+  - first:
+      213: -1802766269705274245
+    second: Puerta_11
+  - first:
+      213: 7326121626077621409
+    second: Puerta_12
+  - first:
+      213: 9135538867705974781
+    second: Puerta_13
+  - first:
+      213: 1683155510752894198
+    second: Puerta_14
+  - first:
+      213: -8659100770924307293
+    second: Puerta_15
+  - first:
+      213: -3172899778250780789
+    second: Puerta_16
+  - first:
+      213: 290696472999226917
+    second: Puerta_17
+  - first:
+      213: 5900238580131705025
+    second: Puerta_18
+  - first:
+      213: 2125336085341613081
+    second: Puerta_19
+  - first:
+      213: -4085770229279524646
+    second: Puerta_20
+  - first:
+      213: 5090684842814461429
+    second: Puerta_21
+  - first:
+      213: -4770947656496882759
+    second: Puerta_22
+  - first:
+      213: -81421424670127337
+    second: Puerta_23
+  - first:
+      213: 1256163741106530011
+    second: Puerta_24
+  - first:
+      213: 8261728843924948677
+    second: Puerta_25
+  - first:
+      213: 6481727075367392592
+    second: Puerta_26
+  - first:
+      213: 5633240619094088293
+    second: Puerta_27
+  - first:
+      213: 349401560221153505
+    second: Puerta_28
+  - first:
+      213: -3098226348334108497
+    second: Puerta_29
+  - first:
+      213: 364678266213577863
+    second: Puerta_30
+  - first:
+      213: 5516865584401673811
+    second: Puerta_31
+  - first:
+      213: -4027492518131568242
+    second: Puerta_32
+  - first:
+      213: 205450427333696162
+    second: Puerta_33
+  - first:
+      213: 8876428473859472756
+    second: Puerta_34
+  - first:
+      213: -847046875780200212
+    second: Puerta_35
+  - first:
+      213: -6974697209051221044
+    second: Puerta_36
+  - first:
+      213: -7311018017536341191
+    second: Puerta_37
+  - first:
+      213: 4412837915091592756
+    second: Puerta_38
+  - first:
+      213: 7168119050847613670
+    second: Puerta_39
+  - first:
+      213: -5704161626832199135
+    second: Puerta_40
+  - first:
+      213: -1610331048129105374
+    second: Puerta_41
+  - first:
+      213: -7262996251792105706
+    second: Puerta_42
+  - first:
+      213: 926469284777936175
+    second: Puerta_43
+  - first:
+      213: 7812326012509592005
+    second: Puerta_44
+  - first:
+      213: -3928302515367894137
+    second: Puerta_45
+  - first:
+      213: -2226201948163402481
+    second: Puerta_46
+  - first:
+      213: -2407772484919141060
+    second: Puerta_47
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Puerta_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 227
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2def0e3a2fd595480800000000000000
+      internalID: -8909987091062915374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_1
+      rect:
+        serializedVersion: 2
+        x: 79
+        y: 223
+        width: 10
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec2365820e05c7490800000000000000
+      internalID: -7747228335304461618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_2
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 991
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ed3b09ff7e48a300800000000000000
+      internalID: 263546889747250665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_3
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 983
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5626c74b218d8f260800000000000000
+      internalID: 7131687584790241893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_4
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 975
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b97a5ce16fe5662d0800000000000000
+      internalID: -3285834466948962405
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_5
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 735
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b91bece291deab790800000000000000
+      internalID: -7513432335898988133
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_6
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 707
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8dd81cb1756bfaaa0800000000000000
+      internalID: -6147494481093358120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_7
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 439
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4ea8e5b199946fa40800000000000000
+      internalID: 5401585725015493348
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_8
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 391
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a8052a0a3cb641240800000000000000
+      internalID: 4761549193995243658
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_9
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 326
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e150289397e32b120800000000000000
+      internalID: 2428071839482905886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_10
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 279
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b0a6b1b0b3d69b0f0800000000000000
+      internalID: -1100728533558531573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_11
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 239
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7c392111a94bf6e0800000000000000
+      internalID: -1802766269705274245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_12
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 231
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1ace9afadcc9ba560800000000000000
+      internalID: 7326121626077621409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_13
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 87
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dff8361b234f7ce70800000000000000
+      internalID: 9135538867705974781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_14
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 23
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6fcda20f405cb5710800000000000000
+      internalID: 1683155510752894198
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_15
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 839
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3acdeba0ab1b4d780800000000000000
+      internalID: -8659100770924307293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_16
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 815
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8f4271667897f3d0800000000000000
+      internalID: -3172899778250780789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_17
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 807
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 52ee39ae6e2c80400800000000000000
+      internalID: 290696472999226917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_18
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 719
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c03ec25abbd1e150800000000000000
+      internalID: 5900238580131705025
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_19
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 652
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 91c2b1bb8e5be7d10800000000000000
+      internalID: 2125336085341613081
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_20
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 622
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ad87de1bf9d6c47c0800000000000000
+      internalID: -4085770229279524646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_21
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 551
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5f5db6794eeb5a640800000000000000
+      internalID: 5090684842814461429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_22
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 534
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bb558c42603acdb0800000000000000
+      internalID: -4770947656496882759
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_23
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 527
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71b4e6945abbedef0800000000000000
+      internalID: -81421424670127337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_24
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 455
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bd66160644ace6110800000000000000
+      internalID: 1256163741106530011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_25
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 431
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c6cebc6c9e87a270800000000000000
+      internalID: 8261728843924948677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_26
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 423
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0551e42fe68b3f950800000000000000
+      internalID: 6481727075367392592
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_27
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 399
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 56a97633f7a4d2e40800000000000000
+      internalID: 5633240619094088293
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_28
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 350
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1e8f2f82ed259d400800000000000000
+      internalID: 349401560221153505
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_29
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 335
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa03ac12d83e005d0800000000000000
+      internalID: -3098226348334108497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_30
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 303
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78437f273f89f0500800000000000000
+      internalID: 364678266213577863
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_31
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 271
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35ee6d7f408df8c40800000000000000
+      internalID: 5516865584401673811
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_32
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 247
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e817931b4e87b18c0800000000000000
+      internalID: -4027492518131568242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_33
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 167
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aa5d2c3318e9d200800000000000000
+      internalID: 205450427333696162
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_34
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 143
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 47d7e8aeaa86f2b70800000000000000
+      internalID: 8876428473859472756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_35
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 95
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce84405ba5fae34f0800000000000000
+      internalID: -847046875780200212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_36
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 62
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc3f79687d5e43f90800000000000000
+      internalID: -6974697209051221044
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_37
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 55
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93b044639db0a8a90800000000000000
+      internalID: -7311018017536341191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_38
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 0
+        width: 7
+        height: 5
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 436e86c14bc8d3d30800000000000000
+      internalID: 4412837915091592756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_39
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 999
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6e27b756c464a7360800000000000000
+      internalID: 7168119050847613670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_40
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 951
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 122a04be83fb6d0b0800000000000000
+      internalID: -5704161626832199135
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_41
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 543
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2227b719174f6a9e0800000000000000
+      internalID: -1610331048129105374
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_42
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 487
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 61f10f6d367a43b90800000000000000
+      internalID: -7262996251792105706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_43
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 479
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f25cf76e7ea7bdc00800000000000000
+      internalID: 926469284777936175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_44
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 463
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c99d2ded15fa6c60800000000000000
+      internalID: 7812326012509592005
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_45
+      rect:
+        serializedVersion: 2
+        x: 250
+        y: 0
+        width: 1286
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7832931ecaddb79c0800000000000000
+      internalID: -3928302515367894137
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_46
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 984
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f0510718f11fa11e0800000000000000
+      internalID: -2226201948163402481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Puerta_47
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 39
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c3d5f609eafd59ed0800000000000000
+      internalID: -2407772484919141060
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Puerta_0: -8909987091062915374
+      Puerta_1: -7747228335304461618
+      Puerta_10: -1100728533558531573
+      Puerta_11: -1802766269705274245
+      Puerta_12: 7326121626077621409
+      Puerta_13: 9135538867705974781
+      Puerta_14: 1683155510752894198
+      Puerta_15: -8659100770924307293
+      Puerta_16: -3172899778250780789
+      Puerta_17: 290696472999226917
+      Puerta_18: 5900238580131705025
+      Puerta_19: 2125336085341613081
+      Puerta_2: 263546889747250665
+      Puerta_20: -4085770229279524646
+      Puerta_21: 5090684842814461429
+      Puerta_22: -4770947656496882759
+      Puerta_23: -81421424670127337
+      Puerta_24: 1256163741106530011
+      Puerta_25: 8261728843924948677
+      Puerta_26: 6481727075367392592
+      Puerta_27: 5633240619094088293
+      Puerta_28: 349401560221153505
+      Puerta_29: -3098226348334108497
+      Puerta_3: 7131687584790241893
+      Puerta_30: 364678266213577863
+      Puerta_31: 5516865584401673811
+      Puerta_32: -4027492518131568242
+      Puerta_33: 205450427333696162
+      Puerta_34: 8876428473859472756
+      Puerta_35: -847046875780200212
+      Puerta_36: -6974697209051221044
+      Puerta_37: -7311018017536341191
+      Puerta_38: 4412837915091592756
+      Puerta_39: 7168119050847613670
+      Puerta_4: -3285834466948962405
+      Puerta_40: -5704161626832199135
+      Puerta_41: -1610331048129105374
+      Puerta_42: -7262996251792105706
+      Puerta_43: 926469284777936175
+      Puerta_44: 7812326012509592005
+      Puerta_45: -3928302515367894137
+      Puerta_46: -2226201948163402481
+      Puerta_47: -2407772484919141060
+      Puerta_5: -7513432335898988133
+      Puerta_6: -6147494481093358120
+      Puerta_7: 5401585725015493348
+      Puerta_8: 4761549193995243658
+      Puerta_9: 2428071839482905886
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
