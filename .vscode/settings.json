@@ -67,6 +67,6 @@
         "*.sln": "*.csproj",
         "*.slnx": "*.csproj"
     },
-    "dotnet.defaultSolution": "RepoLumina.slnx",
+    "dotnet.defaultSolution": "repoLuminaJuego.slnx",
     "dotnet.enableWorkspaceBasedDevelopment": false
 }
