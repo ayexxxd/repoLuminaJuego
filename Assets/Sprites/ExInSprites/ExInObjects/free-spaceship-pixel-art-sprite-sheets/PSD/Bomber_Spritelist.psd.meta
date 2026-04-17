@@ -1,0 +1,2522 @@
+fileFormatVersion: 2
+guid: 2a83c721129b8fa44a1137792e69d58a
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -1057074347389312472
+    second: Bomber_Spritelist_0
+  - first:
+      213: 8291369618727747627
+    second: Bomber_Spritelist_1
+  - first:
+      213: 1024122513531466258
+    second: Bomber_Spritelist_2
+  - first:
+      213: -3605263869058166190
+    second: Bomber_Spritelist_3
+  - first:
+      213: 2954193002460994682
+    second: Bomber_Spritelist_4
+  - first:
+      213: -6801994155729649663
+    second: Bomber_Spritelist_5
+  - first:
+      213: -1499580017539819350
+    second: Bomber_Spritelist_6
+  - first:
+      213: -4197273425072354009
+    second: Bomber_Spritelist_7
+  - first:
+      213: -1648755948835183957
+    second: Bomber_Spritelist_8
+  - first:
+      213: 6842879968574826331
+    second: Bomber_Spritelist_9
+  - first:
+      213: 1169767637235604903
+    second: Bomber_Spritelist_10
+  - first:
+      213: 8666373005247245561
+    second: Bomber_Spritelist_11
+  - first:
+      213: 1224289643082531402
+    second: Bomber_Spritelist_12
+  - first:
+      213: 8238063003113224776
+    second: Bomber_Spritelist_13
+  - first:
+      213: -605270507302009763
+    second: Bomber_Spritelist_14
+  - first:
+      213: -4136482629971376509
+    second: Bomber_Spritelist_15
+  - first:
+      213: -6566228649551269753
+    second: Bomber_Spritelist_16
+  - first:
+      213: -2226009175921965853
+    second: Bomber_Spritelist_17
+  - first:
+      213: 2574692040897609880
+    second: Bomber_Spritelist_18
+  - first:
+      213: 4949867291847733412
+    second: Bomber_Spritelist_19
+  - first:
+      213: -1701611054807587379
+    second: Bomber_Spritelist_20
+  - first:
+      213: -6874431094052621331
+    second: Bomber_Spritelist_21
+  - first:
+      213: -7883457187639290671
+    second: Bomber_Spritelist_22
+  - first:
+      213: -6664971406449425458
+    second: Bomber_Spritelist_23
+  - first:
+      213: 6141646925271137872
+    second: Bomber_Spritelist_24
+  - first:
+      213: -3333093386231918990
+    second: Bomber_Spritelist_25
+  - first:
+      213: 3001008318128854337
+    second: Bomber_Spritelist_26
+  - first:
+      213: 3465718328589451399
+    second: Bomber_Spritelist_27
+  - first:
+      213: 7511933942227244046
+    second: Bomber_Spritelist_28
+  - first:
+      213: -3957748259411931948
+    second: Bomber_Spritelist_29
+  - first:
+      213: 4398546831658325662
+    second: Bomber_Spritelist_30
+  - first:
+      213: -8962702099889597645
+    second: Bomber_Spritelist_31
+  - first:
+      213: -6818134228591438730
+    second: Bomber_Spritelist_32
+  - first:
+      213: 2830187048272880108
+    second: Bomber_Spritelist_33
+  - first:
+      213: 7997166463477175720
+    second: Bomber_Spritelist_34
+  - first:
+      213: -8223379166199562357
+    second: Bomber_Spritelist_35
+  - first:
+      213: -1360678734570122401
+    second: Bomber_Spritelist_36
+  - first:
+      213: -541722935026957540
+    second: Bomber_Spritelist_37
+  - first:
+      213: 7083176225165834742
+    second: Bomber_Spritelist_38
+  - first:
+      213: -8514174879386273516
+    second: Bomber_Spritelist_39
+  - first:
+      213: -6162418171380797166
+    second: Bomber_Spritelist_40
+  - first:
+      213: -8492255739425913514
+    second: Bomber_Spritelist_41
+  - first:
+      213: -881263930300742201
+    second: Bomber_Spritelist_42
+  - first:
+      213: 4784356718380958388
+    second: Bomber_Spritelist_43
+  - first:
+      213: -4151492222736025384
+    second: Bomber_Spritelist_44
+  - first:
+      213: 2730711717425471165
+    second: Bomber_Spritelist_45
+  - first:
+      213: 4245398139159963326
+    second: Bomber_Spritelist_46
+  - first:
+      213: 4020145256648866276
+    second: Bomber_Spritelist_47
+  - first:
+      213: 4713130100519008093
+    second: Bomber_Spritelist_48
+  - first:
+      213: -8632900716970695890
+    second: Bomber_Spritelist_49
+  - first:
+      213: 662423262938831995
+    second: Bomber_Spritelist_50
+  - first:
+      213: 1905893523201810284
+    second: Bomber_Spritelist_51
+  - first:
+      213: 3854433312391057664
+    second: Bomber_Spritelist_52
+  - first:
+      213: -3279001043683780013
+    second: Bomber_Spritelist_53
+  - first:
+      213: -2793325712865001209
+    second: Bomber_Spritelist_54
+  - first:
+      213: 5146297261300947991
+    second: Bomber_Spritelist_55
+  - first:
+      213: -1061710941478718452
+    second: Bomber_Spritelist_56
+  - first:
+      213: -124412742056172807
+    second: Bomber_Spritelist_57
+  - first:
+      213: 5054642957599259625
+    second: Bomber_Spritelist_58
+  - first:
+      213: 7570573349276245733
+    second: Bomber_Spritelist_59
+  - first:
+      213: -4364938425206292958
+    second: Bomber_Spritelist_60
+  - first:
+      213: -1690533644668428204
+    second: Bomber_Spritelist_61
+  - first:
+      213: 8499440184969013917
+    second: Bomber_Spritelist_62
+  - first:
+      213: 41576139893587479
+    second: Bomber_Spritelist_63
+  - first:
+      213: -4987289220292678009
+    second: Bomber_Spritelist_64
+  - first:
+      213: 460992236372228115
+    second: Bomber_Spritelist_65
+  - first:
+      213: 8874348523307476933
+    second: Bomber_Spritelist_66
+  - first:
+      213: -3814423465828743615
+    second: Bomber_Spritelist_67
+  - first:
+      213: -3399134173413337848
+    second: Bomber_Spritelist_68
+  - first:
+      213: -2187298882944938812
+    second: Bomber_Spritelist_69
+  - first:
+      213: -4005337363416594181
+    second: Bomber_Spritelist_70
+  - first:
+      213: 115163334034310545
+    second: Bomber_Spritelist_71
+  - first:
+      213: 3890438407468591274
+    second: Bomber_Spritelist_72
+  - first:
+      213: 7443570123761542503
+    second: Bomber_Spritelist_73
+  - first:
+      213: 8367782216165486876
+    second: Bomber_Spritelist_74
+  - first:
+      213: 3164873092876206426
+    second: Bomber_Spritelist_75
+  - first:
+      213: -6849921746036404574
+    second: Bomber_Spritelist_76
+  - first:
+      213: 7622450141418678712
+    second: Bomber_Spritelist_77
+  - first:
+      213: 2817784636622777164
+    second: Bomber_Spritelist_78
+  - first:
+      213: -7712408411815193756
+    second: Bomber_Spritelist_79
+  - first:
+      213: -8490855395963870255
+    second: Bomber_Spritelist_80
+  - first:
+      213: -8867032236262990003
+    second: Bomber_Spritelist_81
+  - first:
+      213: -847000077455551068
+    second: Bomber_Spritelist_82
+  - first:
+      213: 7945282213676155852
+    second: Bomber_Spritelist_83
+  - first:
+      213: 7101686972787485354
+    second: Bomber_Spritelist_84
+  - first:
+      213: 427883086283857479
+    second: Bomber_Spritelist_85
+  - first:
+      213: -1433071722621728384
+    second: Bomber_Spritelist_86
+  - first:
+      213: 7006977740051646691
+    second: Bomber_Spritelist_87
+  - first:
+      213: -3579179098386892443
+    second: Bomber_Spritelist_88
+  - first:
+      213: 6352256607346665160
+    second: Bomber_Spritelist_89
+  - first:
+      213: 4650782334100732236
+    second: Bomber_Spritelist_90
+  - first:
+      213: -7175913530734377297
+    second: Bomber_Spritelist_91
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Bomber_Spritelist_0
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1800
+        width: 104
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 822aeae4b748451f0800000000000000
+      internalID: -1057074347389312472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 1618
+        width: 114
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b20cbb91dbcd01370800000000000000
+      internalID: 8291369618727747627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_2
+      rect:
+        serializedVersion: 2
+        x: 223
+        y: 1618
+        width: 115
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 212f581000a663e00800000000000000
+      internalID: 1024122513531466258
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_3
+      rect:
+        serializedVersion: 2
+        x: 414
+        y: 1618
+        width: 116
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 252dc33dc9787fdc0800000000000000
+      internalID: -3605263869058166190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_4
+      rect:
+        serializedVersion: 2
+        x: 607
+        y: 1618
+        width: 115
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7cd1ad32e66ff820800000000000000
+      internalID: 2954193002460994682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_5
+      rect:
+        serializedVersion: 2
+        x: 799
+        y: 1618
+        width: 115
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10083779a567a91a0800000000000000
+      internalID: -6801994155729649663
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_6
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 1618
+        width: 114
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa8d34e4beb603be0800000000000000
+      internalID: -1499580017539819350
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_7
+      rect:
+        serializedVersion: 2
+        x: 30
+        y: 1426
+        width: 116
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 72d0069de0a40c5c0800000000000000
+      internalID: -4197273425072354009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_8
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 1426
+        width: 117
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ba2ed5433317e19e0800000000000000
+      internalID: -1648755948835183957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_9
+      rect:
+        serializedVersion: 2
+        x: 413
+        y: 1426
+        width: 117
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b57e987831bc6fe50800000000000000
+      internalID: 6842879968574826331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_10
+      rect:
+        serializedVersion: 2
+        x: 604
+        y: 1426
+        width: 118
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ad1d27e779db3010800000000000000
+      internalID: 1169767637235604903
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_11
+      rect:
+        serializedVersion: 2
+        x: 797
+        y: 1426
+        width: 117
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9fcebc4f454254870800000000000000
+      internalID: 8666373005247245561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_12
+      rect:
+        serializedVersion: 2
+        x: 990
+        y: 1426
+        width: 116
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a42cf1e91fc8df010800000000000000
+      internalID: 1224289643082531402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_13
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1234
+        width: 105
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 84af9d977aa735270800000000000000
+      internalID: 8238063003113224776
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_14
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 1234
+        width: 107
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d544e333ea5a997f0800000000000000
+      internalID: -605270507302009763
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_15
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1234
+        width: 206
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3868bfcc6f24896c0800000000000000
+      internalID: -4136482629971376509
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_16
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 1042
+        width: 115
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 780f08525d110e4a0800000000000000
+      internalID: -6566228649551269753
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_17
+      rect:
+        serializedVersion: 2
+        x: 201
+        y: 1067
+        width: 21
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e4496ac270ab11e0800000000000000
+      internalID: -2226009175921965853
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_18
+      rect:
+        serializedVersion: 2
+        x: 221
+        y: 1067
+        width: 21
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8904ab715c42bb320800000000000000
+      internalID: 2574692040897609880
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_19
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 1067
+        width: 21
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a0b8ef831671b440800000000000000
+      internalID: 4949867291847733412
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_20
+      rect:
+        serializedVersion: 2
+        x: 262
+        y: 1067
+        width: 19
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dc5e05cd2c9a268e0800000000000000
+      internalID: -1701611054807587379
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_21
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 850
+        width: 104
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: de3f71e975d1990a0800000000000000
+      internalID: -6874431094052621331
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_22
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 855
+        width: 104
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d492c8c475589290800000000000000
+      internalID: -7883457187639290671
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_23
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 868
+        width: 102
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ec3427081d34183a0800000000000000
+      internalID: -6664971406449425458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_24
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 855
+        width: 104
+        height: 44
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 05ef7a4b6538b3550800000000000000
+      internalID: 6141646925271137872
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_25
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 850
+        width: 104
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 27e417689397eb1d0800000000000000
+      internalID: -3333093386231918990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_26
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 855
+        width: 104
+        height: 46
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14510125a29b5a920800000000000000
+      internalID: 3001008318128854337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_27
+      rect:
+        serializedVersion: 2
+        x: 1196
+        y: 865
+        width: 105
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 780822b2574b81030800000000000000
+      internalID: 3465718328589451399
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_28
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 851
+        width: 104
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e0497aade10cf3860800000000000000
+      internalID: 7511933942227244046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_29
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 851
+        width: 104
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4dcc4575de04319c0800000000000000
+      internalID: -3957748259411931948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_30
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 658
+        width: 104
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e961ae4f907ca0d30800000000000000
+      internalID: 4398546831658325662
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_31
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 664
+        width: 104
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 333de643de51e9380800000000000000
+      internalID: -8962702099889597645
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_32
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 466
+        width: 104
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67410e90b0f1161a0800000000000000
+      internalID: -6818134228591438730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_33
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 471
+        width: 104
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ce1673c1028d64720800000000000000
+      internalID: 2830187048272880108
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_34
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 275
+        width: 104
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a559391784abfe60800000000000000
+      internalID: 7997166463477175720
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_35
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 275
+        width: 104
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b8fb359b730b0ed80800000000000000
+      internalID: -8223379166199562357
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_36
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 275
+        width: 104
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f53158c66e5ed1de0800000000000000
+      internalID: -1360678734570122401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_37
+      rect:
+        serializedVersion: 2
+        x: 618
+        y: 264
+        width: 104
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c13490b5cd96b78f0800000000000000
+      internalID: -541722935026957540
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_38
+      rect:
+        serializedVersion: 2
+        x: 810
+        y: 271
+        width: 104
+        height: 62
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f9708e9f3f7c4260800000000000000
+      internalID: 7083176225165834742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_39
+      rect:
+        serializedVersion: 2
+        x: 1002
+        y: 245
+        width: 104
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 41970a6ae0397d980800000000000000
+      internalID: -8514174879386273516
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_40
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 246
+        width: 104
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2117f61b251ba7aa0800000000000000
+      internalID: -6162418171380797166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_41
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 258
+        width: 104
+        height: 75
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6550fbd1662752a80800000000000000
+      internalID: -8492255739425913514
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_42
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 274
+        width: 104
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7c54f01ef1f15c3f0800000000000000
+      internalID: -881263930300742201
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_43
+      rect:
+        serializedVersion: 2
+        x: 1755
+        y: 301
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b2c9d53613756240800000000000000
+      internalID: 4784356718380958388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_44
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 275
+        width: 104
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d8b508a1dfe266c0800000000000000
+      internalID: -4151492222736025384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_45
+      rect:
+        serializedVersion: 2
+        x: 1574
+        y: 287
+        width: 14
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dbe542dc6df65e520800000000000000
+      internalID: 2730711717425471165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_46
+      rect:
+        serializedVersion: 2
+        x: 1751
+        y: 290
+        width: 9
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb6ebbe4d1faaea30800000000000000
+      internalID: 4245398139159963326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_47
+      rect:
+        serializedVersion: 2
+        x: 868
+        y: 247
+        width: 12
+        height: 25
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4e9f600bfcc6ac730800000000000000
+      internalID: 4020145256648866276
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_48
+      rect:
+        serializedVersion: 2
+        x: 1573
+        y: 258
+        width: 13
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d57f2adead6686140800000000000000
+      internalID: 4713130100519008093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_49
+      rect:
+        serializedVersion: 2
+        x: 1752
+        y: 259
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e232fb77986c13880800000000000000
+      internalID: -8632900716970695890
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_50
+      rect:
+        serializedVersion: 2
+        x: 1753
+        y: 266
+        width: 7
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7c9c6ea276613900800000000000000
+      internalID: 662423262938831995
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_51
+      rect:
+        serializedVersion: 2
+        x: 900
+        y: 176
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c6f592ebf08137a10800000000000000
+      internalID: 1905893523201810284
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_52
+      rect:
+        serializedVersion: 2
+        x: 690
+        y: 158
+        width: 10
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 001508b0da2bd7530800000000000000
+      internalID: 3854433312391057664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_53
+      rect:
+        serializedVersion: 2
+        x: 1254
+        y: 134
+        width: 63
+        height: 26
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 35ad7157ce5ae72d0800000000000000
+      internalID: -3279001043683780013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_54
+      rect:
+        serializedVersion: 2
+        x: 1412
+        y: 137
+        width: 16
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 70187b6501d1c39d0800000000000000
+      internalID: -2793325712865001209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_55
+      rect:
+        serializedVersion: 2
+        x: 1432
+        y: 153
+        width: 33
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71c9868c7125b6740800000000000000
+      internalID: 5146297261300947991
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_56
+      rect:
+        serializedVersion: 2
+        x: 1472
+        y: 155
+        width: 20
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c04f30f168b0441f0800000000000000
+      internalID: -1061710941478718452
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_57
+      rect:
+        serializedVersion: 2
+        x: 1493
+        y: 152
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f2a530354ff54ef0800000000000000
+      internalID: -124412742056172807
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_58
+      rect:
+        serializedVersion: 2
+        x: 1594
+        y: 145
+        width: 107
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9eb32224df2b52640800000000000000
+      internalID: 5054642957599259625
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_59
+      rect:
+        serializedVersion: 2
+        x: 740
+        y: 139
+        width: 12
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ee56adb954101960800000000000000
+      internalID: 7570573349276245733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_60
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 54
+        width: 182
+        height: 93
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 22e3023f0af9c63c0800000000000000
+      internalID: -4364938425206292958
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_61
+      rect:
+        serializedVersion: 2
+        x: 1205
+        y: 126
+        width: 49
+        height: 30
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 45021b46b940a88e0800000000000000
+      internalID: -1690533644668428204
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_62
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 144
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9a22c6f0d314f570800000000000000
+      internalID: 8499440184969013917
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_63
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 62
+        width: 109
+        height: 74
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 71e3d796745b39000800000000000000
+      internalID: 41576139893587479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_64
+      rect:
+        serializedVersion: 2
+        x: 483
+        y: 135
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 78ee150c0e699cab0800000000000000
+      internalID: -4987289220292678009
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_65
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 43
+        width: 138
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 318fd2d1ff5c56600800000000000000
+      internalID: 460992236372228115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_66
+      rect:
+        serializedVersion: 2
+        x: 1392
+        y: 131
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5c721c0b6f4082b70800000000000000
+      internalID: 8874348523307476933
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_67
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 63
+        width: 104
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1460d584112701bc0800000000000000
+      internalID: -3814423465828743615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_68
+      rect:
+        serializedVersion: 2
+        x: 234
+        y: 63
+        width: 104
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8059ec98a79d3d0d0800000000000000
+      internalID: -3399134173413337848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_69
+      rect:
+        serializedVersion: 2
+        x: 518
+        y: 120
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4cc4578314725a1e0800000000000000
+      internalID: -2187298882944938812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_70
+      rect:
+        serializedVersion: 2
+        x: 612
+        y: 57
+        width: 138
+        height: 69
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf844ff93ee2a68c0800000000000000
+      internalID: -4005337363416594181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_71
+      rect:
+        serializedVersion: 2
+        x: 1194
+        y: 51
+        width: 104
+        height: 77
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 195c3403174299100800000000000000
+      internalID: 115163334034310545
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_72
+      rect:
+        serializedVersion: 2
+        x: 1304
+        y: 44
+        width: 32
+        height: 79
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aa8a3b18e1d9df530800000000000000
+      internalID: 3890438407468591274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_73
+      rect:
+        serializedVersion: 2
+        x: 1313
+        y: 120
+        width: 11
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 765648ff69fdc4760800000000000000
+      internalID: 7443570123761542503
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_74
+      rect:
+        serializedVersion: 2
+        x: 1386
+        y: 54
+        width: 104
+        height: 67
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c11ff585795502470800000000000000
+      internalID: 8367782216165486876
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_75
+      rect:
+        serializedVersion: 2
+        x: 1501
+        y: 39
+        width: 29
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a51041c4f43ebeb20800000000000000
+      internalID: 3164873092876206426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_76
+      rect:
+        serializedVersion: 2
+        x: 1516
+        y: 121
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2aec644e67030f0a0800000000000000
+      internalID: -6849921746036404574
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_77
+      rect:
+        serializedVersion: 2
+        x: 1578
+        y: 14
+        width: 104
+        height: 107
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8b9e265a40268c960800000000000000
+      internalID: 7622450141418678712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_78
+      rect:
+        serializedVersion: 2
+        x: 1709
+        y: 121
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c4b247f9238ca1720800000000000000
+      internalID: 2817784636622777164
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_79
+      rect:
+        serializedVersion: 2
+        x: 1770
+        y: 63
+        width: 104
+        height: 58
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 463550b596508f490800000000000000
+      internalID: -7712408411815193756
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_80
+      rect:
+        serializedVersion: 2
+        x: 1712
+        y: 93
+        width: 11
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1d36d5cf00c6a2a80800000000000000
+      internalID: -8490855395963870255
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_81
+      rect:
+        serializedVersion: 2
+        x: 471
+        y: 55
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d4f5b912929f1f480800000000000000
+      internalID: -8867032236262990003
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_82
+      rect:
+        serializedVersion: 2
+        x: 1696
+        y: 32
+        width: 26
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4a5988acae9de34f0800000000000000
+      internalID: -847000077455551068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_83
+      rect:
+        serializedVersion: 2
+        x: 671
+        y: 24
+        width: 8
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cc38562d310534e60800000000000000
+      internalID: 7945282213676155852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_84
+      rect:
+        serializedVersion: 2
+        x: 1210
+        y: 29
+        width: 37
+        height: 19
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aaa6407eca24e8260800000000000000
+      internalID: 7101686972787485354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_85
+      rect:
+        serializedVersion: 2
+        x: 1246
+        y: 25
+        width: 69
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 74ed853666520f500800000000000000
+      internalID: 427883086283857479
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_86
+      rect:
+        serializedVersion: 2
+        x: 1401
+        y: 26
+        width: 25
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 089897b6cd4bc1ce0800000000000000
+      internalID: -1433071722621728384
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_87
+      rect:
+        serializedVersion: 2
+        x: 1426
+        y: 22
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3e809d84129cd3160800000000000000
+      internalID: 7006977740051646691
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_88
+      rect:
+        serializedVersion: 2
+        x: 1477
+        y: 15
+        width: 32
+        height: 23
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5697525c293345ec0800000000000000
+      internalID: -3579179098386892443
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_89
+      rect:
+        serializedVersion: 2
+        x: 1437
+        y: 16
+        width: 17
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8c6a60b8abfb72850800000000000000
+      internalID: 6352256607346665160
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_90
+      rect:
+        serializedVersion: 2
+        x: 1452
+        y: 14
+        width: 19
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c497cb754e5ea8040800000000000000
+      internalID: 4650782334100732236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Bomber_Spritelist_91
+      rect:
+        serializedVersion: 2
+        x: 882
+        y: 0
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fa688a5d9a80a6c90800000000000000
+      internalID: -7175913530734377297
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Bomber_Spritelist_0: -1057074347389312472
+      Bomber_Spritelist_1: 8291369618727747627
+      Bomber_Spritelist_10: 1169767637235604903
+      Bomber_Spritelist_11: 8666373005247245561
+      Bomber_Spritelist_12: 1224289643082531402
+      Bomber_Spritelist_13: 8238063003113224776
+      Bomber_Spritelist_14: -605270507302009763
+      Bomber_Spritelist_15: -4136482629971376509
+      Bomber_Spritelist_16: -6566228649551269753
+      Bomber_Spritelist_17: -2226009175921965853
+      Bomber_Spritelist_18: 2574692040897609880
+      Bomber_Spritelist_19: 4949867291847733412
+      Bomber_Spritelist_2: 1024122513531466258
+      Bomber_Spritelist_20: -1701611054807587379
+      Bomber_Spritelist_21: -6874431094052621331
+      Bomber_Spritelist_22: -7883457187639290671
+      Bomber_Spritelist_23: -6664971406449425458
+      Bomber_Spritelist_24: 6141646925271137872
+      Bomber_Spritelist_25: -3333093386231918990
+      Bomber_Spritelist_26: 3001008318128854337
+      Bomber_Spritelist_27: 3465718328589451399
+      Bomber_Spritelist_28: 7511933942227244046
+      Bomber_Spritelist_29: -3957748259411931948
+      Bomber_Spritelist_3: -3605263869058166190
+      Bomber_Spritelist_30: 4398546831658325662
+      Bomber_Spritelist_31: -8962702099889597645
+      Bomber_Spritelist_32: -6818134228591438730
+      Bomber_Spritelist_33: 2830187048272880108
+      Bomber_Spritelist_34: 7997166463477175720
+      Bomber_Spritelist_35: -8223379166199562357
+      Bomber_Spritelist_36: -1360678734570122401
+      Bomber_Spritelist_37: -541722935026957540
+      Bomber_Spritelist_38: 7083176225165834742
+      Bomber_Spritelist_39: -8514174879386273516
+      Bomber_Spritelist_4: 2954193002460994682
+      Bomber_Spritelist_40: -6162418171380797166
+      Bomber_Spritelist_41: -8492255739425913514
+      Bomber_Spritelist_42: -881263930300742201
+      Bomber_Spritelist_43: 4784356718380958388
+      Bomber_Spritelist_44: -4151492222736025384
+      Bomber_Spritelist_45: 2730711717425471165
+      Bomber_Spritelist_46: 4245398139159963326
+      Bomber_Spritelist_47: 4020145256648866276
+      Bomber_Spritelist_48: 4713130100519008093
+      Bomber_Spritelist_49: -8632900716970695890
+      Bomber_Spritelist_5: -6801994155729649663
+      Bomber_Spritelist_50: 662423262938831995
+      Bomber_Spritelist_51: 1905893523201810284
+      Bomber_Spritelist_52: 3854433312391057664
+      Bomber_Spritelist_53: -3279001043683780013
+      Bomber_Spritelist_54: -2793325712865001209
+      Bomber_Spritelist_55: 5146297261300947991
+      Bomber_Spritelist_56: -1061710941478718452
+      Bomber_Spritelist_57: -124412742056172807
+      Bomber_Spritelist_58: 5054642957599259625
+      Bomber_Spritelist_59: 7570573349276245733
+      Bomber_Spritelist_6: -1499580017539819350
+      Bomber_Spritelist_60: -4364938425206292958
+      Bomber_Spritelist_61: -1690533644668428204
+      Bomber_Spritelist_62: 8499440184969013917
+      Bomber_Spritelist_63: 41576139893587479
+      Bomber_Spritelist_64: -4987289220292678009
+      Bomber_Spritelist_65: 460992236372228115
+      Bomber_Spritelist_66: 8874348523307476933
+      Bomber_Spritelist_67: -3814423465828743615
+      Bomber_Spritelist_68: -3399134173413337848
+      Bomber_Spritelist_69: -2187298882944938812
+      Bomber_Spritelist_7: -4197273425072354009
+      Bomber_Spritelist_70: -4005337363416594181
+      Bomber_Spritelist_71: 115163334034310545
+      Bomber_Spritelist_72: 3890438407468591274
+      Bomber_Spritelist_73: 7443570123761542503
+      Bomber_Spritelist_74: 8367782216165486876
+      Bomber_Spritelist_75: 3164873092876206426
+      Bomber_Spritelist_76: -6849921746036404574
+      Bomber_Spritelist_77: 7622450141418678712
+      Bomber_Spritelist_78: 2817784636622777164
+      Bomber_Spritelist_79: -7712408411815193756
+      Bomber_Spritelist_8: -1648755948835183957
+      Bomber_Spritelist_80: -8490855395963870255
+      Bomber_Spritelist_81: -8867032236262990003
+      Bomber_Spritelist_82: -847000077455551068
+      Bomber_Spritelist_83: 7945282213676155852
+      Bomber_Spritelist_84: 7101686972787485354
+      Bomber_Spritelist_85: 427883086283857479
+      Bomber_Spritelist_86: -1433071722621728384
+      Bomber_Spritelist_87: 7006977740051646691
+      Bomber_Spritelist_88: -3579179098386892443
+      Bomber_Spritelist_89: 6352256607346665160
+      Bomber_Spritelist_9: 6842879968574826331
+      Bomber_Spritelist_90: 4650782334100732236
+      Bomber_Spritelist_91: -7175913530734377297
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
