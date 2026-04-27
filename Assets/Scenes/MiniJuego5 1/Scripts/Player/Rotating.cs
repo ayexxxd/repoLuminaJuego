@@ -9,7 +9,7 @@ public class Rotating : MonoBehaviour
         //Calc angle between transform and target
         float lookAngle = AngleBetweenPointsTwoPoints(transform.position, target);
         //Assign the target rotation
-        transform.eulerAngles = new Vector3(0,0,lookAngle);
+        transform.eulerAngles = new Vector3(0,0,lookAngle + 90f);
     }
 
     private float AngleBetweenPointsTwoPoints(Vector3 a, Vector3 b)
