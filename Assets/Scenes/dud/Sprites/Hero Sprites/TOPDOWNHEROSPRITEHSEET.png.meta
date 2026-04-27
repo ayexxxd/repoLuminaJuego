@@ -1,0 +1,572 @@
+fileFormatVersion: 2
+guid: 12a05617e4875491cb73f347b78d8eeb
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -630119439016153699
+    second: TOPDOWNHEROSPRITEHSEET_0
+  - first:
+      213: 2424900071235253154
+    second: TOPDOWNHEROSPRITEHSEET_1
+  - first:
+      213: 2874009772269343896
+    second: TOPDOWNHEROSPRITEHSEET_2
+  - first:
+      213: 7370401979793233256
+    second: TOPDOWNHEROSPRITEHSEET_3
+  - first:
+      213: 7873173672610258046
+    second: TOPDOWNHEROSPRITEHSEET_4
+  - first:
+      213: -7382827572573884205
+    second: TOPDOWNHEROSPRITEHSEET_5
+  - first:
+      213: 5545455135625391624
+    second: TOPDOWNHEROSPRITEHSEET_6
+  - first:
+      213: -675585721423429052
+    second: TOPDOWNHEROSPRITEHSEET_7
+  - first:
+      213: -2231699738601480713
+    second: TOPDOWNHEROSPRITEHSEET_8
+  - first:
+      213: 8990333906266243469
+    second: TOPDOWNHEROSPRITEHSEET_9
+  - first:
+      213: -6033784284872931072
+    second: TOPDOWNHEROSPRITEHSEET_10
+  - first:
+      213: 8248179760319991848
+    second: TOPDOWNHEROSPRITEHSEET_11
+  - first:
+      213: -3142129812742391036
+    second: TOPDOWNHEROSPRITEHSEET_12
+  - first:
+      213: -2757236510963525411
+    second: TOPDOWNHEROSPRITEHSEET_13
+  - first:
+      213: 4814929531747825822
+    second: TOPDOWNHEROSPRITEHSEET_14
+  - first:
+      213: -7688536178550514013
+    second: TOPDOWNHEROSPRITEHSEET_15
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TOPDOWNHEROSPRITEHSEET_0
+      rect:
+        serializedVersion: 2
+        x: 68
+        y: 748
+        width: 203
+        height: 165
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d9daf5f65bd5147f0800000000000000
+      internalID: -630119439016153699
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TOPDOWNHEROSPRITEHSEET_1
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 740
+        width: 210
+        height: 169
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2a3fbc164c9f6a120800000000000000
+      internalID: 2424900071235253154
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TOPDOWNHEROSPRITEHSEET_2
+      rect:
+        serializedVersion: 2
+        x: 591
+        y: 738
+        width: 211
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8949d1529a882e720800000000000000
+      internalID: 2874009772269343896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TOPDOWNHEROSPRITEHSEET_3
+      rect:
+        serializedVersion: 2
+        x: 851
+        y: 738
+        width: 216
+        height: 171
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8655961fc8de84660800000000000000
+      internalID: 7370401979793233256
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TOPDOWNHEROSPRITEHSEET_4
+      rect:
+        serializedVersion: 2
+        x: 55
+        y: 502
+        width: 199
+        height: 182
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e7c54eacdb1234d60800000000000000
+      internalID: 7873173672610258046
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TOPDOWNHEROSPRITEHSEET_5
+      rect:
+        serializedVersion: 2
+        x: 318
+        y: 496
+        width: 205
+        height: 190
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3d036ca407dea8990800000000000000
+      internalID: -7382827572573884205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TOPDOWNHEROSPRITEHSEET_6
+      rect:
+        serializedVersion: 2
+        x: 587
+        y: 492
+        width: 177
+        height: 227
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 80e21d4901a65fc40800000000000000
+      internalID: 5545455135625391624
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TOPDOWNHEROSPRITEHSEET_7
+      rect:
+        serializedVersion: 2
+        x: 858
+        y: 483
+        width: 169
+        height: 247
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4420b33ad56df96f0800000000000000
+      internalID: -675585721423429052
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TOPDOWNHEROSPRITEHSEET_8
+      rect:
+        serializedVersion: 2
+        x: 36
+        y: 260
+        width: 262
+        height: 176
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7fd935b69e86701e0800000000000000
+      internalID: -2231699738601480713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TOPDOWNHEROSPRITEHSEET_9
+      rect:
+        serializedVersion: 2
+        x: 307
+        y: 264
+        width: 252
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d81462f0e0514cc70800000000000000
+      internalID: 8990333906266243469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TOPDOWNHEROSPRITEHSEET_10
+      rect:
+        serializedVersion: 2
+        x: 572
+        y: 264
+        width: 254
+        height: 172
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00980d84921b34ca0800000000000000
+      internalID: -6033784284872931072
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TOPDOWNHEROSPRITEHSEET_11
+      rect:
+        serializedVersion: 2
+        x: 841
+        y: 267
+        width: 223
+        height: 180
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82090719acb677270800000000000000
+      internalID: 8248179760319991848
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TOPDOWNHEROSPRITEHSEET_12
+      rect:
+        serializedVersion: 2
+        x: 57
+        y: 29
+        width: 180
+        height: 205
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 40b33514599e464d0800000000000000
+      internalID: -3142129812742391036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TOPDOWNHEROSPRITEHSEET_13
+      rect:
+        serializedVersion: 2
+        x: 322
+        y: 31
+        width: 184
+        height: 198
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd8184270045cb9d0800000000000000
+      internalID: -2757236510963525411
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TOPDOWNHEROSPRITEHSEET_14
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 31
+        width: 201
+        height: 188
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e98fd5606e012d240800000000000000
+      internalID: 4814929531747825822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TOPDOWNHEROSPRITEHSEET_15
+      rect:
+        serializedVersion: 2
+        x: 845
+        y: 25
+        width: 239
+        height: 192
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3aed1cac415dc4590800000000000000
+      internalID: -7688536178550514013
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TOPDOWNHEROSPRITEHSEET_0: -630119439016153699
+      TOPDOWNHEROSPRITEHSEET_1: 2424900071235253154
+      TOPDOWNHEROSPRITEHSEET_10: -6033784284872931072
+      TOPDOWNHEROSPRITEHSEET_11: 8248179760319991848
+      TOPDOWNHEROSPRITEHSEET_12: -3142129812742391036
+      TOPDOWNHEROSPRITEHSEET_13: -2757236510963525411
+      TOPDOWNHEROSPRITEHSEET_14: 4814929531747825822
+      TOPDOWNHEROSPRITEHSEET_15: -7688536178550514013
+      TOPDOWNHEROSPRITEHSEET_2: 2874009772269343896
+      TOPDOWNHEROSPRITEHSEET_3: 7370401979793233256
+      TOPDOWNHEROSPRITEHSEET_4: 7873173672610258046
+      TOPDOWNHEROSPRITEHSEET_5: -7382827572573884205
+      TOPDOWNHEROSPRITEHSEET_6: 5545455135625391624
+      TOPDOWNHEROSPRITEHSEET_7: -675585721423429052
+      TOPDOWNHEROSPRITEHSEET_8: -2231699738601480713
+      TOPDOWNHEROSPRITEHSEET_9: 8990333906266243469
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
