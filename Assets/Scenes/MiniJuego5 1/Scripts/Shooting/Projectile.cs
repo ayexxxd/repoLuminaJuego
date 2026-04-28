@@ -8,7 +8,8 @@ public class Projectile : MonoBehaviour
    [Header("Movement Stats")]
    [SerializeField]private float speed = 10f;
    [SerializeField]private float lifetime = 5f;
-
+    [Header("Damage")]
+    [SerializeField] private int damage = 5;
    private Rigidbody2D body;
    private float lifeTimer;
 
@@ -52,5 +53,18 @@ public class Projectile : MonoBehaviour
         gameObject.SetActive(false);
     }
         }
+
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Enemy"))
+        {
+            Health enemyHealth = collision.GetComponent<Health>();
+            if (enemyHealth != null)
+            {
+                enemyHealth.Damage(damage);
+            }
+            gameObject.SetActive(false);
+        }
+    }
 }
 }
