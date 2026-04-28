@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 1381339499628397207}
   - component: {fileID: 7378840030152147976}
   - component: {fileID: 8013246863178673021}
-  - component: {fileID: 8002815310443396803}
+  - component: {fileID: 7581301892371978199}
   m_Layer: 0
   m_Name: AlienS
   m_TagString: Enemy
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6322104006086594710}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.72, y: -8.1, z: 0}
+  m_LocalPosition: {x: -0.52, y: -7.63, z: 0}
   m_LocalScale: {x: 0.5673267, y: 0.5900291, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -174,7 +174,7 @@ MonoBehaviour:
   damage: 7
   speed: 2.1
   data: {fileID: 11400000, guid: 57191d2cc0edd4bd4a708558b3552e1e, type: 2}
---- !u!114 &8002815310443396803
+--- !u!114 &7581301892371978199
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -183,7 +183,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6322104006086594710}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 834cbedd89e3743f2993f0da0f2f0872, type: 3}
+  m_Script: {fileID: 11500000, guid: 7af8366e27c674f52a57bb0c1302661f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   isDead: 0
