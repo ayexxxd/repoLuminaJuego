@@ -18,7 +18,7 @@ namespace DefensoresDeSoftware
         [Header("Comportamientos")]
         
         public TipoDisparo patronDisparo;
-        public enum TipoDisparo { Null, HaciaAdelante, Estrella }
+        public enum TipoDisparo { Null, HaciaAdelante, Estrella, EnX }
 
         public enum TipoMovimiento { Estatico, Recto, Senoidal, Persecucion }
         public TipoMovimiento patronMovimiento = TipoMovimiento.Recto;
@@ -130,6 +130,7 @@ namespace DefensoresDeSoftware
 
                 if (patronDisparo == TipoDisparo.HaciaAdelante) DisparoAdelante();
                 else if (patronDisparo == TipoDisparo.Estrella) DisparoEstrella();
+                else if (patronDisparo == TipoDisparo.EnX) DisparoEnX();
             }
         }
 
@@ -147,6 +148,23 @@ namespace DefensoresDeSoftware
                 Vector2.up, Vector2.down, Vector2.left, Vector2.right,
                 new Vector2(1, 1).normalized, new Vector2(-1, 1).normalized,
                 new Vector2(1, -1).normalized, new Vector2(-1, -1).normalized
+            };
+
+            foreach (Vector2 dir in direcciones)
+            {
+                GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+                ExInBullet bulletScript = newBullet.GetComponent<ExInBullet>();
+                if (bulletScript != null) bulletScript.Fire(dir);
+            }
+        }
+        void DisparoEnX()
+        {
+            // Solo usamos las 4 esquinas (diagonales) y las normalizamos para que viajen a velocidad constante
+            Vector2[] direcciones = {
+                new Vector2(1, 1).normalized,   // Arriba a la derecha
+                new Vector2(-1, 1).normalized,  // Arriba a la izquierda
+                new Vector2(1, -1).normalized,  // Abajo a la derecha
+                new Vector2(-1, -1).normalized  // Abajo a la izquierda
             };
 
             foreach (Vector2 dir in direcciones)
