@@ -13,9 +13,6 @@ namespace DefensoresDeSoftware
         public Transform firePoint;
         public float fireRate = 2f; 
 
-        [Header("Límites de Pantalla (Rebote)")]
-        public float limiteIzquierdo = -9f; // Ajusta esto en el Inspector según tu cámara
-        public float limiteDerecho = 9f;    // Ajusta esto en el Inspector según tu cámara
         private float direccionX = -1f;     // -1 = Izquierda, 1 = Derecha
 
         [Header("Comportamientos")]
@@ -62,19 +59,7 @@ namespace DefensoresDeSoftware
 
         void FixedUpdate()
         {
-            // --- NUEVO: SISTEMA DE REBOTE ---
-            // Si toca o cruza el límite izquierdo, lo forzamos a ir a la derecha
-            if (transform.position.x <= limiteIzquierdo)
-            {
-                direccionX = 1f; 
-            }
-            // Si toca o cruza el límite derecho, lo forzamos a ir a la izquierda
-            else if (transform.position.x >= limiteDerecho)
-            {
-                direccionX = -1f;
-            }
-
-            // 1. Calculamos a dónde quiere ir el cerebro del enemigo
+            // 1. Calculamos la velocidad base deseada por el cerebro del enemigo
             Vector2 velocidadBase = Vector2.zero;
 
             if (patronMovimiento == TipoMovimiento.Estatico) 
@@ -83,13 +68,11 @@ namespace DefensoresDeSoftware
             }
             else if (patronMovimiento == TipoMovimiento.Recto) 
             {
-                // Ahora usa "direccionX" en lugar de siempre ir a la izquierda
                 velocidadBase = new Vector2(direccionX * speed, 0);
             }
             else if (patronMovimiento == TipoMovimiento.Senoidal)
             {
                 float velocidadY = Mathf.Sin(Time.time * velocidadOla) * amplitudOla;
-                // Aplica el rebote horizontal y el movimiento de ola vertical
                 velocidadBase = new Vector2(direccionX * speed, velocidadY);
             }
             else if (patronMovimiento == TipoMovimiento.Persecucion)
@@ -100,7 +83,6 @@ namespace DefensoresDeSoftware
                     if (playerTransform.position.y > transform.position.y) direccionY = 1f;
                     else if (playerTransform.position.y < transform.position.y) direccionY = -1f;
                     
-                    // Persigue en Y, pero respeta el rebote en X
                     velocidadBase = new Vector2(direccionX * speed, direccionY * (speed * 0.8f));
                 }
                 else 
@@ -109,11 +91,34 @@ namespace DefensoresDeSoftware
                 }
             }
 
-            // 2. Fricción simulada: Reducimos la inercia un 5% cada fotograma físico
+            // 2. Fricción de la inercia (para la explosión de los hijos)
             inerciaActiva = Vector2.Lerp(inerciaActiva, Vector2.zero, Time.fixedDeltaTime * 5f);
 
-            // 3. Resultado final: El cerebro + El impacto físico
-            rig.linearVelocity = velocidadBase + inerciaActiva;
+            // 3. Sumamos la velocidad del cerebro + la inercia física
+            Vector2 velocidadTotal = velocidadBase + inerciaActiva;
+
+            // --- TU NUEVO SISTEMA ANTI-JITTERING ---
+
+            // 4. Calculamos la posición futura imaginaria (igual que en el Player)
+            Vector2 posicionFutura = rig.position + (velocidadTotal * Time.fixedDeltaTime);
+
+            // 5. Sistema de Rebote en X: Evaluamos el futuro para reaccionar a tiempo
+            if (posicionFutura.x <= ExInGameControl.Instance.minX)
+            {
+                direccionX = 1f; // Cambiamos de dirección
+                posicionFutura.x = ExInGameControl.Instance.minX; // Lo pegamos exacto a la pared para que no se salga ni un pixel
+            }
+            else if (posicionFutura.x >= ExInGameControl.Instance.maxX)
+            {
+                direccionX = -1f;
+                posicionFutura.x = ExInGameControl.Instance.maxX;
+            }
+
+            // 6. Límite estricto en Y (Muro invisible, igual que el Player)
+            posicionFutura.y = Mathf.Clamp(posicionFutura.y, ExInGameControl.Instance.minY, ExInGameControl.Instance.maxY);
+
+            // 7. Movemos el objeto de forma segura y suave
+            rig.MovePosition(posicionFutura);
         }
 
         // Hilo secundario que controla el ritmo de ataque
@@ -170,21 +175,29 @@ namespace DefensoresDeSoftware
         // Unity llama a esto 1 milisegundo antes de borrar el objeto de la memoria RAM
         void OnDestroy()
         {
-            if (seEstaCerrandoElJuego || !gameObject.scene.isLoaded) return;
+            if (seEstaCerrandoElJuego || !gameObject.scene.isLoaded) 
+                return;
 
             if (seDivideAlMorir && enemigoHijoPrefab != null)
             {
                 for (int i = 0; i < cantidadHijos; i++)
                 {
-                    Vector2 direccionAleatoria = Random.insideUnitCircle.normalized;
-                    Vector2 spawnPos = (Vector2)transform.position + (direccionAleatoria * 0.5f);
+                    // --- NUEVA LÓGICA DE DIRECCIÓN ---
+                    // Si 'i' es un número par (ej. 0), la Y es positiva (arriba). Si es impar (ej. 1), es negativa (abajo).
+                    float direccionY = (i % 2 == 0) ? 1f : -1f; 
+                    float direccionX = Random.Range(0f, 1f); 
+
+                    Vector2 direccionCalculada = new Vector2(direccionX, direccionY).normalized;                   
+                    // Calculamos dónde nacen usando nuestra nueva dirección
+                    Vector2 spawnPos = (Vector2)transform.position + (direccionCalculada * 0.5f);
 
                     GameObject nuevoHijo = Instantiate(enemigoHijoPrefab, spawnPos, Quaternion.identity);
 
                     ExInEnemy scriptHijo = nuevoHijo.GetComponent<ExInEnemy>();
                     if (scriptHijo != null)
                     {
-                        scriptHijo.RecibirInercia(direccionAleatoria * fuerzaExplosionHijos);
+                        // Le inyectamos la inercia con la dirección que acabamos de construir
+                        scriptHijo.RecibirInercia(direccionCalculada * fuerzaExplosionHijos);
                     }
                 }
             }

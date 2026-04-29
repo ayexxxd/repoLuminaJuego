@@ -9,6 +9,13 @@ namespace DefensoresDeSoftware
         public static ExInGameControl Instance;
         public int initialLives = 3;
 
+
+        [Header("Límites Globales de Pantalla")]
+        public float minX = -8f;
+        public float maxX = 8f;
+        public float maxY = 5f;  // Ajusta en el Inspector
+        public float minY = -5f; // Ajusta en el Inspector
+
         void Awake()
         {
             // Si no hay un GameControl, nos asignamos como el principal
