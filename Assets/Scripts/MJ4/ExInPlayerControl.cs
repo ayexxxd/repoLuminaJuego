@@ -52,7 +52,7 @@ namespace DefensoresDeSoftware
         void Shoot()
         {
             // Instanciamos una copia de la bala en la posición de nuestro "cañón"
-            GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+            GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             
             // Buscamos el script de la bala para darle la orden de disparo
             ExInBullet bulletScript = newBullet.GetComponent<ExInBullet>();

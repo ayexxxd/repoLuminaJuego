@@ -5,19 +5,41 @@ namespace DefensoresDeSoftware
 {
     public class ExInEnemy : MonoBehaviour
     {
+        [Header("Movimiento")]
         public float speed = 3f;
         public Rigidbody2D rig;
+
+        // Añadimos el estado 'Estatico' a la lista de opciones
+        public enum TipoMovimiento { Estatico, Recto, Senoidal, Persecucion }
+        public TipoMovimiento patronMovimiento;
+
+        [Header("Ajustes Extra de Movimiento")]
+        public float amplitudOla = 3f;   
+        public float velocidadOla = 5f;  
+        
+        private Transform playerTransform; 
+
+        [Header("Disparo")]
         public GameObject bulletPrefab;
         public Transform firePoint;
         public float fireRate = 2f; 
         
-        // Lista de comportamientos que podemos elegir en Unity
         public enum TipoDisparo { Null, HaciaAdelante, Estrella }
         public TipoDisparo patronDisparo;
 
         void Start()
         {
-            // Si el enemigo no es kamikaze (Null), encendemos su ciclo de disparo
+            // Solo buscamos al jugador si el enemigo es del tipo Persecución
+            if (patronMovimiento == TipoMovimiento.Persecucion)
+            {
+                GameObject player = GameObject.FindGameObjectWithTag("Player");
+                if (player != null)
+                {
+                    playerTransform = player.transform;
+                }
+            }
+
+            // Si el enemigo dispara, iniciamos su temporizador
             if (patronDisparo != TipoDisparo.Null)
             {
                 StartCoroutine(RutinaDeDisparo());
@@ -26,20 +48,47 @@ namespace DefensoresDeSoftware
 
         void FixedUpdate()
         {
-            // El enemigo siempre avanza hacia la izquierda
-            rig.linearVelocity = Vector2.left * speed;
+            // Decidimos cómo se mueve este enemigo
+            if (patronMovimiento == TipoMovimiento.Estatico)
+            {
+                // El Sniper no se mueve, anulamos cualquier velocidad
+                rig.linearVelocity = Vector2.zero;
+            }
+            else if (patronMovimiento == TipoMovimiento.Recto)
+            {
+                // Avanza directo a la izquierda
+                rig.linearVelocity = Vector2.left * speed;
+            }
+            else if (patronMovimiento == TipoMovimiento.Senoidal)
+            {
+                // Avanza a la izquierda oscilando en forma de ola
+                float velocidadY = Mathf.Sin(Time.time * velocidadOla) * amplitudOla;
+                rig.linearVelocity = new Vector2(-speed, velocidadY);
+            }
+            else if (patronMovimiento == TipoMovimiento.Persecucion)
+            {
+                // Rastrea la altura del jugador y avanza a la izquierda
+                if (playerTransform != null)
+                {
+                    float direccionY = 0f;
+                    if (playerTransform.position.y > transform.position.y) direccionY = 1f;
+                    else if (playerTransform.position.y < transform.position.y) direccionY = -1f;
+
+                    rig.linearVelocity = new Vector2(-speed, direccionY * (speed * 0.8f));
+                }
+                else
+                {
+                    rig.linearVelocity = Vector2.left * speed;
+                }
+            }
         }
 
-        // Hilo secundario que controla el ritmo de ataque
+        // --- (El código de disparo queda igual) ---
         IEnumerator RutinaDeDisparo()
         {
-            // Bucle infinito: ataca mientras siga vivo
             while (true) 
             {
-                // Espera el tiempo de recarga
                 yield return new WaitForSeconds(fireRate);
-
-                // Decide qué ataque usar según su configuración
                 if (patronDisparo == TipoDisparo.HaciaAdelante) DisparoAdelante();
                 else if (patronDisparo == TipoDisparo.Estrella) DisparoEstrella();
             }
@@ -47,22 +96,21 @@ namespace DefensoresDeSoftware
 
         void DisparoAdelante()
         {
-            // Crea una bala y la lanza directamente hacia la izquierda (hacia el jugador)
-            GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
+            // La bala del enemigo nace rotada según como hayas girado su propio FirePoint
+            GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            
             ExInBullet bulletScript = newBullet.GetComponent<ExInBullet>();
             if (bulletScript != null) bulletScript.Fire(Vector2.left); 
         }
 
         void DisparoEstrella()
         {
-            // Preparamos una lista con las 8 direcciones posibles
             Vector2[] direcciones = {
                 Vector2.up, Vector2.down, Vector2.left, Vector2.right,
                 new Vector2(1, 1).normalized, new Vector2(-1, 1).normalized,
                 new Vector2(1, -1).normalized, new Vector2(-1, -1).normalized
             };
 
-            // Disparamos una bala por cada dirección de la lista
             foreach (Vector2 dir in direcciones)
             {
                 GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
@@ -71,14 +119,10 @@ namespace DefensoresDeSoftware
             }
         }
 
-        // Detecta si choca físicamente (cuerpo a cuerpo) contra el jugador
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            if (collision.gameObject.CompareTag("Player"))
-            {
-                // El enemigo se destruye al impactar
-                Destroy(this.gameObject);
-            }
+            // El enemigo muere si choca con el jugador
+            if (collision.gameObject.CompareTag("Player")) Destroy(this.gameObject);
         }
     }
 }
