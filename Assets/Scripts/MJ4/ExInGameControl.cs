@@ -32,19 +32,29 @@ namespace DefensoresDeSoftware
             }
         }
 
-        public void SpendLives()
+        // Reemplaza tu función SpendLives() por esta nueva:
+        public void TakeDamage(int damageAmount)
         {
-            // Leemos las vidas actuales guardadas en memoria y restamos una
+            // Leemos las vidas actuales guardadas en memoria
             int currentLives = PlayerPrefs.GetInt("Lives", initialLives);
-            currentLives--;
+            
+            // Restamos el daño que nos mandó la bala
+            currentLives -= damageAmount;
 
             // Guardamos el nuevo valor
             PlayerPrefs.SetInt("Lives", currentLives);
 
+            // Buscamos a la UI para que actualice los corazones en pantalla de inmediato
+            ExInUIController ui = FindAnyObjectByType<ExInUIController>();
+            if (ui != null)
+            {
+                ui.UpdateLives();
+            }
+
             // Si llegamos a 0 vidas, mandamos a la pantalla de Game Over
             if (currentLives <= 0)
             {
-                SceneManager.LoadScene("ExInEndScene");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("ExInEndScene");
             }
         }
     }

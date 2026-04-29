@@ -7,6 +7,7 @@ namespace DefensoresDeSoftware
     {
      
         [Header("Configuración Básica")]
+        public int lives = 3; // Puedes cambiar este número en el Inspector de Unity
         public float speed = 3f;
         public Rigidbody2D rig;
         public GameObject bulletPrefab;
@@ -181,6 +182,17 @@ namespace DefensoresDeSoftware
             if (collision.gameObject.CompareTag("Player")) 
             {
                 Destroy(this.gameObject);
+            }
+        }
+
+        public void TakeDamage(int damage)
+        {
+            lives -= damage; // Restamos la cantidad de daño recibida
+
+            // Solo si las vidas llegan a 0 o menos, el enemigo se destruye
+            if (lives <= 0)
+            {
+                Destroy(gameObject);
             }
         }
 

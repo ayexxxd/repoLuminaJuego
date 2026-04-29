@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 5161515742968147862}
   - component: {fileID: 4412462082526761769}
   m_Layer: 0
-  m_Name: Bolita_Enemigo_trans_0
+  m_Name: Bolita_Enemigo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
