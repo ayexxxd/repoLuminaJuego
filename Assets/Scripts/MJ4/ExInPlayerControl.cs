@@ -14,7 +14,12 @@ namespace DefensoresDeSoftware
         public Transform firePoint; 
         public float fireRate = 0.25f; 
         public Vector2 fireDirection = Vector2.right; 
-        
+        [Header("Límites de Pantalla")]
+        public float minX = -8f;
+        public float maxX = 8f;
+        public float minY = -4.5f;
+        public float maxY = 4.5f;
+
         private Vector2 moveInput;
         private float nextFireTime = 0f;
 
@@ -45,8 +50,16 @@ namespace DefensoresDeSoftware
 
         void FixedUpdate()
         {
-            // Aplicamos el movimiento calculado al motor de físicas
-            rig.linearVelocity = moveInput * moveSpeed;
+            // 1. Calculamos a dónde intentará ir la nave en esta fracción de segundo
+            // (Time.fixedDeltaTime asegura que la velocidad sea constante sin importar los FPS)
+            Vector2 posicionFutura = rig.position + (moveInput * moveSpeed * Time.fixedDeltaTime);
+
+            // 2. Le aplicamos el muro matemático a esa posición IMAGINARIA, antes de movernos
+            posicionFutura.x = Mathf.Clamp(posicionFutura.x, minX, maxX);
+            posicionFutura.y = Mathf.Clamp(posicionFutura.y, minY, maxY);
+
+            // 3. Movemos el objeto de forma segura, sin que choque ni vibre
+            rig.MovePosition(posicionFutura);
         }
 
         void Shoot()
