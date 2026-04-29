@@ -12,12 +12,26 @@ public class Health : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
 
+    [Header("Audio")]
+    [SerializeField] private AudioClip startSFX;
+    [SerializeField] private AudioClip healSFX;
+    private AudioSource audioSource;
+
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
         if (spriteRenderer != null)
         {
             originalColor = spriteRenderer.color;
+        }
+        audioSource = GetComponent<AudioSource>();
+    }
+
+    private void Start()
+    {
+        if(startSFX != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(startSFX);
         }
     }
 
@@ -67,6 +81,11 @@ public class Health : MonoBehaviour
             throw new System.ArgumentOutOfRangeException("cannot work");
         }
         this.StartCoroutine(VisualIndicator(Color.green));
+        
+        if(healSFX != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(healSFX);
+        }
         
         if(this.health + amount > MAX_HEALTH)
         {
