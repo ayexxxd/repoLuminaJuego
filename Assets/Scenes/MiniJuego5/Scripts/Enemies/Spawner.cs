@@ -10,8 +10,11 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float spawnInterval = 1.5f;
     [SerializeField] private int enemiesPerWave = 5;
     [SerializeField] private float pauseBetweenWaves = 5f;
+    [SerializeField] private int totalWaves = 10;
 
     private int currentWave = 1;
+    public int CurrentWave => currentWave;
+    public int TotalWaves => totalWaves;
 
     void Start()
     {
@@ -20,7 +23,7 @@ public class Spawner : MonoBehaviour
 
     private IEnumerator WaveLoop()
     {
-        while (true)
+        while (currentWave <= totalWaves)
         {
             Debug.Log($"Wave {currentWave} started!");
             yield return StartCoroutine(SpawnWave(enemiesPerWave));

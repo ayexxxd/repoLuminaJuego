@@ -1,23 +1,20 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
 {
-    [Header("References")]
-    [SerializeField] private GameObject pauseMenuUI; // assign Canvas root for pause menu
-
+    [SerializeField] private GameObject pausePanel;
     private bool isPaused = false;
 
     private void Start()
     {
-        if (pauseMenuUI != null) pauseMenuUI.SetActive(false);
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
+        pausePanel.SetActive(false);
     }
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Escape))
+        if (Keyboard.current.pKey.wasPressedThisFrame)
         {
             TogglePause();
         }
@@ -25,46 +22,29 @@ public class PauseMenu : MonoBehaviour
 
     public void TogglePause()
     {
-        if (isPaused) Resume();
-        else Pause();
+        if (isPaused)
+            Resume();
+        else
+            Pause();
     }
 
     public void Pause()
     {
-        if (pauseMenuUI != null) pauseMenuUI.SetActive(true);
+        pausePanel.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
-        Cursor.visible = true;
-        Cursor.lockState = CursorLockMode.None;
     }
 
     public void Resume()
     {
-        if (pauseMenuUI != null) pauseMenuUI.SetActive(false);
+        pausePanel.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
-        Cursor.visible = false;
-        Cursor.lockState = CursorLockMode.Locked;
     }
 
-    public void RestartLevel()
+    public void Leave()
     {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-    }
-
-    public void QuitToMenu(string menuSceneName)
-    {
-        Time.timeScale = 1f;
-        SceneManager.LoadScene(menuSceneName);
-    }
-
-    public void QuitGame()
-    {
-#if UNITY_EDITOR
-        UnityEditor.EditorApplication.isPlaying = false;
-#else
-        Application.Quit();
-#endif
+        //Time.timeScale = 1f;
+        SceneManager.LoadScene("Startcene");
     }
 }
