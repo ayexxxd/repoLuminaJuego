@@ -16,16 +16,28 @@ namespace DefensoresDeSoftware
         [Header("Ajustes Extra de Movimiento")]
         public float amplitudOla = 3f;   
         public float velocidadOla = 5f;  
-        
-        private Transform playerTransform; 
 
         [Header("Disparo")]
         public GameObject bulletPrefab;
         public Transform firePoint;
         public float fireRate = 2f; 
-        
         public enum TipoDisparo { Null, HaciaAdelante, Estrella }
         public TipoDisparo patronDisparo;
+
+        [Header("Al Morir (División)")]
+        public bool seDivideAlMorir = false;
+        public GameObject enemigoHijoPrefab; 
+        public int cantidadHijos = 2;        
+        public float fuerzaExplosionHijos = 15f; // Qué tan violento es el empuje
+
+        
+
+        // Privadas ----------
+
+        private Transform playerTransform; 
+        private bool seEstaCerrandoElJuego = false;
+        // Memoria temporal del impacto físico
+        private Vector2 inerciaActiva = Vector2.zero;
 
         void Start()
         {
@@ -123,6 +135,34 @@ namespace DefensoresDeSoftware
         {
             // El enemigo muere si choca con el jugador
             if (collision.gameObject.CompareTag("Player")) Destroy(this.gameObject);
+        }
+        // --- NUEVO: GESTIÓN DE DESTRUCCIÓN ---
+
+        // Unity llama a esto automáticamente cuando cierras la ventana del juego
+        void OnApplicationQuit()
+        {
+            seEstaCerrandoElJuego = true;
+        }
+
+        // Unity llama a esto 1 milisegundo antes de borrar el objeto de la memoria RAM
+        void OnDestroy()
+        {
+            // CANDADO DE SEGURIDAD: Evita generar enemigos si el juego se está cerrando
+            // o si estamos cambiando a la pantalla de Game Over.
+            if (seEstaCerrandoElJuego || !gameObject.scene.isLoaded) return;
+
+            if (seDivideAlMorir && enemigoHijoPrefab != null)
+            {
+                for (int i = 0; i < cantidadHijos; i++)
+                {
+                    // Añadimos un pequeño factor aleatorio para que los hijos no nazcan 
+                    // fusionados en el mismo pixel exacto.
+                    Vector2 randomOffset = new Vector2(Random.Range(-0.5f, 0.5f), -1f * (i + 1));
+                    Vector2 spawnPos = (Vector2)transform.position + randomOffset;
+
+                    Instantiate(enemigoHijoPrefab, spawnPos, Quaternion.identity);
+                }
+            }
         }
     }
 }
