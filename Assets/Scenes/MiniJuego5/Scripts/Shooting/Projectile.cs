@@ -39,20 +39,20 @@ public class Projectile : MonoBehaviour
 
     if(lifeTimer >= lifetime)
     {
-        gameObject.SetActive(false);
+        Destroy(gameObject);//completely destroy bullet from memory
     }
         }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Enemy"))
+        if (collision.CompareTag("EnemyS") || collision.CompareTag("EnemyM") || collision.CompareTag("EnemyL"))
         {
             EnemyHealth enemyHealth = collision.GetComponent<EnemyHealth>();
             if (enemyHealth != null)
             {
                 enemyHealth.Damage(damage);
             }
-            gameObject.SetActive(false);
+            Destroy(gameObject);//completely destroy bullet from memory
         }
     }
 }

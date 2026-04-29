@@ -49,6 +49,11 @@ public class EnemyHealth : MonoBehaviour
     private void Die()
     {
         isDead = true;
+        if (ScoreManager.instance != null)
+        {
+            ScoreManager.instance.EnemyKilled(gameObject.tag);
+        }
+
         Destroy(gameObject);
     }
 
