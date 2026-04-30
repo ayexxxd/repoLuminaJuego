@@ -67,7 +67,6 @@ public class Spawner : MonoBehaviour
     private IEnumerator SpawnWave(int count)
     {
         enemiesAliveInWave = count;
-
         for (int i = 0; i < count; i++)
         {
             SpawnRandomEnemy();//spawnea enemigo

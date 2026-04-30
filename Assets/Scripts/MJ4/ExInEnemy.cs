@@ -115,7 +115,7 @@ namespace DefensoresDeSoftware
 
             inerciaActiva = Vector2.Lerp(inerciaActiva, Vector2.zero, Time.fixedDeltaTime * 5f);
 
-            Vector2e velocidadTotal = velocidadBase + inerciaActiva;
+            Vector2 velocidadTotal = velocidadBase + inerciaActiva;
 
             Vector2 posicionFutura = rig.position + (velocidadTotal * Time.fixedDeltaTime);
 

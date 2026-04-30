@@ -185,7 +185,6 @@ namespace DefensoresDeSoftware
             {
                 panelTienda.SetActive(true);
                 RefrescarBotonesTienda();
-                ActualizarTextosCostos();
             }
 
             Time.timeScale = 0f;
