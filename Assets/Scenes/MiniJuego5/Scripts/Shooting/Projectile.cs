@@ -1,7 +1,8 @@
 using UnityEngine;
 
-namespace TopDown.Shooting
-{
+namespace TopDown.Shooting{
+using TopDown.Enemy;//namespace to organize code and avoid naming conflicts
+
     [RequireComponent(typeof(Rigidbody2D))]
 public class Projectile : MonoBehaviour
 {
@@ -17,14 +18,29 @@ public class Projectile : MonoBehaviour
         {
             body = GetComponent<Rigidbody2D>();
         }
-    public void ShootBullet(Transform shootPoint)
+
+    /// <summary>
+    /// Set the damage this projectile deals (called by GunController).
+    /// </summary>
+    public void SetDamage(int newDamage)
+    {
+        damage = newDamage;
+    }
+
+    public void ShootBullet(Transform shootPoint, float bulletSpeed)
         {
             lifeTimer = 0;
             transform.position = shootPoint.position;
             transform.rotation = shootPoint.rotation;
             gameObject.SetActive(true);
-            body.linearVelocity = -transform.up * speed;
+            body.linearVelocity = -transform.up * bulletSpeed;
         }
+
+    // Overload for backwards compatibility (uses default speed)
+    public void ShootBullet(Transform shootPoint)
+    {
+        ShootBullet(shootPoint, speed);
+    }
 
     private void Update()
         {//life timer increases

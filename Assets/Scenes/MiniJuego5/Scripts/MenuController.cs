@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+//namespace TopDown.Shooting{//namespace to organize code and avoid naming conflicts
 
 public class MenuController : MonoBehaviour
 {

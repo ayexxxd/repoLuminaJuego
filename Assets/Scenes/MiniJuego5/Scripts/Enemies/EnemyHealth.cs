@@ -1,11 +1,10 @@
 using System.Collections;
 using UnityEngine;
-
+namespace TopDown.Enemy{//namespace to organize code and avoid naming conflicts
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int health = 100;
     public bool isDead = false;
-    
     private SpriteRenderer spriteRenderer;//sets sprite renderer
     private Color ogColor;//sets og Color 
     private Vector3 ogScale;//sets og scale to return to after size pulse effect
@@ -27,7 +26,7 @@ public class EnemyHealth : MonoBehaviour
     void Update()
     {//check every frame if health is 0 or less,
     //and if im not dead yet
-        if (!isDead && health <= 0)
+        if (health <= 0)
         {
             Die();
         }
@@ -40,7 +39,6 @@ public class EnemyHealth : MonoBehaviour
     public void Damage(int amount)
     {//reduce health by amount 
         health = health - amount;
-
         StopAllCoroutines();//stop all coroutines to prevent 
         //multiple damage indicators from overlapping
         StartCoroutine(ScalePulse());//start size pulse effect
@@ -50,17 +48,17 @@ public class EnemyHealth : MonoBehaviour
     private IEnumerator ScalePulse()
     {
         //shrink
-        transform.localScale = ogScale * 0.7f;
+        transform.localScale =ogScale * 0.7f;
         //wait like 5 milliseconds
         yield return new WaitForSeconds(0.05f);
 
         //grow
-        transform.localScale = ogScale * 1.2f;
+        transform.localScale =ogScale * 1.2f;
         //wait like 5 milliseconds
         yield return new WaitForSeconds(0.05f);
 
         //back to normal
-        transform.localScale = ogScale;
+        transform.localScale =ogScale;
     }
 
     private IEnumerator VisualIndicator(Color color)
@@ -79,6 +77,14 @@ public class EnemyHealth : MonoBehaviour
         {//tell score manager to increase score based on enemy type
             ScoreManager.instance.EnemyKilled(gameObject.tag);
         }
+        
+        // Notify spawner that an enemy died
+        Spawner spawner = FindAnyObjectByType<Spawner>();
+        if (spawner != null)
+        {
+            spawner.EnemyDied();
+        }
+        
         Destroy(gameObject);//then destroy enemy
     }
 
@@ -87,4 +93,4 @@ public class EnemyHealth : MonoBehaviour
     {//sett health
         this.health = health_;
     }*/
-}
+}}

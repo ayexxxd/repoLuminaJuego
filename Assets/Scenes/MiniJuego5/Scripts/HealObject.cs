@@ -1,5 +1,6 @@
 using Unity.VisualScripting;
 using UnityEngine;
+namespace TopDown.Shooting{//namespace to organize code and avoid naming conflicts
 
 public class HealObject : MonoBehaviour
 {
@@ -9,11 +10,9 @@ public class HealObject : MonoBehaviour
         if(collision.gameObject.CompareTag("Player"))
         {
             Health health = collision.gameObject.GetComponent<Health>();
-            if(health != null)
-            {
                 health.Heal(healAmount);
                 Destroy(gameObject);
-            }
         }
     }
+}
 }

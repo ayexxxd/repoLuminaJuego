@@ -6,7 +6,6 @@ namespace TopDown.Shooting
 {
     public class GunController : MonoBehaviour
     {
-        [SerializeField] private float cooldown = 0.4f;
         private float cooldownTimer;
 
         [Header("References")]
@@ -15,15 +14,25 @@ namespace TopDown.Shooting
         [SerializeField] private Animator muzzleFlashAnimator;
         [SerializeField] private Animator characterAnimator;
 
+        [Header("Bullet Stats")]
+        [SerializeField] private int baseBulletDamage = 20;
+        [SerializeField] private float baseBulletSpeed = 20f;
+        [SerializeField] private float baseCooldown = 0.1f;
+        private int currentBulletDamage;
+        private float currentBulletSpeed;
+        private float currentCooldown;
+
         [Header("Visual")]
         [SerializeField] private GameObject objectToHide;
 
         [SerializeField] private AudioClip shootSFX;
         private AudioSource audioSource;
         private bool isShooting;
+
         private void Awake()
         {
             audioSource = GetComponent<AudioSource>();
+            ResetBulletStats();
         }
 
         private void Update()
@@ -37,11 +46,16 @@ namespace TopDown.Shooting
 
         private void OnShoot()
         {//if left click, and not on cooldown
-            if (cooldownTimer < cooldown) return;
+            if (cooldownTimer < currentCooldown) return;
             //spawn bullet and shoot it
             GameObject bullet = Instantiate(bulletPrefab, firepoint.position, firepoint.rotation, null);
             //bullet spawned at firepoint position and rotation
-            bullet.GetComponent<Projectile>().ShootBullet(firepoint);
+            Projectile projectile = bullet.GetComponent<Projectile>();
+            if (projectile != null)
+            {
+                projectile.SetDamage(currentBulletDamage);
+                projectile.ShootBullet(firepoint, currentBulletSpeed);
+            }
 
             if (characterAnimator != null)
             {//animate player
@@ -71,6 +85,27 @@ namespace TopDown.Shooting
             {//reset shooting animation
                 characterAnimator.SetBool("shoot", false);
             }
+        }
+
+        /// <summary>
+        /// Set custom bullet damage, speed, and cooldown (called by WeaponModifier).
+        /// </summary>
+        public void SetBulletStats(int damage, float speed, float cooldown)
+        {
+            currentBulletDamage = damage;
+            currentBulletSpeed = speed;
+            currentCooldown = cooldown;
+            Debug.Log($"Bullet stats updated: Damage={damage}, Speed={speed}, Cooldown={cooldown}");
+        }
+
+        /// <summary>
+        /// Reset bullet stats to their base values.
+        /// </summary>
+        public void ResetBulletStats()
+        {
+            currentBulletDamage = baseBulletDamage;
+            currentBulletSpeed = baseBulletSpeed;
+            currentCooldown = baseCooldown;
         }
     }
 }

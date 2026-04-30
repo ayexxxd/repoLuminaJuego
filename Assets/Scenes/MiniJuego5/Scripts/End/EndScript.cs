@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEditor.Search;
+namespace TopDown.Enemy{//namespace to organize code and avoid naming conflicts
 
 public class EndScript : MonoBehaviour
 {
@@ -24,3 +25,4 @@ public class EndScript : MonoBehaviour
         waveText.text = "Oleada Final: " + finalWave + "/" + 10;
     }
 }}
+}

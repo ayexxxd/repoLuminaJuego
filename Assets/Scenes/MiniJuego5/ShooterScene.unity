@@ -435,6 +435,149 @@ RectTransform:
   m_AnchoredPosition: {x: 65, y: -4.3}
   m_SizeDelta: {x: 136.2734, y: 29.5483}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &225590432
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 225590433}
+  - component: {fileID: 225590434}
+  m_Layer: 0
+  m_Name: WeaponModifier
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &225590433
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225590432}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 191.89291, y: 448.63766, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &225590434
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 225590432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3860e9a8fc74449d290f20df0a36a144, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TopDown.Shooting.WeaponModifier
+  wordInputPanel: {fileID: 1457486552}
+  gunController: {fileID: 2100127810}
+  modifiers:
+  - keyword: rapido
+    damage: 10
+    projectileSpeed: 30
+    cooldown: 0.1
+  - keyword: veloz
+    damage: 10
+    projectileSpeed: 30
+    cooldown: 0.1
+  - keyword: agil
+    damage: 10
+    projectileSpeed: 30
+    cooldown: 0.1
+  - keyword: fuerte
+    damage: 15
+    projectileSpeed: 8
+    cooldown: 0.3
+  - keyword: letal
+    damage: 25
+    projectileSpeed: 6
+    cooldown: 0.4
+  - keyword: critico
+    damage: 40
+    projectileSpeed: 4
+    cooldown: 0.5
+  - keyword: fuego
+    damage: 12
+    projectileSpeed: 9
+    cooldown: 0.2
+  - keyword: hielo
+    damage: 6
+    projectileSpeed: 35
+    cooldown: 0.02
+  - keyword: veneno
+    damage: 30
+    projectileSpeed: 14
+    cooldown: 0.3
+--- !u!1 &265183445
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 265183447}
+  - component: {fileID: 265183448}
+  m_Layer: 0
+  m_Name: WordInputPanel
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!4 &265183447
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265183445}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -5.57841, y: -10.89216, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &265183448
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 265183445}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3391369a1ecc44f88430de29493adf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TopDown.Shooting.WordInputPanel
+  input: {fileID: 600653696}
+  onValidWord:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: 
+        m_MethodName: 
+        m_Mode: 0
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &309582648
 GameObject:
   m_ObjectHideFlags: 0
@@ -943,6 +1086,63 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_SpriteSortPoint: 0
+--- !u!1001 &513945984
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5008574444978279537, guid: 0c84b2ee83b0e47a99ecc6a80fb2192c, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.55672
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008574444978279537, guid: 0c84b2ee83b0e47a99ecc6a80fb2192c, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -6.7577
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008574444978279537, guid: 0c84b2ee83b0e47a99ecc6a80fb2192c, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008574444978279537, guid: 0c84b2ee83b0e47a99ecc6a80fb2192c, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008574444978279537, guid: 0c84b2ee83b0e47a99ecc6a80fb2192c, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008574444978279537, guid: 0c84b2ee83b0e47a99ecc6a80fb2192c, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008574444978279537, guid: 0c84b2ee83b0e47a99ecc6a80fb2192c, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008574444978279537, guid: 0c84b2ee83b0e47a99ecc6a80fb2192c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008574444978279537, guid: 0c84b2ee83b0e47a99ecc6a80fb2192c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5008574444978279537, guid: 0c84b2ee83b0e47a99ecc6a80fb2192c, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6255452090338331908, guid: 0c84b2ee83b0e47a99ecc6a80fb2192c, type: 3}
+      propertyPath: m_Name
+      value: Heal
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 0c84b2ee83b0e47a99ecc6a80fb2192c, type: 3}
 --- !u!1 &519420028
 GameObject:
   m_ObjectHideFlags: 0
@@ -3140,6 +3340,7 @@ GameObject:
   - component: {fileID: 1457486549}
   - component: {fileID: 1457486548}
   - component: {fileID: 1457486552}
+  - component: {fileID: 1457486553}
   m_Layer: 5
   m_Name: Preguntas
   m_TagString: Untagged
@@ -3243,6 +3444,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e6398d1c58f2948c98b71d114d155043, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::WordInputPanel
+--- !u!114 &1457486553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1457486547}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b3391369a1ecc44f88430de29493adf9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TopDown.Shooting.WordInputPanel
+  input: {fileID: 600653696}
+  onValidWord:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!1 &1528620538
 GameObject:
   m_ObjectHideFlags: 0
@@ -4739,6 +4956,17 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &2100127810 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5650774970161864208, guid: 2a8245cbbf0124916a4eba941941ac5f, type: 3}
+  m_PrefabInstance: {fileID: 5555614307594558298}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1139975016}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2831fa8028d574eabb91e7415b4958c5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TopDown.Shooting.GunController
 --- !u!1 &2110222671
 GameObject:
   m_ObjectHideFlags: 0
@@ -4897,6 +5125,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 8300000, guid: 7cdf81f6241a0457ea1f47d37a73ecd0, type: 3}
     - target: {fileID: 5650774970161864208, guid: 2a8245cbbf0124916a4eba941941ac5f, type: 3}
+      propertyPath: baseCooldown
+      value: 0.1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5650774970161864208, guid: 2a8245cbbf0124916a4eba941941ac5f, type: 3}
       propertyPath: bulletPrefab
       value: 
       objectReference: {fileID: 5276691761223284129, guid: 6f5c3908a8699494092c077713e086a0, type: 3}
@@ -4904,6 +5136,10 @@ PrefabInstance:
       propertyPath: objectToHide
       value: 
       objectReference: {fileID: 695160135}
+    - target: {fileID: 5650774970161864208, guid: 2a8245cbbf0124916a4eba941941ac5f, type: 3}
+      propertyPath: baseBulletDamage
+      value: 20
+      objectReference: {fileID: 0}
     - target: {fileID: 5650774970161864208, guid: 2a8245cbbf0124916a4eba941941ac5f, type: 3}
       propertyPath: characterAnimator
       value: 
@@ -5036,3 +5272,6 @@ SceneRoots:
   - {fileID: 1457486551}
   - {fileID: 599297675}
   - {fileID: 309582651}
+  - {fileID: 225590433}
+  - {fileID: 513945984}
+  - {fileID: 265183447}

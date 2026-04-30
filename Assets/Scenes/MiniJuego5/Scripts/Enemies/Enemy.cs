@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;//required for Coroutine
 
+namespace TopDown.Enemy{//namespace to organize code and avoid naming conflicts
 public class Enemy : MonoBehaviour
 {
     [SerializeField] private int damage = 5;//sets damage variable
@@ -82,4 +83,4 @@ public class Enemy : MonoBehaviour
             yield return new WaitForSeconds(1.2f);//deal dmg every 1.2s
         }
     }
-}
+}}

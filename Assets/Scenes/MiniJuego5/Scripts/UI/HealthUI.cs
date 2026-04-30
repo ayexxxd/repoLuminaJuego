@@ -2,6 +2,9 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
+namespace TopDown.UI
+{
+using TopDown.Enemy;//namespace to organize code and avoid naming conflicts
 public class HealthBar : MonoBehaviour
 {
     private Health playerHealth;
@@ -41,4 +44,4 @@ public class HealthBar : MonoBehaviour
     if (spawner != null)
         UpdateWave(spawner.CurrentWave, spawner.TotalWaves);
 }
-}
+}}
