@@ -7,20 +7,8 @@ public class ScoreManager : MonoBehaviour
     private int score = 0;
     [SerializeField] private TextMeshProUGUI scoreText;
     [SerializeField] private int pointsForEnemyS = 10;
-    [SerializeField] private int pointsForEnemyM = 20;
+    [SerializeField] private int pointsForEnemyM = 25;
     [SerializeField] private int pointsForEnemyL = 50;
-    private void Awake()
-    {
-        if (instance == null)
-        {
-            instance = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
-    }
-
     private void Start()
     {
         UpdateScoreDisplay();
@@ -53,21 +41,12 @@ public class ScoreManager : MonoBehaviour
     }
 
     private void UpdateScoreDisplay()
-    {
-        if (scoreText != null)
-        {
-            scoreText.text = "Puntos: " + score;
-        }
+    {//actualiaar el texto del score en la UI
+        scoreText.text = "Puntos: " + score;
     }
 
-    public int GetScore()
+    public int GetScore()//lo usamos en endscreen
     {
         return score;
     }
-
-    public void SaveScore()
-{
-    PlayerPrefs.SetInt("FinalScore", score);
-    PlayerPrefs.Save(); // makes sure it writes to disk
-}
 }

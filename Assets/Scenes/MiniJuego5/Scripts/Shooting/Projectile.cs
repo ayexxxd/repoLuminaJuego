@@ -27,13 +27,13 @@ public class Projectile : MonoBehaviour
         damage = newDamage;
     }
 
-    public void ShootBullet(Transform shootPoint, float bulletSpeed)
+    public void ShootBullet(Transform shootPoint, float bulletSpd)
         {
             lifeTimer = 0;
             transform.position = shootPoint.position;
             transform.rotation = shootPoint.rotation;
             gameObject.SetActive(true);
-            body.linearVelocity = -transform.up * bulletSpeed;
+            body.linearVelocity = -transform.up * bulletSpd;
         }
 
     // Overload for backwards compatibility (uses default speed)
@@ -56,11 +56,8 @@ public class Projectile : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision)
     {
         EnemyHealth enemyHealth = collision.GetComponentInParent<EnemyHealth>();
-        if (enemyHealth != null)
-        {
-            enemyHealth.Damage(damage);
-            Destroy(gameObject);
-        }
+        enemyHealth.Damage(damage);
+        Destroy(gameObject);
     }
 }
 }

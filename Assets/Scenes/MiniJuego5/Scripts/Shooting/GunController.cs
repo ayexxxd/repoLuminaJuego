@@ -35,11 +35,9 @@ namespace TopDown.Shooting
 
         private void Update()
         {
-            cooldownTimer += Time.deltaTime;//aumentar timer de cooldown
-            if (objectToHide != null)
-            {//removes muzzle flash and shooting animation when not shooting 
-                objectToHide.SetActive(isShooting);
-            }
+            cooldownTimer += Time.deltaTime;//aumentar timer de cooldow
+            //removes muzzle flash and shooting animation when not shooting 
+            objectToHide.SetActive(isShooting);
         }
 
         private void OnShoot()
