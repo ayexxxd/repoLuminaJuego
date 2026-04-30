@@ -154,10 +154,8 @@ namespace DefensoresDeSoftware
                 botonContinuarTienda.onClick.AddListener(CerrarTienda);
             }
 
-            ActualizarTextosCostos();
         }
 
-        void ActualizarTextosCostos() { }
 
         void RefrescarBotonesTienda()
         {
@@ -180,8 +178,6 @@ namespace DefensoresDeSoftware
             UpdateTokens();
             RefrescarBotonesTienda();
         }
-
-        IEnumerator MostrarFeedback(string mensaje) { yield break; }
 
         public void MostrarTienda()
         {

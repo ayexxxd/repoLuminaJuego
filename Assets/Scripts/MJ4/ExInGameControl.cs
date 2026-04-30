@@ -5,21 +5,25 @@ namespace DefensoresDeSoftware
 {
     public class ExInGameControl : MonoBehaviour
     {
-
+        // Ajustes generales
         public static ExInGameControl Instance;
         public int initialLives = 3;
 
+        // Ajustes de la pantalla
         [Header("Límites Globales de Pantalla")]
         public float minX = -8f;
         public float maxX = 8f;
         public float maxY = 5f;
         public float minY = -5f;
 
+        // Ajustes de la tienda
         [Header("Costos de Mejoras (en Tokens)")]
         public int costoDamage = 2;
         public int costoVelocidad = 1;
-        public int costoVida = 3;
-
+        public int costoVida = 1;
+        
+        
+        // Aseguramos que solo haya una objeto gamecontrol
         void Awake()
         {
             if (Instance == null)
@@ -35,8 +39,13 @@ namespace DefensoresDeSoftware
             {
                 Destroy(gameObject);
             }
+            PlayerPrefs.SetInt("WhirlpoolTokens", 0);
+            PlayerPrefs.SetInt("BonusDamage", 0);     
+            PlayerPrefs.SetInt("BonusSpeed", 0);
+            PlayerPrefs.Save();
         }
 
+        // Controla las vidas y el daño y comunica con el ui
         public void TakeDamage(int damageAmount)
         {
             int currentLives = PlayerPrefs.GetInt("Lives", initialLives);
@@ -57,7 +66,6 @@ namespace DefensoresDeSoftware
             int tokens = PlayerPrefs.GetInt("WhirlpoolTokens", 0);
             tokens++;
             PlayerPrefs.SetInt("WhirlpoolTokens", tokens);
-            PlayerPrefs.Save();
 
             ExInUIController ui = FindAnyObjectByType<ExInUIController>();
             if (ui != null) ui.UpdateTokens();
