@@ -5,10 +5,9 @@ namespace DefensoresDeSoftware
 {
     public class ExInGameControl : MonoBehaviour
     {
-        // Variable global para acceder a este script desde cualquier lugar
+
         public static ExInGameControl Instance;
         public int initialLives = 3;
-
 
         [Header("Límites Globales de Pantalla")]
         public float minX = -8f;
@@ -16,9 +15,6 @@ namespace DefensoresDeSoftware
         public float maxY = 5f;
         public float minY = -5f;
 
-        // ==========================================
-        //        COSTOS DE MEJORAS (Editables)
-        // ==========================================
         [Header("Costos de Mejoras (en Tokens)")]
         public int costoDamage = 2;
         public int costoVelocidad = 1;
@@ -31,7 +27,7 @@ namespace DefensoresDeSoftware
                 Instance = this;
                 DontDestroyOnLoad(gameObject); 
                 PlayerPrefs.SetInt("Lives", initialLives);
-                // Reseteamos las mejoras al iniciar una partida nueva
+
                 PlayerPrefs.SetInt("BonusDamage", 0);
                 PlayerPrefs.SetInt("BonusSpeed", 0);
             }
@@ -67,13 +63,6 @@ namespace DefensoresDeSoftware
             if (ui != null) ui.UpdateTokens();
         }
 
-        // ==========================================
-        //        SISTEMA DE MEJORAS
-        // ==========================================
-
-        /// <summary>
-        /// Intenta comprar la mejora solicitada. Devuelve true si la compra fue exitosa.
-        /// </summary>
         public bool ComprarMejora(TipoMejora mejora)
         {
             int tokens = PlayerPrefs.GetInt("WhirlpoolTokens", 0);
@@ -85,12 +74,10 @@ namespace DefensoresDeSoftware
                 return false;
             }
 
-            // Descontamos los tokens
             tokens -= costo;
             PlayerPrefs.SetInt("WhirlpoolTokens", tokens);
             PlayerPrefs.Save();
 
-            // Aplicamos la mejora
             switch (mejora)
             {
                 case TipoMejora.Dano:
@@ -106,7 +93,7 @@ namespace DefensoresDeSoftware
                 case TipoMejora.Vida:
                     int currentLives = PlayerPrefs.GetInt("Lives", initialLives);
                     PlayerPrefs.SetInt("Lives", currentLives + 1);
-                    // Actualizamos el HUD de vidas
+
                     ExInUIController ui = FindAnyObjectByType<ExInUIController>();
                     if (ui != null) ui.UpdateLives();
                     break;
@@ -115,7 +102,6 @@ namespace DefensoresDeSoftware
             PlayerPrefs.Save();
             Debug.Log("Mejora comprada: " + mejora + " | Tokens restantes: " + tokens);
 
-            // Notificamos al jugador para que recargue sus stats
             ExInPlayerControl player = FindAnyObjectByType<ExInPlayerControl>();
             if (player != null) player.AplicarMejoras();
 

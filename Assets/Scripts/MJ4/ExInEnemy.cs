@@ -7,7 +7,7 @@ namespace DefensoresDeSoftware
     {
      
         [Header("Configuración Básica")]
-        public int lives = 3; // Puedes cambiar este número en el Inspector de Unity
+        public int lives = 3;
         public float knockbackFuerza = 5f;
         public int damageAlChocar = 1;
         public float speed = 3f;
@@ -16,7 +16,7 @@ namespace DefensoresDeSoftware
         public Transform firePoint;
         public float fireRate = 2f; 
 
-        private float direccionX = -1f;     // -1 = Izquierda, 1 = Derecha
+        private float direccionX = -1f;
 
         [Header("Comportamientos")]
         
@@ -36,16 +36,15 @@ namespace DefensoresDeSoftware
         public int cantidadHijos = 2;
         public float fuerzaExplosionHijos = 5f;
 
-
         private SpriteRenderer spriteRenderer;
         private Vector2 inerciaActiva;
         private bool seEstaCerrandoElJuego = false;
 
         void Start()
         {
-            // Unity busca el SpriteRenderer en este mismo objeto y lo guarda en la variable
+
             spriteRenderer = GetComponent<SpriteRenderer>();
-            // Si el enemigo no es kamikaze (Null), encendemos su ciclo de disparo
+
             if (patronDisparo != TipoDisparo.Null)
             {
                 StartCoroutine(RutinaDeDisparo());
@@ -65,7 +64,7 @@ namespace DefensoresDeSoftware
 
         void FixedUpdate()
         {
-            // 1. Calculamos la velocidad base deseada por el cerebro del enemigo
+
             Vector2 velocidadBase = Vector2.zero;
 
             if (patronMovimiento == TipoMovimiento.Estatico) 
@@ -100,40 +99,30 @@ namespace DefensoresDeSoftware
             {
                 if (playerTransform != null)
                 {
-                    // 1. Matemáticas: Destino - Origen = Dirección
+
                     Vector2 direccionHaciaJugador = (playerTransform.position - transform.position).normalized;
                     
-                    // 2. Aplicamos la fuerza de empuje en esa dirección exacta
+
                     velocidadBase = direccionHaciaJugador * speed;
 
-                    // Opcional: Descomenta estas dos líneas de abajo si quieres que el "dibujo" 
-                    // del enemigo también rote para mirar físicamente hacia el jugador.
-                    // float angulo = Mathf.Atan2(direccionHaciaJugador.y, direccionHaciaJugador.x) * Mathf.Rad2Deg;
-                    // rig.MoveRotation(angulo);
                 }
                 else 
                 {
-                    // Si el jugador ya murió, sigue volando recto hacia donde estaba mirando
+
                     velocidadBase = new Vector2(direccionX * speed, 0);
                 }
             }
 
-            // 2. Fricción de la inercia (para la explosión de los hijos)
             inerciaActiva = Vector2.Lerp(inerciaActiva, Vector2.zero, Time.fixedDeltaTime * 5f);
 
-            // 3. Sumamos la velocidad del cerebro + la inercia física
             Vector2 velocidadTotal = velocidadBase + inerciaActiva;
 
-            // --- TU NUEVO SISTEMA ANTI-JITTERING ---
-
-            // 4. Calculamos la posición futura imaginaria (igual que en el Player)
             Vector2 posicionFutura = rig.position + (velocidadTotal * Time.fixedDeltaTime);
 
-            // 5. Sistema de Rebote en X: Evaluamos el futuro para reaccionar a tiempo
             if (posicionFutura.x <= ExInGameControl.Instance.minX)
             {
-                direccionX = 1f; // Cambiamos de dirección
-                posicionFutura.x = ExInGameControl.Instance.minX; // Lo pegamos exacto a la pared para que no se salga ni un pixel
+                direccionX = 1f;
+                posicionFutura.x = ExInGameControl.Instance.minX;
             }
             else if (posicionFutura.x >= ExInGameControl.Instance.maxX)
             {
@@ -141,14 +130,11 @@ namespace DefensoresDeSoftware
                 posicionFutura.x = ExInGameControl.Instance.maxX;
             }
 
-            // 6. Límite estricto en Y (Muro invisible, igual que el Player)
             posicionFutura.y = Mathf.Clamp(posicionFutura.y, ExInGameControl.Instance.minY, ExInGameControl.Instance.maxY);
 
-            // 7. Movemos el objeto de forma segura y suave
             rig.MovePosition(posicionFutura);
         }
 
-        // Hilo secundario que controla el ritmo de ataque
         IEnumerator RutinaDeDisparo()
         {
             while (true) 
@@ -165,7 +151,7 @@ namespace DefensoresDeSoftware
         {
             GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, Quaternion.identity);
             ExInBullet bulletScript = newBullet.GetComponent<ExInBullet>();
-            // La bala ahora se dispara hacia la dirección a la que esté mirando el enemigo
+
             if (bulletScript != null) bulletScript.Fire(new Vector2(direccionX, 0)); 
         }
 
@@ -186,12 +172,12 @@ namespace DefensoresDeSoftware
         }
         void DisparoEnX()
         {
-            // Solo usamos las 4 esquinas (diagonales) y las normalizamos para que viajen a velocidad constante
+
             Vector2[] direcciones = {
-                new Vector2(1, 1).normalized,   // Arriba a la derecha
-                new Vector2(-1, 1).normalized,  // Arriba a la izquierda
-                new Vector2(1, -1).normalized,  // Abajo a la derecha
-                new Vector2(-1, -1).normalized  // Abajo a la izquierda
+                new Vector2(1, 1).normalized,
+                new Vector2(-1, 1).normalized,
+                new Vector2(1, -1).normalized,
+                new Vector2(-1, -1).normalized
             };
 
             foreach (Vector2 dir in direcciones)
@@ -206,15 +192,14 @@ namespace DefensoresDeSoftware
         {
             if (collision.gameObject.CompareTag("Player")) 
             {
-                // Buscamos el script del jugador en el objeto con el que chocamos
+
                 ExInPlayerControl playerScript = collision.gameObject.GetComponent<ExInPlayerControl>();
                 if (playerScript != null)
                 {
-                    // El jugador hace su flash rojo y procesa el daño
+
                     playerScript.GetDamaged(damageAlChocar);
                 }
 
-                // Ahora sí, destruimos a este enemigo
                 Destroy(this.gameObject);
             }
         }
@@ -226,13 +211,11 @@ namespace DefensoresDeSoftware
             
             if (lives <= 0)
             {
-                // Si muere, lo destruimos y NO intentamos hacer el parpadeo
+
                 Destroy(gameObject);
-                return; // Esta línea es clave: detiene la función aquí mismo y no lee lo de abajo
+                return;
             }
 
-            // Si llegó hasta aquí, significa que sobrevivió al golpe.
-            // Aplicamos el empuje y el parpadeo.
             RecibirInercia(Vector2.right * knockbackFuerza);
 
             if (spriteRenderer != null)
@@ -241,7 +224,6 @@ namespace DefensoresDeSoftware
             }
         }
 
-        // 3. Agrega esta nueva función al final del script:
         IEnumerator RedFlashEffect()
         {
             if (spriteRenderer != null) 
@@ -251,13 +233,12 @@ namespace DefensoresDeSoftware
                 spriteRenderer.color = Color.white;
             }
         }
-        // Unity llama a esto automáticamente cuando cierras la ventana del juego
+
         void OnApplicationQuit()
         {
             seEstaCerrandoElJuego = true;
         }
 
-        // Unity llama a esto 1 milisegundo antes de borrar el objeto de la memoria RAM
         void OnDestroy()
         {
             if (seEstaCerrandoElJuego || !gameObject.scene.isLoaded) 
@@ -267,13 +248,12 @@ namespace DefensoresDeSoftware
             {
                 for (int i = 0; i < cantidadHijos; i++)
                 {
-                    // --- NUEVA LÓGICA DE DIRECCIÓN ---
-                    // Si 'i' es un número par (ej. 0), la Y es positiva (arriba). Si es impar (ej. 1), es negativa (abajo).
+
                     float direccionY = (i % 2 == 0) ? 1f : -1f; 
                     float direccionX = Random.Range(0f, 1f); 
 
                     Vector2 direccionCalculada = new Vector2(direccionX, direccionY).normalized;                   
-                    // Calculamos dónde nacen usando nuestra nueva dirección
+
                     Vector2 spawnPos = (Vector2)transform.position + (direccionCalculada * 0.5f);
 
                     GameObject nuevoHijo = Instantiate(enemigoHijoPrefab, spawnPos, Quaternion.identity);
@@ -281,7 +261,7 @@ namespace DefensoresDeSoftware
                     ExInEnemy scriptHijo = nuevoHijo.GetComponent<ExInEnemy>();
                     if (scriptHijo != null)
                     {
-                        // Le inyectamos la inercia con la dirección que acabamos de construir
+
                         scriptHijo.RecibirInercia(direccionCalculada * fuerzaExplosionHijos);
                     }
                 }

@@ -24,7 +24,6 @@ namespace DefensoresDeSoftware
         [Header("Indicador de Nivel")]
         public TextMeshProUGUI textoNivel;
 
-        // --- TRIVIA ---
         [Header("Sistema de Trivia")]
         public GameObject panelTrivia; 
         public TextMeshProUGUI textoPregunta;
@@ -35,19 +34,13 @@ namespace DefensoresDeSoftware
         [HideInInspector]
         public bool triviaFinalizada = false;
 
-        // ==========================================
-        //        PANEL DE TIENDA DE MEJORAS
-        // ==========================================
         [Header("Tienda de Mejoras")]
         public GameObject panelTienda;
 
-        // Botones de compra
         public Button botonCompraDano;
         public Button botonCompraVelocidad;
         public Button botonCompraVida;
         public Button botonContinuarTienda;
-
-        // ==========================================
 
         void Start()
         {
@@ -59,10 +52,6 @@ namespace DefensoresDeSoftware
             UpdateTokens();
             ConfigurarBotonesTienda();
         }
-
-        // ----------------------------------------------------------------
-        //  VIDAS Y NIVEL
-        // ----------------------------------------------------------------
 
         public void UpdateLives()
         {
@@ -93,22 +82,13 @@ namespace DefensoresDeSoftware
                 textoNivel.text = "Nivel: " + nivelActual;
         }
 
-        // ----------------------------------------------------------------
-        //  TOKENS
-        // ----------------------------------------------------------------
-
         public void UpdateTokens() 
         {
             if (textoTokens != null)
                 textoTokens.text = PlayerPrefs.GetInt("WhirlpoolTokens", 0).ToString();
 
-            // Refrescamos los colores de los botones según si el jugador puede comprar
             RefrescarBotonesTienda();
         }
-
-        // ----------------------------------------------------------------
-        //  TRIVIA
-        // ----------------------------------------------------------------
 
         public void MostrarTrivia() 
         {
@@ -116,7 +96,7 @@ namespace DefensoresDeSoftware
             {
                 Debug.LogWarning("No hay preguntas configuradas en el Inspector.");
                 triviaFinalizada = true;
-                // Si no hay trivia, mostramos la tienda directamente
+
                 MostrarTienda();
                 return;
             }
@@ -147,13 +127,8 @@ namespace DefensoresDeSoftware
             
             if (panelTrivia != null) panelTrivia.SetActive(false);
 
-            // Después de la trivia → abrimos la Tienda antes de continuar
             MostrarTienda();
         }
-
-        // ----------------------------------------------------------------
-        //  TIENDA DE MEJORAS
-        // ----------------------------------------------------------------
 
         void ConfigurarBotonesTienda()
         {
@@ -172,7 +147,7 @@ namespace DefensoresDeSoftware
                 botonCompraVida.onClick.RemoveAllListeners();
                 botonCompraVida.onClick.AddListener(() => IntentarCompra(TipoMejora.Vida));
             }
-            // 4to botón: Continuar (siempre interactable)
+
             if (botonContinuarTienda != null)
             {
                 botonContinuarTienda.onClick.RemoveAllListeners();
@@ -182,7 +157,7 @@ namespace DefensoresDeSoftware
             ActualizarTextosCostos();
         }
 
-        void ActualizarTextosCostos() { } // textos manejados manualmente en la escena
+        void ActualizarTextosCostos() { }
 
         void RefrescarBotonesTienda()
         {
@@ -206,7 +181,7 @@ namespace DefensoresDeSoftware
             RefrescarBotonesTienda();
         }
 
-        IEnumerator MostrarFeedback(string mensaje) { yield break; } // eliminado
+        IEnumerator MostrarFeedback(string mensaje) { yield break; }
 
         public void MostrarTienda()
         {
@@ -216,24 +191,17 @@ namespace DefensoresDeSoftware
                 RefrescarBotonesTienda();
                 ActualizarTextosCostos();
             }
-            // El juego queda pausado (timeScale = 0 viene de la Trivia, o lo pausamos aquí)
+
             Time.timeScale = 0f;
         }
 
-        /// <summary>
-        /// Llamado por el botón "Continuar" del panel de Tienda.
-        /// </summary>
         public void CerrarTienda()
         {
             if (panelTienda != null) panelTienda.SetActive(false);
             Time.timeScale = 1f;
-            triviaFinalizada = true; // Ahora sí le avisamos al Spawner que puede seguir
+            triviaFinalizada = true;
         }
 
-        // ----------------------------------------------------------------
-        //  SALTAR OLEADA
-        // ----------------------------------------------------------------
-
-        void ConfigurarBotonSaltarOleada() { } // eliminado, ya no se usa
+        void ConfigurarBotonSaltarOleada() { }
     }
 }
