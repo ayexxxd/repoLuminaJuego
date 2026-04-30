@@ -4,8 +4,9 @@ using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject pausePanel;
-    private bool isPaused = false;
+    [SerializeField] private GameObject pausePanel;//referncia al panel
+    //SpriteRenderer player;//referencia al sprite del jugador para ocultarlo en pausa
+    private bool paused = false;
 
     private void Start()
     {
@@ -16,35 +17,28 @@ public class PauseMenu : MonoBehaviour
     {
         if (Keyboard.current.pKey.wasPressedThisFrame)
         {
-            TogglePause();
-        }
-    }
-
-    public void TogglePause()
-    {
-        if (isPaused)
-            Resume();
+            if (paused)
+                Resume();
         else
             Pause();
+        }
     }
-
     public void Pause()
     {
         pausePanel.SetActive(true);
         Time.timeScale = 0f;
-        isPaused = true;
+        paused = true;
     }
 
     public void Resume()
-    {
+    {//quitar panel de pausa
         pausePanel.SetActive(false);
-        Time.timeScale = 1f;
-        isPaused = false;
+        Time.timeScale = 1f;//resumir el tiempo
+        paused = false;
     }
 
     public void Leave()
-    {
-        //Time.timeScale = 1f;
-        SceneManager.LoadScene("Startcene");
+    {//funcion del boton de salir al menu
+        SceneManager.LoadScene("StartScene");
     }
 }

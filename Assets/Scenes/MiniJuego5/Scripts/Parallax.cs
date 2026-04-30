@@ -1,16 +1,14 @@
 using UnityEngine;
 
-public class Parallax : MonoBehaviour
+public class Parallax : MonoBehaviour//no es parallax real, es un sistema de repeticion de fondo
 {
-    public Transform player;
-    private float width;
-    private float height;
+    public Transform player;//referencia al jugador
+    private float length, height;//ancho del sprite para calcular el punto de repeticion
 
     void Start()
     {
-        SpriteRenderer sr = GetComponent<SpriteRenderer>();
-        width = sr.bounds.size.x;
-        height = sr.bounds.size.y;
+        length = GetComponent<SpriteRenderer>().bounds.size.x;
+        height = GetComponent<SpriteRenderer>().bounds.size.y;
     }
 
     void Update()
@@ -18,17 +16,17 @@ public class Parallax : MonoBehaviour
         Vector3 pos = transform.position;
         Vector3 playerPos = player.position;
 
-        // Horizontal reposition
-        if (playerPos.x > pos.x + width)
+        //posicion horizontal
+        if (playerPos.x > pos.x + length)
         {
-            transform.position = new Vector3(pos.x + width * 2, pos.y, pos.z);
+            transform.position = new Vector3(pos.x + length * 2, pos.y, pos.z);
         }
-        else if (playerPos.x < pos.x - width)
+        else if (playerPos.x < pos.x - length)
         {
-            transform.position = new Vector3(pos.x - width * 2, pos.y, pos.z);
+            transform.position = new Vector3(pos.x - length * 2, pos.y, pos.z);
         }
 
-        // Vertical reposition
+        //posicion vertical
         if (playerPos.y > pos.y + height)
         {
             transform.position = new Vector3(transform.position.x, pos.y + height * 2, pos.z);
