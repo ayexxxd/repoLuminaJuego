@@ -17,7 +17,7 @@ public class Parallax : MonoBehaviour//no es parallax real, es un sistema de rep
         Vector3 playerPos = player.position;
 
         //posicion horizontal
-        if (playerPos.x > pos.x + length)
+        if (playerPos.x > pos.x + length)//si el jugador se mueve mas alla del ancho del sprite a la derecha
         {
             transform.position = new Vector3(pos.x + length * 2, pos.y, pos.z);
         }
@@ -27,7 +27,7 @@ public class Parallax : MonoBehaviour//no es parallax real, es un sistema de rep
         }
 
         //posicion vertical
-        if (playerPos.y > pos.y + height)
+        if (playerPos.y > pos.y + height)//si el jugador se mueve mas alla del alto del sprite hacia arriba
         {
             transform.position = new Vector3(transform.position.x, pos.y + height * 2, pos.z);
         }
