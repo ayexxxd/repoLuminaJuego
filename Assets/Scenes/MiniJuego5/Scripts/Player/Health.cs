@@ -8,6 +8,7 @@ public class Health : MonoBehaviour
 
     [SerializeField] private int health = 100;//vida actual
     [SerializeField] private int healthmax = 100;//vida maxima`
+    private bool isDead;
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
 
@@ -36,6 +37,11 @@ public class Health : MonoBehaviour
 
     void Update()
     {
+        if (isDead)
+        {
+            return;
+        }
+
         if (Keyboard.current != null && Keyboard.current.kKey.wasPressedThisFrame)
         {
             Damage(10);
@@ -80,8 +86,12 @@ public class Health : MonoBehaviour
     }
     private void Die()
     {
-            SceneManager.LoadScene("ShooterEnd");
-            Destroy(gameObject);
+        if (isDead)
+        {
+            return;
+        }
+        isDead = true;
+        SceneManager.LoadScene("ShooterEnd");
     }
     }
 

@@ -4,6 +4,7 @@ namespace TopDown.Enemy{//namespace to organize code and avoid naming conflicts
 public class EnemyHealth : MonoBehaviour
 {
     [SerializeField] private int health = 100;
+    private bool isDead;
     private SpriteRenderer spriteRen;//referencia al sprite renderer para cambiar color al recibir daño
     private Color ogColor;//guardar color original
     private Vector3 ogScale;//guardar tamaño original
@@ -58,8 +59,20 @@ public class EnemyHealth : MonoBehaviour
     }
 
     private void Die()
-    {   //aumentar score al matar enemigo, usando el tag del enemigo para determinar cuantos puntos da
+    {
+            if (isDead)
+            {
+                return;
+            }
+
+            isDead = true;
+            //aumentar score al matar enemigo, usando el tag del enemigo para determinar cuantos puntos da
             ScoreManager.instance.EnemyKilled(gameObject.tag);
+            Spawner spawner = FindAnyObjectByType<Spawner>();
+            if (spawner != null)
+            {
+                spawner.EnemyDied();
+            }
             Destroy(gameObject);//y borrrar enemigo
 
     
