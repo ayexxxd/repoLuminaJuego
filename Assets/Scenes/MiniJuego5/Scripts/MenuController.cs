@@ -16,7 +16,8 @@ public class MenuController : MonoBehaviour
     }
     public void ExitGame()
     {
-        UnityEditor.EditorApplication.isPlaying = false;
+        SceneManager.LoadScene("MenuScene");
+        //UnityEditor.EditorApplication.isPlaying = false;
         //Application.Quit();//funcion del boton para salir en app
     }
     public void OpenInstructions()

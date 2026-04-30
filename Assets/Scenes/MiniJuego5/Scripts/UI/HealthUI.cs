@@ -32,21 +32,11 @@ public class HealthBar : MonoBehaviour
     }
     private void Update()
     {
-        if (playerHealth != null)
-        {
-            UpdateBar(playerHealth.getHealth());
-        }
-
-        if (spawner != null)
-        {
-            UpdateWave(spawner.CurrentWave, spawner.TotalWaves);
-        }
+        UpdateBar(playerHealth.getHealth());
+        UpdateWave(spawner.CurrentWave, spawner.TotalWaves);
     }
-    public void UpdateStats(int damage, float speed, float cooldown)
+    /*public void UpdateStats(int damage, float speed, float cooldown)
     {
-        if (statsText != null)
-        {
-            statsText.text = "DMG: " + damage + " SPD: " + speed + " CD: "+ cooldown;
-        }
-}
+        statsText.text = "DMG: " + damage + " SPD: " + speed + " CD: "+ cooldown;
+}*/
 }}  

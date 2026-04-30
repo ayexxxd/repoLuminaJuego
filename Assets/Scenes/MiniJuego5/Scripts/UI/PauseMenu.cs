@@ -26,7 +26,7 @@ public class PauseMenu : MonoBehaviour
     public void Pause()
     {
         pausePanel.SetActive(true);
-        Time.timeScale = 0f;
+        Time.timeScale = 0f;//pausar el tiempo
         paused = true;
     }
 
@@ -41,4 +41,5 @@ public class PauseMenu : MonoBehaviour
     {//funcion del boton de salir al menu
         SceneManager.LoadScene("StartScene");
     }
+
 }
