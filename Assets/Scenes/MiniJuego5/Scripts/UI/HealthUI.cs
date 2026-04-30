@@ -25,15 +25,15 @@ public class HealthBar : MonoBehaviour
     }
     private void UpdateWave(int currentWave, int totalWaves)
     {
-        if (waveText != null)
-        {
-            waveText.text = "OLEADA: " + currentWave + "/" + totalWaves;
-        }
+        waveText.text = "OLEADA: " + currentWave + "/" + totalWaves;
     }
     private void Update()
     {
-        UpdateBar(playerHealth.getHealth());
-        UpdateWave(spawner.CurrentWave, spawner.TotalWaves);
+        if (waveText!=null && spawner != null)
+        {
+            UpdateBar(playerHealth.getHealth());
+            UpdateWave(spawner.CurrentWave, spawner.TotalWaves);
+        }
     }
     /*public void UpdateStats(int damage, float speed, float cooldown)
     {

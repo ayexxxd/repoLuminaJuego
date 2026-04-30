@@ -154,10 +154,8 @@ namespace DefensoresDeSoftware
                 botonContinuarTienda.onClick.AddListener(CerrarTienda);
             }
 
-            ActualizarTextosCostos();
         }
 
-        void ActualizarTextosCostos() { }
 
         void RefrescarBotonesTienda()
         {
@@ -181,15 +179,12 @@ namespace DefensoresDeSoftware
             RefrescarBotonesTienda();
         }
 
-        IEnumerator MostrarFeedback(string mensaje) { yield break; }
-
         public void MostrarTienda()
         {
             if (panelTienda != null)
             {
                 panelTienda.SetActive(true);
                 RefrescarBotonesTienda();
-                ActualizarTextosCostos();
             }
 
             Time.timeScale = 0f;

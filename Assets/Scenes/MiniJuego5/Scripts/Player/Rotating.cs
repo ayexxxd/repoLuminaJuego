@@ -13,7 +13,7 @@ public class Rotating : MonoBehaviour
         transform.eulerAngles = new Vector3(0,0,lookAngle + 90f);
     }
 
-    private float AngleBetweenPointsTwoPoints(Vector3 a, Vector3 b)//funcion para calcular el angulo entre dos puntos
+    private float AngleBetweenPointsTwoPoints(Vector3 a, Vector3 b)//funcion trig para calcular el angulo entre dos puntos
     {
         return Mathf.Atan2(a.y - b.y, a.x - b.x) * Mathf.Rad2Deg;
     }

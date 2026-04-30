@@ -9,6 +9,12 @@ public class ScoreManager : MonoBehaviour
     [SerializeField] private int pointsForEnemyS = 10;
     [SerializeField] private int pointsForEnemyM = 25;
     [SerializeField] private int pointsForEnemyL = 50;
+    private void Awake()
+    {
+        //una sola instancia de ScoreManager en toda la escena
+        instance =this;
+        DontDestroyOnLoad(gameObject);
+    }
     private void Start()
     {
         UpdateScoreDisplay();

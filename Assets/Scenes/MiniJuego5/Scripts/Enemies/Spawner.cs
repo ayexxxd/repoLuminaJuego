@@ -15,7 +15,7 @@ public class Spawner : MonoBehaviour
 
     [SerializeField] private float spawnInterval = 1.5f;
     [SerializeField] private int enemiesPerWave = 5;
-    [SerializeField] private float pauseBetweenWaves = 5f;
+    [SerializeField] private float pauseBetweenWaves = 1f;
     [SerializeField] private GameObject healPrefab;
     [SerializeField, Range(0f,1f)] private float healSpawn = 0.7f;//cheance que spanwea un heal item 
     [SerializeField] private int totalWaves = 10;//number of waves before game ends
@@ -30,6 +30,7 @@ public class Spawner : MonoBehaviour
     void Start()
     {//iniciar la rutina de oleadas
         StartCoroutine(WaveLoop());
+        PlayerPrefs.SetInt("CurrentWave", 1);//guardar oleada actual en player prefs
     }
 
     private IEnumerator WaveLoop()
@@ -48,6 +49,8 @@ public class Spawner : MonoBehaviour
             //esperar antes de siguiente oleada
             yield return new WaitForSeconds(pauseBetweenWaves);
 
+
+
             //puede aparecer un heal item
             if (Random.value < healSpawn)
             {//spawnea heal item en posicion aleatoria dentro de los mismos limites que los enemigos
@@ -63,26 +66,13 @@ public class Spawner : MonoBehaviour
     }
     private IEnumerator SpawnWave(int count)
     {
-        enemiesAliveInWave = count;//cuenta enemigos vivos
+        enemiesAliveInWave = count;
         for (int i = 0; i < count; i++)
         {
             SpawnRandomEnemy();//spawnea enemigo
             yield return new WaitForSeconds(spawnInterval);//espera antes de spawnear siguiente enemigo
         }
-    }/*
-    public void EnemyDied()
-    {
-        if (waveInProgress)
-        {
-            enemiesAliveInWave--;//reducir el numero de enemigos vivos
-            if (enemiesAliveInWave <= 0)
-            {//si no quedan enemigos vivos, disparar evento de oleada completa
-                enemiesAliveInWave = 0;
-                //onWaveComplete.Invoke();
-            }
-        }
-    }*/
-    
+    }
     private void SpawnRandomEnemy()
     {
         //array of enemty types
@@ -92,5 +82,16 @@ public class Spawner : MonoBehaviour
         //instantiates enemy at random position with no rotation
         Instantiate(randomEnemy, new Vector3(Random.Range(-5f, 5f), Random.Range(-6f, 6f), 0), Quaternion.identity);
     }
-
+    public void EnemyDied()
+    {
+        if (waveInProgress)
+        {
+            enemiesAliveInWave--;//reducir el numero de enemigos vivos
+            if (enemiesAliveInWave <= 0)
+            {//si no quedan enemigos vivos
+                enemiesAliveInWave = 0;
+                //onWaveComplete.Invoke();
+            }
+        }
+    }
 }}

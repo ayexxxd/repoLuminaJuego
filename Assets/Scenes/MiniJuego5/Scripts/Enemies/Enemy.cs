@@ -41,16 +41,13 @@ public class Enemy : MonoBehaviour
     }
 
     //inicia el daño
-    private void OnTriggerEnter2(Collider2D collider)
+    private void OnTriggerEnter2D(Collider2D collider)
     {   //si el jugador entra al rango del enemigo, iniciar el loop de daño
         if (collider.CompareTag("Player"))//compara tags
         {
             Health health = collider.GetComponent<Health>();
-            if (health != null)//si el objeto tiene componente de health, iniciar el loop de daño
-            {
-                damageCoroutine = StartCoroutine(Attack(health));
-                //llamamos funcion attack con el parametro de daño
-            }
+            damageCoroutine = StartCoroutine(Attack(health));
+            //llamamos funcion attack con el parametro de daño
         } 
     }
 
@@ -59,7 +56,7 @@ public class Enemy : MonoBehaviour
     {   //si jugador slae de rango, detener loop
         if (collider.CompareTag("Player"))
         {
-            if (damageCoroutine != null) StopCoroutine(damageCoroutine);
+            StopCoroutine(damageCoroutine);
         }
     }
 

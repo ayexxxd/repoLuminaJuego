@@ -50,7 +50,7 @@ namespace TopDown.Shooting
             if (projectile != null)
             {
                 projectile.SetDamage(currentDmg);
-                projectile.ShootBullet(firepoint, currentSpd);
+                projectile.ShootBullet(firepoint, currentSpd);//funcion para disparar bullet
             }
                 //anima personaje y muzzle flash
                 characterAnimator.SetBool("shoot", true);

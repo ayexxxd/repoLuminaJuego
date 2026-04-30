@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.SceneManagement;
 
 namespace DefensoresDeSoftware
 {
@@ -87,12 +88,6 @@ namespace DefensoresDeSoftware
             
             if (ui != null) ui.ActualizarNivel(currentWave);
 
-            if (currentWave > configuracionOleadas.Length)
-            {
-                Debug.Log("¡Juego Terminado!");
-                yield break; 
-            }
-
             isSpawning = true;
             oleadaSaltada = false;
 
@@ -152,6 +147,7 @@ namespace DefensoresDeSoftware
                 yield return new WaitUntil(() => GameObject.FindGameObjectsWithTag("Enemy").Length == 0);
                 Debug.Log("¡VICTORIA TOTAL!");
                 isSpawning = false;
+                SceneManager.LoadScene("ExInVictoria");
                 yield break; 
             }
 
