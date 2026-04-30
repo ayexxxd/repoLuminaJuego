@@ -16,7 +16,6 @@ namespace DefensoresDeSoftware
         public float fireRate = 0.25f; 
         public Vector2 fireDirection = Vector2.right; 
 
-        // Stats base (guardados para recalcular con mejoras)
         private float baseMoveSpeed;
         private int baseDamage = 1;
 
@@ -24,7 +23,6 @@ namespace DefensoresDeSoftware
         private Vector2 moveInput;
         private float nextFireTime = 0f;
 
-        // Stat actual de daño (modificado por upgrades)
         [HideInInspector] public int currentDamage = 1;
 
         void Start()
@@ -33,21 +31,16 @@ namespace DefensoresDeSoftware
             baseMoveSpeed = moveSpeed;
             baseDamage = 1;
 
-            // Cargamos las mejoras guardadas al iniciar
             AplicarMejoras();
         }
 
-        /// <summary>
-        /// Lee las mejoras de PlayerPrefs y actualiza los stats del jugador.
-        /// Se llama al inicio y cada vez que se compra una mejora.
-        /// </summary>
         public void AplicarMejoras()
         {
             int bonusDamage = PlayerPrefs.GetInt("BonusDamage", 0);
             int bonusSpeed  = PlayerPrefs.GetInt("BonusSpeed", 0);
 
             currentDamage = baseDamage + bonusDamage;
-            moveSpeed     = baseMoveSpeed + (bonusSpeed * 1f); // +1 unidad de vel por nivel
+            moveSpeed     = baseMoveSpeed + (bonusSpeed * 1f);
 
             Debug.Log($"[Player] Daño actual: {currentDamage} | Velocidad actual: {moveSpeed}");
         }
@@ -88,7 +81,7 @@ namespace DefensoresDeSoftware
             ExInBullet bulletScript = newBullet.GetComponent<ExInBullet>();
             if (bulletScript != null)
             {
-                // Usamos el daño actual (base + bonus de upgrades)
+
                 bulletScript.damage = currentDamage;
                 bulletScript.Fire(fireDirection);
             }

@@ -58,7 +58,6 @@ namespace DefensoresDeSoftware
 
         private bool isSpawning = false;
 
-        // Flag para interrumpir el spawn loop cuando se salta la oleada
         private bool oleadaSaltada = false;
 
         void Start()
@@ -74,10 +73,6 @@ namespace DefensoresDeSoftware
             }
         }
 
-        /// <summary>
-        /// Llamado desde la UI para saltar la oleada actual.
-        /// Interrumpe el spawn en curso y avanza a la siguiente.
-        /// </summary>
         public void SaltarOleadaActual()
         {
             if (!isSpawning) return;
@@ -99,12 +94,11 @@ namespace DefensoresDeSoftware
             }
 
             isSpawning = true;
-            oleadaSaltada = false; // Reiniciamos el flag al empezar una oleada nueva
+            oleadaSaltada = false;
 
             OleadaConfig oleadaActual = configuracionOleadas[currentWave - 1];
             int presupuestoRestante = oleadaActual.presupuesto;
 
-            // --- BOSS ---
             if (oleadaActual.enemigoForzado != null)
             {
                 Vector2 posicionFinal = CalcularPosicionConVarianza(oleadaActual.categoriaDelBoss);
@@ -112,7 +106,6 @@ namespace DefensoresDeSoftware
                 yield return new WaitForSeconds(timeBetweenSpawns * 2f); 
             }
 
-            // --- CICLO DE SPAWN (con salida anticipada si se salta) ---
             int conteoGrupoActual = 0; 
 
             while (presupuestoRestante > 0 && !oleadaSaltada)
@@ -145,19 +138,15 @@ namespace DefensoresDeSoftware
                 }
             }
 
-            // --- POST-OLEADA ---
-
-            // Mostramos la Trivia (que a su vez abrirá la Tienda al terminar)
             if (ui != null)
             {
                 ui.MostrarTrivia();
-                // Esperamos a que el jugador cierre la Tienda también
+
                 yield return new WaitUntil(() => ui.triviaFinalizada);
             }
 
             timeBetweenSpawns = Mathf.Max(0.5f, timeBetweenSpawns - speedUpPerWave); 
 
-            // Victoria total
             if (currentWave == configuracionOleadas.Length)
             {
                 yield return new WaitUntil(() => GameObject.FindGameObjectsWithTag("Enemy").Length == 0);
@@ -166,7 +155,6 @@ namespace DefensoresDeSoftware
                 yield break; 
             }
 
-            // Siguiente oleada
             currentWave++;
             isSpawning = false;
             oleadaSaltada = false;
