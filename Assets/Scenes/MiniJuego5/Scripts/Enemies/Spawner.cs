@@ -6,7 +6,7 @@ using TopDown.Shooting;
 namespace TopDown.Enemy{//namespace to organize code and avoid naming conflicts
 public class Spawner : MonoBehaviour
 {
-    // Static event that fires when a wave is complete - anyone can listen
+    //evento estatico
     public static UnityEvent onWaveComplete = new UnityEvent();
     //GameObject for each enemy type to spawn
     [SerializeField] private GameObject AlienS; 
@@ -18,83 +18,71 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float pauseBetweenWaves = 5f;
     [Header("Healer Item")]
     [SerializeField] private GameObject healPrefab;
-    [SerializeField, Range(0f,1f)] private float healSpawnChance = 0.5f;//1/3 chance by default
+    [SerializeField, Range(0f,1f)] private float healSpawn = 0.7f;//cheance que spanwea un heal item 
     [SerializeField] private int totalWaves = 10;//number of waves before game ends
 
-    private int currentWave = 1;
-    public int CurrentWave => currentWave;
-    public int TotalWaves => totalWaves;
+    private int currentWave = 1;//track de oleada actual
+    public int CurrentWave => currentWave;//propiedad para acceder a la oleada actual
+    public int TotalWaves => totalWaves;//propiedad para acceder al total de oleadas
     
-    private int enemiesAliveInWave = 0;
-    private bool waveInProgress = false;
+    private int enemiesAliveInWave = 0;//track de enemigos vivos en la oleada actual
+    private bool waveInProgress = false;//track si una oleada esta en progreso
 
     void Start()
-    {
-        Debug.Log($"Spawner started. onWaveComplete listeners: {onWaveComplete.GetPersistentEventCount()}");
+    {//iniciar la rutina de oleadas
         StartCoroutine(WaveLoop());
     }
 
     private IEnumerator WaveLoop()
     {
-        while (currentWave <= totalWaves)
+        while (currentWave <= totalWaves)//mientras no se hayan completado todas las oleadas
         {
-            //Debug.Log($"Wave {currentWave}");
             waveInProgress = true;
             yield return StartCoroutine(SpawnWave(enemiesPerWave));
-            //Debug.Log($"Wave {currentWave} complete");
             
-            // Wait for all enemies in this wave to be killed
-            while (enemiesAliveInWave > 0)
+            while (enemiesAliveInWave > 0)//espera a que todos los enemigos de la oleada mueran
             {
-                yield return new WaitForSeconds(0.5f); // Check every half second
+                yield return new WaitForSeconds(0.5f);//revisar cada medio segundo
             }
-            
-            Debug.Log("Wave complete! Firing onWaveComplete event.");
-            onWaveComplete?.Invoke(); // Fire the event - WordInputPanel listens to this
             waveInProgress = false;
             
-            //wait before the next wave
+            //esperar antes de siguiente oleada
             yield return new WaitForSeconds(pauseBetweenWaves);
 
-            //chance to spawn a healing pickup after the wave
-            if (Random.value < healSpawnChance)
-            {
+            //puede aparecer un heal item
+            if (Random.value < healSpawn)
+            {//spawnea heal item en posicion aleatoria dentro de los mismos limites que los enemigos
                 Vector3 spawnPos = new Vector3(Random.Range(-5f, 5f), Random.Range(-6f, 6f), 0f);
+                //instancia el heal item sin rotacion
                 Instantiate(healPrefab, spawnPos, Quaternion.identity);
             }
 
-            currentWave++;
-            PlayerPrefs.SetInt("CurrentWave", currentWave);//save current wave to PlayerPrefs for end screen display
-            enemiesPerWave += 3; // increase enemies per wave for difficulty
+            currentWave++;//sube el numero de oleada
+            PlayerPrefs.SetInt("CurrentWave", currentWave);//se guarda en player prefs
+            enemiesPerWave += 3;//incrementa el numero de enemigos por oleada
         }
     }
     private IEnumerator SpawnWave(int count)
     {
-        enemiesAliveInWave = count; // Track enemies for this wave
-        Debug.Log($"Spawning {count} enemies for wave {currentWave}");
+        enemiesAliveInWave = count;//cuenta enemigos vivos
         for (int i = 0; i < count; i++)
         {
-            SpawnRandomEnemy();
-            yield return new WaitForSeconds(spawnInterval);
+            SpawnRandomEnemy();//spawnea enemigo
+            yield return new WaitForSeconds(spawnInterval);//espera antes de spawnear siguiente enemigo
         }
-    }
-    
-    /// <summary>
-    /// Called by EnemyHealth when an enemy dies. Tracks wave completion.
-    /// </summary>
+    }/*
     public void EnemyDied()
     {
         if (waveInProgress)
         {
-            enemiesAliveInWave--;
-            Debug.Log($"Enemy died! Enemies remaining in wave: {enemiesAliveInWave}");
+            enemiesAliveInWave--;//reducir el numero de enemigos vivos
             if (enemiesAliveInWave <= 0)
-            {
-                enemiesAliveInWave = 0; // Prevent negative values
-                Debug.Log("All enemies defeated! Wave complete.");
+            {//si no quedan enemigos vivos, disparar evento de oleada completa
+                enemiesAliveInWave = 0;
+                //onWaveComplete.Invoke();
             }
         }
-    }
+    }*/
     
     private void SpawnRandomEnemy()
     {
