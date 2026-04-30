@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 6942920515316096780}
   - component: {fileID: 340664813445058455}
   - component: {fileID: 8727609618655419109}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Mosca
   m_TagString: Enemy
   m_Icon: {fileID: 0}
@@ -108,6 +108,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::DefensoresDeSoftware.ExInEnemy
   lives: 3
   knockbackFuerza: 8
+  damageAlChocar: 1
   speed: 3
   rig: {fileID: 8727609618655419109}
   bulletPrefab: {fileID: 0}
@@ -122,6 +123,7 @@ MonoBehaviour:
   enemigoHijoPrefab: {fileID: 0}
   cantidadHijos: 2
   fuerzaExplosionHijos: 15
+  spriteRenderer: {fileID: 188499183715561272}
 --- !u!70 &340664813445058455
 CapsuleCollider2D:
   m_ObjectHideFlags: 0

@@ -23,7 +23,7 @@ namespace DefensoresDeSoftware
         public TipoDisparo patronDisparo;
         public enum TipoDisparo { Null, HaciaAdelante, Estrella, EnX }
 
-        public enum TipoMovimiento { Estatico, Recto, Senoidal, Persecucion }
+        public enum TipoMovimiento { Estatico, Recto, Senoidal, Persecucion, PersecucionVectorial}
         public TipoMovimiento patronMovimiento = TipoMovimiento.Recto;
         
         public float velocidadOla = 5f;
@@ -36,19 +36,22 @@ namespace DefensoresDeSoftware
         public int cantidadHijos = 2;
         public float fuerzaExplosionHijos = 5f;
 
+
+        private SpriteRenderer spriteRenderer;
         private Vector2 inerciaActiva;
         private bool seEstaCerrandoElJuego = false;
 
         void Start()
         {
+            // Unity busca el SpriteRenderer en este mismo objeto y lo guarda en la variable
+            spriteRenderer = GetComponent<SpriteRenderer>();
             // Si el enemigo no es kamikaze (Null), encendemos su ciclo de disparo
             if (patronDisparo != TipoDisparo.Null)
             {
                 StartCoroutine(RutinaDeDisparo());
             }
 
-            // Si es de persecución y no le asignamos al jugador, lo busca automáticamente
-            if (patronMovimiento == TipoMovimiento.Persecucion && playerTransform == null)
+            if ((patronMovimiento == TipoMovimiento.Persecucion || patronMovimiento == TipoMovimiento.PersecucionVectorial) && playerTransform == null)
             {
                 GameObject player = GameObject.FindGameObjectWithTag("Player");
                 if (player != null) playerTransform = player.transform;
@@ -90,6 +93,27 @@ namespace DefensoresDeSoftware
                 }
                 else 
                 {
+                    velocidadBase = new Vector2(direccionX * speed, 0);
+                }
+            }
+            else if (patronMovimiento == TipoMovimiento.PersecucionVectorial)
+            {
+                if (playerTransform != null)
+                {
+                    // 1. Matemáticas: Destino - Origen = Dirección
+                    Vector2 direccionHaciaJugador = (playerTransform.position - transform.position).normalized;
+                    
+                    // 2. Aplicamos la fuerza de empuje en esa dirección exacta
+                    velocidadBase = direccionHaciaJugador * speed;
+
+                    // Opcional: Descomenta estas dos líneas de abajo si quieres que el "dibujo" 
+                    // del enemigo también rote para mirar físicamente hacia el jugador.
+                    // float angulo = Mathf.Atan2(direccionHaciaJugador.y, direccionHaciaJugador.x) * Mathf.Rad2Deg;
+                    // rig.MoveRotation(angulo);
+                }
+                else 
+                {
+                    // Si el jugador ya murió, sigue volando recto hacia donde estaba mirando
                     velocidadBase = new Vector2(direccionX * speed, 0);
                 }
             }
@@ -180,31 +204,53 @@ namespace DefensoresDeSoftware
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            // Verificamos si chocamos con el jugador
             if (collision.gameObject.CompareTag("Player")) 
             {
-                // Le mandamos el daño al GameControl ANTES de destruir al enemigo
-                ExInGameControl.Instance.TakeDamage(damageAlChocar);
+                // Buscamos el script del jugador en el objeto con el que chocamos
+                ExInPlayerControl playerScript = collision.gameObject.GetComponent<ExInPlayerControl>();
+                if (playerScript != null)
+                {
+                    // El jugador hace su flash rojo y procesa el daño
+                    playerScript.GetDamaged(damageAlChocar);
+                }
 
                 // Ahora sí, destruimos a este enemigo
                 Destroy(this.gameObject);
             }
         }
+        
 
         public void TakeDamage(int damage)
         {
             lives -= damage; 
             
-            // ¡Aquí está la magia del knockback!
-            // Vector2.right es exactamente lo mismo que escribir new Vector2(1, 0)
-            RecibirInercia(Vector2.right * knockbackFuerza);
-
             if (lives <= 0)
             {
+                // Si muere, lo destruimos y NO intentamos hacer el parpadeo
                 Destroy(gameObject);
+                return; // Esta línea es clave: detiene la función aquí mismo y no lee lo de abajo
+            }
+
+            // Si llegó hasta aquí, significa que sobrevivió al golpe.
+            // Aplicamos el empuje y el parpadeo.
+            RecibirInercia(Vector2.right * knockbackFuerza);
+
+            if (spriteRenderer != null)
+            {
+                StartCoroutine(RedFlashEffect());
             }
         }
 
+        // 3. Agrega esta nueva función al final del script:
+        IEnumerator RedFlashEffect()
+        {
+            if (spriteRenderer != null) 
+            {
+                spriteRenderer.color = Color.red;
+                yield return new WaitForSeconds(0.1f);
+                spriteRenderer.color = Color.white;
+            }
+        }
         // Unity llama a esto automáticamente cuando cierras la ventana del juego
         void OnApplicationQuit()
         {

@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -14,60 +15,108 @@ namespace DefensoresDeSoftware
         public Transform firePoint; 
         public float fireRate = 0.25f; 
         public Vector2 fireDirection = Vector2.right; 
-        
 
+        // Stats base (guardados para recalcular con mejoras)
+        private float baseMoveSpeed;
+        private int baseDamage = 1;
+
+        private SpriteRenderer spriteRenderer;
         private Vector2 moveInput;
         private float nextFireTime = 0f;
 
+        // Stat actual de daño (modificado por upgrades)
+        [HideInInspector] public int currentDamage = 1;
+
+        void Start()
+        {
+            spriteRenderer = GetComponent<SpriteRenderer>();
+            baseMoveSpeed = moveSpeed;
+            baseDamage = 1;
+
+            // Cargamos las mejoras guardadas al iniciar
+            AplicarMejoras();
+        }
+
+        /// <summary>
+        /// Lee las mejoras de PlayerPrefs y actualiza los stats del jugador.
+        /// Se llama al inicio y cada vez que se compra una mejora.
+        /// </summary>
+        public void AplicarMejoras()
+        {
+            int bonusDamage = PlayerPrefs.GetInt("BonusDamage", 0);
+            int bonusSpeed  = PlayerPrefs.GetInt("BonusSpeed", 0);
+
+            currentDamage = baseDamage + bonusDamage;
+            moveSpeed     = baseMoveSpeed + (bonusSpeed * 1f); // +1 unidad de vel por nivel
+
+            Debug.Log($"[Player] Daño actual: {currentDamage} | Velocidad actual: {moveSpeed}");
+        }
+
         void Update()
         {
-            // Variables temporales para registrar la intención de movimiento
             float xInput = 0f;
             float yInput = 0f;
             
-            // Leemos qué flechas del teclado está presionando el jugador
-            if (Keyboard.current.leftArrowKey.isPressed) xInput = -1f;
+            if (Keyboard.current.leftArrowKey.isPressed)  xInput = -1f;
             else if (Keyboard.current.rightArrowKey.isPressed) xInput = 1f;
 
-            if (Keyboard.current.downArrowKey.isPressed) yInput = -1f;
+            if (Keyboard.current.downArrowKey.isPressed)  yInput = -1f;
             else if (Keyboard.current.upArrowKey.isPressed) yInput = 1f;
 
-            // Recortamos el movimiento en diagonal para que no camine más rápido
             moveInput = new Vector2(xInput, yInput).normalized;
 
-            // Verificamos si presionó espacio y si ya pasó el tiempo de recarga del arma
             if (Keyboard.current.spaceKey.isPressed && Time.time >= nextFireTime)
             {
                 Shoot();
-                // Registramos en qué momento podrá volver a disparar
                 nextFireTime = Time.time + fireRate;
             }
         }
 
         void FixedUpdate()
         {
-            // 1. Calculamos a dónde intentará ir la nave en esta fracción de segundo
-            // (Time.fixedDeltaTime asegura que la velocidad sea constante sin importar los FPS)
             Vector2 posicionFutura = rig.position + (moveInput * moveSpeed * Time.fixedDeltaTime);
 
-            // 2. Le aplicamos el muro matemático a esa posición IMAGINARIA, antes de movernos
             posicionFutura.x = Mathf.Clamp(posicionFutura.x, ExInGameControl.Instance.minX, ExInGameControl.Instance.maxX);
             posicionFutura.y = Mathf.Clamp(posicionFutura.y, ExInGameControl.Instance.minY, ExInGameControl.Instance.maxY);
 
-            // 3. Movemos el objeto de forma segura, sin que choque ni vibre
             rig.MovePosition(posicionFutura);
         }
-
+        
         void Shoot()
         {
-            // Instanciamos una copia de la bala en la posición de nuestro "cañón"
             GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-            
-            // Buscamos el script de la bala para darle la orden de disparo
             ExInBullet bulletScript = newBullet.GetComponent<ExInBullet>();
             if (bulletScript != null)
             {
+                // Usamos el daño actual (base + bonus de upgrades)
+                bulletScript.damage = currentDamage;
                 bulletScript.Fire(fireDirection);
+            }
+        }
+
+        public void GetDamaged(int damage)
+        {
+            if (spriteRenderer != null && gameObject.activeInHierarchy)
+            {
+                StartCoroutine(RedFlashEffect());
+            }
+
+            if (ExInGameControl.Instance != null)
+            {
+                ExInGameControl.Instance.TakeDamage(damage);
+            }
+        }
+
+        IEnumerator RedFlashEffect()
+        {
+            if (spriteRenderer != null) 
+            {
+                spriteRenderer.color = Color.red;
+                yield return new WaitForSeconds(0.1f);
+                if (spriteRenderer != null)
+                {
+                    spriteRenderer.color = Color.white;
+                }
             }
         }
     }

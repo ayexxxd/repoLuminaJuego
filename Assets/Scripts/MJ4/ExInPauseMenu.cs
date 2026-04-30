@@ -36,6 +36,11 @@ namespace DefensoresDeSoftware
             // 1. Descongelamos el motor físico
             Time.timeScale = 1f; 
 
+            // --- NUEVO: Borramos los tokens acumulados de la memoria ---
+            PlayerPrefs.DeleteKey("WhirlpoolTokens");
+            PlayerPrefs.Save(); // Forzamos a Unity a guardar esta limpieza inmediatamente
+            // -----------------------------------------------------------
+
             // 2. Reiniciamos las vidas en el registro usando el valor por defecto de tu GameControl
             if (ExInGameControl.Instance != null)
             {

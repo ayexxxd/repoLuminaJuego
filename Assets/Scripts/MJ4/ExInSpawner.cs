@@ -1,21 +1,65 @@
 using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace DefensoresDeSoftware
 {
+    public enum CategoriaSpawn 
+    { 
+        General,
+        Flanco,
+        Especial,
+        Jefe
+    }
+
+    [System.Serializable]
+    public class EnemigoConfig
+    {
+        public GameObject prefab;
+        public int costo = 1; 
+        public int oleadaMinima = 1; 
+        public CategoriaSpawn categoriaRequerida = CategoriaSpawn.General; 
+    }
+
+    [System.Serializable]
+    public class PuntoSpawnConfig
+    {
+        public Transform punto; 
+        public CategoriaSpawn categoriaDelPunto = CategoriaSpawn.General; 
+        
+        [Header("Rango de Varianza")]
+        public Vector2 varianzaMin = new Vector2(-1f, -1f); 
+        public Vector2 varianzaMax = new Vector2(1f, 1f);
+    }
+
+    [System.Serializable]
+    public class OleadaConfig
+    {
+        public int presupuesto; 
+        public GameObject enemigoForzado; 
+        public CategoriaSpawn categoriaDelBoss = CategoriaSpawn.Jefe; 
+        public int enemigosPorGrupo = 2; 
+    }
+
     public class ExInSpawner : MonoBehaviour
     {
-        public GameObject[] enemyPrefabs; 
-        public Transform[] spawnPoints; 
+        [Header("Qué y Dónde")]
+        public EnemigoConfig[] enemigosDisponibles; 
+        public PuntoSpawnConfig[] spawnPoints; 
 
+        [Header("Configuración de Oleadas")]
         public int currentWave = 1;
+        public OleadaConfig[] configuracionOleadas; 
         
-        // Convertimos el número suelto en una lista de números.
-        // En Unity, podrás agregar elementos. Ej: Element 0 = 5, Element 1 = 8.
-        public int[] enemiesPerWave; 
-        
-        public float timeBetweenSpawns = 2f;
+        [Header("Tiempos y Dificultad")]
+        public float timeBetweenSpawns = 2f; 
+        public float timeBetweenWaves = 6f; 
+        public float speedUpPerWave = 0.2f; 
+
         private bool isSpawning = false;
+
+        // Flag para interrumpir el spawn loop cuando se salta la oleada
+        private bool oleadaSaltada = false;
 
         void Start()
         {
@@ -30,41 +74,145 @@ namespace DefensoresDeSoftware
             }
         }
 
+        /// <summary>
+        /// Llamado desde la UI para saltar la oleada actual.
+        /// Interrumpe el spawn en curso y avanza a la siguiente.
+        /// </summary>
+        public void SaltarOleadaActual()
+        {
+            if (!isSpawning) return;
+
+            oleadaSaltada = true;
+            Debug.Log("[Spawner] Oleada saltada → avanzando a la siguiente.");
+        }
+
         IEnumerator SpawnWave()
         {
-            // CANDADO DE SEGURIDAD: Comprobamos si la oleada actual existe en nuestra lista.
-            // Si currentWave es mayor al tamaño de nuestro arreglo, significa que el jugador ganó.
-            if (currentWave > enemiesPerWave.Length)
+            ExInUIController ui = FindAnyObjectByType<ExInUIController>();
+            
+            if (ui != null) ui.ActualizarNivel(currentWave);
+
+            if (currentWave > configuracionOleadas.Length)
             {
-                Debug.Log("¡Todas las oleadas completadas! No hay más enemigos.");
-                // yield break funciona como un "return", aborta la corrutina inmediatamente.
+                Debug.Log("¡Juego Terminado!");
                 yield break; 
             }
 
             isSpawning = true;
-            Debug.Log("Iniciando Oleada " + currentWave);
+            oleadaSaltada = false; // Reiniciamos el flag al empezar una oleada nueva
 
-            // TRADUCCIÓN DE ÍNDICES: Restamos 1 a la oleada actual. 
-            // Si es la Oleada 1, buscará el valor en la posición 0 del arreglo.
-            int enemiesThisWave = enemiesPerWave[currentWave - 1];
+            OleadaConfig oleadaActual = configuracionOleadas[currentWave - 1];
+            int presupuestoRestante = oleadaActual.presupuesto;
 
-            // Nuestro ciclo for ahora usa el límite exacto que configuraste para esta ronda
-            for (int i = 0; i < enemiesThisWave; i++)
+            // --- BOSS ---
+            if (oleadaActual.enemigoForzado != null)
             {
-                GameObject randomEnemy = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
-                Transform randomPoint = spawnPoints[Random.Range(0, spawnPoints.Length)];
-
-                Instantiate(randomEnemy, randomPoint.position, Quaternion.identity);
-
-                yield return new WaitForSeconds(timeBetweenSpawns);
+                Vector2 posicionFinal = CalcularPosicionConVarianza(oleadaActual.categoriaDelBoss);
+                Instantiate(oleadaActual.enemigoForzado, posicionFinal, Quaternion.identity);
+                yield return new WaitForSeconds(timeBetweenSpawns * 2f); 
             }
 
-            // Terminó de lanzar los enemigos de esta ronda
-            isSpawning = false;
-            
-            // Preparamos el reloj interno para la siguiente ronda, 
-            // pero ya no sumamos enemigos matemáticamente.
+            // --- CICLO DE SPAWN (con salida anticipada si se salta) ---
+            int conteoGrupoActual = 0; 
+
+            while (presupuestoRestante > 0 && !oleadaSaltada)
+            {
+                List<EnemigoConfig> tienda = new List<EnemigoConfig>();
+                foreach (EnemigoConfig enemigo in enemigosDisponibles)
+                {
+                    if (currentWave >= enemigo.oleadaMinima && presupuestoRestante >= enemigo.costo)
+                        tienda.Add(enemigo);
+                }
+
+                if (tienda.Count == 0) break; 
+
+                EnemigoConfig enemigoComprado = tienda[Random.Range(0, tienda.Count)];
+                presupuestoRestante -= enemigoComprado.costo;
+
+                Vector2 posicionFinal = CalcularPosicionConVarianza(enemigoComprado.categoriaRequerida);
+                Instantiate(enemigoComprado.prefab, posicionFinal, Quaternion.identity);
+
+                conteoGrupoActual++; 
+
+                if (conteoGrupoActual >= oleadaActual.enemigosPorGrupo) 
+                {
+                    yield return new WaitForSeconds(timeBetweenSpawns);
+                    conteoGrupoActual = 0; 
+                }
+                else
+                {
+                    yield return new WaitForSeconds(0.1f);
+                }
+            }
+
+            // --- POST-OLEADA ---
+
+            // Mostramos la Trivia (que a su vez abrirá la Tienda al terminar)
+            if (ui != null)
+            {
+                ui.MostrarTrivia();
+                // Esperamos a que el jugador cierre la Tienda también
+                yield return new WaitUntil(() => ui.triviaFinalizada);
+            }
+
+            timeBetweenSpawns = Mathf.Max(0.5f, timeBetweenSpawns - speedUpPerWave); 
+
+            // Victoria total
+            if (currentWave == configuracionOleadas.Length)
+            {
+                yield return new WaitUntil(() => GameObject.FindGameObjectsWithTag("Enemy").Length == 0);
+                Debug.Log("¡VICTORIA TOTAL!");
+                isSpawning = false;
+                yield break; 
+            }
+
+            // Siguiente oleada
             currentWave++;
+            isSpawning = false;
+            oleadaSaltada = false;
+            yield return new WaitForSeconds(timeBetweenWaves);
+            StartNextWave();
+        }
+
+        private Vector2 CalcularPosicionConVarianza(CategoriaSpawn categoriaBuscada)
+        {
+            List<PuntoSpawnConfig> puntosValidos = new List<PuntoSpawnConfig>();
+            
+            foreach (PuntoSpawnConfig sp in spawnPoints)
+            {
+                if (sp.categoriaDelPunto == categoriaBuscada)
+                    puntosValidos.Add(sp);
+            }
+
+            if (puntosValidos.Count == 0)
+            {
+                Debug.LogWarning("Falta un punto de spawn para la categoría: " + categoriaBuscada + ". Usando uno al azar.");
+                puntosValidos.AddRange(spawnPoints);
+            }
+
+            PuntoSpawnConfig configElegida = puntosValidos[Random.Range(0, puntosValidos.Count)];
+            
+            if (configElegida.punto == null) return Vector2.zero;
+
+            float offsetX = Random.Range(configElegida.varianzaMin.x, configElegida.varianzaMax.x);
+            float offsetY = Random.Range(configElegida.varianzaMin.y, configElegida.varianzaMax.y);
+
+            return (Vector2)configElegida.punto.position + new Vector2(offsetX, offsetY);
+        }
+
+        void OnDrawGizmos()
+        {
+            if (spawnPoints == null) return;
+            foreach (PuntoSpawnConfig sp in spawnPoints)
+            {
+                if (sp.punto != null)
+                {
+                    Gizmos.color = new Color(1f, 0f, 0f, 0.3f); 
+                    Vector2 centro = (Vector2)sp.punto.position + (sp.varianzaMin + sp.varianzaMax) / 2f;
+                    Vector2 tamano = new Vector2(Mathf.Abs(sp.varianzaMax.x - sp.varianzaMin.x), Mathf.Abs(sp.varianzaMax.y - sp.varianzaMin.y));
+                    Gizmos.DrawCube(centro, tamano);
+                }
+            }
         }
     }
 }

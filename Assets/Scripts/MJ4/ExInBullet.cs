@@ -35,9 +35,13 @@ namespace DefensoresDeSoftware
             {
                 if (targetTag == "Player")
                 {
-                    // Le avisamos al gestor global que el jugador recibió daño
-                    ExInGameControl.Instance.TakeDamage(damage);
-                    // Destruimos esta bala
+                    // Buscamos el script del jugador en el objeto que tocamos
+                    ExInPlayerControl playerScript = hitInfo.GetComponent<ExInPlayerControl>();
+                    if (playerScript != null)
+                    {
+                        // El jugador se encarga de parpadear y restar su vida
+                        playerScript.GetDamaged(damage); 
+                    }
                     Destroy(gameObject);
                 }
                 // Busca esta sección dentro de OnTriggerEnter2D en ExInBullet.cs:
