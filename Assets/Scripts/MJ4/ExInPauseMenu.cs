@@ -33,7 +33,18 @@ namespace DefensoresDeSoftware
 
         public void Leave()
         {
+            // 1. Descongelamos el motor físico
             Time.timeScale = 1f; 
+
+            // 2. Reiniciamos las vidas en el registro usando el valor por defecto de tu GameControl
+            if (ExInGameControl.Instance != null)
+            {
+                // 3. Destruimos el GameControl para que al volver a jugar nazca uno nuevo y limpio
+                Destroy(ExInGameControl.Instance.gameObject);
+                ExInGameControl.Instance = null; 
+            }
+
+            // 4. Cargamos el menú principal
             SceneManager.LoadScene("ExInInicio"); 
         }
     }

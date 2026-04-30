@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 4563172828891703162}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.46, y: 0.31, z: 0}
+  m_LocalPosition: {x: -7.41, y: -0.68, z: 0}
   m_LocalScale: {x: 1.1, y: 1.1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -107,6 +107,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: faa828a2f88c3bd4682cf23cef46903c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DefensoresDeSoftware.ExInEnemy
+  lives: 3
+  knockbackFuerza: 4
   speed: 3
   rig: {fileID: 4714264875218545934}
   bulletPrefab: {fileID: 8663848667437153397, guid: 83144589aa472e948b02ea4532d4644e, type: 3}
@@ -178,7 +180,7 @@ CapsuleCollider2D:
   m_CallbackLayers:
     serializedVersion: 2
     m_Bits: 4294967295
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0

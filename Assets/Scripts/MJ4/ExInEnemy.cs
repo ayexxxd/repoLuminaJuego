@@ -8,6 +8,8 @@ namespace DefensoresDeSoftware
      
         [Header("Configuración Básica")]
         public int lives = 3; // Puedes cambiar este número en el Inspector de Unity
+        public float knockbackFuerza = 5f;
+        public int damageAlChocar = 1;
         public float speed = 3f;
         public Rigidbody2D rig;
         public GameObject bulletPrefab;
@@ -178,18 +180,25 @@ namespace DefensoresDeSoftware
 
         private void OnCollisionEnter2D(Collision2D collision)
         {
-            // El enemigo muere si choca con el jugador
+            // Verificamos si chocamos con el jugador
             if (collision.gameObject.CompareTag("Player")) 
             {
+                // Le mandamos el daño al GameControl ANTES de destruir al enemigo
+                ExInGameControl.Instance.TakeDamage(damageAlChocar);
+
+                // Ahora sí, destruimos a este enemigo
                 Destroy(this.gameObject);
             }
         }
 
         public void TakeDamage(int damage)
         {
-            lives -= damage; // Restamos la cantidad de daño recibida
+            lives -= damage; 
+            
+            // ¡Aquí está la magia del knockback!
+            // Vector2.right es exactamente lo mismo que escribir new Vector2(1, 0)
+            RecibirInercia(Vector2.right * knockbackFuerza);
 
-            // Solo si las vidas llegan a 0 o menos, el enemigo se destruye
             if (lives <= 0)
             {
                 Destroy(gameObject);

@@ -22,8 +22,9 @@ namespace DefensoresDeSoftware
             if (Instance == null)
             {
                 Instance = this;
-                // Nos protegemos para no ser destruidos al cambiar de nivel
                 DontDestroyOnLoad(gameObject); 
+                // REINICIO DE VIDAS
+                PlayerPrefs.SetInt("Lives", initialLives);
             }
             else
             {
@@ -54,7 +55,7 @@ namespace DefensoresDeSoftware
             // Si llegamos a 0 vidas, mandamos a la pantalla de Game Over
             if (currentLives <= 0)
             {
-                UnityEngine.SceneManagement.SceneManager.LoadScene("ExInEndScene");
+                UnityEngine.SceneManagement.SceneManager.LoadScene("ExInDerrota");
             }
         }
     }
