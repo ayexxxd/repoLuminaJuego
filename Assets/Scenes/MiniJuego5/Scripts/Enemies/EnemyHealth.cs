@@ -27,8 +27,7 @@ public class EnemyHealth : MonoBehaviour
     public void Damage(int damage)
     {//reducir vida por cantidad de daño
         health = health - damage;
-        //StopAllCoroutines();//stop all coroutines to prevent 
-        //multiple damage indicators from overlapping
+        StopAllCoroutines();//detiene corrutinas para evitar que se acumulen
 
         StartCoroutine(Scale());//indicar daño con pulso de tamaño
         StartCoroutine(VisualIndicator(Color.red));//a color rojo
@@ -60,12 +59,8 @@ public class EnemyHealth : MonoBehaviour
 
     private void Die()
     {   //aumentar score al matar enemigo, usando el tag del enemigo para determinar cuantos puntos da
-        ScoreManager.instance.EnemyKilled(gameObject.tag);
+            ScoreManager.instance.EnemyKilled(gameObject.tag);
+            Destroy(gameObject);//y borrrar enemigo
 
-        //notify spawner que enemigo murio
-        Spawner spawner = FindAnyObjectByType<Spawner>();
-        Destroy(gameObject);//y borrrar enemigo
-
-        //spawner.EnemyDied();//funcion para que el spawner
     
 }}}

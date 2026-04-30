@@ -11,6 +11,8 @@ public class PauseMenu : MonoBehaviour
     private void Start()
     {
         pausePanel.SetActive(false);
+        Time.timeScale = 1f;
+        paused = false;
     }
 
     private void Update()
@@ -19,8 +21,13 @@ public class PauseMenu : MonoBehaviour
         {
             if (paused)
                 Resume();
-        else
+            else
             Pause();
+        }
+
+        if (Keyboard.current.qKey.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene("StartScene");
         }
     }
     public void Pause()
@@ -39,7 +46,9 @@ public class PauseMenu : MonoBehaviour
 
     public void Leave()
     {//funcion del boton de salir al menu
-        SceneManager.LoadScene("StartScene");
+        if (Keyboard.current.qKey.wasPressedThisFrame)
+        {
+            SceneManager.LoadScene("StartScene");
+        }
     }
-
 }

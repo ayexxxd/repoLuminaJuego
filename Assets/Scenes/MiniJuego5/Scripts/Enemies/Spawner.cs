@@ -16,7 +16,6 @@ public class Spawner : MonoBehaviour
     [SerializeField] private float spawnInterval = 1.5f;
     [SerializeField] private int enemiesPerWave = 5;
     [SerializeField] private float pauseBetweenWaves = 5f;
-    [Header("Healer Item")]
     [SerializeField] private GameObject healPrefab;
     [SerializeField, Range(0f,1f)] private float healSpawn = 0.7f;//cheance que spanwea un heal item 
     [SerializeField] private int totalWaves = 10;//number of waves before game ends

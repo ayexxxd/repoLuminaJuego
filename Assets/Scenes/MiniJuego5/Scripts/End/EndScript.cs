@@ -1,6 +1,7 @@
 using UnityEngine;
 using TMPro;
 using UnityEditor.Search;
+using UnityEngine.SceneManagement;
 namespace TopDown.Enemy{//namespace para evitar conflictos de nombres
 
 public class EndScript : MonoBehaviour
@@ -10,6 +11,14 @@ public class EndScript : MonoBehaviour
     [SerializeField] private TextMeshProUGUI gameOverText;//reference to game over text UI element
     [SerializeField] private TextMeshProUGUI waveText;//reference to wave text UI element
 
+    public void Retry()
+    {//funcion del boton de jugar
+        SceneManager.LoadScene("ShooterScene");
+    }
+    public void Quit()
+    {//funcion del boton de jugar
+        SceneManager.LoadScene("StartScene");
+    }
     void Start()
     {   
         GetComponent<AudioSource>().PlayOneShot(endSFX);
