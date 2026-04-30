@@ -13,6 +13,7 @@ namespace DefensoresDeSoftware
 
         [Header("Impacto")]
         public string targetTag = "Enemy"; 
+        public int damage = 1;
 
         void Start()
         {
@@ -34,15 +35,28 @@ namespace DefensoresDeSoftware
             {
                 if (targetTag == "Player")
                 {
-                    // Le avisamos al gestor global que el jugador recibió daño
-                    ExInGameControl.Instance.SpendLives();
-                    // Destruimos esta bala
+                    // Buscamos el script del jugador en el objeto que tocamos
+                    ExInPlayerControl playerScript = hitInfo.GetComponent<ExInPlayerControl>();
+                    if (playerScript != null)
+                    {
+                        // El jugador se encarga de parpadear y restar su vida
+                        playerScript.GetDamaged(damage); 
+                    }
                     Destroy(gameObject);
                 }
+                // Busca esta sección dentro de OnTriggerEnter2D en ExInBullet.cs:
                 else if (targetTag == "Enemy")
                 {
-                    // Destruimos al enemigo y luego a esta bala
-                    Destroy(hitInfo.gameObject); 
+                    // 1. Buscamos el script del enemigo en el objeto que tocamos
+                    ExInEnemy enemyScript = hitInfo.GetComponent<ExInEnemy>();
+
+                    if (enemyScript != null)
+                    {
+                        // 2. Le pedimos al enemigo que reciba 1 de daño
+                        enemyScript.TakeDamage(damage);
+                    }
+
+                    // 3. Destruimos la bala (siempre se destruye al impactar)
                     Destroy(gameObject);         
                 }
             }
