@@ -7,7 +7,7 @@ public class CameraController : MonoBehaviour
    private float Zpos = -10;
    private void Update()
     {
-        //Determine final camera position and assign it
+        //determine final camera position and assign it
         transform.position = new Vector3 (playerTransform.position.x, playerTransform.position.y , Zpos);
     }
 //hi

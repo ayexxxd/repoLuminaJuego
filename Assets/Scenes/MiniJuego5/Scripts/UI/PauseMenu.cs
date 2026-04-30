@@ -5,6 +5,7 @@ using UnityEngine.InputSystem;
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
+    SpriteRenderer player;
     private bool isPaused = false;
 
     private void Start()
@@ -16,23 +17,21 @@ public class PauseMenu : MonoBehaviour
     {
         if (Keyboard.current.pKey.wasPressedThisFrame)
         {
-            TogglePause();
-        }
-    }
-
-    public void TogglePause()
-    {
-        if (isPaused)
+            if (isPaused)
             Resume();
         else
             Pause();
+        }
     }
-
     public void Pause()
     {
         pausePanel.SetActive(true);
         Time.timeScale = 0f;
         isPaused = true;
+        //hide player in pause
+        if(player != null){
+            player.gameObject.SetActive(false);
+        }
     }
 
     public void Resume()
@@ -40,11 +39,14 @@ public class PauseMenu : MonoBehaviour
         pausePanel.SetActive(false);
         Time.timeScale = 1f;
         isPaused = false;
+        //reveal player when resuming
+        if(player != null){
+            player.gameObject.SetActive(true);
+        }
     }
 
     public void Leave()
     {
-        //Time.timeScale = 1f;
-        SceneManager.LoadScene("Startcene");
+        SceneManager.LoadScene("StartScene");
     }
 }

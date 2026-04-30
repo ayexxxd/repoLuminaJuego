@@ -20,7 +20,7 @@ public class HealthBar : MonoBehaviour
             Debug.LogError("no jay jugador");
         }
 
-        spawner = FindObjectOfType<Spawner>();
+        spawner = FindAnyObjectByType<Spawner>();
     }
     private void UpdateBar(float current, float max)
     {

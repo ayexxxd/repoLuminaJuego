@@ -1,64 +1,90 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 
 public class EnemyHealth : MonoBehaviour
 {
-    public bool isDead = false;
     [SerializeField] private int health = 100;
-
-    private SpriteRenderer spriteRenderer;
-    private Color originalColor;
+    public bool isDead = false;
+    
+    private SpriteRenderer spriteRenderer;//sets sprite renderer
+    private Color ogColor;//sets og Color 
+    private Vector3 ogScale;//sets og scale to return to after size pulse effect
 
     private void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
+        //tamaño original es el tamaño al iniciar
+        ogScale = transform.localScale;
+        //si no tiene sprite renderer, 
+        // no se puede cambiar el color, asi que 
+        // no se asigna el color original
         if (spriteRenderer != null)
         {
-            originalColor = spriteRenderer.color;
+            ogColor = spriteRenderer.color;
         }
     }
 
-
     void Update()
-    {
+    {//check every frame if health is 0 or less,
+    //and if im not dead yet
         if (!isDead && health <= 0)
         {
             Die();
         }
     }
-    private IEnumerator VisualIndicator(Color color)
-    {
-        this.spriteRenderer.color = color;
-        yield return new WaitForSeconds(0.15f);
-        this.spriteRenderer.color = originalColor;
-    }
-    public int getHealth(){
+
+    public int getHealth()
+    {//just fetch health
         return health;
     }
     public void Damage(int amount)
-    {
-        if(amount < 0)
-        {
-            throw new System.ArgumentOutOfRangeException("cannot work");
-        }
-        this.health -= amount;
-        this.StartCoroutine(VisualIndicator(Color.red));
+    {//reduce health by amount 
+        health = health - amount;
+
+        StopAllCoroutines();//stop all coroutines to prevent 
+        //multiple damage indicators from overlapping
+        StartCoroutine(ScalePulse());//start size pulse effect
+        StartCoroutine(VisualIndicator(Color.red));//to color red
     }
+
+    private IEnumerator ScalePulse()
+    {
+        //shrink
+        transform.localScale = ogScale * 0.7f;
+        //wait like 5 milliseconds
+        yield return new WaitForSeconds(0.05f);
+
+        //grow
+        transform.localScale = ogScale * 1.2f;
+        //wait like 5 milliseconds
+        yield return new WaitForSeconds(0.05f);
+
+        //back to normal
+        transform.localScale = ogScale;
+    }
+
+    private IEnumerator VisualIndicator(Color color)
+    {//change color to given color, wait a bit, 
+    //then change back to original color
+        spriteRenderer.color = color;
+        yield return new WaitForSeconds(0.15f);
+        spriteRenderer.color = ogColor;
+    }
+
     private void Die()
     {
-        isDead = true;
+        isDead = true;//if dead...
+
         if (ScoreManager.instance != null)
-        {
+        {//tell score manager to increase score based on enemy type
             ScoreManager.instance.EnemyKilled(gameObject.tag);
         }
-
-        Destroy(gameObject);
+        Destroy(gameObject);//then destroy enemy
     }
 
-    public void SetHealth(int health_){
-        this.health=health_;
-    }
-    }
-
+    /*THIS ISNT USED, WAS FOR DEBUGGING
+    public void SetHealth(int health_)
+    {//sett health
+        this.health = health_;
+    }*/
+}

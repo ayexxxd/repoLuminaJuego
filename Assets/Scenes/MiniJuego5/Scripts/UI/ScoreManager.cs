@@ -64,4 +64,10 @@ public class ScoreManager : MonoBehaviour
     {
         return score;
     }
+
+    public void SaveScore()
+{
+    PlayerPrefs.SetInt("FinalScore", score);
+    PlayerPrefs.Save(); // makes sure it writes to disk
+}
 }

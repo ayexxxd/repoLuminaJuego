@@ -1,21 +1,28 @@
 using UnityEngine;
-using System.Collections; // Required for Coroutine
+using System.Collections;//required for Coroutine
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private int damage = 5;
+    [SerializeField] private int damage = 5;//sets damage variable
     [SerializeField] private float speed = 1.5f;
     [SerializeField] private EnemyData data;
+
+    //optional array of sprites you can assign in the Inspector. The enemy will pick one at random when spawned.
+    [Header("Appearance")]
+    [SerializeField] private Sprite[] possibleSprites;
     
     private GameObject player;
     private Rigidbody2D body;
-    private Coroutine damageCoroutine; // 1. ADDED: Variable to track the damage loop
+    private Coroutine damageCoroutine;//variable to track the damage loop
+    private SpriteRenderer spriteRenderer;
 
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
+        spriteRenderer = GetComponent<SpriteRenderer>();
         player = GameObject.FindGameObjectWithTag("Player");
         SetEnemy();
+        PickRandomSprite();
     }
 
     private void Swarm()
@@ -29,36 +36,45 @@ public class Enemy : MonoBehaviour
     }
 
     private void SetEnemy()
-    {
-        GetComponent<EnemyHealth>().SetHealth(data.HP);
+    {   //set stats from data
         damage = data.damage;
         speed = data.speed;
     }
 
-    // 2. MODIFIED: Start the repeating damage
-    private void OnTriggerEnter2D(Collider2D collider)
+    // Pick a random sprite from the inspector array; safe if array is empty or null
+    private void PickRandomSprite()
     {
+        if (possibleSprites != null && possibleSprites.Length > 0 && spriteRenderer != null)
+        {
+            int idx = Random.Range(0, possibleSprites.Length);
+            spriteRenderer.sprite = possibleSprites[idx];
+        }
+    }
+
+    //start the repeating damage
+    private void OnTriggerEnter2D(Collider2D collider)
+    {   //if player enters the trigger, start the damage loop
         if (collider.CompareTag("Player"))
         {
             Health health = collider.GetComponent<Health>();
             if (health != null)
             {
-                damageCoroutine = StartCoroutine(DealDamageRepeatedly(health));
+                damageCoroutine = StartCoroutine(Attack(health));
             }
         } 
     }
 
-    // 3. ADDED: Stop the damage when player leaves
+    //stop the damage when player leaves
     private void OnTriggerExit2D(Collider2D collider)
-    {
+    {   //if player leaves the trigger, stop the damage loop
         if (collider.CompareTag("Player"))
         {
             if (damageCoroutine != null) StopCoroutine(damageCoroutine);
         }
     }
 
-    // 4. ADDED: The loop that actually deals the damage
-    private IEnumerator DealDamageRepeatedly(Health health)
+    //the loop that actually deals the damage
+    private IEnumerator Attack(Health health)
     {
         while (true)
         {

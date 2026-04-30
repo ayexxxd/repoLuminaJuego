@@ -42,12 +42,10 @@ public class Health : MonoBehaviour
         {
             Damage(10);
         }
-
         if (Keyboard.current != null && Keyboard.current.hKey.wasPressedThisFrame)
         {
             Heal(10);
         }
-
         if (!isDead && health <= 0)
         {
             Die();
@@ -101,7 +99,7 @@ public class Health : MonoBehaviour
         isDead = true;
         if(isPlayer)
         {
-            SceneManager.LoadScene("EndScene");
+            SceneManager.LoadScene("ShooterEnd");
             return;
         }
         Destroy(gameObject);
