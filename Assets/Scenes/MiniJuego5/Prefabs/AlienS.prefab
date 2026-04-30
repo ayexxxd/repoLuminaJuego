@@ -171,9 +171,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 82f1c66a59d9c4440972b70acde75527, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
-  damage: 7
-  speed: 2.1
+  damage: 8
+  speed: 2.3
   data: {fileID: 11400000, guid: 57191d2cc0edd4bd4a708558b3552e1e, type: 2}
+  possibleSprites:
+  - {fileID: 21300000, guid: fddb1391f07c4464d86e45703b0b0ebe, type: 3}
+  - {fileID: 21300000, guid: 818740ff7053677409557ac70aec2cbd, type: 3}
 --- !u!114 &7581301892371978199
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -186,5 +189,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7af8366e27c674f52a57bb0c1302661f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
-  isDead: 0
   health: 25
+  isDead: 0

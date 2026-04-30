@@ -5,14 +5,12 @@ using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
 {
-    public bool isDead = false;
-    [SerializeField] private int health = 100;
-    [SerializeField] private int MAX_HEALTH = 100;
-    [SerializeField] private bool isPlayer = true;
+
+    [SerializeField] private int health = 100;//vida actual
+    [SerializeField] private int healthmax = 100;//vida maxima`
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
 
-    [Header("Audio")]
     [SerializeField] private AudioClip startSFX;
     [SerializeField] private AudioClip healSFX;
     private AudioSource audioSource;
@@ -42,19 +40,17 @@ public class Health : MonoBehaviour
         {
             Damage(10);
         }
-
         if (Keyboard.current != null && Keyboard.current.hKey.wasPressedThisFrame)
         {
             Heal(10);
         }
-
-        if (!isDead && health <= 0)
+        if(health <= 0)
         {
             Die();
         }
     }
     private IEnumerator VisualIndicator(Color color)
-    {
+    {//cambiar color a color de daño o curacion y regresar a color original
         this.spriteRenderer.color = color;
         yield return new WaitForSeconds(0.15f);
         this.spriteRenderer.color = originalColor;
@@ -62,53 +58,30 @@ public class Health : MonoBehaviour
     public int getHealth(){
         return health;
     }
-    public int getMax_Health(){
-        return MAX_HEALTH;
-    }
     public void Damage(int amount)
-    {
-        if(amount < 0)
-        {
-            throw new System.ArgumentOutOfRangeException("cannot work");
-        }
-        this.health -= amount;
-        this.StartCoroutine(VisualIndicator(Color.red));
+    {//daño a jugador
+        health -= amount;
+        StartCoroutine(VisualIndicator(Color.red));
     }
+
     public void Heal(int amount)
     {
-        if(amount < 0)
+        StartCoroutine(VisualIndicator(Color.green));   
+        audioSource.PlayOneShot(healSFX);
+        //si vida actual mas curacion es mayor a vida maxima, setear vida a maxima
+        if(health + amount > healthmax)
         {
-            throw new System.ArgumentOutOfRangeException("cannot work");
-        }
-        this.StartCoroutine(VisualIndicator(Color.green));
-        
-        if(healSFX != null && audioSource != null)
-        {
-            audioSource.PlayOneShot(healSFX);
-        }
-        
-        if(this.health + amount > MAX_HEALTH)
-        {
-           this.health =MAX_HEALTH ;
+           health =healthmax ;
         }
         else
         {
-             this.health += amount;
+             health = health + amount;
         }
     }
     private void Die()
     {
-        isDead = true;
-        if(isPlayer)
-        {
-            SceneManager.LoadScene("EndScene");
-            return;
-        }
-        Destroy(gameObject);
-    }
-
-    public void SetHealth(int health_){
-        this.health=health_;
+            SceneManager.LoadScene("ShooterEnd");
+            Destroy(gameObject);
     }
     }
 
