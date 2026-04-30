@@ -27,7 +27,7 @@ public class PauseMenu : MonoBehaviour
 
         if (Keyboard.current.qKey.wasPressedThisFrame)
         {
-            SceneManager.LoadScene("StartScene");
+            SceneManager.LoadScene("StartScene");//loadea menu
         }
     }
     public void Pause()
