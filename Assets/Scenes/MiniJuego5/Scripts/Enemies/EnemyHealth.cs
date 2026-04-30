@@ -73,7 +73,5 @@ public class EnemyHealth : MonoBehaviour
             {
                 spawner.EnemyDied();
             }
-            Destroy(gameObject);//y borrrar enemigo
-
-    
+            Destroy(gameObject);//y borrrar enemigo    
 }}}

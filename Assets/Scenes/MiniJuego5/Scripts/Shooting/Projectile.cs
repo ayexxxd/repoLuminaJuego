@@ -18,29 +18,24 @@ public class Projectile : MonoBehaviour
         {
             body = GetComponent<Rigidbody2D>();
         }
-
-    /// <summary>
-    /// Set the damage this projectile deals (called by GunController).
-    /// </summary>
     public void SetDamage(int newDamage)
     {
         damage = newDamage;
     }
 
     public void ShootBullet(Transform shootPoint, float bulletSpd)
-        {
+        {//reset cooldown, posicion y rotacion, y disparar bala
             lifeTimer = 0;
             transform.position = shootPoint.position;
             transform.rotation = shootPoint.rotation;
             gameObject.SetActive(true);
-            body.linearVelocity = -transform.up * bulletSpd;
+            body.linearVelocity = -transform.up * bulletSpd;//disparar hacia adelante
         }
 
-    // Overload for backwards compatibility (uses default speed)
-    public void ShootBullet(Transform shootPoint)
+    /*public void ShootBullet(Transform shootPoint)
     {
         ShootBullet(shootPoint, speed);
-    }
+    }*/
 
     private void Update()
         {//life timer increases

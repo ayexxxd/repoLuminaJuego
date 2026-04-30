@@ -49,6 +49,8 @@ public class Spawner : MonoBehaviour
             //esperar antes de siguiente oleada
             yield return new WaitForSeconds(pauseBetweenWaves);
 
+
+
             //puede aparecer un heal item
             if (Random.value < healSpawn)
             {//spawnea heal item en posicion aleatoria dentro de los mismos limites que los enemigos
@@ -93,7 +95,4 @@ public class Spawner : MonoBehaviour
             }
         }
     }
-    
-    
-
 }}
