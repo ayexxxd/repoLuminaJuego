@@ -48,7 +48,7 @@ public class ScoreManager : MonoBehaviour
 
     private void UpdateScoreDisplay()
     {//actualiaar el texto del score en la UI
-        scoreText.text = "Puntos: " + score;
+        scoreText.text = "MONEDAS: " + score;
     }
 
     public int GetScore()//lo usamos en endscreen

@@ -3,13 +3,11 @@ using UnityEngine;
 namespace TopDown.Shooting{
 using TopDown.Enemy;//namespace to organize code and avoid naming conflicts
 
-    [RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class Projectile : MonoBehaviour
 {
-   [Header("Movement Stats")]
    [SerializeField]private float speed = 10f;
    [SerializeField]private float lifetime = 5f;
-    [Header("Damage")]
     [SerializeField] private int damage = 5;
    private Rigidbody2D body;
    private float lifeTimer;
@@ -31,11 +29,6 @@ public class Projectile : MonoBehaviour
             gameObject.SetActive(true);
             body.linearVelocity = -transform.up * bulletSpd;//disparar hacia adelante
         }
-
-    /*public void ShootBullet(Transform shootPoint)
-    {
-        ShootBullet(shootPoint, speed);
-    }*/
 
     private void Update()
         {//life timer increases
