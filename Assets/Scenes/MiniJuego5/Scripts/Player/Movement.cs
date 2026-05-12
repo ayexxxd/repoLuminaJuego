@@ -18,16 +18,16 @@ public class PlayerControl : MonoBehaviour
     {
         xInput = 0f;
         yInput = 0f;
-        if(Keyboard.current.aKey.isPressed)//left
+        if(Keyboard.current.aKey.isPressed || Keyboard.current.leftArrowKey.isPressed)//left
         xInput = -2f;
 
-        else if(Keyboard.current.dKey.isPressed)//right
+        else if(Keyboard.current.dKey.isPressed || Keyboard.current.rightArrowKey.isPressed)//right
         xInput = 2f;
 
-        if(Keyboard.current.wKey.isPressed)//up
+        if(Keyboard.current.wKey.isPressed || Keyboard.current.upArrowKey.isPressed)//up
         yInput = 2f;
 
-        else if(Keyboard.current.sKey.isPressed)//down
+        else if(Keyboard.current.sKey.isPressed || Keyboard.current.downArrowKey.isPressed)//down
         yInput = -2f;
     }
     public void FixedUpdate()
