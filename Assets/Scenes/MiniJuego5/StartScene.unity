@@ -579,9 +579,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Regresar a Menu
-
-'
+  m_text: "Regresar a Men\xFA\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c18d470c4d95ced49aa122411cabfd3b, type: 2}
   m_sharedMaterial: {fileID: -6471479325630977397, guid: c18d470c4d95ced49aa122411cabfd3b, type: 2}
@@ -1179,7 +1177,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1.2062988, y: 1}
+  m_AnchoredPosition: {x: -1.2062988, y: -4}
   m_SizeDelta: {x: 653.7896, y: 489.6132}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &959741812
@@ -1254,7 +1252,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -1, y: -5}
+  m_AnchoredPosition: {x: -1, y: -50}
   m_SizeDelta: {x: 404.1901, y: 220.2043}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &991689832
@@ -1958,7 +1956,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4, y: 23}
+  m_AnchoredPosition: {x: 4, y: 27}
   m_SizeDelta: {x: 452.391, y: 287.6885}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1803567336
@@ -1981,18 +1979,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Sobrevive 10 olas, elimina enemigos para ganar puntos!
+  m_text: '
 
+    Sobrevive 10 olas, elimina enemigos para ganar puntos!
 
-
-
-
-
-
-
-
-    OBJETIVO:
-    Dispara a los enemigos y obtiene puntos por cada uno que elimines!
 
 
 '
