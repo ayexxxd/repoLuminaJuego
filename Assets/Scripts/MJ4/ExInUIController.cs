@@ -197,6 +197,5 @@ namespace DefensoresDeSoftware
             triviaFinalizada = true;
         }
 
-        void ConfigurarBotonSaltarOleada() { }
     }
 }
