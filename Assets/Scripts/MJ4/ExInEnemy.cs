@@ -16,7 +16,7 @@ namespace DefensoresDeSoftware
         public Transform firePoint;
         public float fireRate = 2f; 
 
-        private float direccionX = -1f;
+        
 
         [Header("Comportamientos")]
         
@@ -36,6 +36,7 @@ namespace DefensoresDeSoftware
         public int cantidadHijos = 2;
         public float fuerzaExplosionHijos = 5f;
 
+        private float direccionX = -1f;
         private SpriteRenderer spriteRenderer;
         private Vector2 inerciaActiva;
         private bool seEstaCerrandoElJuego = false;
