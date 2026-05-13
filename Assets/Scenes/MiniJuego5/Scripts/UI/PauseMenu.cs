@@ -4,8 +4,8 @@ using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
 {
-    [SerializeField] private GameObject pausePanel;//referncia al panel
-    //SpriteRenderer player;//referencia al sprite del jugador para ocultarlo en pausa
+    [SerializeField] private GameObject pausePanel;
+
     private bool paused = false;
 
     private void Start()
@@ -17,38 +17,55 @@ public class PauseMenu : MonoBehaviour
 
     private void Update()
     {
+        if (Keyboard.current.qKey.wasPressedThisFrame)
+        {
+            Time.timeScale = 1f;
+            SceneManager.LoadScene("StartScene");
+        }
+    }
+
+    private void LateUpdate()
+    {
         if (Keyboard.current.pKey.wasPressedThisFrame)
         {
             if (paused)
                 Resume();
             else
-            Pause();
-        }
-
-        if (Keyboard.current.qKey.wasPressedThisFrame)
-        {
-            SceneManager.LoadScene("StartScene");//loadea menu
+                Pause();
         }
     }
+
     public void Pause()
     {
-        pausePanel.SetActive(true);
-        Time.timeScale = 0f;//pausar el tiempo
+        EnsurePausePanelExists();
+        if (pausePanel != null)
+        {
+            pausePanel.SetActive(true);
+        }
+        Time.timeScale = 0f;
         paused = true;
     }
 
     public void Resume()
-    {//quitar panel de pausa
-        pausePanel.SetActive(false);
-        Time.timeScale = 1f;//resumir el tiempo
+    {
+        EnsurePausePanelExists();
+        if (pausePanel != null)
+        {
+            pausePanel.SetActive(false);
+        }
+        Time.timeScale = 1f;
         paused = false;
     }
 
-    public void Leave()
-    {//funcion del boton de salir al menu
-        if (Keyboard.current.qKey.wasPressedThisFrame)
+    private void EnsurePausePanelExists()
+    {
+        if (pausePanel == null)
         {
-            SceneManager.LoadScene("StartScene");
+            pausePanel = GameObject.Find("PausePanel");
+            if (pausePanel == null)
+            {
+                pausePanel = FindAnyObjectByType<Canvas>()?.gameObject.transform.Find("PausePanel")?.gameObject;
+            }
         }
     }
 }
