@@ -5,7 +5,9 @@ using TMPro;
 namespace TopDown.UI
 {
 using TopDown.Enemy;//namespace to organize code and avoid naming conflicts
-public class HealthBar : MonoBehaviour
+    using Unity.VisualScripting;
+
+    public class HealthBar : MonoBehaviour
 {
     private Health playerHealth;
     private Spawner spawner;
@@ -21,7 +23,9 @@ public class HealthBar : MonoBehaviour
     }
     private void UpdateBar(float current)
     {//funcion para actualizar barra de vida
-        fillImage.fillAmount = current / 100;
+        if(current > 0){
+            fillImage.fillAmount = current / 100;}
+        
     }
     private void UpdateWave(int currentWave, int totalWaves)
     {
@@ -29,14 +33,12 @@ public class HealthBar : MonoBehaviour
     }
     private void Update()
     {
-        if (waveText!=null && spawner != null)
-        {
-            UpdateBar(playerHealth.getHealth());
-            UpdateWave(spawner.CurrentWave, spawner.TotalWaves);
+        UpdateBar(playerHealth.getHealth());
+        UpdateWave(spawner.CurrentWave, spawner.TotalWaves);
         }
     }
     /*public void UpdateStats(int damage, float speed, float cooldown)
     {
         statsText.text = "DMG: " + damage + " SPD: " + speed + " CD: "+ cooldown;
 }*/
-}}  
+} 

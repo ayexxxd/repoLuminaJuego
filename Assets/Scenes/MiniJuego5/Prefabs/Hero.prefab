@@ -161,7 +161,6 @@ GameObject:
   - component: {fileID: 5233936652518512599}
   - component: {fileID: 6703413820812549544}
   - component: {fileID: 5650774970161864208}
-  - component: {fileID: 6352039541696710276}
   m_Layer: 6
   m_Name: Hero
   m_TagString: Player
@@ -386,19 +385,3 @@ MonoBehaviour:
   baseCd: 0.1
   objectToHide: {fileID: 0}
   shootSFX: {fileID: 0}
---- !u!114 &6352039541696710276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6305262027935978840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f749d80418d59400d92052834ef4b114, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Health
-  health: 100
-  healthmax: 100
-  startSFX: {fileID: 0}
-  healSFX: {fileID: 0}

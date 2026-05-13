@@ -5,7 +5,15 @@ namespace TopDown.Movement
 {
 public class HeroRotator : MonoBehaviour
 {
-   private void OnLook(InputValue value)//funcion para rotar al jugador hacia el mouse
+    private void Awake()
+    {
+        if (TryGetComponent<Rigidbody2D>(out var rb))
+        {
+            rb.freezeRotation = true;
+        }
+    }
+
+    private void OnLook(InputValue value)//funcion para rotar al jugador hacia el mouse
     {   
         Vector2 mouseScreen = value.Get<Vector2>();//obtener posicion del mouse en pantalla
         Vector2 mouseWorld = Camera.main.ScreenToWorldPoint(mouseScreen);//convertir posicion del mouse a coordenadas
