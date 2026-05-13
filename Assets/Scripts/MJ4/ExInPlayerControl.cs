@@ -50,11 +50,11 @@ namespace DefensoresDeSoftware
             float xInput = 0f;
             float yInput = 0f;
             
-            if (Keyboard.current.leftArrowKey.isPressed)  xInput = -1f;
-            else if (Keyboard.current.rightArrowKey.isPressed) xInput = 1f;
+            if (Keyboard.current.leftArrowKey.isPressed || Keyboard.current.aKey.isPressed)  xInput = -1f;
+            else if (Keyboard.current.rightArrowKey.isPressed || Keyboard.current.dKey.isPressed) xInput = 1f;
 
-            if (Keyboard.current.downArrowKey.isPressed)  yInput = -1f;
-            else if (Keyboard.current.upArrowKey.isPressed) yInput = 1f;
+            if (Keyboard.current.downArrowKey.isPressed || Keyboard.current.sKey.isPressed )  yInput = -1f;
+            else if (Keyboard.current.upArrowKey.isPressed || Keyboard.current.wKey.isPressed) yInput = 1f;
 
             moveInput = new Vector2(xInput, yInput).normalized;
 
