@@ -22,7 +22,6 @@ namespace DefensoresDeSoftware
         public int costoVelocidad = 1;
         public int costoVida = 1;
         
-        
         // Aseguramos que solo haya una objeto gamecontrol
         void Awake()
         {
