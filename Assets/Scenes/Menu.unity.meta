@@ -1,5 +1,9 @@
 fileFormatVersion: 2
-guid: ba3a4888c5a4f4baca1122797c83b635
+<<<<<<<< Updated upstream:Assets/Scenes/Menu.unity.meta
+guid: 75bc759826720a446abb61fc3c98470e
+========
+guid: a54c24e2230a72a479771f5f06d3a233
+>>>>>>>> Stashed changes:Assets/Scenes/Scene/SceneCarro.unity.meta
 DefaultImporter:
   externalObjects: {}
   userData: 

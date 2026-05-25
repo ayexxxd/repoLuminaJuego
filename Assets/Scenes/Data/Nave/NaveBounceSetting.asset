@@ -1,0 +1,18 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3f9e3b9b74161fb4cbf169fef0044132, type: 3}
+  m_Name: NaveBounceSetting
+  m_EditorClassIdentifier: Assembly-CSharp::NaveBounceSettingSO
+  _bounceDistance: 0.7
+  _bounceDuration: 0.5
+  _bounceRotacion: 720
+  _bounceEffect: {fileID: 7493611350074830173, guid: 22ce75670dcb6da4f9b00f1461a97157, type: 3}

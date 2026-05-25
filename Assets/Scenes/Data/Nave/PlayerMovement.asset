@@ -1,0 +1,69 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2fb6fd8596cdbe44da896b74e3ab8f67, type: 3}
+  m_Name: PlayerMovement
+  m_EditorClassIdentifier: Assembly-CSharp::NaveMovementStatsSO
+  _acceleration: 4
+  _friction: 5
+  _maxSpeed: 6
+  _steeringBySpeed:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0.001285553
+      value: 0.99905396
+      inSlope: -0.76979995
+      outSlope: -0.76979995
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.19006357
+      value: 0.85373265
+      inSlope: -0.731496
+      outSlope: -0.731496
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.44340816
+      value: 0.6781162
+      inSlope: -0.5410388
+      outSlope: -0.5410388
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.76040345
+      value: 0.5548413
+      inSlope: -0.29672942
+      outSlope: -0.29672942
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.9935913
+      value: 0.5071373
+      inSlope: -0.20457318
+      outSlope: -0.20457318
+      tangentMode: 34
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  _steerStrength: 500
