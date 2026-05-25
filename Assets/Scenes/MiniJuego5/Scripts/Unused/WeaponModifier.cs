@@ -1,8 +1,8 @@
 using UnityEngine;
 using System.Collections.Generic;
 
-namespace TopDown.Shooting{//namespace to organize code and avoid naming conflicts
-using TopDown.UI;//namespace to organize code and avoid naming conflicts
+namespace TopDown.Shooting
+{
 
 public class WeaponModifier : MonoBehaviour
 {
@@ -11,6 +11,49 @@ public class WeaponModifier : MonoBehaviour
 
     [SerializeField] private BulletModifier[] modifiers;//array de modificadores de bala, cada uno con un keyword
 
+    private void Awake()
+    {
+        if (wordInputPanel != null)
+        {
+            wordInputPanel.onWordSubmitted.AddListener(HandleWordSubmitted);
+        }
+    }
+
+    private void OnDestroy()
+    {
+        if (wordInputPanel != null)
+        {
+            wordInputPanel.onWordSubmitted.RemoveListener(HandleWordSubmitted);
+        }
+    }
+
+    private void HandleWordSubmitted(string submittedWord)
+    {
+        if (string.IsNullOrWhiteSpace(submittedWord) || gunController == null || modifiers == null)
+        {
+            return;
+        }
+
+        string normalizedWord = submittedWord.Trim().ToLowerInvariant();
+
+        foreach (BulletModifier modifier in modifiers)
+        {
+            if (modifier == null || string.IsNullOrWhiteSpace(modifier.keyword))
+            {
+                continue;
+            }
+
+            if (normalizedWord == modifier.keyword.Trim().ToLowerInvariant())
+            {
+                gunController.ApplyBulletUpgrade(modifier);
+                if (wordInputPanel != null)
+                {
+                    wordInputPanel.HidePanel();
+                }
+                return;
+            }
+        }
+    }
 
 
     
