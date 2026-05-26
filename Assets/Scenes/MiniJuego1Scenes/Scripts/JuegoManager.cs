@@ -5,10 +5,10 @@ using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class GameManager : MonoBehaviour
+public class JuegoManager : MonoBehaviour
 {
     // ── Singleton ─────────────────────────────────────────
-    public static GameManager instancia;
+    public static JuegoManager instancia;
 
     // ── Movimientos ───────────────────────────────────────
     [Header("Movimientos")]

@@ -101,7 +101,7 @@ public class UsarPoderes : MonoBehaviour
         bool exito = InventarioManager.instancia.UsarMovExtra();
         if (!exito) return;
 
-        GameManager.instancia.AgregarMovimientos(3);
+        JuegoManager.instancia.AgregarMovimientos(3);
         MostrarAviso("+3 movimientos agregados");
         Debug.Log("+3 movimientos usados");
     }
