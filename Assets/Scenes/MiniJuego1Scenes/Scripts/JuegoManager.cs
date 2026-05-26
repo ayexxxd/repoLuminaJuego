@@ -1,14 +1,14 @@
-// GameManager.cs
+// ManagerJuego.cs
 // Controla movimientos, puntos y estado general del juego.
 
 using UnityEngine;
 using TMPro;
 using UnityEngine.SceneManagement;
 
-public class JuegoManager : MonoBehaviour
+public class ManagerJuego : MonoBehaviour
 {
     // ── Singleton ─────────────────────────────────────────
-    public static JuegoManager instancia;
+    public static ManagerJuego instancia;
 
     // ── Movimientos ───────────────────────────────────────
     [Header("Movimientos")]

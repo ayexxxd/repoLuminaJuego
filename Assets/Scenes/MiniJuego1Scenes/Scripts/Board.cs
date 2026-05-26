@@ -176,7 +176,7 @@ public class Board : MonoBehaviour
 
         if (hayMatch)
         {
-            JuegoManager.instancia.UsarMovimiento();
+            ManagerJuego.instancia.UsarMovimiento();
             GestorPreguntas.instancia.RegistrarMovimiento();
         }
         else
@@ -228,8 +228,8 @@ public class Board : MonoBehaviour
         Debug.Log($"Piezas a destruir: {cantidad}");
 
         // Suma puntos
-        JuegoManager.instancia.AgregarPuntos(CalcularPuntos(cantidad));
-        JuegoManager.instancia.UsarMovimiento();
+        ManagerJuego.instancia.AgregarPuntos(CalcularPuntos(cantidad));
+        ManagerJuego.instancia.UsarMovimiento();
         GestorPreguntas.instancia.RegistrarMovimiento();
 
         // Destruye físicamente
@@ -440,7 +440,7 @@ public class Board : MonoBehaviour
         }
 
         int puntos = CalcularPuntos(cantidad);
-        JuegoManager.instancia.AgregarPuntos(puntos);
+        ManagerJuego.instancia.AgregarPuntos(puntos);
 
         StartCoroutine(CaerYRellenar());
     }
@@ -602,7 +602,7 @@ public class Board : MonoBehaviour
             }
         }
 
-        JuegoManager.instancia.AgregarMovimientos(3);
+        ManagerJuego.instancia.AgregarMovimientos(3);
     }
 
     // ── Destruye todo el tablero y lo regenera ────────────
