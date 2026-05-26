@@ -97,7 +97,7 @@ public class LapManager : MonoBehaviour
             Debug.Log("LapManager: Meta ignorada — faltan checkpoints.");
 
             if (uiManager != null)
-                uiManager.MostrarMensajeTemporal("", 2f);
+                uiManager.MostrarMensajeTemporal(" ", 2f);
             return;
         }
 
@@ -114,7 +114,7 @@ public class LapManager : MonoBehaviour
         // Verificamos si ya ganó
         if (vueltaActual >= vueltasTotales)
         {
-            Debug.Log("🏆 LapManager: ¡El jugador completó todas las vueltas!");
+            Debug.Log(" LapManager: ¡El jugador completó todas las vueltas!");
             onJugadorGano?.Invoke();
 
             // Llamamos directamente al GameManager
