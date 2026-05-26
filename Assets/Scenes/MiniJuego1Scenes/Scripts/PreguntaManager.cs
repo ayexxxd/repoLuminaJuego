@@ -108,7 +108,7 @@ public class GestorPreguntas : MonoBehaviour
         if (seleccionado == correcto)
         {
             Debug.Log("¡Correcto! +" + movimientosBonus + " movimientos.");
-            ManagerJuego.instancia.AgregarMovimientos(movimientosBonus);
+            GameManager.instancia.AgregarMovimientos(movimientosBonus);
 
             // ── ELIMINADO: antes abría TiendaManager.instancia.AbrirTienda()
             // La tienda ahora solo aparece en ResultadoScene
