@@ -111,45 +111,17 @@ public class Board : MonoBehaviour
     {
         if (estaProcesando) return;
 
-        // Martillo activo: destruye la pieza directamente
-        if (TiendaManager.instancia != null && TiendaManager.instancia.martilloActivo)
+        // ── Modo martillo activo ──────────────────────────
+        if (UsarPoderes.instancia != null &&
+            UsarPoderes.instancia.ModoMartilloActivo)
         {
-            TiendaManager.instancia.UsarMartilloEn(pieza);
+            UsarPoderes.instancia.UsarMartilloEnPieza(pieza);
             return;
         }
 
-        // 🔥 NUEVO: Si el jugador toca un monstruo, explota con UN SOLO CLIC
-        if (pieza != null && pieza.esEspecial)
-        {
-            // Creamos el mapa de destrucción temporal
-            bool[,] aDestruir = new bool[columnas, filas];
-            
-            // Marcamos la posición de este monstruo para que se limpie
-            aDestruir[pieza.col, pieza.fil] = true;
-
-            // Disparamos los efectos que ya programaste con Claude
-            if (pieza.tipoEspecial == 1)
-                ActivarMonstruoRojo(pieza.col, pieza.fil, aDestruir);
-            
-            if (pieza.tipoEspecial == 2)
-                ActivarMonstruoVerde(pieza.col, pieza.fil, pieza.tipoPieza, aDestruir);
-
-            // Reseteamos la selección por si el jugador tenía otra pieza agrandada
-            if (piezaSeleccionada != null)
-            {
-                piezaSeleccionada.transform.localScale = Vector3.one;
-                piezaSeleccionada = null;
-            }
-
-            // Destruimos, sumamos puntos, hacemos caer runas y rellenamos todo solo
-            DestruirMatches(aDestruir);
-            return; // ← Súper importante: detiene el método para que no intente mover nada
-        }
-
-        // ── AQUÍ SIGUE TU CÓDIGO NORMAL DE SELECCIÓN INTERNA ─────────────────
+        // ── Selección normal ──────────────────────────────
         if (piezaSeleccionada == null)
         {
-            // Primera selección
             piezaSeleccionada = pieza;
             piezaSeleccionada.transform.localScale = Vector3.one * 1.2f;
         }
@@ -157,12 +129,10 @@ public class Board : MonoBehaviour
         {
             if (SonVecinas(piezaSeleccionada, pieza))
             {
-                // Son vecinas: intentar intercambio
                 StartCoroutine(IntentarIntercambio(piezaSeleccionada, pieza));
             }
             else
             {
-                // No son vecinas: cambiar selección
                 piezaSeleccionada.transform.localScale = Vector3.one;
                 piezaSeleccionada = pieza;
                 piezaSeleccionada.transform.localScale = Vector3.one * 1.2f;
@@ -185,6 +155,20 @@ public class Board : MonoBehaviour
         a.transform.localScale = Vector3.one;
         piezaSeleccionada = null;
 
+        Debug.Log($"IntentarIntercambio — A:[{a.col},{a.fil}] " +
+                $"esEspecial:{a.esEspecial} tipo:{a.tipoEspecial} | " +
+                $"B:[{b.col},{b.fil}] esEspecial:{b.esEspecial} tipo:{b.tipoEspecial}");
+
+        // Detecta si alguna es monstruo
+        if (a.esEspecial || b.esEspecial)
+        {
+            Debug.Log("→ Detectado monstruo, activando efecto");
+            yield return StartCoroutine(ActivarMonstruoDeIntercambio(a, b));
+            estaProcesando = false;
+            yield break;
+        }
+
+        // Intercambio normal
         IntercambiarPiezas(a, b);
         yield return new WaitForSeconds(0.2f);
 
@@ -192,18 +176,78 @@ public class Board : MonoBehaviour
 
         if (hayMatch)
         {
-            // Movimiento válido
             GameManager.instancia.UsarMovimiento();
             GestorPreguntas.instancia.RegistrarMovimiento();
         }
         else
         {
-            // Sin match: revertir
             yield return new WaitForSeconds(0.2f);
             IntercambiarPiezas(a, b);
+            Debug.Log("Sin match, revertido");
         }
 
         estaProcesando = false;
+    }
+
+    IEnumerator ActivarMonstruoDeIntercambio(Pieza a, Pieza b)
+    {
+        Pieza monstruo = a.esEspecial ? a : b;
+        Pieza objetivo = a.esEspecial ? b : a;
+
+        Debug.Log($"Monstruo tipo:{monstruo.tipoEspecial} " +
+                $"en [{monstruo.col},{monstruo.fil}] " +
+                $"objetivo tipo:{objetivo.tipoPieza}");
+
+        bool[,] aDestruir = new bool[columnas, filas];
+
+        if (monstruo.tipoEspecial == 1)
+        {
+            Debug.Log("→ Activando Monstruo Rojo 3x3");
+            ActivarMonstruoRojo(monstruo.col, monstruo.fil, aDestruir);
+        }
+        else if (monstruo.tipoEspecial == 2)
+        {
+            Debug.Log("→ Activando Monstruo Verde — color:" + objetivo.tipoPieza);
+            ActivarMonstruoVerde(monstruo.col, monstruo.fil,
+                                objetivo.tipoPieza, aDestruir);
+        }
+        else
+        {
+            Debug.LogWarning("tipoEspecial desconocido: " + monstruo.tipoEspecial);
+        }
+
+        // Destruye también al monstruo
+        aDestruir[monstruo.col, monstruo.fil] = true;
+
+        // Cuenta piezas a destruir
+        int cantidad = 0;
+        for (int c = 0; c < columnas; c++)
+            for (int f = 0; f < filas; f++)
+                if (aDestruir[c, f]) cantidad++;
+
+        Debug.Log($"Piezas a destruir: {cantidad}");
+
+        // Suma puntos
+        GameManager.instancia.AgregarPuntos(CalcularPuntos(cantidad));
+        GameManager.instancia.UsarMovimiento();
+        GestorPreguntas.instancia.RegistrarMovimiento();
+
+        // Destruye físicamente
+        for (int c = 0; c < columnas; c++)
+        {
+            for (int f = 0; f < filas; f++)
+            {
+                if (aDestruir[c, f] && tablero[c, f] != null)
+                {
+                    Debug.Log($"  Destruyendo [{c},{f}]");
+                    Destroy(tablero[c, f].gameObject);
+                    tablero[c, f] = null;
+                }
+            }
+        }
+
+        yield return new WaitForSeconds(0.3f);
+        yield return StartCoroutine(CaerYRellenar());
     }
 
     // Intercambia dos piezas en el array y en pantalla

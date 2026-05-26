@@ -100,7 +100,6 @@ public class GestorPreguntas : MonoBehaviour
         }
     }
 
-    // ── El jugador eligió una respuesta ───────────────────
     void AlResponder(int seleccionado, int correcto)
     {
         panelPreguntas.SetActive(false);
@@ -110,7 +109,9 @@ public class GestorPreguntas : MonoBehaviour
         {
             Debug.Log("¡Correcto! +" + movimientosBonus + " movimientos.");
             GameManager.instancia.AgregarMovimientos(movimientosBonus);
-            TiendaManager.instancia.AbrirTienda();
+
+            // ── ELIMINADO: antes abría TiendaManager.instancia.AbrirTienda()
+            // La tienda ahora solo aparece en ResultadoScene
         }
         else
         {
