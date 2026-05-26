@@ -33,6 +33,7 @@ public class Pieza : MonoBehaviour
     // ── Detección de clic ─────────────────────────────────
     void OnMouseDown()
     {
-        tableroRef.AlHacerClicEnPieza(this);
+        if (tableroRef != null)
+            tableroRef.AlHacerClicEnPieza(this);
     }
 }
