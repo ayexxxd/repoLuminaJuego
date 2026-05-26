@@ -87,7 +87,7 @@ public class Impulsador : MonoBehaviour
         // Mostramos mensaje en pantalla si existe el UIManager
         UIManager ui = FindObjectOfType<UIManager>();
         if (ui != null)
-            ui.MostrarMensajeTemporal("⚡ ¡BOOST!", 1.5f);
+            ui.MostrarMensajeTemporal("¡IMPULSADOR!", 1.5f);
 
         // Sumamos puntos si existe el PuntosManager
         if (PuntosManager.instancia != null)

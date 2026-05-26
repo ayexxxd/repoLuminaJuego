@@ -10,7 +10,7 @@ public class LapManager : MonoBehaviour
     public int totalCheckpoints = 2;
 
     [Header("Estado actual (solo lectura)")]
-    public int vueltaActual = 1;
+    public int vueltaActual = 0;
     public int checkpointsCruzados = 0;
     public int ultimoCheckpoint = 0;
     public bool puedeCruzarMeta = false;
@@ -97,7 +97,7 @@ public class LapManager : MonoBehaviour
             Debug.Log("LapManager: Meta ignorada — faltan checkpoints.");
 
             if (uiManager != null)
-                uiManager.MostrarMensajeTemporal("⚠️ ¡Pasa por todos los checkpoints!", 2f);
+                uiManager.MostrarMensajeTemporal("", 2f);
             return;
         }
 

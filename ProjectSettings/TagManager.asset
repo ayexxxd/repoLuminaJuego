@@ -11,16 +11,21 @@ TagManager:
   - Enemy
   - Bullet
   - Heal
+  - Minimapa
+  - estrellas
+  - Impulsadores
+  - Jugador
+  - pista
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Enemy
+  - Pista
   - Water
   - UI
   - Player
   - Bullet
-  - 
+  - Obstaculos
   - 
   - 
   - 

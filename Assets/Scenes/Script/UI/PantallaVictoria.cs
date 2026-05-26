@@ -73,12 +73,12 @@ public class PantallaVictoria : MonoBehaviour
 
     public void BotonVolverAJugar()
     {
-        SceneManager.LoadScene(nombreEscenaJuego);
+        SceneManager.LoadScene("SceneCarro");
     }
 
     public void BotonMenu()
     {
-        SceneManager.LoadScene(nombreEscenaMenu);
+        SceneManager.LoadScene("MenuPrincipal");
     }
 
     public void BotonSalir()

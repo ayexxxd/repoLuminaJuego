@@ -106,7 +106,7 @@ public class UIManager : MonoBehaviour
             string corazones = "";
             for (int i = 0; i < vidasActuales; i++)
             {
-                corazones += "❤️ ";
+                corazones += " ";
             }
             textoVidas.text = corazones;
         }
@@ -116,7 +116,7 @@ public class UIManager : MonoBehaviour
     public void MostrarResumenVictoria(int puntos, int tokens)
     {
         // Construimos el mensaje de resumen
-        string resumen = "🏆 ¡VICTORIA!\n" +
+        string resumen = " ¡VICTORIA!\n" +
                         "Puntos: " + puntos + "\n" +
                         "Tokens: " + tokens;
 

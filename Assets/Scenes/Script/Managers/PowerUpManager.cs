@@ -84,7 +84,7 @@ public class PowerUpManager : MonoBehaviour
 
         // Avisamos al UIManager
         UIManager uiManager = FindObjectOfType<UIManager>();
-        uiManager?.MostrarMensajeTemporal("¡BOOST!", 1.5f);
+        uiManager?.MostrarMensajeTemporal("¡IMPULSO!", 1.5f);
 
         
         Debug.Log("Boost aplicado: x" + multiplicadorBoost + " por " + duracionBoost + "s");
@@ -139,7 +139,7 @@ public class PowerUpManager : MonoBehaviour
         nave.AplicarEfectoVelocidad(multiplicadorBoost, duracionBoost);
 
         UIManager uiManager = FindObjectOfType<UIManager>();
-        uiManager?.MostrarMensajeTemporal("⚡ ¡Velocidad!", 2f);
+        uiManager?.MostrarMensajeTemporal(" ¡Velocidad!", 2f);
 
         Debug.Log("Estrella: efecto VELOCIDAD aplicado.");
         // Damos puntos por recoger la estrella
@@ -154,7 +154,7 @@ public class PowerUpManager : MonoBehaviour
         timerManager.AgregarTiempo(tiempoExtra);
 
         UIManager uiManager = FindObjectOfType<UIManager>();
-        uiManager?.MostrarMensajeTemporal("⏱ +" + tiempoExtra + "s", 2f);
+        uiManager?.MostrarMensajeTemporal(" +" + tiempoExtra + "s", 2f);
 
         Debug.Log("Estrella: efecto TIEMPO EXTRA aplicado. +" + tiempoExtra + "s");
         PuntosManager.instancia?.AgregarPuntosPorEstrella();
@@ -168,7 +168,7 @@ public class PowerUpManager : MonoBehaviour
         vidasManager.AgregarVida();
 
         UIManager uiManager = FindObjectOfType<UIManager>();
-        uiManager?.MostrarMensajeTemporal("❤️ ¡Vida extra!", 2f);
+        uiManager?.MostrarMensajeTemporal(" ¡Vida extra!", 2f);
 
         Debug.Log("Estrella: efecto VIDA EXTRA aplicado.");
         PuntosManager.instancia?.AgregarPuntosPorEstrella();
@@ -182,7 +182,7 @@ public class PowerUpManager : MonoBehaviour
         vidasManager.QuitarVida();
 
         UIManager uiManager = FindObjectOfType<UIManager>();
-        uiManager?.MostrarMensajeTemporal("💀 ¡Mala suerte!", 2f);
+        uiManager?.MostrarMensajeTemporal(" ¡Mala suerte!", 2f);
 
         Debug.Log("Estrella: efecto QUITAR VIDA aplicado.");
         PuntosManager.instancia?.AgregarPuntosPorEstrella();
