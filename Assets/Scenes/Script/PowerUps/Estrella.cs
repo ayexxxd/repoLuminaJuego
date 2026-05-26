@@ -1,13 +1,15 @@
 using UnityEngine;
 
+// Script que va en cada estrella de la pista
+// Cuando la nave la toca aplica un efecto aleatorio y la hace desaparecer
+// Requiere: SpriteRenderer, Collider2D con isTrigger=true, tag "Jugador" en la nave
 public class Estrella : MonoBehaviour
 {
     [Header("Configuración")]
-    // Cuántos segundos tarda en reaparecer después de ser recogida
-    // 0 = no reaparece nunca
+    // Segundos hasta que reaparece (0 = no reaparece)
     public float tiempoReaparicion = 10f;
 
-    // Si la estrella debe rotar visualmente
+    // Si debe rotar visualmente
     public bool rotar = true;
     public float velocidadRotacion = 90f;
 
@@ -18,59 +20,92 @@ public class Estrella : MonoBehaviour
 
     void Start()
     {
+        // Buscamos los componentes necesarios
         spriteRenderer = GetComponent<SpriteRenderer>();
-        miCollider = GetComponent<Collider2D>();
+        miCollider     = GetComponent<Collider2D>();
+
+        // Verificaciones de configuración
+        if (spriteRenderer == null)
+        {
+            Debug.LogError(gameObject.name + ": No tiene SpriteRenderer. " +
+                        "Agrega uno con Add Component.");
+            return;
+        }
+
+        if (spriteRenderer.sprite == null)
+        {
+            Debug.LogError(gameObject.name + ": El SpriteRenderer no tiene sprite asignado. " +
+                        "Arrastra un sprite al campo Source Image.");
+            return;
+        }
+
+        if (miCollider == null)
+        {
+            Debug.LogError(gameObject.name + ": No tiene Collider2D. " +
+                        "Agrega un Circle Collider 2D.");
+            return;
+        }
+
+        if (!miCollider.isTrigger)
+        {
+            Debug.LogError(gameObject.name + ": El Collider2D no tiene isTrigger activado.");
+        }
+
+        if (PowerUpManager.instancia == null)
+        {
+            Debug.LogWarning(gameObject.name + ": No se encontró el PowerUpManager. " +
+                        "Verifica que existe en la escena.");
+        }
+
+        Debug.Log(gameObject.name + ": Estrella lista. Sprite: " +
+                spriteRenderer.sprite.name);
     }
 
     void Update()
     {
-        // Rotamos la estrella visualmente si está activa
+        // Rotamos la estrella si no fue recogida
         if (rotar && !fueRecogida)
-        {
-            // Rotamos en el eje Z — en 2D es la única rotación visible
-            transform.Rotate(0, 0, velocidadRotacion * Time.deltaTime);
-        }
+            transform.Rotate(0f, 0f, velocidadRotacion * Time.deltaTime);
     }
 
-    // ---- Se llama cuando la nave entra al trigger de la estrella ----
     void OnTriggerEnter2D(Collider2D otro)
     {
-        // Solo reaccionamos si es el jugador y la estrella no fue recogida ya
-        if (!otro.CompareTag("Jugador") || fueRecogida) return;
+        // Log para ver qué entra al trigger
+        Debug.Log(gameObject.name + ": algo entró al trigger → " +
+                otro.gameObject.name + " (tag: " + otro.tag + ")");
 
-        // Marcamos como recogida para evitar doble activación
+        // Verificamos que no fue recogida ya y que es el jugador
+        if (fueRecogida || !otro.CompareTag("Jugador")) return;
+
+        Debug.Log(" ¡Estrella recogida: " + gameObject.name + "!");
         fueRecogida = true;
 
-        Debug.Log("¡Estrella recogida!");
-
-        // Pedimos al PowerUpManager que aplique un efecto aleatorio
+        // Aplicamos el efecto aleatorio
         if (PowerUpManager.instancia != null)
         {
             PowerUpManager.instancia.AplicarEfectoAleatorio();
         }
         else
         {
-            Debug.LogError("Estrella: No se encontró el PowerUpManager.");
+            Debug.LogError(gameObject.name + ": PowerUpManager.instancia es null. " +
+                        "Verifica que el GameObject PowerUpManager existe en la escena.");
         }
 
-        // Iniciamos la corrutina de desaparición y reaparición
+        // Iniciamos la desaparición y reaparición
         StartCoroutine(CorrutinaReaparicion());
     }
 
-    // ---- Hace desaparecer la estrella y la hace reaparecer después ----
     System.Collections.IEnumerator CorrutinaReaparicion()
     {
-        // Ocultamos la estrella visualmente
+        // Ocultamos la estrella
         if (spriteRenderer != null) spriteRenderer.enabled = false;
+        if (miCollider != null)     miCollider.enabled = false;
 
-        // Desactivamos el collider para que no se pueda recoger mientras está oculta
-        if (miCollider != null) miCollider.enabled = false;
-
-        // Si tiempoReaparicion es 0, la estrella desaparece para siempre
-        if (tiempoReaparicion <= 0)
+        // Si no reaparece la desactivamos para siempre
+        if (tiempoReaparicion <= 0f)
         {
             gameObject.SetActive(false);
-            yield break; // Terminamos la corrutina
+            yield break;
         }
 
         // Esperamos el tiempo de reaparición
@@ -78,9 +113,9 @@ public class Estrella : MonoBehaviour
 
         // Reaparecemos la estrella
         if (spriteRenderer != null) spriteRenderer.enabled = true;
-        if (miCollider != null) miCollider.enabled = true;
+        if (miCollider != null)     miCollider.enabled = true;
 
         fueRecogida = false;
-        Debug.Log("Estrella reapareció.");
+        Debug.Log(gameObject.name + ": Estrella reapareció.");
     }
 }

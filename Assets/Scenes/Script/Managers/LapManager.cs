@@ -1,153 +1,157 @@
 using UnityEngine;
 using UnityEngine.Events;
 
-// LapManager controla todo el sistema de vueltas del juego
-// Vive en un GameObject vacío en la escena
+// LapManager controla todo el sistema de vueltas
+// Vive en un GameObject vacío llamado "LapManager" en la escena
 public class LapManager : MonoBehaviour
 {
-    [Header("Configuración de Vueltas")]
+    [Header("Configuración")]
+    public int vueltasTotales = 2;
+    public int totalCheckpoints = 2;
 
-    // Cuántas vueltas necesita completar el jugador para ganar
-    public int vueltasTotales = 3;
+    [Header("Estado actual (solo lectura)")]
+    public int vueltaActual = 1;
+    public int checkpointsCruzados = 0;
+    public int ultimoCheckpoint = 0;
+    public bool puedeCruzarMeta = false;
 
-    // Cuántos checkpoints tiene la pista
-    public int totalCheckpoints = 3;
-
-    [Header("Estado Actual (solo lectura)")]
-
-    // Empieza en 0 para que la primera vuelta sea 1
-    public int vueltaActual = 0;
-
-    // ---- Variables privadas ----
-
-    // Último checkpoint cruzado
-    private int ultimoCheckpointCruzado = 0;
-
-    // Cuántos checkpoints lleva en la vuelta actual
-    private int checkpointsCruzadosEnVuelta = 0;
-
-    // Solo permite cruzar meta si pasó todos los checkpoints
-    private bool puedeCruzarMeta = false;
-    
-
-    // Evita contar varias veces la meta rápidamente
-    private bool metaBloqueada = false;
-
-    // Evento cuando se completa una vuelta
+    // Eventos opcionales
     public UnityEvent<int> onVueltaCompletada;
-
-    // Evento cuando el jugador gana
     public UnityEvent onJugadorGano;
+
+    // Referencias
+    private UIManager uiManager;
+    private GameManager gameManager;
+    private TimerManager timerManager;
 
     void Start()
     {
-        puedeCruzarMeta = false;
+        // Buscamos referencias
+        uiManager    = FindObjectOfType<UIManager>();
+        gameManager  = FindObjectOfType<GameManager>();
+        timerManager = FindObjectOfType<TimerManager>();
 
-        Debug.Log("LapManager iniciado.");
+        // Verificamos referencias críticas
+        if (gameManager == null)
+            Debug.LogError("LapManager: No se encontró el GameManager.");
+
+        if (uiManager == null)
+            Debug.LogWarning("LapManager: No se encontró el UIManager.");
+
+        // Estado inicial
+        vueltaActual        = 1;
+        checkpointsCruzados = 0;
+        ultimoCheckpoint    = 0;
+        puedeCruzarMeta     = false;
+
+        // Actualizamos la UI con la vuelta inicial
+        ActualizarUIVueltas();
+
+        Debug.Log("LapManager iniciado. Vueltas requeridas: " + vueltasTotales +
+                " | Checkpoints requeridos: " + totalCheckpoints);
     }
 
-    // ----------------------------------------------------
-    // CHECKPOINTS
-    // ----------------------------------------------------
-    public void CheckpointCruzado(int numeroCheckpoint)
+    // ---- Llamado por cada Checkpoint cuando la nave lo cruza ----
+    public void CheckpointCruzado(int numero)
     {
-        // Verificamos que pase los checkpoints en orden
-        if (numeroCheckpoint == ultimoCheckpointCruzado + 1)
+        Debug.Log("LapManager: CheckpointCruzado(" + numero + ") recibido. " +
+                "Último checkpoint: " + ultimoCheckpoint);
+
+        // Verificamos que sea el siguiente en orden
+        if (numero != ultimoCheckpoint + 1)
         {
-            ultimoCheckpointCruzado = numeroCheckpoint;
-
-            checkpointsCruzadosEnVuelta++;
-
-            Debug.Log("Checkpoint " + numeroCheckpoint + " cruzado.");
-
-            // Si ya cruzó todos los checkpoints
-            if (checkpointsCruzadosEnVuelta >= totalCheckpoints)
-            {
-                puedeCruzarMeta = true;
-
-                Debug.Log("¡Todos los checkpoints cruzados! Ve a la meta.");
-            }
+            Debug.Log("LapManager: Checkpoint " + numero + " ignorado. " +
+                    "Se esperaba el " + (ultimoCheckpoint + 1));
+            return;
         }
-        else
+
+        // Registramos el checkpoint
+        ultimoCheckpoint = numero;
+        checkpointsCruzados++;
+
+        Debug.Log("LapManager: Checkpoint " + numero + " registrado. " +
+                "Cruzados: " + checkpointsCruzados + "/" + totalCheckpoints);
+
+        // Si ya cruzó todos los checkpoints, puede cruzar la meta
+        if (checkpointsCruzados >= totalCheckpoints)
         {
-            Debug.Log(
-                "Checkpoint incorrecto. Debes pasar el checkpoint "
-                + (ultimoCheckpointCruzado + 1)
-            );
+            puedeCruzarMeta = true;
+            Debug.Log("LapManager: Todos los checkpoints cruzados. " +
+                    "¡Busca la meta!");
+
+            // Avisamos al jugador con un mensaje en pantalla
+            if (uiManager != null)
+                uiManager.MostrarMensajeTemporal("¡Busca la meta!", 2f);
         }
     }
 
-    // ----------------------------------------------------
-    // META
-    // ----------------------------------------------------
+    // ---- Llamado por LineaMeta cuando la nave cruza la meta ----
     public void MetaCruzada()
     {
-        // Si la meta está bloqueada, ignoramos
-        if (metaBloqueada)
-        {
-            return;
-        }
+        Debug.Log("LapManager: MetaCruzada() recibido. " +
+                "puedeCruzarMeta: " + puedeCruzarMeta);
 
-        // Verificamos que haya pasado todos los checkpoints
+        // Solo cuenta si cruzó todos los checkpoints
         if (!puedeCruzarMeta)
         {
-            Debug.Log("Debes pasar todos los checkpoints primero.");
+            Debug.Log("LapManager: Meta ignorada — faltan checkpoints.");
+
+            if (uiManager != null)
+                uiManager.MostrarMensajeTemporal("⚠️ ¡Pasa por todos los checkpoints!", 2f);
             return;
         }
 
-        // Bloqueamos temporalmente la meta
-        metaBloqueada = true;
-
-        // Desbloqueamos después de 1 segundo
-        Invoke(nameof(DesbloquearMeta), 1f);
-
-        // Aumentamos la vuelta
-        vueltaActual++;
-
-        Debug.Log("¡Vuelta " + vueltaActual + " completada!");
+        // Completó una vuelta válida
+        Debug.Log(" LapManager: ¡Vuelta " + vueltaActual + " completada!");
 
         // Damos puntos por vuelta
         if (PuntosManager.instancia != null)
-        {
             PuntosManager.instancia.AgregarPuntosPorVuelta();
-        }
 
-        // Actualizamos la UI
+        // Disparamos el evento
         onVueltaCompletada?.Invoke(vueltaActual);
 
-        // Verificamos si ganó
+        // Verificamos si ya ganó
         if (vueltaActual >= vueltasTotales)
         {
-            Debug.Log("¡EL JUGADOR GANÓ!");
+            Debug.Log("🏆 LapManager: ¡El jugador completó todas las vueltas!");
+            onJugadorGano?.Invoke();
+
+            // Llamamos directamente al GameManager
+            if (gameManager != null)
+                gameManager.JugadorGano();
 
             // Detenemos el timer
-            TimerManager timerManager =
-                Object.FindAnyObjectByType<TimerManager>();
-
             if (timerManager != null)
-            {
                 timerManager.DetenerTimer();
-            }
-
-            // Disparamos evento de victoria
-            onJugadorGano?.Invoke();
 
             return;
         }
 
-        // Reiniciamos para la siguiente vuelta
-        ultimoCheckpointCruzado = 0;
+        // Preparamos la siguiente vuelta
+        vueltaActual++;
+        checkpointsCruzados = 0;
+        ultimoCheckpoint    = 0;
+        puedeCruzarMeta     = false;
 
-        checkpointsCruzadosEnVuelta = 0;
+        // Actualizamos la UI
+        ActualizarUIVueltas();
 
-        puedeCruzarMeta = false;
+        // Mensaje de vuelta completada
+        if (uiManager != null)
+            uiManager.MostrarMensajeTemporal("¡Vuelta " + (vueltaActual - 1) +
+                                            " completada!", 2f);
+
+        Debug.Log("LapManager: Vuelta " + vueltaActual + " iniciada.");
     }
 
-    // ----------------------------------------------------
-    // DESBLOQUEAR META
-    // ----------------------------------------------------
-    void DesbloquearMeta()
+    // ---- Actualiza el texto de vueltas en la UI ----
+    void ActualizarUIVueltas()
     {
-        metaBloqueada = false;
+        if (uiManager != null)
+            uiManager.ActualizarVueltas(vueltaActual);
+
+        Debug.Log("LapManager: UI actualizada → Vuelta " +
+                vueltaActual + "/" + vueltasTotales);
     }
 }

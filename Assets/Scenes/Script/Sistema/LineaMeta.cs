@@ -1,29 +1,49 @@
 using UnityEngine;
 
+// Script que va en el objeto LineaMeta
+// Detecta cuando la nave cruza la meta y avisa al LapManager
 public class LineaMeta : MonoBehaviour
 {
-    [Header("Configuración de Vueltas")]
-    public int vueltasTotales = 3; // Cuántas vueltas necesita el jugador para ganar
-    private int vueltasActuales = 0;
+    private LapManager lapManager;
+
+    void Start()
+    {
+        lapManager = FindObjectOfType<LapManager>();
+
+        // Verificamos configuración
+        Collider2D col = GetComponent<Collider2D>();
+
+        if (col == null)
+        {
+            Debug.LogError("LineaMeta: No tiene Collider2D.");
+            return;
+        }
+
+        if (!col.isTrigger)
+        {
+            Debug.LogError("LineaMeta: El Collider2D NO tiene isTrigger activado.");
+        }
+
+        if (lapManager == null)
+        {
+            Debug.LogError("LineaMeta: No se encontró el LapManager en la escena.");
+            return;
+        }
+
+        Debug.Log("LineaMeta: lista y conectada al LapManager.");
+    }
 
     void OnTriggerEnter2D(Collider2D otro)
     {
-        // Solo reaccionamos si el objeto que entra tiene el tag "Jugador"
-        if (otro.CompareTag("Jugador"))
-        {
-            MetaCruzada();
-        }
-    }
+        // Log para ver cualquier objeto que cruce la meta
+        Debug.Log("LineaMeta: algo cruzó → " + otro.gameObject.name +
+                " (tag: " + otro.tag + ")");
 
-    public void MetaCruzada()
-    {
-        vueltasActuales++;
-        Debug.Log("¡Meta cruzada! Vuelta actual: " + vueltasActuales);
+        if (!otro.CompareTag("Jugador")) return;
 
-        if (vueltasActuales >= vueltasTotales)
-        {
-            Debug.Log("¡Felicidades, has ganado el juego!");
-            // Aquí puedes poner el código para cargar la pantalla de victoria
-        }
+        Debug.Log(" ¡Jugador cruzó la meta!");
+
+        if (lapManager != null)
+            lapManager.MetaCruzada();
     }
 }

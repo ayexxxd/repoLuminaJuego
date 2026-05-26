@@ -68,6 +68,20 @@ public class MovimientoNave : MonoBehaviour
         }
     }
 
+    public void HitBoundary(Vector2 direccionRebote)
+    {
+        // Aquí es donde defines qué hace la nave al chocar
+        // Por ejemplo, si usas un Rigidbody2D:
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            // Esto le da un empujón a la nave en la dirección calculada
+            rb.linearVelocity = direccionRebote * 10f; 
+        }
+        
+        Debug.Log("La nave chocó y rebotó");
+    }
+
     // ---- Gira la nave a izquierda o derecha ----
     void GirarNave()
     {

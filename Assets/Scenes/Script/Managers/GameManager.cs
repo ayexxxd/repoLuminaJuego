@@ -1,122 +1,158 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-// GameManager controla el estado general del juego
-// Sabe si el jugador está jugando, ganó o perdió
-// Vive en un GameObject vacío en la escena
 public class GameManager : MonoBehaviour
 {
-    // Estado posibles del juego
-    public enum EstadoJuego
-    {
-        Jugando,
-        Victoria,
-        Derrota
-    }
-
-    // Estado actual — empieza en Jugando
+    public enum EstadoJuego { Jugando, Victoria, Derrota }
     public EstadoJuego estadoActual = EstadoJuego.Jugando;
 
-    // Para que solo exista un GameManager en toda la escena
     public static GameManager instancia;
 
     void Awake()
     {
-        // Patrón Singleton: nos aseguramos de que solo haya uno
-        if (instancia == null)
-        {
-            instancia = this;
-        }
-        else
-        {
-            Destroy(gameObject);
-        }
+        if (instancia == null) instancia = this;
+        else Destroy(gameObject);
     }
 
-    // ---- Llamado cuando el tiempo se agota ----
-    // Lo conectaremos al evento onTiempoAgotado del TimerManager
-    public void JugadorPerdio()
-    {
-        // Solo reaccionamos si el juego aún está en curso
-        if (estadoActual != EstadoJuego.Jugando) return;
+    // ============================================================
+    // VICTORIA
+    // ============================================================
 
-        estadoActual = EstadoJuego.Derrota;
-        Debug.Log("GAME OVER - El jugador perdió.");
-
-        // Desactivamos el movimiento de la nave
-        MovimientoNave nave = Object.FindAnyObjectByType<MovimientoNave>();
-        if (nave != null)
-        {
-            nave.enabled = false;
-        }
-
-        // Por ahora solo mostramos en consola
-        // En la Etapa 13 cargaremos la pantalla de derrota real
-        Debug.Log("Cargando pantalla de derrota...");
-
-        // Esperamos 2 segundos y recargamos la escena por ahora
-        Invoke("RecargarEscena", 2f);
-    }
-
-    // ---- Llamado cuando el jugador completa todas las vueltas ----
-    // Lo conectaremos al evento onJugadorGano del LapManager
     public void JugadorGano()
     {
         if (estadoActual != EstadoJuego.Jugando) return;
-
         estadoActual = EstadoJuego.Victoria;
+
         Debug.Log("¡VICTORIA!");
 
         // Detenemos la nave
         MovimientoNave nave = FindObjectOfType<MovimientoNave>();
         if (nave != null) nave.enabled = false;
 
-        // Obtenemos el tiempo restante para el bonus
-         // Obtenemos el tiempo restante para el bonus
+        // Obtenemos el tiempo transcurrido desde el TimerManager
         TimerManager timerManager = FindObjectOfType<TimerManager>();
+        float tiempoTranscurrido = 0f;
         float tiempoRestante = 0f;
 
         if (timerManager != null)
         {
-            tiempoRestante = timerManager.tiempoRestante;
+            tiempoTranscurrido = timerManager.ObtenerTiempoTranscurrido();
+            tiempoRestante     = timerManager.tiempoRestante;
+            timerManager.DetenerTimer();
         }
-        
 
-        // Buscamos el UIManager
-        UIManager uiManager = FindObjectOfType<UIManager>();
-        
-        // Agregamos puntos por victoria y por tiempo restante
+        // Calculamos puntos y tokens
+        int puntosTotales = 0;
+        int tokens = 0;
+
         if (PuntosManager.instancia != null)
         {
             PuntosManager.instancia.AgregarPuntosPorVictoria(tiempoRestante);
-
-            // Calculamos los tokens generados
-            int tokens = PuntosManager.instancia.CalcularTokens();
-            int puntosTotales = PuntosManager.instancia.ObtenerPuntos();
-
-            Debug.Log("=== RESUMEN DE PARTIDA ===");
-            Debug.Log("Puntos totales: " + puntosTotales);
-            Debug.Log("Tokens ganados: " + tokens);
-
-            // Guardamos los tokens para enviarlos a la API
-            // Esto lo usaremos en la Etapa 14
-            PlayerPrefs.SetInt("TokensGanados", tokens);
-            PlayerPrefs.SetInt("PuntosFinales", puntosTotales);
-            PlayerPrefs.SetFloat("TiempoFinal", timerManager != null ?
-                                timerManager.ObtenerTiempoTranscurrido() : 0f);
-            PlayerPrefs.Save();
+            tokens        = PuntosManager.instancia.CalcularTokens();
+            puntosTotales = PuntosManager.instancia.ObtenerPuntos();
         }
-        
 
-        // Mostramos el resumen en UI
-        uiManager?.MostrarMensajeTemporal("¡VICTORIA! 🏆", 3f);
+        // Comparamos y guardamos el mejor tiempo
+        GuardarMejorTiempo(tiempoTranscurrido);
 
-        Invoke("RecargarEscena", 3f);
+        // Guardamos todo en PlayerPrefs para la pantalla de victoria
+        PlayerPrefs.SetInt("PuntosFinales",  puntosTotales);
+        PlayerPrefs.SetInt("TokensGanados",  tokens);
+        PlayerPrefs.SetFloat("TiempoFinal",  tiempoTranscurrido);
+        PlayerPrefs.Save();
+
+        Debug.Log("Puntos: " + puntosTotales + " | Tokens: " + tokens +
+                " | Tiempo: " + tiempoTranscurrido);
+
+        // Cargamos la pantalla de victoria después de 2 segundos
+        Invoke("CargarVictoria", 2f);
     }
 
-    void RecargarEscena()
+    // ============================================================
+    // DERROTA — por tiempo agotado
+    // ============================================================
+
+    // ---- Llamado cuando se acaba el tiempo ----
+    public void JugadorPerdioTiempo()
     {
-        // Recarga la escena actual — útil para pruebas
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Debug.Log("GameManager: JugadorPerdioTiempo() recibido. Estado: " + estadoActual);
+
+        if (estadoActual != EstadoJuego.Jugando) return;
+
+        PlayerPrefs.SetInt("RazonDerrota", 1);
+        ProcesarDerrota();
+    }
+
+    // ---- Llamado cuando se acaban las vidas ----
+    public void JugadorPerdioSinVidas()
+    {
+        Debug.Log("GameManager: JugadorPerdioSinVidas() recibido. Estado: " + estadoActual);
+
+        if (estadoActual != EstadoJuego.Jugando) return;
+
+        PlayerPrefs.SetInt("RazonDerrota", 0);
+        ProcesarDerrota();
+    }
+
+    // ---- Lógica común de derrota ----
+    void ProcesarDerrota()
+    {
+        estadoActual = EstadoJuego.Derrota;
+        Debug.Log("GameManager: Procesando derrota...");
+
+        // Detenemos la nave
+        MovimientoNave nave = FindObjectOfType<MovimientoNave>();
+        if (nave != null) nave.enabled = false;
+
+        // Guardamos los puntos actuales
+        if (PuntosManager.instancia != null)
+        {
+            PlayerPrefs.SetInt("PuntosFinales",
+                            PuntosManager.instancia.ObtenerPuntos());
+        }
+
+        PlayerPrefs.Save();
+
+        Debug.Log("Cargando escena Derrota en 2 segundos...");
+        Invoke("CargarDerrota", 2f);
+    }
+
+    
+    // ============================================================
+    // MEJOR TIEMPO
+    // ============================================================
+
+    // ---- Compara el tiempo actual con el mejor guardado ----
+    // Si es mejor (más rápido), lo guarda
+    void GuardarMejorTiempo(float tiempoActual)
+    {
+        float mejorTiempo = PlayerPrefs.GetFloat("MejorTiempo", 0f);
+
+        // Si no hay tiempo guardado (0) o el nuevo es más rápido → guardamos
+        if (mejorTiempo <= 0f || tiempoActual < mejorTiempo)
+        {
+            PlayerPrefs.SetFloat("MejorTiempo", tiempoActual);
+            PlayerPrefs.Save();
+            Debug.Log("¡Nuevo mejor tiempo! " + tiempoActual + "s");
+        }
+        else
+        {
+            Debug.Log("Mejor tiempo anterior: " + mejorTiempo +
+                    "s | Tiempo actual: " + tiempoActual + "s");
+        }
+    }
+
+    // ============================================================
+    // MÉTODOS DE CARGA DE ESCENAS
+    // ============================================================
+
+    void CargarVictoria()
+    {
+        SceneManager.LoadScene("Victoria");
+    }
+
+    void CargarDerrota()
+    {
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Derrota");
     }
 }

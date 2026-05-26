@@ -42,10 +42,13 @@ public class PowerUpManager : MonoBehaviour
         if (instancia == null)
         {
             instancia = this;
+            DontDestroyOnLoad(gameObject); 
+            Debug.Log("PowerUpManager: Inicializado y protegido.");
         }
-        else
+        else if (instancia != this)
         {
             Destroy(gameObject);
+            Debug.Log("PowerUpManager: Duplicado eliminado.");
         }
     }
 

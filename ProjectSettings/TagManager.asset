@@ -3,17 +3,21 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Impulsadores
+  - Jugador
+  - estrellas
+  - Minimapa
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Jugador
   - Water
   - UI
-  - 
-  - 
-  - 
+  - PowerUp
+  - Trigger
+  - Minimapa
   - 
   - 
   - 

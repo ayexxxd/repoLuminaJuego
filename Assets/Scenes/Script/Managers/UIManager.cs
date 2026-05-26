@@ -68,6 +68,10 @@ public class UIManager : MonoBehaviour
             // Mostramos "VUELTA 2 / 3" por ejemplo
             textoVueltas.text = "VUELTA " + vueltaActual + " / " + vueltasTotales;
         }
+        else
+        {
+            Debug.LogWarning("UIManager: textoVueltas no está asignado en el Inspector.");
+        }
     }
 
     // ---- Actualiza el texto del timer en pantalla ----
