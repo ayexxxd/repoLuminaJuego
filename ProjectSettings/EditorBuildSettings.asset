@@ -36,14 +36,14 @@ EditorBuildSettings:
     path: Assets/Scenes/MiniJuego1Scenes/ScenesMJ1/FinalEscena.unity
     guid: b2898e5b911907641862f3039a8f5009
   - enabled: 1
-    path: Assets/Scenes/Scene/Derrota.unity
-    guid: ac306ab647064fc4280da17df1a4e3ec
-  - enabled: 1
     path: Assets/Scenes/Scene/MenuPrincipal.unity
     guid: b1a8a6710b8375e4cb9145c143b3c9b0
   - enabled: 1
     path: Assets/Scenes/Scene/SceneCarro.unity
     guid: 0eea88a390689b640b61011c8b59aa1a
+  - enabled: 1
+    path: Assets/Scenes/Scene/Derrota.unity
+    guid: ac306ab647064fc4280da17df1a4e3ec
   - enabled: 1
     path: Assets/Scenes/Scene/Victoria.unity
     guid: f3c584b82e67fbc49bbfa7235829634e

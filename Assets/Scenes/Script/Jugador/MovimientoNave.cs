@@ -11,6 +11,21 @@ public class MovimientoNave : MonoBehaviour
 
     // Velocidad con la que la nave gira (en grados por segundo)
     public float velocidadGiro = 150f;
+    [Header("Configuración de Drift")]
+// Si el drift está habilitado
+    public bool driftHabilitado = true;
+
+    // Cuánto resbala la nave durante el drift (0 = nada, 1 = máximo)
+    public float fuerzaDerrape = 0.85f;
+
+    // Multiplicador de giro durante el drift
+    public float multiplicadorGiroDrift = 1.5f;
+
+    // Si está en modo drift ahora mismo
+    private bool enDrift = false;
+
+    // Referencia al TrailRenderer para el rastro visual
+    private TrailRenderer rastro;
 
     // Velocidad máxima que puede alcanzar la nave
     public float velocidadMaxima = 8f;
@@ -31,6 +46,8 @@ public class MovimientoNave : MonoBehaviour
         // Buscamos y guardamos el componente Rigidbody2D que está en este mismo GameObject
         // GetComponent<>() busca un componente específico en el objeto
         rb = GetComponent<Rigidbody2D>();
+        // Buscamos el TrailRenderer si existe
+        rastro = GetComponent<TrailRenderer>();
     }
 
     // ---- Unity llama a Update() una vez por cada frame ----
@@ -40,8 +57,17 @@ public class MovimientoNave : MonoBehaviour
         entradaMovimiento = Input.GetAxisRaw("Vertical");
         entradaGiro = Input.GetAxisRaw("Horizontal");
 
-        // Agrega esta línea justo debajo:
-        Debug.Log("Movimiento: " + entradaMovimiento + " | Giro: " + entradaGiro);
+        // Detectamos si el jugador está haciendo drift
+        // Shift izquierdo o Space activan el drift
+        if (driftHabilitado)
+        {
+            enDrift = Input.GetKey(KeyCode.LeftShift) ||
+                    Input.GetKey(KeyCode.Space);
+        }
+
+        // Activamos el rastro visual durante el drift
+        if (rastro != null)
+            rastro.emitting = enDrift;
     }
 
     // ---- Unity llama a FixedUpdate() a intervalos fijos de tiempo ----
@@ -49,8 +75,18 @@ public class MovimientoNave : MonoBehaviour
     void FixedUpdate()
     {
         MoverNave();
-        GirarNave();
+
+        // Si está en drift usamos el giro especial
+        if (enDrift)
+            GirarNaveDrift();
+        else
+            GirarNave();
+
         LimitarVelocidad();
+
+        // Aplicamos el efecto de derrape si está en drift
+        if (enDrift)
+            AplicarDerrape();
     }
 
     // ---- Mueve la nave hacia adelante o hacia atrás ----
@@ -159,7 +195,44 @@ public class MovimientoNave : MonoBehaviour
 
         Debug.Log("Velocidad restaurada.");
     }
+    // ---- Aplica el efecto de resbalamiento durante el drift ----
+    // ---- Aplica el efecto de resbalamiento durante el drift ----
+    void AplicarDerrape()
+    {
+        // Reducimos la velocidad perpendicular a la nave
+        // Esto crea el efecto de que la nave "resbala" de lado
+        Vector2 velocidadActual = rb.linearVelocity;
+
+        // Dirección hacia adelante de la nave
+        Vector2 adelante = transform.up;
+
+        // Componente de velocidad hacia adelante
+        float velocidadAdelante = Vector2.Dot(velocidadActual, adelante);
+
+        // Velocidad hacia adelante como vector
+        Vector2 velocidadFrontal = adelante * velocidadAdelante;
+
+        // Velocidad lateral (la que causa el derrape)
+        Vector2 velocidadLateral = velocidadActual - velocidadFrontal;
+
+        // Reducimos la velocidad lateral según la fuerza de derrape
+        // fuerzaDerrape cerca de 1 = mucho derrape / cerca de 0 = poco
+        rb.linearVelocity = velocidadFrontal + velocidadLateral * fuerzaDerrape;
+    }
+
+    // ---- Versión especial del giro durante drift ----
+    void GirarNaveDrift()
+    {
+        if (entradaGiro != 0)
+        {
+            // Durante el drift la nave gira más rápido
+            float cantidadGiro = -entradaGiro * velocidadGiro *
+                                  multiplicadorGiroDrift * Time.fixedDeltaTime;
+            rb.MoveRotation(rb.rotation + cantidadGiro);
+        }
+    }
+                
+    }
 
 
 
-}
