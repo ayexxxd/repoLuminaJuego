@@ -35,18 +35,13 @@ public class GameController : MonoBehaviour
     }
     else
     {
-        Juego juego =
-            JsonUtility.FromJson<Juego>
-            (web.downloadHandler.text);
+        Juego juego =JsonUtility.FromJson<Juego>(web.downloadHandler.text);
 
         nombreJuego.text = juego.Nombre;
 
-        UnityWebRequest imageWeb =
-            UnityWebRequestTexture
-            .GetTexture(juego.imagen);
+        UnityWebRequest imageWeb =UnityWebRequestTexture.GetTexture(juego.imagen);
 
-        imageWeb.certificateHandler =
-            new ForceAcceptAll5();
+        imageWeb.certificateHandler =new ForceAcceptAll5();
 
         yield return imageWeb.SendWebRequest();
 
@@ -56,21 +51,8 @@ public class GameController : MonoBehaviour
         }
         else
         {
-            Texture2D texture =
-                DownloadHandlerTexture
-                .GetContent(imageWeb);
-
-            Sprite sprite =
-                Sprite.Create(
-                    texture,
-                    new Rect(
-                        0,
-                        0,
-                        texture.width,
-                        texture.height),
-                    new Vector2(0.5f, 0.5f)
-                );
-
+            Texture2D texture =DownloadHandlerTexture.GetContent(imageWeb);
+            Sprite sprite =Sprite.Create(texture,new Rect(0,0,texture.width,texture.height),new Vector2(0.5f, 0.5f));
             gameImage.sprite = sprite;
         }
     }
