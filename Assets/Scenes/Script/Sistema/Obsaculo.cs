@@ -55,13 +55,13 @@ public class Obstaculo : MonoBehaviour
         if (tipo == TipoObstaculo.Fisico && col.isTrigger)
         {
             Debug.LogWarning(gameObject.name + ": Es tipo Fisico pero isTrigger está activado. " +
-                           "Desactiva isTrigger para que haya rebote físico.");
+                        "Desactiva isTrigger para que haya rebote físico.");
         }
 
         if (tipo == TipoObstaculo.Toxico && !col.isTrigger)
         {
             Debug.LogWarning(gameObject.name + ": Es tipo Toxico pero isTrigger está desactivado. " +
-                           "Activa isTrigger para que la nave pueda atravesarlo.");
+                        "Activa isTrigger para que la nave pueda atravesarlo.");
         }
     }
 
