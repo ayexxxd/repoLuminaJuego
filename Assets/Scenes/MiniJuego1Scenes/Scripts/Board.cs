@@ -194,40 +194,48 @@ public class Board : MonoBehaviour
         Pieza monstruo = a.esEspecial ? a : b;
         Pieza objetivo = a.esEspecial ? b : a;
 
-        Debug.Log($"Monstruo tipo:{monstruo.tipoEspecial} " +
-                $"en [{monstruo.col},{monstruo.fil}] " +
+        Debug.Log($"[MONSTRUO] tipo:{monstruo.tipoEspecial} " +
+                $"pos:[{monstruo.col},{monstruo.fil}] " +
                 $"objetivo tipo:{objetivo.tipoPieza}");
 
         bool[,] aDestruir = new bool[columnas, filas];
 
         if (monstruo.tipoEspecial == 1)
         {
-            Debug.Log("→ Activando Monstruo Rojo 3x3");
+            Debug.Log("[MONSTRUO] Activando Rojo 3x3");
             ActivarMonstruoRojo(monstruo.col, monstruo.fil, aDestruir);
         }
         else if (monstruo.tipoEspecial == 2)
         {
-            Debug.Log("→ Activando Monstruo Verde — color:" + objetivo.tipoPieza);
+            Debug.Log("[MONSTRUO] Activando Verde color:" + objetivo.tipoPieza);
             ActivarMonstruoVerde(monstruo.col, monstruo.fil,
                                 objetivo.tipoPieza, aDestruir);
         }
         else
         {
-            Debug.LogWarning("tipoEspecial desconocido: " + monstruo.tipoEspecial);
+            Debug.LogError("[MONSTRUO] tipoEspecial inválido: " + monstruo.tipoEspecial);
+            estaProcesando = false;
+            yield break;
         }
 
-        // Destruye también al monstruo
+        // Destruye el monstruo también
         aDestruir[monstruo.col, monstruo.fil] = true;
 
-        // Cuenta piezas a destruir
+        // Cuenta cuántas se van a destruir
         int cantidad = 0;
         for (int c = 0; c < columnas; c++)
             for (int f = 0; f < filas; f++)
                 if (aDestruir[c, f]) cantidad++;
 
-        Debug.Log($"Piezas a destruir: {cantidad}");
+        Debug.Log("[MONSTRUO] Piezas a destruir: " + cantidad);
 
-        // Suma puntos
+        if (cantidad == 0)
+        {
+            Debug.LogError("[MONSTRUO] cantidad es 0 — algo falló en ActivarMonstruoRojo/Verde");
+            estaProcesando = false;
+            yield break;
+        }
+
         GameManager.instancia.AgregarPuntos(CalcularPuntos(cantidad));
         GameManager.instancia.UsarMovimiento();
         GestorPreguntas.instancia.RegistrarMovimiento();
@@ -239,7 +247,6 @@ public class Board : MonoBehaviour
             {
                 if (aDestruir[c, f] && tablero[c, f] != null)
                 {
-                    Debug.Log($"  Destruyendo [{c},{f}]");
                     Destroy(tablero[c, f].gameObject);
                     tablero[c, f] = null;
                 }
@@ -602,7 +609,7 @@ public class Board : MonoBehaviour
             }
         }
 
-        GameManager.instancia.AgregarMovimientos(3);
+        //GameManager.instancia.AgregarMovimientos(3);
     }
 
     // ── Destruye todo el tablero y lo regenera ────────────
