@@ -118,11 +118,12 @@ namespace DefensoresDeSoftware
             }
         }
 
-        void RevisarRespuesta(bool esCorrecto) 
+        void RevisarRespuesta(bool esCorrecto)
         {
             if (esCorrecto && ExInGameControl.Instance != null)
             {
                 ExInGameControl.Instance.AddWhirlpoolToken();
+                ExInGameControl.Instance.RegistrarRespuestaCorrecta();
             }
             
             if (panelTrivia != null) panelTrivia.SetActive(false);

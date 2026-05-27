@@ -12,9 +12,10 @@ namespace DefensoresDeSoftware
 
         [Header("Sistema de Disparo")]
         public GameObject bulletPrefab;
-        public Transform firePoint; 
-        public float fireRate = 0.25f; 
-        public Vector2 fireDirection = Vector2.right; 
+        public Transform firePoint;
+        public float fireRate = 0.25f;
+        public Vector2 fireDirection = Vector2.right;
+        public AudioClip shootSFX;
 
         private float baseMoveSpeed;
         private int baseDamage = 1;
@@ -77,11 +78,13 @@ namespace DefensoresDeSoftware
         
         void Shoot()
         {
+            if (SFXManager.Instance != null)
+                SFXManager.Instance.PlaySFX(shootSFX, randomizePitch: true);
+
             GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             ExInBullet bulletScript = newBullet.GetComponent<ExInBullet>();
             if (bulletScript != null)
             {
-
                 bulletScript.damage = currentDamage;
                 bulletScript.Fire(fireDirection);
             }

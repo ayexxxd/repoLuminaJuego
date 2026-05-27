@@ -14,7 +14,8 @@ namespace DefensoresDeSoftware
         public Rigidbody2D rig;
         public GameObject bulletPrefab;
         public Transform firePoint;
-        public float fireRate = 2f; 
+        public float fireRate = 2f;
+        public AudioClip shootSFX;
 
         
 
@@ -138,9 +139,12 @@ namespace DefensoresDeSoftware
 
         IEnumerator RutinaDeDisparo()
         {
-            while (true) 
+            while (true)
             {
                 yield return new WaitForSeconds(fireRate);
+
+                if (SFXManager.Instance != null)
+                    SFXManager.Instance.PlaySFX(shootSFX, randomizePitch: true);
 
                 if (patronDisparo == TipoDisparo.HaciaAdelante) DisparoAdelante();
                 else if (patronDisparo == TipoDisparo.Estrella) DisparoEstrella();
