@@ -24,6 +24,8 @@ public class ScoreManager : MonoBehaviour
     {
         score += points;
         UpdateScoreDisplay();
+        PlayerPrefs.SetInt("Score", score);
+        PlayerPrefs.Save();
     }
 
     public void EnemyKilled(string Tag)

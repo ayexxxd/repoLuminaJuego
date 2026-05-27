@@ -2,7 +2,7 @@
 
 public class Juego
 {
-    public string Nombre;
+    public string nombre;
 
     public string imagen;
 }

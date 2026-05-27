@@ -37,7 +37,7 @@ public class GameController : MonoBehaviour
     {
         Juego juego =JsonUtility.FromJson<Juego>(web.downloadHandler.text);
 
-        nombreJuego.text = juego.Nombre;
+        nombreJuego.text = juego.nombre;
 
         UnityWebRequest imageWeb =UnityWebRequestTexture.GetTexture(juego.imagen);
 
