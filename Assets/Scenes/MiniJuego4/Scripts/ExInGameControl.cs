@@ -28,19 +28,23 @@ namespace DefensoresDeSoftware
             if (Instance == null)
             {
                 Instance = this;
-                DontDestroyOnLoad(gameObject); 
-                PlayerPrefs.SetInt("Lives", initialLives);
-
-                PlayerPrefs.SetInt("BonusDamage", 0);
-                PlayerPrefs.SetInt("BonusSpeed", 0);
+                DontDestroyOnLoad(gameObject);
+                ResetearProgreso();
             }
             else
             {
                 Destroy(gameObject);
             }
-            PlayerPrefs.SetInt("WhirlpoolTokens", 0);
-            PlayerPrefs.SetInt("BonusDamage", 0);     
+        }
+
+        void ResetearProgreso()
+        {
+            PlayerPrefs.SetInt("Lives", initialLives);
+            PlayerPrefs.SetInt("BonusDamage", 0);
             PlayerPrefs.SetInt("BonusSpeed", 0);
+            PlayerPrefs.SetInt("WhirlpoolTokens", 0);
+            PlayerPrefs.SetInt("OleadasCompletadas", 0);
+            PlayerPrefs.SetInt("PreguntasCorrectas", 0);
             PlayerPrefs.Save();
         }
 
@@ -56,7 +60,7 @@ namespace DefensoresDeSoftware
 
             if (currentLives <= 0)
             {
-                SceneManager.LoadScene("ExInDerrota");
+                SceneManager.LoadScene("ExInEndScene");
             }
         }
 
@@ -124,6 +128,19 @@ namespace DefensoresDeSoftware
                 case TipoMejora.Vida:      return costoVida;
                 default:                   return 999;
             }
+        }
+
+        public void ReportarOleadasCompletadas(int total)
+        {
+            PlayerPrefs.SetInt("OleadasCompletadas", total);
+            PlayerPrefs.Save();
+        }
+
+        public void RegistrarRespuestaCorrecta()
+        {
+            int correctas = PlayerPrefs.GetInt("PreguntasCorrectas", 0);
+            PlayerPrefs.SetInt("PreguntasCorrectas", correctas + 1);
+            PlayerPrefs.Save();
         }
     }
 
