@@ -1297,8 +1297,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2071b8d992b44b58930452a5c0da325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::menu
+  apiBaseUrl: https://127.0.0.1:5001
+  idUsuario: 1
+  costoMiniJuego4: 1
+  aceptarCertificadosNoConfiables: 1
   miniJuego5StartScene: StartScene
-  miniJuego4StartScene: MiniJuego4Start
+  miniJuego4StartScene: ExInInicio
+  panelTokensInsuficientes: {fileID: 0}
+  textoMensaje: {fileID: 0}
+  botonMiniJuego4: {fileID: 0}
 --- !u!1 &713451534
 GameObject:
   m_ObjectHideFlags: 0
