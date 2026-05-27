@@ -1,0 +1,3718 @@
+fileFormatVersion: 2
+guid: fab08af802b9c4e19a07119f1892be54
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1857820820543059913
+    second: Diamante_0
+  - first:
+      213: 721031680227320466
+    second: Diamante_1
+  - first:
+      213: -3717169777695690816
+    second: Diamante_2
+  - first:
+      213: -1600791969373642666
+    second: Diamante_3
+  - first:
+      213: -7917477937132821893
+    second: Diamante_4
+  - first:
+      213: -2212903619031866885
+    second: Diamante_5
+  - first:
+      213: -5309557163118522386
+    second: Diamante_6
+  - first:
+      213: 1587634947357183401
+    second: Diamante_7
+  - first:
+      213: -207381402559181221
+    second: Diamante_8
+  - first:
+      213: -8280763864789194096
+    second: Diamante_9
+  - first:
+      213: 3784177062270041842
+    second: Diamante_10
+  - first:
+      213: -3035917871142698946
+    second: Diamante_11
+  - first:
+      213: 8874688669956068442
+    second: Diamante_12
+  - first:
+      213: 1896148954242576128
+    second: Diamante_13
+  - first:
+      213: 8020374990997091496
+    second: Diamante_14
+  - first:
+      213: -3144315362386158195
+    second: Diamante_15
+  - first:
+      213: 583283264694177456
+    second: Diamante_16
+  - first:
+      213: 6353356749125908282
+    second: Diamante_17
+  - first:
+      213: 326691274628676713
+    second: Diamante_18
+  - first:
+      213: -2947003226806469402
+    second: Diamante_19
+  - first:
+      213: -4652150463999863744
+    second: Diamante_20
+  - first:
+      213: 3767842307563846174
+    second: Diamante_21
+  - first:
+      213: -532898620213179525
+    second: Diamante_22
+  - first:
+      213: 8004690666058147924
+    second: Diamante_23
+  - first:
+      213: -2106374556985004016
+    second: Diamante_24
+  - first:
+      213: 5712515734636575354
+    second: Diamante_25
+  - first:
+      213: -1313225686614272605
+    second: Diamante_26
+  - first:
+      213: -4947950110154477119
+    second: Diamante_27
+  - first:
+      213: 1135442454016178571
+    second: Diamante_28
+  - first:
+      213: -2747233433733154585
+    second: Diamante_29
+  - first:
+      213: 7913412164143893835
+    second: Diamante_30
+  - first:
+      213: 3914052724612422409
+    second: Diamante_31
+  - first:
+      213: -8271494873614283934
+    second: Diamante_32
+  - first:
+      213: -2030683334762599781
+    second: Diamante_33
+  - first:
+      213: 6522302859983361169
+    second: Diamante_34
+  - first:
+      213: 5077745088703217096
+    second: Diamante_35
+  - first:
+      213: -5990002485847927391
+    second: Diamante_36
+  - first:
+      213: -5189814216347405213
+    second: Diamante_37
+  - first:
+      213: 4250188147702965205
+    second: Diamante_38
+  - first:
+      213: 4116783967295810285
+    second: Diamante_39
+  - first:
+      213: 3039870425117309864
+    second: Diamante_40
+  - first:
+      213: 5612466062718379144
+    second: Diamante_41
+  - first:
+      213: -3833812285835984950
+    second: Diamante_42
+  - first:
+      213: 284318347952683094
+    second: Diamante_43
+  - first:
+      213: 3679701066844850364
+    second: Diamante_44
+  - first:
+      213: -1406889964202594020
+    second: Diamante_45
+  - first:
+      213: 3358464616950497120
+    second: Diamante_46
+  - first:
+      213: 3453861663696915896
+    second: Diamante_47
+  - first:
+      213: 3425468256146814966
+    second: Diamante_48
+  - first:
+      213: -6607407972921249383
+    second: Diamante_49
+  - first:
+      213: 5769289489854788929
+    second: Diamante_50
+  - first:
+      213: 5214814901264683487
+    second: Diamante_51
+  - first:
+      213: 5019155681270964184
+    second: Diamante_52
+  - first:
+      213: 7818337093009359742
+    second: Diamante_53
+  - first:
+      213: 1589539313497756687
+    second: Diamante_54
+  - first:
+      213: 5196536902297528679
+    second: Diamante_55
+  - first:
+      213: 2319333820290687664
+    second: Diamante_56
+  - first:
+      213: -100959782372005740
+    second: Diamante_57
+  - first:
+      213: 5179637426190109316
+    second: Diamante_58
+  - first:
+      213: -5264826341449092964
+    second: Diamante_59
+  - first:
+      213: -1908581947375212121
+    second: Diamante_60
+  - first:
+      213: -848684793579300266
+    second: Diamante_61
+  - first:
+      213: -1414016875255992280
+    second: Diamante_62
+  - first:
+      213: -3772922481519253896
+    second: Diamante_63
+  - first:
+      213: -7226987777126744247
+    second: Diamante_64
+  - first:
+      213: -5997661638181765099
+    second: Diamante_65
+  - first:
+      213: -406062086705218846
+    second: Diamante_66
+  - first:
+      213: 6445563909290091623
+    second: Diamante_67
+  - first:
+      213: -1565833162308248856
+    second: Diamante_68
+  - first:
+      213: -8771112701399032714
+    second: Diamante_69
+  - first:
+      213: 6032312105472694254
+    second: Diamante_70
+  - first:
+      213: 2051862870195111975
+    second: Diamante_71
+  - first:
+      213: 7327549096055823612
+    second: Diamante_72
+  - first:
+      213: 6352463553906005272
+    second: Diamante_73
+  - first:
+      213: -6723120794067821655
+    second: Diamante_74
+  - first:
+      213: 6943379465331866553
+    second: Diamante_75
+  - first:
+      213: 2966853823588610429
+    second: Diamante_76
+  - first:
+      213: -8315354846936724809
+    second: Diamante_77
+  - first:
+      213: -4467280238757442383
+    second: Diamante_78
+  - first:
+      213: 535322048090145827
+    second: Diamante_79
+  - first:
+      213: -6495251570943249672
+    second: Diamante_80
+  - first:
+      213: -3896377017149441279
+    second: Diamante_81
+  - first:
+      213: 8060105382582688517
+    second: Diamante_82
+  - first:
+      213: 6838721974561163774
+    second: Diamante_83
+  - first:
+      213: 3056720642265996965
+    second: Diamante_84
+  - first:
+      213: 2476014600995711887
+    second: Diamante_85
+  - first:
+      213: -2307445240287261667
+    second: Diamante_86
+  - first:
+      213: -3259114445795142731
+    second: Diamante_87
+  - first:
+      213: 5186421001472557192
+    second: Diamante_88
+  - first:
+      213: -715277432211913413
+    second: Diamante_89
+  - first:
+      213: 4476302658227344035
+    second: Diamante_90
+  - first:
+      213: -865963924578227428
+    second: Diamante_91
+  - first:
+      213: 3271481426176051522
+    second: Diamante_92
+  - first:
+      213: 2886941621380824430
+    second: Diamante_93
+  - first:
+      213: 3545751546494512223
+    second: Diamante_94
+  - first:
+      213: -2357759656375696079
+    second: Diamante_95
+  - first:
+      213: -8995039488438924618
+    second: Diamante_96
+  - first:
+      213: -5944149732249112583
+    second: Diamante_97
+  - first:
+      213: 2133627991090364852
+    second: Diamante_98
+  - first:
+      213: 1502370972474699321
+    second: Diamante_99
+  - first:
+      213: 7245896552627741534
+    second: Diamante_100
+  - first:
+      213: 4353662254379446918
+    second: Diamante_101
+  - first:
+      213: -8421221402638792080
+    second: Diamante_102
+  - first:
+      213: 7444314613400089736
+    second: Diamante_103
+  - first:
+      213: -2098860482098187554
+    second: Diamante_104
+  - first:
+      213: 8274450027163533274
+    second: Diamante_105
+  - first:
+      213: 5827226658551386697
+    second: Diamante_106
+  - first:
+      213: -7537587564230043716
+    second: Diamante_107
+  - first:
+      213: -1852544308194595239
+    second: Diamante_108
+  - first:
+      213: 6565103301416519031
+    second: Diamante_109
+  - first:
+      213: 6502505040604147069
+    second: Diamante_110
+  - first:
+      213: -6505892082020211458
+    second: Diamante_111
+  - first:
+      213: -2631882948857200083
+    second: Diamante_112
+  - first:
+      213: 2717846805189605168
+    second: Diamante_113
+  - first:
+      213: 5764761244334673834
+    second: Diamante_114
+  - first:
+      213: -6715262273021446207
+    second: Diamante_115
+  - first:
+      213: -6614194382902814564
+    second: Diamante_116
+  - first:
+      213: -6442370446684767847
+    second: Diamante_117
+  - first:
+      213: 5183816265351628990
+    second: Diamante_118
+  - first:
+      213: 3941916394456916957
+    second: Diamante_119
+  - first:
+      213: 2708339159789356118
+    second: Diamante_120
+  - first:
+      213: -8569301649538159190
+    second: Diamante_121
+  - first:
+      213: -3105556571623357673
+    second: Diamante_122
+  - first:
+      213: 5441937715559811063
+    second: Diamante_123
+  - first:
+      213: 1958686839132723321
+    second: Diamante_124
+  - first:
+      213: 1875703490383068191
+    second: Diamante_125
+  - first:
+      213: 6009948627745558150
+    second: Diamante_126
+  - first:
+      213: -6186351296418833980
+    second: Diamante_127
+  - first:
+      213: 8208540413903965923
+    second: Diamante_128
+  - first:
+      213: 4659049600552423042
+    second: Diamante_129
+  - first:
+      213: -8292651081346461191
+    second: Diamante_130
+  - first:
+      213: 8314294300857374333
+    second: Diamante_131
+  - first:
+      213: 1027275647643417643
+    second: Diamante_132
+  - first:
+      213: 5429857302575199486
+    second: Diamante_133
+  - first:
+      213: 2551558098830141809
+    second: Diamante_134
+  - first:
+      213: 5145318277165018777
+    second: Diamante_135
+  - first:
+      213: 7272168057053483957
+    second: Diamante_136
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Diamante_0
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 0
+        width: 227
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9c73bc0713e48c910800000000000000
+      internalID: 1857820820543059913
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_1
+      rect:
+        serializedVersion: 2
+        x: 247
+        y: 0
+        width: 775
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 292a0c33e7e910a00800000000000000
+      internalID: 721031680227320466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_2
+      rect:
+        serializedVersion: 2
+        x: 463
+        y: 903
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0cf61a618c5f96cc0800000000000000
+      internalID: -3717169777695690816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_3
+      rect:
+        serializedVersion: 2
+        x: 510
+        y: 791
+        width: 9
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 650af2a6f28d8c9e0800000000000000
+      internalID: -1600791969373642666
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_4
+      rect:
+        serializedVersion: 2
+        x: 512
+        y: 903
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b72a438c3c77f1290800000000000000
+      internalID: -7917477937132821893
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_5
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 706
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: bf1ed6902ef2a41e0800000000000000
+      internalID: -2212903619031866885
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_6
+      rect:
+        serializedVersion: 2
+        x: 570
+        y: 743
+        width: 13
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eef80b134e9a056b0800000000000000
+      internalID: -5309557163118522386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_7
+      rect:
+        serializedVersion: 2
+        x: 571
+        y: 711
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ad883ea299680610800000000000000
+      internalID: 1587634947357183401
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_8
+      rect:
+        serializedVersion: 2
+        x: 721
+        y: 956
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b5e007f86bb3f1df0800000000000000
+      internalID: -207381402559181221
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_9
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 832
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 09a695a6321d41d80800000000000000
+      internalID: -8280763864789194096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_10
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 867
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2fe79cb1df8148430800000000000000
+      internalID: 3784177062270041842
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_11
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 699
+        width: 55
+        height: 325
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e30874bf7c04ed5d0800000000000000
+      internalID: -3035917871142698946
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_12
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 744
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a545ae0435a392b70800000000000000
+      internalID: 8874688669956068442
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_13
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 1008
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 00f6bda7d69705a10800000000000000
+      internalID: 1896148954242576128
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_14
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 752
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8a4fecf7f881e4f60800000000000000
+      internalID: 8020374990997091496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_15
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 699
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d8d5b2356d52d54d0800000000000000
+      internalID: -3144315362386158195
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_16
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 719
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0bec683f90d381800800000000000000
+      internalID: 583283264694177456
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_17
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 659
+        width: 7
+        height: 41
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a37faf24d48ab2850800000000000000
+      internalID: 6353356749125908282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_18
+      rect:
+        serializedVersion: 2
+        x: 1051
+        y: 0
+        width: 478
+        height: 1024
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 96c367fbbf3a88400800000000000000
+      internalID: 326691274628676713
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_19
+      rect:
+        serializedVersion: 2
+        x: 1089
+        y: 731
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ec354add242a17d0800000000000000
+      internalID: -2947003226806469402
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_20
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 620
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0449e971dcd307fb0800000000000000
+      internalID: -4652150463999863744
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_21
+      rect:
+        serializedVersion: 2
+        x: 489
+        y: 641
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e1af708ad901a4430800000000000000
+      internalID: 3767842307563846174
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_22
+      rect:
+        serializedVersion: 2
+        x: 534
+        y: 557
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b7bc5e04783ca98f0800000000000000
+      internalID: -532898620213179525
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_23
+      rect:
+        serializedVersion: 2
+        x: 543
+        y: 571
+        width: 31
+        height: 27
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 458e74700cf561f60800000000000000
+      internalID: 8004690666058147924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_24
+      rect:
+        serializedVersion: 2
+        x: 547
+        y: 615
+        width: 9
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 010fcfe1087a4c2e0800000000000000
+      internalID: -2106374556985004016
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_25
+      rect:
+        serializedVersion: 2
+        x: 563
+        y: 607
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a7ab7d06bcee64f40800000000000000
+      internalID: 5712515734636575354
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_26
+      rect:
+        serializedVersion: 2
+        x: 967
+        y: 584
+        width: 14
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a5107f123c76cde0800000000000000
+      internalID: -1313225686614272605
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_27
+      rect:
+        serializedVersion: 2
+        x: 974
+        y: 632
+        width: 20
+        height: 20
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c133e51799555bb0800000000000000
+      internalID: -4947950110154477119
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_28
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 657
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b89388665e6e1cf00800000000000000
+      internalID: 1135442454016178571
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_29
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 671
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e8324b5fbddfd9d0800000000000000
+      internalID: -2747233433733154585
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_30
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 635
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b4d4d0daf6612dd60800000000000000
+      internalID: 7913412164143893835
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_31
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 562
+        width: 27
+        height: 122
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 90b5caa2732815630800000000000000
+      internalID: 3914052724612422409
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_32
+      rect:
+        serializedVersion: 2
+        x: 1003
+        y: 21
+        width: 35
+        height: 542
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 26b81c89c3fb53d80800000000000000
+      internalID: -8271494873614283934
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_33
+      rect:
+        serializedVersion: 2
+        x: 1025
+        y: 389
+        width: 24
+        height: 260
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9a6b2c144091d3e0800000000000000
+      internalID: -2030683334762599781
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_34
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 647
+        width: 6
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 19492def4efd38a50800000000000000
+      internalID: 6522302859983361169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_35
+      rect:
+        serializedVersion: 2
+        x: 481
+        y: 535
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8cdb3205146c77640800000000000000
+      internalID: 5077745088703217096
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_36
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 520
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1a5d35bb97c3fdca0800000000000000
+      internalID: -5990002485847927391
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_37
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 535
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 364375097731af7b0800000000000000
+      internalID: -5189814216347405213
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_38
+      rect:
+        serializedVersion: 2
+        x: 559
+        y: 519
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5d329641a93bbfa30800000000000000
+      internalID: 4250188147702965205
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_39
+      rect:
+        serializedVersion: 2
+        x: 971
+        y: 521
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: deaa0b3e431c12930800000000000000
+      internalID: 4116783967295810285
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_40
+      rect:
+        serializedVersion: 2
+        x: 977
+        y: 522
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ab3554bb0acf2a20800000000000000
+      internalID: 3039870425117309864
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_41
+      rect:
+        serializedVersion: 2
+        x: 519
+        y: 506
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 884a34ed52c73ed40800000000000000
+      internalID: 5612466062718379144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_42
+      rect:
+        serializedVersion: 2
+        x: 973
+        y: 503
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: acfb737d9009bcac0800000000000000
+      internalID: -3833812285835984950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_43
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 504
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65878d4f70a12f300800000000000000
+      internalID: 284318347952683094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_44
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 495
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb8c9e8df9ce01330800000000000000
+      internalID: 3679701066844850364
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_45
+      rect:
+        serializedVersion: 2
+        x: 491
+        y: 456
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1174a51809b97ce0800000000000000
+      internalID: -1406889964202594020
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_46
+      rect:
+        serializedVersion: 2
+        x: 521
+        y: 467
+        width: 8
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 06f7d0476c9ab9e20800000000000000
+      internalID: 3358464616950497120
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_47
+      rect:
+        serializedVersion: 2
+        x: 993
+        y: 440
+        width: 8
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8bd8eff32e49eef20800000000000000
+      internalID: 3453861663696915896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_48
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 456
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6f7f105ea35b98f20800000000000000
+      internalID: 3425468256146814966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_49
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 433
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 991f1f7c475cd44a0800000000000000
+      internalID: -6607407972921249383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_50
+      rect:
+        serializedVersion: 2
+        x: 987
+        y: 407
+        width: 11
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 14570395932a01050800000000000000
+      internalID: 5769289489854788929
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_51
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 400
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: fd19b4ff58ebe5840800000000000000
+      internalID: 5214814901264683487
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_52
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 410
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8df1a8edf7f97a540800000000000000
+      internalID: 5019155681270964184
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_53
+      rect:
+        serializedVersion: 2
+        x: 525
+        y: 391
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e73451ba920508c60800000000000000
+      internalID: 7818337093009359742
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_54
+      rect:
+        serializedVersion: 2
+        x: 558
+        y: 391
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f045d89759d2f0610800000000000000
+      internalID: 1589539313497756687
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_55
+      rect:
+        serializedVersion: 2
+        x: 951
+        y: 382
+        width: 18
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 76927abb7cecd1840800000000000000
+      internalID: 5196536902297528679
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_56
+      rect:
+        serializedVersion: 2
+        x: 992
+        y: 391
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0b2e9f932ddef2020800000000000000
+      internalID: 2319333820290687664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_57
+      rect:
+        serializedVersion: 2
+        x: 1032
+        y: 368
+        width: 17
+        height: 32
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 498ad13ec91599ef0800000000000000
+      internalID: -100959782372005740
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_58
+      rect:
+        serializedVersion: 2
+        x: 1069
+        y: 391
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 48a4165dbc4c1e740800000000000000
+      internalID: 5179637426190109316
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_59
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 387
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c90bec136549fe6b0800000000000000
+      internalID: -5264826341449092964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_60
+      rect:
+        serializedVersion: 2
+        x: 488
+        y: 367
+        width: 9
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7a92af9b4da5385e0800000000000000
+      internalID: -1908581947375212121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_61
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 376
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 65a1e604dadd834f0800000000000000
+      internalID: -848684793579300266
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_62
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 326
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 82075fbc427606ce0800000000000000
+      internalID: -1414016875255992280
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_63
+      rect:
+        serializedVersion: 2
+        x: 550
+        y: 351
+        width: 12
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 876a5fb2ef2e3abc0800000000000000
+      internalID: -3772922481519253896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_64
+      rect:
+        serializedVersion: 2
+        x: 969
+        y: 328
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94f354c28e494bb90800000000000000
+      internalID: -7226987777126744247
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_65
+      rect:
+        serializedVersion: 2
+        x: 985
+        y: 327
+        width: 8
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 510403d548604cca0800000000000000
+      internalID: -5997661638181765099
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_66
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 336
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2ea7e2dfea06d5af0800000000000000
+      internalID: -406062086705218846
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_67
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 312
+        width: 7
+        height: 18
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7646056b93e337950800000000000000
+      internalID: 6445563909290091623
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_68
+      rect:
+        serializedVersion: 2
+        x: 1038
+        y: 53
+        width: 11
+        height: 259
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8ea1717f80b054ae0800000000000000
+      internalID: -1565833162308248856
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_69
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 311
+        width: 9
+        height: 57
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 67c913c287fb64680800000000000000
+      internalID: -8771112701399032714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_70
+      rect:
+        serializedVersion: 2
+        x: 1101
+        y: 342
+        width: 10
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ee71dfc36e317b350800000000000000
+      internalID: 6032312105472694254
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_71
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 302
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7280bc1c86ea97c10800000000000000
+      internalID: 2051862870195111975
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_72
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 296
+        width: 7
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cfc54a0741fa0b560800000000000000
+      internalID: 7327549096055823612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_73
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 286
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 815de2b02fb782850800000000000000
+      internalID: 6352463553906005272
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_74
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 280
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ab9b87224da2b2a0800000000000000
+      internalID: -6723120794067821655
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_75
+      rect:
+        serializedVersion: 2
+        x: 555
+        y: 255
+        width: 15
+        height: 21
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9bbf8db06d6db5060800000000000000
+      internalID: 6943379465331866553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_76
+      rect:
+        serializedVersion: 2
+        x: 743
+        y: 244
+        width: 20
+        height: 29
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d71328f55d16c2920800000000000000
+      internalID: 2966853823588610429
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_77
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 272
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7ba8307c2dce99c80800000000000000
+      internalID: -8315354846936724809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_78
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 256
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1bc8db0aa480102c0800000000000000
+      internalID: -4467280238757442383
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_79
+      rect:
+        serializedVersion: 2
+        x: 634
+        y: 259
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 32409d40198dd6700800000000000000
+      internalID: 535322048090145827
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_80
+      rect:
+        serializedVersion: 2
+        x: 767
+        y: 256
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8f2312b0c1b3cd5a0800000000000000
+      internalID: -6495251570943249672
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_81
+      rect:
+        serializedVersion: 2
+        x: 871
+        y: 255
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 10bbfcd2fb94de9c0800000000000000
+      internalID: -3896377017149441279
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_82
+      rect:
+        serializedVersion: 2
+        x: 887
+        y: 260
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 50b1e05242f3bdf60800000000000000
+      internalID: 8060105382582688517
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_83
+      rect:
+        serializedVersion: 2
+        x: 931
+        y: 260
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef9406b176508ee50800000000000000
+      internalID: 6838721974561163774
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_84
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 264
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5ae5edb9a37ab6a20800000000000000
+      internalID: 3056720642265996965
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_85
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 244
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f8ba70f39229c5220800000000000000
+      internalID: 2476014600995711887
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_86
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 246
+        width: 9
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d1c030287ce4affd0800000000000000
+      internalID: -2307445240287261667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_87
+      rect:
+        serializedVersion: 2
+        x: 642
+        y: 244
+        width: 13
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b35908ddac45c2d0800000000000000
+      internalID: -3259114445795142731
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_88
+      rect:
+        serializedVersion: 2
+        x: 679
+        y: 240
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 880c5680c6ed9f740800000000000000
+      internalID: 5186421001472557192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_89
+      rect:
+        serializedVersion: 2
+        x: 840
+        y: 249
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b35c72117f2d216f0800000000000000
+      internalID: -715277432211913413
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_90
+      rect:
+        serializedVersion: 2
+        x: 922
+        y: 247
+        width: 14
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3a217ca1d850f1e30800000000000000
+      internalID: 4476302658227344035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_91
+      rect:
+        serializedVersion: 2
+        x: 568
+        y: 235
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c1b263f066a7bf3f0800000000000000
+      internalID: -865963924578227428
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_92
+      rect:
+        serializedVersion: 2
+        x: 749
+        y: 233
+        width: 11
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 24903882603a66d20800000000000000
+      internalID: 3271481426176051522
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_93
+      rect:
+        serializedVersion: 2
+        x: 766
+        y: 239
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e6db1b5eb1a701820800000000000000
+      internalID: 2886941621380824430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_94
+      rect:
+        serializedVersion: 2
+        x: 773
+        y: 232
+        width: 6
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f5ce89ece3a053130800000000000000
+      internalID: 3545751546494512223
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_95
+      rect:
+        serializedVersion: 2
+        x: 818
+        y: 240
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 135caff951e874fd0800000000000000
+      internalID: -2357759656375696079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_96
+      rect:
+        serializedVersion: 2
+        x: 833
+        y: 242
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6ba8cf63e333b2380800000000000000
+      internalID: -8995039488438924618
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_97
+      rect:
+        serializedVersion: 2
+        x: 663
+        y: 217
+        width: 18
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9ffee8ddf43228da0800000000000000
+      internalID: -5944149732249112583
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_98
+      rect:
+        serializedVersion: 2
+        x: 800
+        y: 233
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4b185cb7a5b2c9d10800000000000000
+      internalID: 2133627991090364852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_99
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 232
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 93e6637807e79d410800000000000000
+      internalID: 1502370972474699321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_100
+      rect:
+        serializedVersion: 2
+        x: 735
+        y: 212
+        width: 10
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e53aa9236889e8460800000000000000
+      internalID: 7245896552627741534
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_101
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 215
+        width: 10
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 6823050f0c05b6c30800000000000000
+      internalID: 4353662254379446918
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_102
+      rect:
+        serializedVersion: 2
+        x: 823
+        y: 222
+        width: 11
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 07a4cc870cfc12b80800000000000000
+      internalID: -8421221402638792080
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_103
+      rect:
+        serializedVersion: 2
+        x: 867
+        y: 219
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 88436fff2b48f4760800000000000000
+      internalID: 7444314613400089736
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_104
+      rect:
+        serializedVersion: 2
+        x: 944
+        y: 223
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ed2be6303895fd2e0800000000000000
+      internalID: -2098860482098187554
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_105
+      rect:
+        serializedVersion: 2
+        x: 715
+        y: 214
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: adfbdc4b570c4d270800000000000000
+      internalID: 8274450027163533274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_106
+      rect:
+        serializedVersion: 2
+        x: 905
+        y: 200
+        width: 19
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94254a0a5c77ed050800000000000000
+      internalID: 5827226658551386697
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_107
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 198
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: cb79aa2db0c156790800000000000000
+      internalID: -7537587564230043716
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_108
+      rect:
+        serializedVersion: 2
+        x: 515
+        y: 199
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 95ea36354c07a46e0800000000000000
+      internalID: -1852544308194595239
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_109
+      rect:
+        serializedVersion: 2
+        x: 703
+        y: 201
+        width: 10
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7750da25baeeb1b50800000000000000
+      internalID: 6565103301416519031
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_110
+      rect:
+        serializedVersion: 2
+        x: 761
+        y: 199
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7da567f1e98d3a50800000000000000
+      internalID: 6502505040604147069
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_111
+      rect:
+        serializedVersion: 2
+        x: 798
+        y: 205
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef4a8200f9d66b5a0800000000000000
+      internalID: -6505892082020211458
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_112
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 198
+        width: 7
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d2285fef66ca97bd0800000000000000
+      internalID: -2631882948857200083
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_113
+      rect:
+        serializedVersion: 2
+        x: 775
+        y: 184
+        width: 10
+        height: 17
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 037b141054bb7b520800000000000000
+      internalID: 2717846805189605168
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_114
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 186
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aafc1870fcb800050800000000000000
+      internalID: 5764761244334673834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_115
+      rect:
+        serializedVersion: 2
+        x: 651
+        y: 171
+        width: 6
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1c779faaa889ec2a0800000000000000
+      internalID: -6715262273021446207
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_116
+      rect:
+        serializedVersion: 2
+        x: 816
+        y: 175
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c9891b39049a534a0800000000000000
+      internalID: -6614194382902814564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_117
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 176
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99931ed363a1896a0800000000000000
+      internalID: -6442370446684767847
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_118
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 167
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: eb80d25ad6d90f740800000000000000
+      internalID: 5183816265351628990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_119
+      rect:
+        serializedVersion: 2
+        x: 866
+        y: 159
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: dd3a4e9531084b630800000000000000
+      internalID: 3941916394456916957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_120
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 152
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 654468ecd14f59520800000000000000
+      internalID: 2708339159789356118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_121
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 134
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: aadeb164d89b31980800000000000000
+      internalID: -8569301649538159190
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_122
+      rect:
+        serializedVersion: 2
+        x: 995
+        y: 147
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 713828680c8d6e4d0800000000000000
+      internalID: -3105556571623357673
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_123
+      rect:
+        serializedVersion: 2
+        x: 751
+        y: 130
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7f74eb90585a58b40800000000000000
+      internalID: 5441937715559811063
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_124
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 102
+        width: 7
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9781db87d47ae2b10800000000000000
+      internalID: 1958686839132723321
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_125
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 104
+        width: 6
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f1c3e38f266d70a10800000000000000
+      internalID: 1875703490383068191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_126
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 91
+        width: 7
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 68ece135f60a76350800000000000000
+      internalID: 6009948627745558150
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_127
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 84
+        width: 7
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 4c99d29c54aa52aa0800000000000000
+      internalID: -6186351296418833980
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_128
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 79
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 3ee0f2704089ae170800000000000000
+      internalID: 8208540413903965923
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_129
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 70
+        width: 6
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 28e4adf4de448a040800000000000000
+      internalID: 4659049600552423042
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_130
+      rect:
+        serializedVersion: 2
+        x: 81
+        y: 38
+        width: 8
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f1d51227c59aec80800000000000000
+      internalID: -8292651081346461191
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_131
+      rect:
+        serializedVersion: 2
+        x: 1039
+        y: 0
+        width: 9
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d7698a89d9e426370800000000000000
+      internalID: 8314294300857374333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_132
+      rect:
+        serializedVersion: 2
+        x: 1041
+        y: 46
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b2cf13042cd914e00800000000000000
+      internalID: 1027275647643417643
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_133
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 23
+        width: 7
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: ef43e05b27aba5b40800000000000000
+      internalID: 5429857302575199486
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_134
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 27
+        width: 7
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 179aa887294f86320800000000000000
+      internalID: 2551558098830141809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_135
+      rect:
+        serializedVersion: 2
+        x: 1087
+        y: 19
+        width: 8
+        height: 6
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 99eeeb646b7d76740800000000000000
+      internalID: 5145318277165018777
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Diamante_136
+      rect:
+        serializedVersion: 2
+        x: 994
+        y: 3
+        width: 7
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 5b39d9b715eebe460800000000000000
+      internalID: 7272168057053483957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      Diamante_0: 1857820820543059913
+      Diamante_1: 721031680227320466
+      Diamante_10: 3784177062270041842
+      Diamante_100: 7245896552627741534
+      Diamante_101: 4353662254379446918
+      Diamante_102: -8421221402638792080
+      Diamante_103: 7444314613400089736
+      Diamante_104: -2098860482098187554
+      Diamante_105: 8274450027163533274
+      Diamante_106: 5827226658551386697
+      Diamante_107: -7537587564230043716
+      Diamante_108: -1852544308194595239
+      Diamante_109: 6565103301416519031
+      Diamante_11: -3035917871142698946
+      Diamante_110: 6502505040604147069
+      Diamante_111: -6505892082020211458
+      Diamante_112: -2631882948857200083
+      Diamante_113: 2717846805189605168
+      Diamante_114: 5764761244334673834
+      Diamante_115: -6715262273021446207
+      Diamante_116: -6614194382902814564
+      Diamante_117: -6442370446684767847
+      Diamante_118: 5183816265351628990
+      Diamante_119: 3941916394456916957
+      Diamante_12: 8874688669956068442
+      Diamante_120: 2708339159789356118
+      Diamante_121: -8569301649538159190
+      Diamante_122: -3105556571623357673
+      Diamante_123: 5441937715559811063
+      Diamante_124: 1958686839132723321
+      Diamante_125: 1875703490383068191
+      Diamante_126: 6009948627745558150
+      Diamante_127: -6186351296418833980
+      Diamante_128: 8208540413903965923
+      Diamante_129: 4659049600552423042
+      Diamante_13: 1896148954242576128
+      Diamante_130: -8292651081346461191
+      Diamante_131: 8314294300857374333
+      Diamante_132: 1027275647643417643
+      Diamante_133: 5429857302575199486
+      Diamante_134: 2551558098830141809
+      Diamante_135: 5145318277165018777
+      Diamante_136: 7272168057053483957
+      Diamante_14: 8020374990997091496
+      Diamante_15: -3144315362386158195
+      Diamante_16: 583283264694177456
+      Diamante_17: 6353356749125908282
+      Diamante_18: 326691274628676713
+      Diamante_19: -2947003226806469402
+      Diamante_2: -3717169777695690816
+      Diamante_20: -4652150463999863744
+      Diamante_21: 3767842307563846174
+      Diamante_22: -532898620213179525
+      Diamante_23: 8004690666058147924
+      Diamante_24: -2106374556985004016
+      Diamante_25: 5712515734636575354
+      Diamante_26: -1313225686614272605
+      Diamante_27: -4947950110154477119
+      Diamante_28: 1135442454016178571
+      Diamante_29: -2747233433733154585
+      Diamante_3: -1600791969373642666
+      Diamante_30: 7913412164143893835
+      Diamante_31: 3914052724612422409
+      Diamante_32: -8271494873614283934
+      Diamante_33: -2030683334762599781
+      Diamante_34: 6522302859983361169
+      Diamante_35: 5077745088703217096
+      Diamante_36: -5990002485847927391
+      Diamante_37: -5189814216347405213
+      Diamante_38: 4250188147702965205
+      Diamante_39: 4116783967295810285
+      Diamante_4: -7917477937132821893
+      Diamante_40: 3039870425117309864
+      Diamante_41: 5612466062718379144
+      Diamante_42: -3833812285835984950
+      Diamante_43: 284318347952683094
+      Diamante_44: 3679701066844850364
+      Diamante_45: -1406889964202594020
+      Diamante_46: 3358464616950497120
+      Diamante_47: 3453861663696915896
+      Diamante_48: 3425468256146814966
+      Diamante_49: -6607407972921249383
+      Diamante_5: -2212903619031866885
+      Diamante_50: 5769289489854788929
+      Diamante_51: 5214814901264683487
+      Diamante_52: 5019155681270964184
+      Diamante_53: 7818337093009359742
+      Diamante_54: 1589539313497756687
+      Diamante_55: 5196536902297528679
+      Diamante_56: 2319333820290687664
+      Diamante_57: -100959782372005740
+      Diamante_58: 5179637426190109316
+      Diamante_59: -5264826341449092964
+      Diamante_6: -5309557163118522386
+      Diamante_60: -1908581947375212121
+      Diamante_61: -848684793579300266
+      Diamante_62: -1414016875255992280
+      Diamante_63: -3772922481519253896
+      Diamante_64: -7226987777126744247
+      Diamante_65: -5997661638181765099
+      Diamante_66: -406062086705218846
+      Diamante_67: 6445563909290091623
+      Diamante_68: -1565833162308248856
+      Diamante_69: -8771112701399032714
+      Diamante_7: 1587634947357183401
+      Diamante_70: 6032312105472694254
+      Diamante_71: 2051862870195111975
+      Diamante_72: 7327549096055823612
+      Diamante_73: 6352463553906005272
+      Diamante_74: -6723120794067821655
+      Diamante_75: 6943379465331866553
+      Diamante_76: 2966853823588610429
+      Diamante_77: -8315354846936724809
+      Diamante_78: -4467280238757442383
+      Diamante_79: 535322048090145827
+      Diamante_8: -207381402559181221
+      Diamante_80: -6495251570943249672
+      Diamante_81: -3896377017149441279
+      Diamante_82: 8060105382582688517
+      Diamante_83: 6838721974561163774
+      Diamante_84: 3056720642265996965
+      Diamante_85: 2476014600995711887
+      Diamante_86: -2307445240287261667
+      Diamante_87: -3259114445795142731
+      Diamante_88: 5186421001472557192
+      Diamante_89: -715277432211913413
+      Diamante_9: -8280763864789194096
+      Diamante_90: 4476302658227344035
+      Diamante_91: -865963924578227428
+      Diamante_92: 3271481426176051522
+      Diamante_93: 2886941621380824430
+      Diamante_94: 3545751546494512223
+      Diamante_95: -2357759656375696079
+      Diamante_96: -8995039488438924618
+      Diamante_97: -5944149732249112583
+      Diamante_98: 2133627991090364852
+      Diamante_99: 1502370972474699321
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
