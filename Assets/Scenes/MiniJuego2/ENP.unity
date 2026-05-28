@@ -914,7 +914,7 @@ MonoBehaviour:
   sonidoMoneda: {fileID: 8300000, guid: 1d03bba96246d46319c9bedfa16c5fea, type: 3}
   sonidoPuerta: {fileID: 8300000, guid: 2c80eb53069a54977b0d46b14e139fba, type: 3}
   sonidoCorrecto: {fileID: 8300000, guid: 26352ba24dfd54da1bb140b9be133c4b, type: 3}
-  sonidoIncorrecto: {fileID: 8300000, guid: 489af57cdf9904c52acd4626e4f86cf1, type: 3}
+  sonidoIncorrecto: {fileID: 8300000, guid: c5c80da4a85044ab289b7c6215dae2d9, type: 3}
   sonidoBoton: {fileID: 8300000, guid: bff843ac438e942ca9a6ed068758d94a, type: 3}
   sonidoVictoria: {fileID: 8300000, guid: 778a32b5b511d4d2f82ce9d0c3707d35, type: 3}
   sonidoLavadoraRoja: {fileID: 8300000, guid: f5bf95ffde5bc47c1ab78a83c0910614, type: 3}
