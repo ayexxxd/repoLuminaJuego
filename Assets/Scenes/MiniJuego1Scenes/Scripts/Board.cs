@@ -1,37 +1,29 @@
-// Board.cs
-// Controla todo el tablero: generar piezas, intercambios, matches, caída y relleno.
-
 using UnityEngine;
 using System.Collections;
 
 public class Board : MonoBehaviour
 {
-    // ── Singleton ─────────────────────────────────────────
     public static Board instancia;
 
-    // ── Configuración del tablero ─────────────────────────
     [Header("Configuración del Tablero")]
     public int columnas = 7;
     public int filas    = 8;
     public float tamañoCelda = 1f;
 
-    // ── Prefabs y sprites ─────────────────────────────────
     [Header("Prefabs y Sprites")]
-    public GameObject prefabPieza;     // Arrastra el prefab "Pieza" aquí
-    public Sprite[]   spritePiezas;    // Arrastra tus 4 sprites aquí
-    public Sprite     spriteMonstruoRojo;   // ← NUEVO arrastra aquí
+    public GameObject prefabPieza;    
+    public Sprite[]   spritePiezas;    
+    public Sprite     spriteMonstruoRojo;  
     public Sprite     spriteMonstruoVerde;
 
-    // ── Estado interno ────────────────────────────────────
-    private Pieza[,] tablero;          // El array 2D con todas las piezas
-    private Pieza piezaSeleccionada;   // La pieza que el jugador tocó primero
-    private bool estaProcesando = false; // Bloquea clics mientras se anima
+    private Pieza[,] tablero;         
+    private Pieza piezaSeleccionada;  
+    private bool estaProcesando = false; 
 
-    [HideInInspector] public bool monstruoRojoActivo  = false; // ← NUEVO
-    [HideInInspector] public bool monstruoVerdeActivo = false; // ← NUEVO
-    [HideInInspector] public int tiposActivosEnNivel = 4; // ← NUEVO
+    [HideInInspector] public bool monstruoRojoActivo  = false; 
+    [HideInInspector] public bool monstruoVerdeActivo = false;
+    [HideInInspector] public int tiposActivosEnNivel = 4;
 
-    // ─────────────────────────────────────────────────────
     void Awake()
     {
         if (instancia == null) instancia = this;
@@ -43,7 +35,6 @@ public class Board : MonoBehaviour
         GenerarTablero();
     }
 
-    // ── Genera todas las piezas al inicio ─────────────────
     void GenerarTablero()
     {
         for (int col = 0; col < columnas; col++)
@@ -51,12 +42,10 @@ public class Board : MonoBehaviour
                 CrearPieza(col, fil);
     }
 
-    // ── Crea una pieza en la posición [col, fil] ──────────
     void CrearPieza(int col, int fil)
     {
         Vector2 posicion = ObtenerPosicionMundo(col, fil);
 
-        // Elige un tipo que no forme match inmediato
         int tipo;
         int intentos = 0;
         do
@@ -76,7 +65,6 @@ public class Board : MonoBehaviour
         tablero[col, fil] = pieza;
     }
 
-    // ── Evita matches al generar ──────────────────────────
     bool FormaríaMatch(int col, int fil, int tipo)
     {
         // Dos piezas a la izquierda del mismo tipo
@@ -94,7 +82,6 @@ public class Board : MonoBehaviour
         return false;
     }
 
-    // ── Convierte columna/fila a posición en el mundo ─────
     public Vector2 ObtenerPosicionMundo(int col, int fil)
     {
         float x = col * tamañoCelda - (columnas * tamañoCelda / 2f) + tamañoCelda / 2f;
@@ -102,16 +89,10 @@ public class Board : MonoBehaviour
         return new Vector2(x, y) + (Vector2)transform.position;
     }
 
-    // ─────────────────────────────────────────────────────
-    // SELECCIÓN E INTERCAMBIO
-    // ─────────────────────────────────────────────────────
-
-    // Llamado desde Pieza.cs al hacer clic
     public void AlHacerClicEnPieza(Pieza pieza)
     {
         if (estaProcesando) return;
 
-        // ── Modo martillo activo ──────────────────────────
         if (UsarPoderes.instancia != null &&
             UsarPoderes.instancia.ModoMartilloActivo)
         {
@@ -119,7 +100,6 @@ public class Board : MonoBehaviour
             return;
         }
 
-        // ── Selección normal ──────────────────────────────
         if (piezaSeleccionada == null)
         {
             piezaSeleccionada = pieza;
@@ -140,7 +120,6 @@ public class Board : MonoBehaviour
         }
     }
 
-    // Verifica si dos piezas son adyacentes
     bool SonVecinas(Pieza a, Pieza b)
     {
         int difCol = Mathf.Abs(a.col - b.col);
@@ -148,27 +127,20 @@ public class Board : MonoBehaviour
         return (difCol == 1 && difFil == 0) || (difCol == 0 && difFil == 1);
     }
 
-    // Coroutine principal del intercambio
     IEnumerator IntentarIntercambio(Pieza a, Pieza b)
     {
         estaProcesando = true;
         a.transform.localScale = Vector3.one;
         piezaSeleccionada = null;
 
-        Debug.Log($"IntentarIntercambio — A:[{a.col},{a.fil}] " +
-                $"esEspecial:{a.esEspecial} tipo:{a.tipoEspecial} | " +
-                $"B:[{b.col},{b.fil}] esEspecial:{b.esEspecial} tipo:{b.tipoEspecial}");
 
-        // Detecta si alguna es monstruo
         if (a.esEspecial || b.esEspecial)
         {
-            Debug.Log("→ Detectado monstruo, activando efecto");
             yield return StartCoroutine(ActivarMonstruoDeIntercambio(a, b));
             estaProcesando = false;
             yield break;
         }
 
-        // Intercambio normal
         IntercambiarPiezas(a, b);
         yield return new WaitForSeconds(0.2f);
 
@@ -183,7 +155,6 @@ public class Board : MonoBehaviour
         {
             yield return new WaitForSeconds(0.2f);
             IntercambiarPiezas(a, b);
-            Debug.Log("Sin match, revertido");
         }
 
         estaProcesando = false;
@@ -194,52 +165,37 @@ public class Board : MonoBehaviour
         Pieza monstruo = a.esEspecial ? a : b;
         Pieza objetivo = a.esEspecial ? b : a;
 
-        Debug.Log($"Monstruo tipo:{monstruo.tipoEspecial} " +
-                $"en [{monstruo.col},{monstruo.fil}] " +
-                $"objetivo tipo:{objetivo.tipoPieza}");
-
         bool[,] aDestruir = new bool[columnas, filas];
 
         if (monstruo.tipoEspecial == 1)
         {
-            Debug.Log("→ Activando Monstruo Rojo 3x3");
             ActivarMonstruoRojo(monstruo.col, monstruo.fil, aDestruir);
         }
         else if (monstruo.tipoEspecial == 2)
         {
-            Debug.Log("→ Activando Monstruo Verde — color:" + objetivo.tipoPieza);
             ActivarMonstruoVerde(monstruo.col, monstruo.fil,
                                 objetivo.tipoPieza, aDestruir);
         }
-        else
-        {
-            Debug.LogWarning("tipoEspecial desconocido: " + monstruo.tipoEspecial);
-        }
 
-        // Destruye también al monstruo
+
         aDestruir[monstruo.col, monstruo.fil] = true;
 
-        // Cuenta piezas a destruir
         int cantidad = 0;
         for (int c = 0; c < columnas; c++)
             for (int f = 0; f < filas; f++)
                 if (aDestruir[c, f]) cantidad++;
 
-        Debug.Log($"Piezas a destruir: {cantidad}");
 
-        // Suma puntos
         GameManager.instancia.AgregarPuntos(CalcularPuntos(cantidad));
         GameManager.instancia.UsarMovimiento();
         GestorPreguntas.instancia.RegistrarMovimiento();
 
-        // Destruye físicamente
         for (int c = 0; c < columnas; c++)
         {
             for (int f = 0; f < filas; f++)
             {
                 if (aDestruir[c, f] && tablero[c, f] != null)
                 {
-                    Debug.Log($"  Destruyendo [{c},{f}]");
                     Destroy(tablero[c, f].gameObject);
                     tablero[c, f] = null;
                 }
@@ -250,7 +206,6 @@ public class Board : MonoBehaviour
         yield return StartCoroutine(CaerYRellenar());
     }
 
-    // Intercambia dos piezas en el array y en pantalla
     void IntercambiarPiezas(Pieza a, Pieza b)
     {
         int tempCol = a.col;
@@ -266,17 +221,11 @@ public class Board : MonoBehaviour
         b.transform.position = ObtenerPosicionMundo(b.col, b.fil);
     }
 
-    // ─────────────────────────────────────────────────────
-    // DETECCIÓN DE MATCHES
-    // ─────────────────────────────────────────────────────
-
     bool VerificarMatches()
     {
-        // Guardamos cuántas piezas del mismo tipo hay en cada línea
         bool[,] aDestruir   = new bool[columnas, filas];
         bool    encontróMatch = false;
 
-        // ── Horizontal ────────────────────────────────────
         for (int fil = 0; fil < filas; fil++)
         {
             for (int col = 0; col < columnas; col++)
@@ -288,10 +237,9 @@ public class Board : MonoBehaviour
                     for (int i = 0; i < longitud; i++)
                         aDestruir[col + i, fil] = true;
 
-                    // Si se crea monstruo, protege la primera celda
                     if (SeCrearáMonstruo(longitud))
                     {
-                        aDestruir[col, fil] = false; // ← celda protegida
+                        aDestruir[col, fil] = false; 
                         ProcesarMonstruo(col, fil, longitud, true);
                     }
 
@@ -301,7 +249,6 @@ public class Board : MonoBehaviour
             }
         }
 
-        // ── Vertical ──────────────────────────────────────
         for (int col = 0; col < columnas; col++)
         {
             for (int fil = 0; fil < filas; fil++)
@@ -313,7 +260,6 @@ public class Board : MonoBehaviour
                     for (int i = 0; i < longitud; i++)
                         aDestruir[col, fil + i] = true;
 
-                    // Si se crea monstruo, protege la primera celda
                     if (SeCrearáMonstruo(longitud))
                     {
                         aDestruir[col, fil] = false; // ← celda protegida
@@ -332,7 +278,6 @@ public class Board : MonoBehaviour
         return encontróMatch;
     }
 
-    // ── Cuenta piezas iguales seguidas hacia la derecha ──
     int ContarLineaHorizontal(int colInicio, int fil)
     {
         if (tablero[colInicio, fil] == null) return 0;
@@ -351,7 +296,6 @@ public class Board : MonoBehaviour
         return conteo;
     }
 
-    // ── Cuenta piezas iguales seguidas hacia arriba ───────
     int ContarLineaVertical(int col, int filInicio)
     {
         if (tablero[col, filInicio] == null) return 0;
@@ -370,27 +314,21 @@ public class Board : MonoBehaviour
         return conteo;
     }
 
-    // ── Decide si crear monstruo según longitud del match ─
     void ProcesarMonstruo(int col, int fil, int longitud, bool esHorizontal)
     {
-        Debug.Log($"ProcesarMonstruo — col:{col} fil:{fil} longitud:{longitud} " +
-              $"RojoActivo:{monstruoRojoActivo} VerdeActivo:{monstruoVerdeActivo}");
 
         if (longitud == 4 && monstruoRojoActivo)
         {
-            Debug.Log("→ Creando Monstruo Rojo");
             CrearMonstruo(col, fil, 1);
             return;
         }
 
         if (longitud >= 5 && monstruoVerdeActivo)
         {
-            Debug.Log("→ Creando Monstruo Verde");
             CrearMonstruo(col, fil, 2);
             return;
         }
 
-        Debug.Log("→ Sin monstruo (longitud < 4 o monstruos desactivados)");
     }
 
     bool SeCrearáMonstruo(int longitud)
@@ -400,7 +338,6 @@ public class Board : MonoBehaviour
         return false;
     }
 
-    // ── Convierte una pieza normal en monstruo ────────────
     void CrearMonstruo(int col, int fil, int tipoMonstruo)
     {
         Pieza pieza = tablero[col, fil];
@@ -409,17 +346,14 @@ public class Board : MonoBehaviour
         pieza.esEspecial   = true;
         pieza.tipoEspecial = tipoMonstruo;
 
-        // Cambia el sprite para que se vea diferente
         if (tipoMonstruo == 1 && spriteMonstruoRojo != null)
             pieza.spriteRenderer.sprite = spriteMonstruoRojo;
 
         if (tipoMonstruo == 2 && spriteMonstruoVerde != null)
             pieza.spriteRenderer.sprite = spriteMonstruoVerde;
 
-        Debug.Log($"Monstruo {(tipoMonstruo == 1 ? "Rojo" : "Verde")} creado en [{col},{fil}]");
     }
 
-    // ── Destruye las piezas marcadas y suma puntos ────────
     void DestruirMatches(bool[,] aDestruir)
     {
         ActivarMonstruosMarcados(aDestruir);
@@ -445,8 +379,6 @@ public class Board : MonoBehaviour
         StartCoroutine(CaerYRellenar());
     }
 
-    // ── Revisa si alguna pieza marcada es monstruo ────────
-    // Si lo es, activa su efecto ANTES de destruir
     void ActivarMonstruosMarcados(bool[,] aDestruir)
     {
         for (int col = 0; col < columnas; col++)
@@ -467,28 +399,22 @@ public class Board : MonoBehaviour
         }
     }
 
-    // ── Monstruo Rojo: destruye área 3x3 ─────────────────
     void ActivarMonstruoRojo(int centroCol, int centroFil, bool[,] aDestruir)
     {
-        Debug.Log($"Monstruo Rojo activado en [{centroCol},{centroFil}] — Explosión en Cruz");
 
-        // Destruye toda la fila horizontal (de izquierda a derecha)
         for (int c = 0; c < columnas; c++)
         {
             aDestruir[c, centroFil] = true;
         }
 
-        // Destruye toda la columna vertical (de arriba a abajo)
         for (int f = 0; f < filas; f++)
         {
             aDestruir[centroCol, f] = true;
         }
     }
 
-    // ── Monstruo Verde: destruye todas las piezas del color vecino
     void ActivarMonstruoVerde(int col, int fil, int colorObjetivo, bool[,] aDestruir)
     {
-        Debug.Log($"Monstruo Verde activado — elimina todas las piezas de tipo {colorObjetivo}");
 
         for (int c = 0; c < columnas; c++)
         {
@@ -500,7 +426,6 @@ public class Board : MonoBehaviour
         }
     }
 
-    // Fórmula de puntos según el tamaño del match
     int CalcularPuntos(int cantidad)
     {
         if (cantidad <= 3) return 30;
@@ -508,15 +433,11 @@ public class Board : MonoBehaviour
         return 100 + (cantidad - 5) * 20;
     }
 
-    // ─────────────────────────────────────────────────────
-    // CAÍDA Y RELLENO
-    // ─────────────────────────────────────────────────────
 
     IEnumerator CaerYRellenar()
     {
         yield return new WaitForSeconds(0.2f);
 
-        // Caída: mueve piezas hacia abajo
         for (int col = 0; col < columnas; col++)
         {
             for (int fil = 0; fil < filas; fil++)
@@ -541,7 +462,6 @@ public class Board : MonoBehaviour
 
         yield return new WaitForSeconds(0.2f);
 
-        // Relleno: crea nuevas piezas donde haya huecos
         for (int col = 0; col < columnas; col++)
             for (int fil = 0; fil < filas; fil++)
                 if (tablero[col, fil] == null)
@@ -549,17 +469,11 @@ public class Board : MonoBehaviour
 
         yield return new WaitForSeconds(0.2f);
 
-        // Cascada: revisa si las nuevas piezas forman matches
         bool nuevoMatch = VerificarMatches();
         if (!nuevoMatch)
             estaProcesando = false;
     }
 
-    // ─────────────────────────────────────────────────────
-    // POWER-UPS EXTERNOS
-    // ─────────────────────────────────────────────────────
-
-    // Usado por TiendaManager — Martillo
     public void DestruirPiezaEn(int col, int fil)
     {
         if (tablero[col, fil] == null) return;
@@ -568,24 +482,20 @@ public class Board : MonoBehaviour
         StartCoroutine(CaerYRellenar());
     }
 
-    // Usado por TiendaManager — Shuffle
     public void MezclarTablero()
     {
-        // Recoge todas las piezas
         System.Collections.Generic.List<Pieza> lista = new();
         for (int col = 0; col < columnas; col++)
             for (int fil = 0; fil < filas; fil++)
                 if (tablero[col, fil] != null)
                     lista.Add(tablero[col, fil]);
 
-        // Mezcla aleatoria (Fisher-Yates)
         for (int i = lista.Count - 1; i > 0; i--)
         {
             int j = Random.Range(0, i + 1);
             (lista[i], lista[j]) = (lista[j], lista[i]);
         }
 
-        // Reasigna posiciones
         int indice = 0;
         for (int col = 0; col < columnas; col++)
         {
@@ -605,10 +515,8 @@ public class Board : MonoBehaviour
         GameManager.instancia.AgregarMovimientos(3);
     }
 
-    // ── Destruye todo el tablero y lo regenera ────────────
     public void ReiniciarTablero()
     {
-        // Destruye todas las piezas existentes
         for (int col = 0; col < columnas; col++)
         {
             for (int fil = 0; fil < filas; fil++)
@@ -621,7 +529,6 @@ public class Board : MonoBehaviour
             }
         }
 
-        // Genera el tablero de nuevo
         GenerarTablero();
         estaProcesando = false;
     }
