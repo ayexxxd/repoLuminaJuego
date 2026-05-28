@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using Ximena.Sonido;
 public class CarrerasGameManager : MonoBehaviour
 {
     public enum EstadoJuego { Jugando, Victoria, Derrota }
@@ -12,6 +12,18 @@ public class CarrerasGameManager : MonoBehaviour
     {
         if (instancia == null) instancia = this;
         else Destroy(gameObject);
+    }
+
+    void Start()
+    {
+        if (Ximena.Sonido.SFXManager.instancia != null)
+        {
+            Ximena.Sonido.SFXManager.instancia.PistaMusica();
+        }
+        else
+        {
+            Debug.LogWarning("CarrerasGameManager: SFXManager.instancia es null en Start. Asegúrate de que el SFXManager esté presente en la escena.");
+        }
     }
 
     // ============================================================
@@ -52,6 +64,9 @@ public class CarrerasGameManager : MonoBehaviour
             puntosTotales = PuntosManager.instancia.ObtenerPuntos();
         }
 
+        if (SFXManager.instancia != null)
+            SFXManager.instancia.Victoria();
+
         // Comparamos y guardamos el mejor tiempo
         GuardarMejorTiempo(tiempoTranscurrido);
 
@@ -63,9 +78,23 @@ public class CarrerasGameManager : MonoBehaviour
 
         Debug.Log("Puntos: " + puntosTotales + " | Tokens: " + tokens +
                 " | Tiempo: " + tiempoTranscurrido);
+        
+        int tiempoEntero = Mathf.RoundToInt(tiempoTranscurrido);
+
+        if (ConectorAPI.instancia != null)
+        {
+            ConectorAPI.instancia.GuardarTiempo(tiempoEntero, (exito) =>
+            {
+                if (exito)
+                    Debug.Log(" Tiempo enviado a la API: " + tiempoEntero + "s");
+                else
+                    Debug.LogWarning(" No se pudo guardar en la API.");
+            });
+        }
 
         // Cargamos la pantalla de victoria después de 2 segundos
         Invoke("CargarVictoria", 2f);
+        
     }
 
     // ============================================================
@@ -110,6 +139,9 @@ public class CarrerasGameManager : MonoBehaviour
             PlayerPrefs.SetInt("PuntosFinales",
                             PuntosManager.instancia.ObtenerPuntos());
         }
+
+        if (SFXManager.instancia != null)
+            SFXManager.instancia.GameOver();
 
         PlayerPrefs.Save();
 

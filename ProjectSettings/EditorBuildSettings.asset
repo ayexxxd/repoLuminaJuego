@@ -26,5 +26,32 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MiniJuego5/ShooterEnd.unity
     guid: bacc538d0a1214fa190309d96b64aa4a
+  - enabled: 0
+    path: Assets/Scenes/MiniJuego4/ExInInicio.unity
+    guid: 046f99b2c33ec9243ba877f4318599ea
+  - enabled: 1
+    path: Assets/Scenes/MiniJuego4/Scenes/ExInDerrota.unity
+    guid: dc3d185b1075d0d44b6bbad450f2256c
+  - enabled: 1
+    path: Assets/Scenes/MiniJuego4/Scenes/ExInVictoria.unity
+    guid: 36c77746a45af4f4fab996b0b986a762
+  - enabled: 1
+    path: Assets/Scenes/MiniJuego1Scenes/ScenesMJ1/EscenadeJuego.unity
+    guid: 16a91bb7f27f4c940bcc22b32ed422ab
+  - enabled: 1
+    path: Assets/Scenes/MiniJuego1Scenes/ScenesMJ1/FinalEscena.unity
+    guid: b2898e5b911907641862f3039a8f5009
+  - enabled: 1
+    path: Assets/Scenes/MiniJuego3/Scene/MenuPrincipal.unity
+    guid: b1a8a6710b8375e4cb9145c143b3c9b0
+  - enabled: 1
+    path: Assets/Scenes/MiniJuego3/Scene/SceneCarro.unity
+    guid: 0eea88a390689b640b61011c8b59aa1a
+  - enabled: 1
+    path: Assets/Scenes/MiniJuego3/Scene/Derrota.unity
+    guid: ac306ab647064fc4280da17df1a4e3ec
+  - enabled: 1
+    path: Assets/Scenes/MiniJuego3/Scene/Victoria.unity
+    guid: f3c584b82e67fbc49bbfa7235829634e
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
