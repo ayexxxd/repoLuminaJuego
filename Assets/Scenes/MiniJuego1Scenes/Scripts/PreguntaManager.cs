@@ -28,7 +28,7 @@ public class GestorPreguntas : MonoBehaviour
     {
         if (instancia == null) instancia = this;
     }
-
+    //f2
     public void RegistrarMovimiento()
     {
         contadorMovimientos++;
@@ -42,7 +42,7 @@ public class GestorPreguntas : MonoBehaviour
     IEnumerator CargarYMostrar()
     {
         preguntaActual = CargarPreguntaLocal();
-        // yield return StartCoroutine(ObtenerPreguntaDesdeAPI());
+
 
         MostrarPregunta(preguntaActual);
         yield return null;
@@ -64,7 +64,7 @@ public class GestorPreguntas : MonoBehaviour
         indicePregunta++;
         return p;
     }
-
+    //f2
     void MostrarPregunta(Pregunta p)
     {
         Time.timeScale = 0f;

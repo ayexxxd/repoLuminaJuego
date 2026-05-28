@@ -23,15 +23,15 @@ public class TriviaController : MonoBehaviour
 
     void Start()
     {
-        // ARREGLO 1: Arrancamos la petición a la API al iniciar el juego
+        
         StartCoroutine(GetData());
     }
 
     public IEnumerator GetData()
     {
-        string JSONurl = "https://10.22.207.200:5001/MJ1/preguntas";
+        string JSONurl = "https://127.0.0.1:5002/MJ1/preguntas";
 
-        //Para la libreria que la aceote (como que se conecta con el ForAceptAll
+        
         using (UnityWebRequest web = UnityWebRequest.Get(JSONurl))
         {
             web.certificateHandler = new ForceAcceptAll(); 

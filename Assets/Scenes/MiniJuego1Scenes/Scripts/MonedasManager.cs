@@ -32,8 +32,6 @@ public class MonedasManager : MonoBehaviour
 
         int monedasGanadas = puntosRestantes / puntosPorMoneda;
 
-        Debug.Log($"Puntos sobrantes: {puntosRestantes} " +
-                  $"→ {monedasGanadas} monedas nuevas");
 
         if (monedasGanadas > 0)
         {
@@ -50,12 +48,11 @@ public class MonedasManager : MonoBehaviour
     {
         PlayerPrefs.SetInt(CLAVE_MONEDAS, monedasActuales);
         PlayerPrefs.Save();
-        Debug.Log("Monedas guardadas: " + monedasActuales);
+        
     }
 
     void CargarMonedas()
     {
         monedasActuales = PlayerPrefs.GetInt(CLAVE_MONEDAS, 0);
-        Debug.Log("Monedas cargadas: " + monedasActuales);
     }
 }
