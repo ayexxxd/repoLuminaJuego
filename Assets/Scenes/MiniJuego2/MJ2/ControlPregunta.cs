@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class ControlPregunta : MonoBehaviour
 {
@@ -7,26 +8,40 @@ public class ControlPregunta : MonoBehaviour
 
     public void ResponderCorrecto()
     {
-        RevisarRespuesta("Correcto");
+        StartCoroutine(RevisarRespuesta("Correcto"));
     }
 
     public void ResponderIncorrecto()
     {
-        RevisarRespuesta("Incorrecto");
+        StartCoroutine(RevisarRespuesta("Incorrecto"));
     }
 
-    void RevisarRespuesta(string respuestaJugador)
+    IEnumerator RevisarRespuesta(string respuestaJugador)
     {
         if (preguntaApi.RespuestaEsCorrecta(respuestaJugador))
         {
+            if (AudioManager.instancia != null)
+            {
+                AudioManager.instancia.ReproducirCorrecto();
+            }
+
             DatosJuego.tokensPartida += DatosJuego.tokensNivelPendiente;
             DatosJuego.tokensNivelPendiente = 0;
+
+            yield return new WaitForSeconds(0.5f);
 
             AvanzarNivel();
         }
         else
         {
+            if (AudioManager.instancia != null)
+            {
+                AudioManager.instancia.ReproducirIncorrecto();
+            }
+
             DatosJuego.tokensNivelPendiente = 0;
+
+            yield return new WaitForSeconds(1f);
 
             RepetirNivel();
         }

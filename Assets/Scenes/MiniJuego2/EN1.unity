@@ -5787,7 +5787,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c16c7f324e140be9114f3e2b8037b1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ControlNivel
-  totalMonedas: 6
+  totalMonedas: 3
   monedasRecolectadas: 0
   textoMonedas: {fileID: 1530026637}
   monedas:
