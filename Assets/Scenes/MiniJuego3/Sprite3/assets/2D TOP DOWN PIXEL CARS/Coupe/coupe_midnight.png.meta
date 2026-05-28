@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 7d0b79fd47b1e864a94404befd2a4a84
+guid: d8ea9e7cd96b8194b93cc1ac6b7b520b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3272726929949062758
-    second: item-shop-containerextra-large_0
+      213: 6798498454552591144
+    second: coupe_midnight_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,7 +70,7 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -83,7 +83,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -96,7 +96,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -139,27 +139,29 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: item-shop-containerextra-large_0
+      name: coupe_midnight_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 4
-        width: 488
-        height: 504
+        x: 0
+        y: 0
+        width: 29
+        height: 75
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a9908856230f492d0800000000000000
-      internalID: -3272726929949062758
+      spriteID: 82b36ad035e195e50800000000000000
+      internalID: 6798498454552591144
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
     spriteID: 
@@ -169,17 +171,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
-      item-shop-containerextra-large_0: -3272726929949062758
+      coupe_midnight_0: 6798498454552591144
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 298577
-  packageName: Space Game GUI kit
-  packageVersion: 1.0
-  assetPath: Assets/Space_Exploration_GUI_Kit/Grid_Components/Extra Large/item-shop-containerextra-large.png
-  uploadId: 700894

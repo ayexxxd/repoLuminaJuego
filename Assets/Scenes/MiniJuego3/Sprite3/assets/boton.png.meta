@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: b34dabaecab66534dbe4ad1b4a55f3f3
+guid: d441fd73b82ec2845a93a0dd60ccb026
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2721166144367406985
-    second: info-32_0
-  - first:
-      213: -6722550935021301452
-    second: info-32_1
+      213: -3427443288308981933
+    second: boton_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,7 +70,7 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -86,7 +83,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -142,69 +139,44 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: info-32_0
-      rect:
-        serializedVersion: 2
-        x: 10
-        y: 3
-        width: 12
-        height: 18
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 98fa6d1e03683c520800000000000000
-      internalID: 2721166144367406985
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: info-32_1
+      name: boton_0
       rect:
         serializedVersion: 2
         x: 11
-        y: 20
-        width: 10
-        height: 9
+        y: 0
+        width: 1515
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 431d59dca83b4b2a0800000000000000
-      internalID: -6722550935021301452
+      spriteID: 35fdb881d764f60d0800000000000000
+      internalID: -3427443288308981933
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
-      info-32_0: 2721166144367406985
-      info-32_1: -6722550935021301452
+      boton_0: -3427443288308981933
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 298577
-  packageName: Space Game GUI kit
-  packageVersion: 1.0
-  assetPath: Assets/Space_Exploration_GUI_Kit/Picto_Icons/White/info-32.png
-  uploadId: 700894

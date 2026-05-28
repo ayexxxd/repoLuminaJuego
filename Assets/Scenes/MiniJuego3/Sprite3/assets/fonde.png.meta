@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 9d6bb40c793a6474a804ab4fc0d32920
+guid: 99a17453419017d468fa78a1da25ce55
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8946654070569536050
-    second: download-32_0
-  - first:
-      213: -4489932956281606219
-    second: download-32_1
+      213: 8801729376057086015
+    second: fonde_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -49,7 +46,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 1
+  spriteMode: 2
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -73,7 +70,7 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -86,7 +83,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -142,69 +139,44 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: download-32_0
+      name: fonde_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 2
-        width: 24
-        height: 8
+        x: 0
+        y: 0
+        width: 1537
+        height: 1023
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ec57663368917d380800000000000000
-      internalID: -8946654070569536050
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: download-32_1
-      rect:
-        serializedVersion: 2
-        x: 7
-        y: 8
-        width: 18
-        height: 22
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 5bfe383d3cd80b1c0800000000000000
-      internalID: -4489932956281606219
+      spriteID: f30d005eb36062a70800000000000000
+      internalID: 8801729376057086015
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
-    spriteID: 5e97eb03825dee720800000000000000
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
-      download-32_0: -8946654070569536050
-      download-32_1: -4489932956281606219
+      fonde_0: 8801729376057086015
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 298577
-  packageName: Space Game GUI kit
-  packageVersion: 1.0
-  assetPath: Assets/Space_Exploration_GUI_Kit/Picto_Icons/White/download-32.png
-  uploadId: 700894

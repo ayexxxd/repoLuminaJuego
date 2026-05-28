@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 28e4d2bf9f00a3d46b0ab84e4331e8c3
+guid: ea5b56add9ba60143bf4d322f30f7761
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -7397405783879328169
-    second: gem-2-128_0
+      213: -5206244019247036676
+    second: light_white_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,7 +70,7 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -83,7 +83,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -139,27 +139,29 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: gem-2-128_0
+      name: light_white_0
       rect:
         serializedVersion: 2
-        x: 15
-        y: 8
+        x: 0
+        y: 0
         width: 98
-        height: 112
+        height: 235
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 75ed378f1a2275990800000000000000
-      internalID: -7397405783879328169
+      spriteID: cf647caf5a4bfb7b0800000000000000
+      internalID: -5206244019247036676
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
     spriteID: 
@@ -169,17 +171,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
-      gem-2-128_0: -7397405783879328169
+      light_white_0: -5206244019247036676
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 298577
-  packageName: Space Game GUI kit
-  packageVersion: 1.0
-  assetPath: Assets/Space_Exploration_GUI_Kit/Icons/gem-2-128.png
-  uploadId: 700894

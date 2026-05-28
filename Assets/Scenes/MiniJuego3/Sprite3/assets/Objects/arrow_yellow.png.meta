@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2d73285157a29b747aa85bc4173b5d34
+guid: d39568945982649459cc73357898de9c
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6016517203900145963
-    second: square-pink-extra-large_0
+      213: 2932025978043090931
+    second: arrow_yellow_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,7 +70,7 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -83,7 +83,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -139,27 +139,29 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: square-pink-extra-large_0
+      name: arrow_yellow_0
       rect:
         serializedVersion: 2
-        x: 4
-        y: 6
-        width: 232
-        height: 212
+        x: 0
+        y: 0
+        width: 165
+        height: 99
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5de518cda79018ca0800000000000000
-      internalID: -6016517203900145963
+      spriteID: 3f7c97da716a0b820800000000000000
+      internalID: 2932025978043090931
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
     spriteID: 
@@ -169,18 +171,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
-      square-pink-extra-large_0: -6016517203900145963
+      arrow_yellow_0: 2932025978043090931
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 298577
-  packageName: Space Game GUI kit
-  packageVersion: 1.0
-  assetPath: Assets/Space_Exploration_GUI_Kit/Button_Images/Source_Image_Sprites/extra
-    large/square-pink-extra-large.png
-  uploadId: 700894

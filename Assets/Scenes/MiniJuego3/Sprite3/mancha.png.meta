@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: 8ec4c2201e8015f44b1068345eadbe6e
+guid: ca489637f76f68d42ad0cef501be7aa0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 3743957659742367504
-    second: Move_0
+      213: 2447970500674488768
+    second: mancha_0
   - first:
-      213: 8405476814967859603
-    second: Move_1
+      213: 5039401720214911498
+    second: mancha_1
   - first:
-      213: -5086530901905536447
-    second: Move_2
+      213: -7718889023151590000
+    second: mancha_2
   - first:
-      213: 1521079245874940812
-    second: Move_3
+      213: 2270620666032244086
+    second: mancha_3
   - first:
-      213: 4010896587680814743
-    second: Move_4
+      213: -7156233976959254056
+    second: mancha_4
   - first:
-      213: 8831429847189535439
-    second: Move_5
+      213: 3934086814895543949
+    second: mancha_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -154,13 +154,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Move_0
+      name: mancha_0
       rect:
         serializedVersion: 2
-        x: 53
-        y: 63
-        width: 102
-        height: 66
+        x: 0
+        y: 0
+        width: 1505
+        height: 1024
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 01feb0bb7a535f330800000000000000
-      internalID: 3743957659742367504
+      spriteID: 0c986515330f8f120800000000000000
+      internalID: 2447970500674488768
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Move_1
+      name: mancha_1
       rect:
         serializedVersion: 2
-        x: 243
-        y: 63
-        width: 104
-        height: 66
+        x: 82
+        y: 992
+        width: 6
+        height: 6
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,20 +191,86 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 399e0fb01a046a470800000000000000
-      internalID: 8405476814967859603
+      spriteID: a0af6e52a2d8fe540800000000000000
+      internalID: 5039401720214911498
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Move_2
+      name: mancha_2
       rect:
         serializedVersion: 2
-        x: 436
-        y: 63
+        x: 83
+        y: 534
+        width: 6
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0953362745ff0e490800000000000000
+      internalID: -7718889023151590000
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mancha_3
+      rect:
+        serializedVersion: 2
+        x: 83
+        y: 524
+        width: 6
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 675438a277dd28f10800000000000000
+      internalID: 2270620666032244086
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mancha_4
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 511
+        width: 8
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 8d143c10d13ffac90800000000000000
+      internalID: -7156233976959254056
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: mancha_5
+      rect:
+        serializedVersion: 2
+        x: 60
+        y: 386
         width: 103
-        height: 66
+        height: 69
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,74 +279,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 14a8fd428130969b0800000000000000
-      internalID: -5086530901905536447
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Move_3
-      rect:
-        serializedVersion: 2
-        x: 629
-        y: 63
-        width: 102
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: c8b489dd385fb1510800000000000000
-      internalID: 1521079245874940812
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Move_4
-      rect:
-        serializedVersion: 2
-        x: 819
-        y: 63
-        width: 104
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 7969a83223199a730800000000000000
-      internalID: 4010896587680814743
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: Move_5
-      rect:
-        serializedVersion: 2
-        x: 1013
-        y: 63
-        width: 102
-        height: 66
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: fcab384b7aa8f8a70800000000000000
-      internalID: 8831429847189535439
+      spriteID: d86956d4d1fa89630800000000000000
+      internalID: 3934086814895543949
       vertices: []
       indices: 
       edges: []
@@ -299,12 +299,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Move_0: 3743957659742367504
-      Move_1: 8405476814967859603
-      Move_2: -5086530901905536447
-      Move_3: 1521079245874940812
-      Move_4: 4010896587680814743
-      Move_5: 8831429847189535439
+      mancha_0: 2447970500674488768
+      mancha_1: 5039401720214911498
+      mancha_2: -7718889023151590000
+      mancha_3: 2270620666032244086
+      mancha_4: -7156233976959254056
+      mancha_5: 3934086814895543949
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

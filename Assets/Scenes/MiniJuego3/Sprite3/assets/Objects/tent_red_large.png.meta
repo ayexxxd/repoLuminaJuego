@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 302706aa67fa3fb44bd2ad4f571804de
+guid: 6a5aa793891579b4ba938ed884a2cf15
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6227571165450745772
-    second: full-moon-256_0
+      213: 53412504542189528
+    second: tent_red_large_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,7 +70,7 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -83,7 +83,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -139,7 +139,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: full-moon-256_0
+      name: tent_red_large_0
       rect:
         serializedVersion: 2
         x: 0
@@ -149,17 +149,19 @@ TextureImporter:
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 458c7d525093399a0800000000000000
-      internalID: -6227571165450745772
+      spriteID: 8d71dcfc362cdb000800000000000000
+      internalID: 53412504542189528
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
     spriteID: 
@@ -169,17 +171,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
-      full-moon-256_0: -6227571165450745772
+      tent_red_large_0: 53412504542189528
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 298577
-  packageName: Space Game GUI kit
-  packageVersion: 1.0
-  assetPath: Assets/Space_Exploration_GUI_Kit/Icons/full-moon-256.png
-  uploadId: 700894

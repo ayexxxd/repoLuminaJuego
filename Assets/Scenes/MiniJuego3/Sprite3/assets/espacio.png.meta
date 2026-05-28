@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9802753361421954ebe6942e352f8731
+guid: ac3f35cda3829be4892b61efb04632d0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5908797824531071540
-    second: empty-heart-256_0
+      213: 144369665077079407
+    second: espacio_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,7 +70,7 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -83,7 +83,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -139,27 +139,29 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: empty-heart-256_0
+      name: espacio_0
       rect:
         serializedVersion: 2
-        x: 18
-        y: 30
-        width: 220
-        height: 196
+        x: 0
+        y: 0
+        width: 1538
+        height: 1022
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 43286c4b054400250800000000000000
-      internalID: 5908797824531071540
+      spriteID: f6de24b0277e00200800000000000000
+      internalID: 144369665077079407
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
     spriteID: 
@@ -169,17 +171,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
-      empty-heart-256_0: 5908797824531071540
+      espacio_0: 144369665077079407
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 298577
-  packageName: Space Game GUI kit
-  packageVersion: 1.0
-  assetPath: Assets/Space_Exploration_GUI_Kit/Icons/empty-heart-256.png
-  uploadId: 700894

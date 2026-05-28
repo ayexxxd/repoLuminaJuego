@@ -1,13 +1,10 @@
 fileFormatVersion: 2
-guid: 93edbede21a413d43affcb21a6645b50
+guid: 4852aea9df35cbe409e78f6f9e0540b7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1964633566661953880
-    second: door-64_0
-  - first:
-      213: 763041321153169969
-    second: door-64_1
+      213: 6382882798128785524
+    second: lives 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -73,7 +70,7 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -86,7 +83,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 3
+  - serializedVersion: 4
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -142,48 +139,29 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: door-64_0
+      name: lives 1_0
       rect:
         serializedVersion: 2
-        x: 13
-        y: 8
-        width: 11
-        height: 49
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 859c1bed1d7c34b10800000000000000
-      internalID: 1964633566661953880
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: door-64_1
-      rect:
-        serializedVersion: 2
-        x: 23
+        x: 1
         y: 5
-        width: 28
+        width: 62
         height: 54
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 13a8740f90ed69a00800000000000000
-      internalID: 763041321153169969
+      spriteID: 478ea61461e849850800000000000000
+      internalID: 6382882798128785524
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
+    customData: 
     physicsShape: []
     bones: []
     spriteID: 
@@ -193,18 +171,12 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
     nameFileIdTable:
-      door-64_0: 1964633566661953880
-      door-64_1: 763041321153169969
+      lives 1_0: 6382882798128785524
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 298577
-  packageName: Space Game GUI kit
-  packageVersion: 1.0
-  assetPath: Assets/Space_Exploration_GUI_Kit/Picto_Icons/White/door-64.png
-  uploadId: 700894
