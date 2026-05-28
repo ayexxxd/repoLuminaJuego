@@ -35,6 +35,11 @@ public class PuertaNivel : MonoBehaviour
                 {
                     spriteRendererPuerta.sprite = puertaAbierta;
                 }
+                
+                if (AudioManager.instancia != null)
+                {
+                    AudioManager.instancia.ReproducirPuerta();
+                }
 
                 StartCoroutine(AbrirPuertaYCambiarEscena());
             }

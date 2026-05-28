@@ -10,12 +10,17 @@ public class Moneda : MonoBehaviour
     }
 
     void OnTriggerEnter2D(Collider2D collision)
+{
+    if (collision.CompareTag("Player"))
     {
-        if (collision.CompareTag("Player"))
-        {
-            controlNivel.RecolectarMoneda();
+        controlNivel.RecolectarMoneda();
 
-            gameObject.SetActive(false);
+        if (AudioManager.instancia != null)
+        {
+            AudioManager.instancia.ReproducirMoneda();
         }
+
+        gameObject.SetActive(false);
     }
+}
 }
