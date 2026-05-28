@@ -86,6 +86,17 @@ public class GestorPreguntas : MonoBehaviour
     {
         Time.timeScale = 0f;
         panelPreguntas.SetActive(true);
+
+        // Si hay TriviaController activo, él llena la UI desde el API
+        if (TriviaController.instancia != null)
+        {
+            // Solo pausa y abre el panel — TriviaController llena los textos
+            // cuando termina GetData()
+            StartCoroutine(TriviaController.instancia.GetData());
+            return;
+        }
+
+        // Fallback: llena con preguntas locales si no hay API
         textoPregunta.text = p.textoPregunta;
 
         for (int i = 0; i < botonesRespuesta.Length; i++)
@@ -117,5 +128,24 @@ public class GestorPreguntas : MonoBehaviour
         {
             Debug.Log("Incorrecto. Continúa jugando.");
         }
+    }
+
+    // Llamado desde TriviaController cuando la respuesta es correcta
+    public void RespuestaCorrecta()
+    {
+        panelPreguntas.SetActive(false);
+        Time.timeScale = 1f;
+
+        Debug.Log("¡Correcto! +" + movimientosBonus + " movimientos.");
+        GameManager.instancia.AgregarMovimientos(movimientosBonus);
+    }
+
+    // Llamado desde TriviaController cuando la respuesta es incorrecta
+    public void RespuestaIncorrecta()
+    {
+        panelPreguntas.SetActive(false);
+        Time.timeScale = 1f;
+
+        Debug.Log("Incorrecto. Continúa jugando.");
     }
 }

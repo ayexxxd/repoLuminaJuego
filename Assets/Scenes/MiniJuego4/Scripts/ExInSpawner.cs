@@ -145,11 +145,17 @@ namespace DefensoresDeSoftware
             if (currentWave == configuracionOleadas.Length)
             {
                 yield return new WaitUntil(() => GameObject.FindGameObjectsWithTag("Enemy").Length == 0);
+                // Reportar antes de que el spawner sea destruido por el cambio de escena
+                if (ExInGameControl.Instance != null)
+                    ExInGameControl.Instance.ReportarOleadasCompletadas(currentWave);
                 Debug.Log("¡VICTORIA TOTAL!");
                 isSpawning = false;
-                SceneManager.LoadScene("ExInVictoria");
-                yield break; 
+                SceneManager.LoadScene("ExInEndScene");
+                yield break;
             }
+
+            if (ExInGameControl.Instance != null)
+                ExInGameControl.Instance.ReportarOleadasCompletadas(currentWave);
 
             currentWave++;
             isSpawning = false;
