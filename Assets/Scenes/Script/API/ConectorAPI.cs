@@ -9,7 +9,7 @@ public class ConectorAPI : MonoBehaviour
     [Header("URL de tu API")]
     // Pon tu URL real aquí — sin slash al final
     // Ejemplo: "https://mi-api.onrender.com"
-    public string urlBase = "https://10.22.189.195:5001";
+    public string urlBase = "https://127.0.0.1:5001";
 
     // Singleton — accesible desde cualquier script
     public static ConectorAPI instancia;

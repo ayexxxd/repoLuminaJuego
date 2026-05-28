@@ -1,4 +1,5 @@
 using UnityEngine;
+using UnityEngine.InputSystem;   
 
 // Este script controla el movimiento de la nave del jugador
 // Se comunica con el Rigidbody2D para mover la nave usando física real
@@ -54,18 +55,24 @@ public class MovimientoNave : MonoBehaviour
     // Aquí leemos las teclas del jugador (input)
     void Update()
     {
-        entradaMovimiento = Input.GetAxisRaw("Vertical");
-        entradaGiro = Input.GetAxisRaw("Horizontal");
+        var kb = Keyboard.current;
 
-        // Detectamos si el jugador está haciendo drift
-        // Shift izquierdo o Space activan el drift
+        // Vertical: W / ↑ = adelante,  S / ↓ = atrás
+        float arriba  = (kb.wKey.isPressed || kb.upArrowKey.isPressed)    ? 1f : 0f;
+        float abajo   = (kb.sKey.isPressed || kb.downArrowKey.isPressed)  ? 1f : 0f;
+        entradaMovimiento = arriba - abajo;
+
+        // Horizontal: D / → = derecha,  A / ← = izquierda
+        float derecha = (kb.dKey.isPressed || kb.rightArrowKey.isPressed) ? 1f : 0f;
+        float izquierda = (kb.aKey.isPressed || kb.leftArrowKey.isPressed) ? 1f : 0f;
+        entradaGiro = derecha - izquierda;
+
+        // Drift: Shift izquierdo o Espacio
         if (driftHabilitado)
         {
-            enDrift = Input.GetKey(KeyCode.LeftShift) ||
-                    Input.GetKey(KeyCode.Space);
+            enDrift = kb.leftShiftKey.isPressed || kb.spaceKey.isPressed;
         }
 
-        // Activamos el rastro visual durante el drift
         if (rastro != null)
             rastro.emitting = enDrift;
     }
@@ -231,6 +238,9 @@ public class MovimientoNave : MonoBehaviour
             rb.MoveRotation(rb.rotation + cantidadGiro);
         }
     }
+
+        
+
                 
     }
 

@@ -76,7 +76,7 @@ public class GameManager : MonoBehaviour
         VerificarFinDeNivel();
     }
 
-
+    //f3
     public void AgregarPuntos(int cantidad)
     {
         puntosActuales += cantidad;
@@ -114,7 +114,7 @@ public class GameManager : MonoBehaviour
         if (textoMeta != null)
             textoMeta.text = "Meta: " + puntosActuales + " / " + puntosNecesarios;
     }
-
+    //f3
     public void InicializarNivel()
     {
         int indice = Mathf.Clamp(nivelActual - 1, 0, metasPorNivel.Length - 1);

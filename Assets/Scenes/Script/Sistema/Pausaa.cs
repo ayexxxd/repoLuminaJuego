@@ -1,46 +1,42 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;   // ← nuevo
+
 public class Pausaa : MonoBehaviour
 {
-
     [Header("Asigna el panel de pausa aquí")]
     public GameObject panelPausa;
 
-    // Variable para saber si el juego está pausado o no
     private bool juegoPausado = false;
 
     void Update()
     {
-        // Detecta si presionamos la tecla Escape
-        if (Input.GetKeyDown(KeyCode.Escape))
+        // Keyboard.current reemplaza a Input.GetKeyDown
+        if (Keyboard.current.escapeKey.wasPressedThisFrame)
         {
             if (juegoPausado)
-            {
                 Reanudar();
-            }
             else
-            {
                 Pausar();
-            }
         }
     }
 
     public void Pausar()
     {
         juegoPausado = true;
-        Time.timeScale = 0f; // Esto congela TODAS las físicas y movimientos del juego
-        panelPausa.SetActive(true); // Muestra el panel
+        Time.timeScale = 0f;
+        panelPausa.SetActive(true);
     }
 
     public void Reanudar()
     {
         juegoPausado = false;
-        Time.timeScale = 1f; // Esto hace que el tiempo vuelva a la normalidad
-        panelPausa.SetActive(false); // Oculta el panel
+        Time.timeScale = 1f;
+        panelPausa.SetActive(false);
     }
 
     public void SalirJuego()
     {
-        SceneManager.LoadScene("MenuPrincipal"); // Cambia "MenuPrincipal" por el nombre de tu escena de menú
+        SceneManager.LoadScene("MenuPrincipal");
     }
 }

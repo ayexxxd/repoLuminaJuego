@@ -51,7 +51,7 @@ public class ResultadoManager : MonoBehaviour
         LeerDatos();
         MostrarPanelCorrecto();
     }
-    //esto
+    //f3
     void LeerDatos()
     {
         gano = PlayerPrefs.GetInt("Gano", 0);
@@ -64,7 +64,7 @@ public class ResultadoManager : MonoBehaviour
         puntosDisponibles = Mathf.Max(0, puntosNivel - puntosGastados);
 
     }
-
+    //f3
     void MostrarPanelCorrecto()
     {
         OcultarTiendaSiNivel1();
@@ -204,7 +204,7 @@ public class ResultadoManager : MonoBehaviour
     {
         AlPresionarReintentar();
     }
-
+    //f3
     void MostrarPanelFinal()
     {
         if (panelFinal == null) return;
@@ -224,7 +224,7 @@ public class ResultadoManager : MonoBehaviour
 
         panelFinal.SetActive(true);
     }
-
+    //f3
     public void AlPresionarSiguienteNivel()
     {
         int siguienteNivel = nivelActual >= nivelMaximo ? 1 : nivelActual + 1;

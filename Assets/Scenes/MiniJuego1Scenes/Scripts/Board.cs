@@ -124,7 +124,7 @@ public class Board : MonoBehaviour
         int difFil = Mathf.Abs(a.fil - b.fil);
         return (difCol == 1 && difFil == 0) || (difCol == 0 && difFil == 1);
     }
-
+    //f2
     IEnumerator IntentarIntercambio(Pieza a, Pieza b)
     {
         estaProcesando = true;
@@ -218,7 +218,7 @@ public class Board : MonoBehaviour
         a.transform.position = ObtenerPosicionMundo(a.col, a.fil);
         b.transform.position = ObtenerPosicionMundo(b.col, b.fil);
     }
-
+    //f1
     bool VerificarMatches()
     {
         bool[,] aDestruir   = new bool[columnas, filas];
@@ -235,7 +235,7 @@ public class Board : MonoBehaviour
                     for (int i = 0; i < longitud; i++)
                         aDestruir[col + i, fil] = true;
 
-                    if (SeCrearáMonstruo(longitud))
+                    if (SeCrearaMonstruo(longitud))
                     {
                         aDestruir[col, fil] = false; 
                         ProcesarMonstruo(col, fil, longitud, true);
@@ -258,7 +258,7 @@ public class Board : MonoBehaviour
                     for (int i = 0; i < longitud; i++)
                         aDestruir[col, fil + i] = true;
 
-                    if (SeCrearáMonstruo(longitud))
+                    if (SeCrearaMonstruo(longitud))
                     {
                         aDestruir[col, fil] = false; // ← celda protegida
                         ProcesarMonstruo(col, fil, longitud, false);
@@ -329,7 +329,7 @@ public class Board : MonoBehaviour
 
     }
 
-    bool SeCrearáMonstruo(int longitud)
+    bool SeCrearaMonstruo(int longitud)
     {
         if (longitud == 4 && monstruoRojoActivo)  return true;
         if (longitud >= 5 && monstruoVerdeActivo) return true;
@@ -423,7 +423,7 @@ public class Board : MonoBehaviour
             }
         }
     }
-
+    //f1
     int CalcularPuntos(int cantidad)
     {
         if (cantidad <= 3) return 30;
