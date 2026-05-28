@@ -156,13 +156,11 @@ GameObject:
   - component: {fileID: 6878317122931243717}
   - component: {fileID: 3265106151654126746}
   - component: {fileID: 1855759475005874438}
-  - component: {fileID: 6499475729220605125}
   - component: {fileID: 7850392427019582616}
   - component: {fileID: 8908124418937418235}
   - component: {fileID: 5233936652518512599}
   - component: {fileID: 6703413820812549544}
   - component: {fileID: 5650774970161864208}
-  - component: {fileID: 6352039541696710276}
   m_Layer: 6
   m_Name: Hero
   m_TagString: Player
@@ -283,18 +281,6 @@ CapsuleCollider2D:
   m_Offset: {x: 0.026437955, y: -0.33923978}
   m_Size: {x: 1.877079, y: 2.1551483}
   m_Direction: 0
---- !u!114 &6499475729220605125
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6305262027935978840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5dad8165ac468425984b6e003db02138, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::TopDown.Movement.Rotating
 --- !u!114 &7850392427019582616
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -378,7 +364,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TopDown.Movement.PlayerControl
   moveSpeed: 2.5
   rig: {fileID: 5233936652518512599}
-  sr: {fileID: 3265106151654126746}
 --- !u!114 &5650774970161864208
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -391,25 +376,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2831fa8028d574eabb91e7415b4958c5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopDown.Shooting.GunController
-  cooldown: 0.4
   bulletPrefab: {fileID: 5276691761223284129, guid: 6f5c3908a8699494092c077713e086a0, type: 3}
   firepoint: {fileID: 8330750509792415730}
   muzzleFlashAnimator: {fileID: 7701471918768472665}
---- !u!114 &6352039541696710276
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6305262027935978840}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: f749d80418d59400d92052834ef4b114, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::Health
-  isDead: 0
-  health: 100
-  MAX_HEALTH: 100
-  isPlayer: 1
-  debugDamageAmount: 10
-  debugHealAmount: 10
+  characterAnimator: {fileID: 0}
+  baseDmg: 20
+  baseSpd: 20
+  baseCd: 0.1
+  objectToHide: {fileID: 0}
+  shootSFX: {fileID: 0}

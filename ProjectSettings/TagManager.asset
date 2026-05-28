@@ -9,6 +9,8 @@ TagManager:
   - EnemyM
   - EnemyS
   - Enemy
+  - Bullet
+  - Heal
   layers:
   - Default
   - TransparentFX

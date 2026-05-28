@@ -4,39 +4,78 @@ using TMPro;
 
 namespace TopDown.UI
 {
-using TopDown.Enemy;//namespace to organize code and avoid naming conflicts
-public class HealthBar : MonoBehaviour
-{
-    private Health playerHealth;
-    private Spawner spawner;
-    [SerializeField] private Image fillImage;
-    [SerializeField] private TextMeshProUGUI waveText;
-    [SerializeField] private TextMeshProUGUI statsText;
+    using TopDown.Enemy;//namespace to organize code and avoid naming conflicts
 
-    void Start()
+    public class HealthBar : MonoBehaviour
     {
-        GameObject player = GameObject.FindGameObjectWithTag("Player");//buscar objeto con tag de jugador  
-        playerHealth = player.GetComponent<Health>();//obtener componente de salud del jugador
-        spawner = FindAnyObjectByType<Spawner>();//buscar objeto con componente Spawner
-    }
-    private void UpdateBar(float current)
-    {//funcion para actualizar barra de vida
-        fillImage.fillAmount = current / 100;
-    }
-    private void UpdateWave(int currentWave, int totalWaves)
-    {
-        waveText.text = "OLEADA: " + currentWave + "/" + totalWaves;
-    }
-    private void Update()
-    {
-        if (waveText!=null && spawner != null)
+        private Health playerHealth;
+        private Spawner spawner;
+
+        [SerializeField] private Image fillImage;
+        [SerializeField] private TextMeshProUGUI waveText;
+        [SerializeField] private TextMeshProUGUI statsText;
+
+        private void Start()
         {
-            UpdateBar(playerHealth.getHealth());
-            UpdateWave(spawner.CurrentWave, spawner.TotalWaves);
+            TryAcquirePlayerHealth();
+            TryAcquireSpawner();
+        }
+
+        private void Update()
+        {
+            if (playerHealth == null)
+            {
+                TryAcquirePlayerHealth();
+            }
+
+            if (spawner == null)
+            {
+                TryAcquireSpawner();
+            }
+
+            if (playerHealth != null)
+            {
+                UpdateBar(playerHealth.getHealth());
+            }
+
+            if (spawner != null)
+            {
+                UpdateWave(spawner.CurrentWave, spawner.TotalWaves);
+            }
+        }
+
+        private void TryAcquirePlayerHealth()
+        {
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+            if (player != null)
+            {
+                playerHealth = player.GetComponent<Health>();
+            }
+        }
+
+        private void TryAcquireSpawner()
+        {
+            spawner = FindAnyObjectByType<Spawner>();
+        }
+
+        private void UpdateBar(float current)
+        {
+            if (fillImage == null)
+            {
+                return;
+            }
+
+            fillImage.fillAmount = Mathf.Clamp01(current / 100f);
+        }
+
+        private void UpdateWave(int currentWave, int totalWaves)
+        {
+            if (waveText == null)
+            {
+                return;
+            }
+
+            waveText.text = "OLEADA: " + currentWave + "/" + totalWaves;
         }
     }
-    /*public void UpdateStats(int damage, float speed, float cooldown)
-    {
-        statsText.text = "DMG: " + damage + " SPD: " + speed + " CD: "+ cooldown;
-}*/
-}}  
+}

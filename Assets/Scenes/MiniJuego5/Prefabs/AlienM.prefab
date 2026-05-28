@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8070969969423589774}
   - component: {fileID: 1988163710710372504}
   - component: {fileID: -2806748977648078835}
+  - component: {fileID: 8010704060215906248}
   m_Layer: 0
   m_Name: AlienM
   m_TagString: EnemyM
@@ -158,7 +159,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!114 &1988163710710372504
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -172,11 +173,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   damage: 16
-  speed: 1.8
+  speed: 2
   data: {fileID: 11400000, guid: c0ff703f9524649d88c1908355b75ac0, type: 2}
-  possibleSprites:
-  - {fileID: 21300000, guid: d43195180f1554996a993279984921f7, type: 3}
-  - {fileID: 21300000, guid: e51fbfb9afeaa8a4a82ebd865a9c541a, type: 3}
+  sprites: []
 --- !u!114 &-2806748977648078835
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,4 +189,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyHealth
   health: 40
-  isDead: 0
+--- !u!58 &8010704060215906248
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7209574609094532823}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1.28
