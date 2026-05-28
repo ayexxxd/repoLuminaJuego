@@ -71,14 +71,28 @@ namespace TopDown.Shooting
             characterAnimator.SetBool("shoot", false);
         }
 
-    
-        /*public void SetBulletStats(int damage, float speed, float cooldown)
+        public void SetBulletStats(int damage, float speed, float cooldown)
         {
             currentDmg = damage;
             currentSpd = speed;
             currentCd = cooldown;
-        
-        }*/
+        }
+
+        public void ApplyBulletUpgrade(BulletModifier modifier)
+        {
+            if (modifier == null)
+            {
+                return;
+            }
+
+            SetBulletStats(modifier.damage, modifier.speed, modifier.cooldown);
+        }
+
+        public void ApplyBulletUpgrade(int damage, float speed, float cooldown)
+        {
+            SetBulletStats(damage, speed, cooldown);
+        }
+
         public void ResetBulletStats()
         {
             currentDmg = baseDmg;

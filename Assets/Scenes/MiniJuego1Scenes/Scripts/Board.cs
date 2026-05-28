@@ -512,7 +512,7 @@ public class Board : MonoBehaviour
             }
         }
 
-        GameManager.instancia.AgregarMovimientos(3);
+        //GameManager.instancia.AgregarMovimientos(3);
     }
 
     public void ReiniciarTablero()
