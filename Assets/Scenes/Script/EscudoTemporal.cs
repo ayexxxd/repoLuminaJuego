@@ -29,7 +29,7 @@ public class EscudoTemporal : MonoBehaviour
     // =====================================================
     public void ActivarEscudo()
     {
-        Debug.Log("🛡️ Activando escudo...");
+        Debug.Log(" Activando escudo...");
 
         // Restart timer if already active
         if (rutinaEscudo != null)
@@ -44,7 +44,7 @@ public class EscudoTemporal : MonoBehaviour
     {
         escudoActivo = true;
 
-        Debug.Log("✅ Escudo activo");
+        Debug.Log("Escudo activo");
 
         // Show visual
         if (escudoVisual != null)
@@ -58,7 +58,7 @@ public class EscudoTemporal : MonoBehaviour
         // Disable shield
         escudoActivo = false;
 
-        Debug.Log("❌ Escudo desactivado");
+        Debug.Log(" Escudo desactivado");
 
         // Hide visual
         if (escudoVisual != null)

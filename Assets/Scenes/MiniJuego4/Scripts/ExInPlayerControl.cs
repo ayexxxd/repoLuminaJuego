@@ -78,8 +78,8 @@ namespace DefensoresDeSoftware
         
         void Shoot()
         {
-            if (SFXManager.Instance != null)
-                SFXManager.Instance.PlaySFX(shootSFX, randomizePitch: true);
+            //if (SFXManager.Instance != null)
+                //SFXManager.Instance.PlaySFX(shootSFX, randomizePitch: true);
 
             GameObject newBullet = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             ExInBullet bulletScript = newBullet.GetComponent<ExInBullet>();

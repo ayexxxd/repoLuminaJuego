@@ -143,8 +143,8 @@ namespace DefensoresDeSoftware
             {
                 yield return new WaitForSeconds(fireRate);
 
-                if (SFXManager.Instance != null)
-                    SFXManager.Instance.PlaySFX(shootSFX, randomizePitch: true);
+                // if (SFXManager.Instance != null)
+                    //SFXManager.Instance.PlaySFX(shootSFX, randomizePitch: true);
 
                 if (patronDisparo == TipoDisparo.HaciaAdelante) DisparoAdelante();
                 else if (patronDisparo == TipoDisparo.Estrella) DisparoEstrella();
