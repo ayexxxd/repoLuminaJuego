@@ -86,9 +86,9 @@ public class CarrerasGameManager : MonoBehaviour
             ConectorAPI.instancia.GuardarTiempo(tiempoEntero, (exito) =>
             {
                 if (exito)
-                    Debug.Log("✅ Tiempo enviado a la API: " + tiempoEntero + "s");
+                    Debug.Log(" Tiempo enviado a la API: " + tiempoEntero + "s");
                 else
-                    Debug.LogWarning("⚠️ No se pudo guardar en la API.");
+                    Debug.LogWarning(" No se pudo guardar en la API.");
             });
         }
 
