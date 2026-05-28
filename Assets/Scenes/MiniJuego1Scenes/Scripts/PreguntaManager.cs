@@ -8,30 +8,37 @@ using System.Collections;
 
 public class GestorPreguntas : MonoBehaviour
 {
+    // ── Singleton ─────────────────────────────────────────
     public static GestorPreguntas instancia;
 
+    // ── UI ────────────────────────────────────────────────
     [Header("Panel de Pregunta")]
     public GameObject panelPreguntas;
     public TextMeshProUGUI textoPregunta;
-    public Button[] botonesRespuesta;  
-    public TextMeshProUGUI[] textoBotones;
+    public Button[]        botonesRespuesta;   // 4 botones en el Inspector
+    public TextMeshProUGUI[] textoBotones;     // TMP de cada botón
 
-    [Header("Preguntas")]
+    // ── Preguntas locales ─────────────────────────────────
+    [Header("Preguntas Locales")]
     public Pregunta[] preguntasLocales;
 
+    // ── Configuración ─────────────────────────────────────
     [Header("Configuración")]
     public int movimientosPorPregunta = 5;
     public int movimientosBonus       = 3;
 
+    // ── Estado interno ────────────────────────────────────
     private int contadorMovimientos   = 0;
     private int indicePregunta        = 0;
     private Pregunta preguntaActual;
 
+    // ─────────────────────────────────────────────────────
     void Awake()
     {
         if (instancia == null) instancia = this;
     }
 
+    // Llamado desde Board.cs tras cada movimiento válido
     public void RegistrarMovimiento()
     {
         contadorMovimientos++;
@@ -42,10 +49,13 @@ public class GestorPreguntas : MonoBehaviour
         }
     }
 
-
+    // ── PUNTO DE EXTENSIÓN ────────────────────────────────
+    // Para API en el futuro: comenta CargarPreguntaLocal()
+    // y descomenta ObtenerPreguntaDesdeAPI()
     IEnumerator CargarYMostrar()
     {
         preguntaActual = CargarPreguntaLocal();
+        // yield return StartCoroutine(ObtenerPreguntaDesdeAPI());
 
         MostrarPregunta(preguntaActual);
         yield return null;
@@ -68,17 +78,25 @@ public class GestorPreguntas : MonoBehaviour
         return p;
     }
 
+    // Stub para API futura
+    // IEnumerator ObtenerPreguntaDesdeAPI() { ... }
+
+    // ── Muestra el panel ──────────────────────────────────
     void MostrarPregunta(Pregunta p)
     {
         Time.timeScale = 0f;
         panelPreguntas.SetActive(true);
 
+        // Si hay TriviaController activo, él llena la UI desde el API
         if (TriviaController.instancia != null)
         {
+            // Solo pausa y abre el panel — TriviaController llena los textos
+            // cuando termina GetData()
             StartCoroutine(TriviaController.instancia.GetData());
             return;
         }
 
+        // Fallback: llena con preguntas locales si no hay API
         textoPregunta.text = p.textoPregunta;
 
         for (int i = 0; i < botonesRespuesta.Length; i++)
@@ -102,6 +120,9 @@ public class GestorPreguntas : MonoBehaviour
         {
             Debug.Log("¡Correcto! +" + movimientosBonus + " movimientos.");
             GameManager.instancia.AgregarMovimientos(movimientosBonus);
+
+            // ── ELIMINADO: antes abría TiendaManager.instancia.AbrirTienda()
+            // La tienda ahora solo aparece en ResultadoScene
         }
         else
         {
@@ -109,6 +130,7 @@ public class GestorPreguntas : MonoBehaviour
         }
     }
 
+    // Llamado desde TriviaController cuando la respuesta es correcta
     public void RespuestaCorrecta()
     {
         panelPreguntas.SetActive(false);
@@ -118,6 +140,7 @@ public class GestorPreguntas : MonoBehaviour
         GameManager.instancia.AgregarMovimientos(movimientosBonus);
     }
 
+    // Llamado desde TriviaController cuando la respuesta es incorrecta
     public void RespuestaIncorrecta()
     {
         panelPreguntas.SetActive(false);
