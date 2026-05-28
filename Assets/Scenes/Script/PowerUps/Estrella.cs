@@ -1,4 +1,5 @@
 using UnityEngine;
+using Ximena.Sonido;
 
 // Script que va en cada estrella de la pista
 // Cuando la nave la toca aplica un efecto aleatorio y la hace desaparecer
@@ -17,7 +18,7 @@ public class Estrella : MonoBehaviour
     private bool fueRecogida = false;
     private SpriteRenderer spriteRenderer;
     private Collider2D miCollider;
-
+    public SFXManager sfx;
     void Start()
     {
         // Buscamos los componentes necesarios
@@ -81,6 +82,8 @@ public class Estrella : MonoBehaviour
         fueRecogida = true;
 
         // Aplicamos el efecto aleatorio
+         if (SFXManager.instancia != null)
+            SFXManager.instancia.Estrella();
         if (PowerUpManager.instancia != null)
         {
             PowerUpManager.instancia.AplicarEfectoAleatorio();

@@ -1,9 +1,10 @@
 using UnityEngine;
+using Ximena.Sonido;
 
 // Script que va en cada obstáculo de la pista
 public class Obstaculo : MonoBehaviour
 {
-    [Header("Configuración del Obstáculo")] // Movi el Header aquí, encima de una variable
+    [Header("Configuración del Obstáculo")]
     public TipoObstaculo tipo = TipoObstaculo.Fisico;
 
     public enum TipoObstaculo
@@ -11,17 +12,20 @@ public class Obstaculo : MonoBehaviour
         Fisico,  // Choque físico — rebota y quita vida
         Toxico   // Zona tóxica — se atraviesa, quita vida y reduce velocidad
     }
+
     [Header("Configuración de zona tóxica")]
-    // Solo aplica si el tipo es Toxico
-    // Qué tanto reduce la velocidad (0.3 = 30% de velocidad normal)
+
+    // Qué tanto reduce la velocidad
     public float multiplicadorVelocidadToxico = 0.3f;
 
-    // Cuántos segundos dura el efecto de velocidad reducida
+    // Cuánto dura el efecto
     public float duracionEfectoToxico = 2f;
 
     [Header("Configuración de obstáculo físico")]
-    // Si el obstáculo físico también reduce velocidad al chocar
+
+    // Si el obstáculo físico también reduce velocidad
     public bool reducirVelocidadAlChocar = true;
+
     public float multiplicadorVelocidadFisico = 0.4f;
     public float duracionEfectoFisico = 1f;
 
@@ -37,11 +41,11 @@ public class Obstaculo : MonoBehaviour
             Debug.LogError("Obstaculo: No se encontró el VidasManager en la escena.");
         }
 
-        // Verificamos que el collider coincide con el tipo de obstáculo
+        // Verificamos configuración
         ValidarConfiguracion();
     }
 
-    // ---- Verifica que el collider está configurado correctamente ----
+    // ---- Verifica collider y trigger ----
     void ValidarConfiguracion()
     {
         Collider2D col = GetComponent<Collider2D>();
@@ -52,60 +56,118 @@ public class Obstaculo : MonoBehaviour
             return;
         }
 
+        // Obstáculo físico NO debe ser trigger
         if (tipo == TipoObstaculo.Fisico && col.isTrigger)
         {
-            Debug.LogWarning(gameObject.name + ": Es tipo Fisico pero isTrigger está activado. " +
-                        "Desactiva isTrigger para que haya rebote físico.");
+            Debug.LogWarning(
+                gameObject.name +
+                ": Es tipo Fisico pero isTrigger está activado."
+            );
         }
 
+        // Obstáculo tóxico SÍ debe ser trigger
         if (tipo == TipoObstaculo.Toxico && !col.isTrigger)
         {
-            Debug.LogWarning(gameObject.name + ": Es tipo Toxico pero isTrigger está desactivado. " +
-                        "Activa isTrigger para que la nave pueda atravesarlo.");
+            Debug.LogWarning(
+                gameObject.name +
+                ": Es tipo Toxico pero isTrigger está desactivado."
+            );
         }
     }
 
-    // ---- Para obstáculos FÍSICOS (isTrigger = false) ----
+    // =========================================================
+    // OBSTÁCULOS FÍSICOS
+    // =========================================================
     void OnCollisionEnter2D(Collision2D collision)
     {
+        // Solo para obstáculos físicos
         if (tipo != TipoObstaculo.Fisico) return;
 
+        // Verificamos que sea el jugador
         if (collision.gameObject.CompareTag("Jugador"))
         {
+            // ---- REVISAMOS EL ESCUDO ----
+           EscudoTemporal escudo =
+    collision.gameObject.GetComponentInParent<EscudoTemporal>();
+
+            // Si tiene escudo activo no recibe daño
+            if (escudo != null && escudo.escudoActivo)
+            {
+                Debug.Log("🛡️ Escudo bloqueó daño físico");
+
+                // Sonido opcional
+                SFXManager.instancia?.Mancha();
+
+                return;
+            }
+
             Debug.Log("¡Choque con obstáculo físico: " + gameObject.name + "!");
 
-            // Quitamos una vida
+            // Quitamos vida
             vidasManager?.QuitarVida();
 
-            // Opcionalmente reducimos la velocidad
+            // Sonido
+            SFXManager.instancia?.Mancha();
+
+            // Reducimos velocidad opcionalmente
             if (reducirVelocidadAlChocar)
             {
-                MovimientoNave nave = collision.gameObject.GetComponent<MovimientoNave>();
+                MovimientoNave nave =
+                    collision.gameObject.GetComponent<MovimientoNave>();
+
                 if (nave != null)
                 {
-                    nave.AplicarEfectoVelocidad(multiplicadorVelocidadFisico, duracionEfectoFisico);
+                    nave.AplicarEfectoVelocidad(
+                        multiplicadorVelocidadFisico,
+                        duracionEfectoFisico
+                    );
                 }
             }
         }
     }
 
-    // ---- Para zonas TÓXICAS (isTrigger = true) ----
+
     void OnTriggerEnter2D(Collider2D otro)
     {
+        // Solo para tóxicos
         if (tipo != TipoObstaculo.Toxico) return;
 
+        // Verificamos jugador
         if (otro.CompareTag("Jugador"))
         {
+            // ---- REVISAMOS EL ESCUDO ----
+          EscudoTemporal escudo =
+    otro.GetComponentInParent<EscudoTemporal>();
+
+            // Si tiene escudo activo ignoramos daño
+            if (escudo != null && escudo.escudoActivo)
+            {
+                Debug.Log("🛡️ Escudo protegió zona tóxica");
+
+                // Sonido opcional
+                SFXManager.instancia?.Mancha();
+
+                return;
+            }
+
             Debug.Log("¡Nave entró en zona tóxica: " + gameObject.name + "!");
 
-            // Quitamos una vida
+            // Quitamos vida
             vidasManager?.QuitarVida();
 
-            // Reducimos la velocidad de la nave
-            MovimientoNave nave = otro.GetComponent<MovimientoNave>();
+            // Sonido
+            SFXManager.instancia?.Mancha();
+
+            // Reducimos velocidad
+            MovimientoNave nave =
+                otro.GetComponent<MovimientoNave>();
+
             if (nave != null)
             {
-                nave.AplicarEfectoVelocidad(multiplicadorVelocidadToxico, duracionEfectoToxico);
+                nave.AplicarEfectoVelocidad(
+                    multiplicadorVelocidadToxico,
+                    duracionEfectoToxico
+                );
             }
         }
     }
