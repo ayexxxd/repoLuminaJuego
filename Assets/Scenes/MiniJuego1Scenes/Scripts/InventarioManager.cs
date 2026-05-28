@@ -125,7 +125,7 @@ public class InventarioManager : MonoBehaviour
             SuffleT.text = "Shuffle x" + shuffles;
 
         if (MovExtT != null)
-            MovExtT.text = "+3 Mov x" + movExtras;
+            MovExtT.text = "+5 Mov x" + movExtras;
     }
 
     // ── Agregar items ─────────────────────────────────────
