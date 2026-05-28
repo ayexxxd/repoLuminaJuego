@@ -1,21 +1,10 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Sprites/Sprites4/ExInGUI/Space_Exploration_GUI_Kit/Icons/trophy-64.png.meta
-guid: 55c70a8087dab4afe93f9be4505523bf
-AssetOrigin:
-  serializedVersion: 1
-  productId: 298577
-  packageName: Space Game GUI kit
-  packageVersion: 1.0
-  assetPath: Assets/Space_Exploration_GUI_Kit/Icons/trophy-64.png
-  uploadId: 700894
-=======
-guid: 0370997af3b319949a842562a890b29a
->>>>>>> origin/main:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Truck/truck_red.png.meta
+guid: e50b159e122d7114b9e98a781c487315
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 1360571259609379461
-    second: truck_red_0
+      213: 3601373318033191414
+    second: Bomb_01_2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -175,13 +164,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: truck_red_0
+      name: Bomb_01_2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 40
-        height: 80
+        width: 61
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 5827f9c1a58b1e210800000000000000
-      internalID: 1360571259609379461
+      spriteID: 6f130fca3f5aaf130800000000000000
+      internalID: 3601373318033191414
       vertices: []
       indices: 
       edges: []
@@ -210,7 +199,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      truck_red_0: 1360571259609379461
+      Bomb_01_2_0: 3601373318033191414
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,21 +1,10 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Sprites/Sprites4/ExInGUI/Space_Exploration_GUI_Kit/Settings_&_Menu_Components/Small/on-deselected-small.png.meta
-guid: b273749d1173449c4ab271cdcbc8d8cb
-AssetOrigin:
-  serializedVersion: 1
-  productId: 298577
-  packageName: Space Game GUI kit
-  packageVersion: 1.0
-  assetPath: Assets/Space_Exploration_GUI_Kit/Settings_&_Menu_Components/Small/on-deselected-small.png
-  uploadId: 700894
-=======
-guid: e7e2f5111b1e6d049b29653ed7413b17
->>>>>>> origin/main:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Truck/trailer.png.meta
+guid: 50e0d2b77bfce91478d1ee9ff922db6a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 5004116790936165935
-    second: trailer_0
+      213: 6934588739526189401
+    second: Bomb_03_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -175,13 +164,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: trailer_0
+      name: Bomb_03_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 36
-        height: 162
+        width: 300
+        height: 300
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f2e515a55b1327540800000000000000
-      internalID: 5004116790936165935
+      spriteID: 951e1e2b7bb9c3060800000000000000
+      internalID: 6934588739526189401
       vertices: []
       indices: 
       edges: []
@@ -210,7 +199,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      trailer_0: 5004116790936165935
+      Bomb_03_0: 6934588739526189401
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

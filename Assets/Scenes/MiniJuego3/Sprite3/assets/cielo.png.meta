@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0cd8de7fc858a1240b942ad4cbef2101
+guid: 4bb54862e5691e341a0d19daa7307334
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5510333123701120307
-    second: cielo_0
+      213: 8278347606807767365
+    second: coins-tier-3-small_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,7 +70,7 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -83,7 +83,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -139,29 +139,27 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cielo_0
+      name: coins-tier-3-small_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 2172
-        height: 724
+        x: 2
+        y: 7
+        width: 83
+        height: 74
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: dc2e9bf083d5783b0800000000000000
-      internalID: -5510333123701120307
+      spriteID: 5496bfea94992e270800000000000000
+      internalID: 8278347606807767365
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
-    customData: 
     physicsShape: []
     bones: []
     spriteID: 
@@ -171,12 +169,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    spriteCustomMetadata:
-      entries: []
     nameFileIdTable:
-      cielo_0: -5510333123701120307
+      coins-tier-3-small_0: 8278347606807767365
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 298577
+  packageName: Space Game GUI kit
+  packageVersion: 1.0
+  assetPath: Assets/Space_Exploration_GUI_Kit/Shop_Assets/coins-tier-3-small.png
+  uploadId: 700894

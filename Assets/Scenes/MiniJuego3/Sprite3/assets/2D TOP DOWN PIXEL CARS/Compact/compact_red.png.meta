@@ -1,21 +1,10 @@
 fileFormatVersion: 2
-<<<<<<< HEAD:Assets/Sprites/Sprites4/ExInGUI/Space_Exploration_GUI_Kit/Settings_&_Menu_Components/Small/level-icon-small.png.meta
-guid: 4a55616b2988c4eac94ffdb90cc8b21e
-AssetOrigin:
-  serializedVersion: 1
-  productId: 298577
-  packageName: Space Game GUI kit
-  packageVersion: 1.0
-  assetPath: Assets/Space_Exploration_GUI_Kit/Settings_&_Menu_Components/Small/level-icon-small.png
-  uploadId: 700894
-=======
-guid: 410a21b9141a50042bff620b699a2747
->>>>>>> origin/main:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Compact/compact_red.png.meta
+guid: f7a3b9c585d972e4ca985df3bf13def9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8281952731166136713
-    second: compact_red_0
+      213: -7854092717273902537
+    second: Bomb_Light_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -175,13 +164,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: compact_red_0
+      name: Bomb_Light_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 26
-        height: 58
+        width: 300
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -190,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 989dbbb11286fe270800000000000000
-      internalID: 8281952731166136713
+      spriteID: 73218e15948a00390800000000000000
+      internalID: -7854092717273902537
       vertices: []
       indices: 
       edges: []
@@ -210,7 +199,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      compact_red_0: 8281952731166136713
+      Bomb_Light_0: -7854092717273902537
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

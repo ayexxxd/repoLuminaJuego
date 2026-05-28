@@ -1,25 +1,25 @@
 fileFormatVersion: 2
-guid: dd28a5deed2bc87418f905527eedc026
+guid: 947471653e908db4d972226b5942ef24
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2911141516401931637
-    second: ChatGPT Image 13 may 2026, 22_47_02_0
+      213: -66238934464334820
+    second: Boost_0
   - first:
-      213: -6232333838334802191
-    second: ChatGPT Image 13 may 2026, 22_47_02_1
+      213: -1974737729933420000
+    second: Boost_1
   - first:
-      213: -7498019295600173590
-    second: ChatGPT Image 13 may 2026, 22_47_02_2
+      213: 6722796741340393245
+    second: Boost_2
   - first:
-      213: 6066489176779589247
-    second: ChatGPT Image 13 may 2026, 22_47_02_3
+      213: 2010321010621184076
+    second: Boost_3
   - first:
-      213: 688881154959889283
-    second: ChatGPT Image 13 may 2026, 22_47_02_4
+      213: -6189254300053363620
+    second: Boost_4
   - first:
-      213: 8075030839566947907
-    second: ChatGPT Image 13 may 2026, 22_47_02_5
+      213: -2685682143533965254
+    second: Boost_5
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -154,13 +154,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChatGPT Image 13 may 2026, 22_47_02_0
+      name: Boost_0
       rect:
         serializedVersion: 2
-        x: 11
-        y: 0
-        width: 1494
-        height: 1024
+        x: 31
+        y: 67
+        width: 116
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -169,20 +169,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 575770809c3766820800000000000000
-      internalID: 2911141516401931637
+      spriteID: c14f3f04a0ca41ff0800000000000000
+      internalID: -66238934464334820
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 13 may 2026, 22_47_02_1
+      name: Boost_1
       rect:
         serializedVersion: 2
-        x: 447
-        y: 79
-        width: 9
-        height: 7
+        x: 222
+        y: 67
+        width: 117
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -191,20 +191,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 1f64864f46d4289a0800000000000000
-      internalID: -6232333838334802191
+      spriteID: 02ad1ca4f725894e0800000000000000
+      internalID: -1974737729933420000
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 13 may 2026, 22_47_02_2
+      name: Boost_2
       rect:
         serializedVersion: 2
-        x: 472
-        y: 80
-        width: 10
-        height: 10
+        x: 414
+        y: 67
+        width: 117
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -213,20 +213,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: aed1ab64d2fa1f790800000000000000
-      internalID: -7498019295600173590
+      spriteID: d1f6fb0740c2c4d50800000000000000
+      internalID: 6722796741340393245
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 13 may 2026, 22_47_02_3
+      name: Boost_3
       rect:
         serializedVersion: 2
-        x: 557
-        y: 79
-        width: 12
-        height: 9
+        x: 605
+        y: 67
+        width: 118
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -235,20 +235,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f7603bfb3cf703450800000000000000
-      internalID: 6066489176779589247
+      spriteID: c48749ade4816eb10800000000000000
+      internalID: 2010321010621184076
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 13 may 2026, 22_47_02_4
+      name: Boost_4
       rect:
         serializedVersion: 2
-        x: 575
-        y: 72
-        width: 14
-        height: 14
+        x: 798
+        y: 67
+        width: 117
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,20 +257,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 38358d5b2c56f8900800000000000000
-      internalID: 688881154959889283
+      spriteID: c54a2c4910a5b1aa0800000000000000
+      internalID: -6189254300053363620
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: ChatGPT Image 13 may 2026, 22_47_02_5
+      name: Boost_5
       rect:
         serializedVersion: 2
-        x: 1175
-        y: 83
-        width: 25
-        height: 19
+        x: 991
+        y: 67
+        width: 116
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -279,8 +279,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 34656b6e3c5401070800000000000000
-      internalID: 8075030839566947907
+      spriteID: a306c0fd15a8abad0800000000000000
+      internalID: -2685682143533965254
       vertices: []
       indices: 
       edges: []
@@ -299,12 +299,12 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ChatGPT Image 13 may 2026, 22_47_02_0: 2911141516401931637
-      ChatGPT Image 13 may 2026, 22_47_02_1: -6232333838334802191
-      ChatGPT Image 13 may 2026, 22_47_02_2: -7498019295600173590
-      ChatGPT Image 13 may 2026, 22_47_02_3: 6066489176779589247
-      ChatGPT Image 13 may 2026, 22_47_02_4: 688881154959889283
-      ChatGPT Image 13 may 2026, 22_47_02_5: 8075030839566947907
+      Boost_0: -66238934464334820
+      Boost_1: -1974737729933420000
+      Boost_2: 6722796741340393245
+      Boost_3: 2010321010621184076
+      Boost_4: -6189254300053363620
+      Boost_5: -2685682143533965254
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

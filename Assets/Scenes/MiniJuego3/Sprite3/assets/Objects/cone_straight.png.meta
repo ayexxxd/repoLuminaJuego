@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 46eab92092836f4459496f3517ed6e0b
+guid: 50a81dc0007aacc429f99cc4cb792375
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6003089630803215636
-    second: cone_straight_0
+      213: 4695203152640932501
+    second: ranking-2nd-extra-large_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,7 +70,7 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -83,7 +83,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -139,44 +139,48 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cone_straight_0
+      name: ranking-2nd-extra-large_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 45
-        height: 44
+        x: 14
+        y: 5
+        width: 2971
+        height: 294
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: ceab42959cdb0bca0800000000000000
-      internalID: -6003089630803215636
+      spriteID: 59af47d1466b82140800000000000000
+      internalID: 4695203152640932501
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
-    customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    spriteCustomMetadata:
-      entries: []
     nameFileIdTable:
-      cone_straight_0: -6003089630803215636
+      ranking-2nd-extra-large_0: 4695203152640932501
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 298577
+  packageName: Space Game GUI kit
+  packageVersion: 1.0
+  assetPath: Assets/Space_Exploration_GUI_Kit/Rank_System_Components/Extra Large/ranking-2nd-extra-large
+    1.png
+  uploadId: 700894

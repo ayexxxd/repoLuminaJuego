@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: f1d1a0c843865f84cb7a824c094e75f0
+guid: 4249c99bd5f3cdb449468ac6b71a91f1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -3539351299559945156
-    second: arrow_white_0
+      213: -2494195361460513285
+    second: black-hole-64_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -70,7 +70,7 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -83,7 +83,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -139,29 +139,27 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: arrow_white_0
+      name: black-hole-64_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 165
-        height: 99
+        y: 7
+        width: 64
+        height: 50
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3c896eceb2b1eec0800000000000000
-      internalID: -3539351299559945156
+      spriteID: bf518b79886d26dd0800000000000000
+      internalID: -2494195361460513285
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
-    customData: 
     physicsShape: []
     bones: []
     spriteID: 
@@ -171,12 +169,17 @@ TextureImporter:
     edges: []
     weights: []
     secondaryTextures: []
-    spriteCustomMetadata:
-      entries: []
     nameFileIdTable:
-      arrow_white_0: -3539351299559945156
+      black-hole-64_0: -2494195361460513285
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 298577
+  packageName: Space Game GUI kit
+  packageVersion: 1.0
+  assetPath: Assets/Space_Exploration_GUI_Kit/Icons/black-hole-64.png
+  uploadId: 700894

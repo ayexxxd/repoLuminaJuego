@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5602046bd6a22404281be78b13b88002
+guid: 45e1504f909109744be652357bd2f3c0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 9098850191627251440
-    second: coupe_blue_0
+      213: -2154245656555352606
+    second: Meteor_04_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: coupe_blue_0
+      name: Meteor_04_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 29
-        height: 75
+        width: 300
+        height: 137
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0feef60aa0c954e70800000000000000
-      internalID: 9098850191627251440
+      spriteID: 2ed07123df49a12e0800000000000000
+      internalID: -2154245656555352606
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      coupe_blue_0: 9098850191627251440
+      Meteor_04_0: -2154245656555352606
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

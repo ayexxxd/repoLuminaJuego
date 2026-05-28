@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 2da955a96b92c6c4d97e21298fb4c741
+guid: d206c0b1fb43a11489f1852979f81b57
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 2067707943917799539
-    second: tribune_full_0
+      213: -518871004174526143
+    second: Missile_3_Flying_008_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tribune_full_0
+      name: Missile_3_Flying_008_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 448
-        height: 223
+        y: 15
+        width: 146
+        height: 502
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 37849787b69f1bc10800000000000000
-      internalID: 2067707943917799539
+      spriteID: 1495def12999cc8f0800000000000000
+      internalID: -518871004174526143
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tribune_full_0: 2067707943917799539
+      Missile_3_Flying_008_0: -518871004174526143
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

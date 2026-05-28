@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 4c2f3d0fc8e898b45b8b853bfceb1a09
+guid: ebda82c108a2e064ba99eecfc1faba13
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6177765557105829192
-    second: skidmark_short_2_0
+      213: -4060339134492186001
+    second: 4_1_0
   - first:
-      213: 4027079541563298192
-    second: skidmark_short_2_1
+      213: 5427487967686228553
+    second: 4_1_1
   - first:
-      213: -2308907959801800740
-    second: skidmark_short_2_2
+      213: 5740447195208855335
+    second: 4_1_2
   - first:
-      213: 2024625818785828848
-    second: skidmark_short_2_3
+      213: -1082612679001451718
+    second: 4_1_3
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -148,12 +148,56 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: skidmark_short_2_0
+      name: 4_1_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 3
-        width: 13
+        x: 28
+        y: 29
+        width: 11
+        height: 10
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: f6ae9fcd117c6a7c0800000000000000
+      internalID: -4060339134492186001
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_1_1
+      rect:
+        serializedVersion: 2
+        x: 101
+        y: 28
+        width: 10
+        height: 11
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 94af4a0fc8f425b40800000000000000
+      internalID: 5427487967686228553
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: 4_1_2
+      rect:
+        serializedVersion: 2
+        x: 171
+        y: 26
+        width: 12
         height: 13
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -163,20 +207,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 8ba501ff4fa244aa0800000000000000
-      internalID: -6177765557105829192
+      spriteID: 72faf425f4a2aaf40800000000000000
+      internalID: 5740447195208855335
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: skidmark_short_2_1
+      name: 4_1_3
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 13
-        height: 7
+        x: 241
+        y: 24
+        width: 14
+        height: 15
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -185,52 +229,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0919f15b18f03e730800000000000000
-      internalID: 4027079541563298192
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skidmark_short_2_2
-      rect:
-        serializedVersion: 2
-        x: 47
-        y: 3
-        width: 13
-        height: 13
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: cd711f4917c15ffd0800000000000000
-      internalID: -2308907959801800740
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: skidmark_short_2_3
-      rect:
-        serializedVersion: 2
-        x: 47
-        y: 0
-        width: 13
-        height: 7
-      alignment: 0
-      pivot: {x: 0, y: 0}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-      bones: []
-      spriteID: 0ff40db847ae81c10800000000000000
-      internalID: 2024625818785828848
+      spriteID: a33d8ce1189c9f0f0800000000000000
+      internalID: -1082612679001451718
       vertices: []
       indices: 
       edges: []
@@ -249,10 +249,10 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      skidmark_short_2_0: -6177765557105829192
-      skidmark_short_2_1: 4027079541563298192
-      skidmark_short_2_2: -2308907959801800740
-      skidmark_short_2_3: 2024625818785828848
+      4_1_0: -4060339134492186001
+      4_1_1: 5427487967686228553
+      4_1_2: 5740447195208855335
+      4_1_3: -1082612679001451718
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

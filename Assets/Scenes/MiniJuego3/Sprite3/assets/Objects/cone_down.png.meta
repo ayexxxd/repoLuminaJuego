@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 76e1e6f364d4c844ab6bfbaf7797594b
+guid: 44550b84b494e874f8304a6da917ef1b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6542629591025837928
-    second: cone_down_0
+      213: 778240012933890447
+    second: Charge_1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: cone_down_0
+      name: Charge_1_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 46
-        height: 44
+        height: 46
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 89812f12d09e335a0800000000000000
-      internalID: -6542629591025837928
+      spriteID: f818be02b2ddcca00800000000000000
+      internalID: 778240012933890447
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      cone_down_0: -6542629591025837928
+      Charge_1_0: 778240012933890447
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

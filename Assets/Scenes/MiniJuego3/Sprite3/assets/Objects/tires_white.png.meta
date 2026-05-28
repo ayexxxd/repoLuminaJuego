@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 5a0b0ca4ca0fb754a9f36557dfecf238
+guid: f1ab0555627fdae418d7bcdd14865947
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4919978993032801781
-    second: tires_white_0
+      213: -8211817049249710309
+    second: Missile_3_Explosion_005_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tires_white_0
+      name: Missile_3_Explosion_005_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 56
-        height: 56
+        x: 74
+        y: 74
+        width: 662
+        height: 662
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: b0255e94c29b8bbb0800000000000000
-      internalID: -4919978993032801781
+      spriteID: b1f79fad6e3c90e80800000000000000
+      internalID: -8211817049249710309
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tires_white_0: -4919978993032801781
+      Missile_3_Explosion_005_0: -8211817049249710309
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
