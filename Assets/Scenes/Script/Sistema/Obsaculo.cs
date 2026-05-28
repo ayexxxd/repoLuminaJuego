@@ -19,7 +19,7 @@ public class Obstaculo : MonoBehaviour
     public float multiplicadorVelocidadToxico = 0.3f;
 
     // Cuánto dura el efecto
-    public float duracionEfectoToxico = 2f;
+    public float duracionEfectoToxico = 2;
 
     [Header("Configuración de obstáculo físico")]
 
@@ -93,9 +93,9 @@ public class Obstaculo : MonoBehaviour
             // Si tiene escudo activo no recibe daño
             if (escudo != null && escudo.escudoActivo)
             {
-                Debug.Log("🛡️ Escudo bloqueó daño físico");
+                Debug.Log(" Escudo bloqueó daño físico");
 
-                // Sonido opcional
+                // Sonido 
                 SFXManager.instancia?.Mancha();
 
                 return;

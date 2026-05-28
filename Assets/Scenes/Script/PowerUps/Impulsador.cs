@@ -52,7 +52,7 @@ public class Impulsador : MonoBehaviour
     {
         if (!otro.CompareTag("Jugador") || !estaActivo) return;
 
-        Debug.Log("⚡ Impulsador tocado por el jugador.");
+        Debug.Log(" Impulsador tocado por el jugador.");
 
         // Aplicamos el boost
         MovimientoNave nave = otro.GetComponent<MovimientoNave>();
