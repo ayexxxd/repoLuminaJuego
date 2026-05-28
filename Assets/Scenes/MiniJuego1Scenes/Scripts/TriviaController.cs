@@ -16,42 +16,48 @@ public class TriviaController : MonoBehaviour
 
     public static TriviaController instancia; 
 
-    void Awake()                              
-    {                                         
+    void Awake()                                             
+    {                                                         
         if (instancia == null) instancia = this; 
     }   
 
     void Start()
     {
-
+        // ARREGLO 1: Arrancamos la petición a la API al iniciar el juego
+        StartCoroutine(GetData());
     }
 
     public IEnumerator GetData()
     {
-               
         string JSONurl = "https://10.22.207.200:5001/MJ1/preguntas";
 
-        UnityWebRequest web = UnityWebRequest.Get(JSONurl);
-        web.certificateHandler = new ForceAcceptAll(); 
-        yield return web.SendWebRequest();
+        // Usamos "using" para liberar la memoria de la petición web cuando termine
+        using (UnityWebRequest web = UnityWebRequest.Get(JSONurl))
+        {
+            web.certificateHandler = new ForceAcceptAll(); 
+            
+            yield return web.SendWebRequest();
 
-        if (web.result != UnityWebRequest.Result.Success)
-        {
-            Debug.Log("Error API Trivia MJ1: " + web.error);
-        }
-        else
-        {
-            
-            listaRespuestas = JsonConvert.DeserializeObject<List<PreguntaTrivia>>(web.downloadHandler.text);
-            
-            if (listaRespuestas != null && listaRespuestas.Count > 0)
+            if (web.result != UnityWebRequest.Result.Success)
             {
-            
-                DialogueText.text = listaRespuestas[0].Pregunta;
+                Debug.LogError("Error API Trivia MJ1: " + web.error);
+            }
+            else
+            {
+                string jsonResult = web.downloadHandler.text;
+                Debug.Log("JSON Recibido: " + jsonResult); // Para que verifiques qué te llega
 
-                for (int i = 0; i < listaRespuestas.Count; i++)
+                listaRespuestas = JsonConvert.DeserializeObject<List<PreguntaTrivia>>(jsonResult);
+                
+                if (listaRespuestas != null && listaRespuestas.Count > 0)
                 {
-                    if (i < BotonesText.Length)
+                    // Asignamos el texto de la primera pregunta
+                    DialogueText.text = listaRespuestas[0].Pregunta;
+
+                    // ARREGLO 2: Controlamos que no se pase del límite de botones reales que tienes en escena
+                    int limite = Mathf.Min(listaRespuestas.Count, BotonesText.Length);
+
+                    for (int i = 0; i < limite; i++)
                     {
                         BotonesText[i].text = listaRespuestas[i].Respuesta;
                         
@@ -59,39 +65,25 @@ public class TriviaController : MonoBehaviour
                         {
                             indiceCorrecto = i;
                         }
-                        
-                        //Debug.Log($"Opción {i}: {listaRespuestas[i].Respuesta} | Correcta: {listaRespuestas[i].EsCorrecta}");
                     }
                 }
             }
         }
     }
 
-
     public void ValidarRespuesta(int botonPresionado)
     {
         if (botonPresionado == indiceCorrecto)
         {
             Debug.Log("Respuesta correcta");
-
             if (GestorPreguntas.instancia != null)
                 GestorPreguntas.instancia.RespuestaCorrecta();
         }
         else
         {
             Debug.Log("Respuesta incorrecta");
-
             if (GestorPreguntas.instancia != null)
                 GestorPreguntas.instancia.RespuestaIncorrecta();
-        }
-    }
-
-    public class ForceAcceptAll : CertificateHandler
-    {
-        protected override bool ValidateCertificate(byte[] certificateData)
-        {
-            return true;
-
         }
     }
 }
