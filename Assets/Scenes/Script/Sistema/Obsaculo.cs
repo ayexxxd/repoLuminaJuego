@@ -1,7 +1,6 @@
 using UnityEngine;
 using Ximena.Sonido;
 
-// Script que va en cada obstáculo de la pista
 public class Obstaculo : MonoBehaviour
 {
     [Header("Configuración del Obstáculo")]
@@ -9,27 +8,23 @@ public class Obstaculo : MonoBehaviour
 
     public enum TipoObstaculo
     {
-        Fisico,  // Choque físico — rebota y quita vida
-        Toxico   // Zona tóxica — se atraviesa, quita vida y reduce velocidad
+        Fisico, 
+        Toxico 
     }
 
     [Header("Configuración de zona tóxica")]
 
-    // Qué tanto reduce la velocidad
     public float multiplicadorVelocidadToxico = 0.3f;
 
-    // Cuánto dura el efecto
     public float duracionEfectoToxico = 2;
 
     [Header("Configuración de obstáculo físico")]
 
-    // Si el obstáculo físico también reduce velocidad
     public bool reducirVelocidadAlChocar = true;
 
     public float multiplicadorVelocidadFisico = 0.4f;
     public float duracionEfectoFisico = 1f;
 
-    // ---- Referencias ----
     private VidasManager vidasManager;
 
     void Start()
@@ -41,11 +36,9 @@ public class Obstaculo : MonoBehaviour
             Debug.LogError("Obstaculo: No se encontró el VidasManager en la escena.");
         }
 
-        // Verificamos configuración
         ValidarConfiguracion();
     }
 
-    // ---- Verifica collider y trigger ----
     void ValidarConfiguracion()
     {
         Collider2D col = GetComponent<Collider2D>();
@@ -56,7 +49,6 @@ public class Obstaculo : MonoBehaviour
             return;
         }
 
-        // Obstáculo físico NO debe ser trigger
         if (tipo == TipoObstaculo.Fisico && col.isTrigger)
         {
             Debug.LogWarning(
@@ -65,7 +57,6 @@ public class Obstaculo : MonoBehaviour
             );
         }
 
-        // Obstáculo tóxico SÍ debe ser trigger
         if (tipo == TipoObstaculo.Toxico && !col.isTrigger)
         {
             Debug.LogWarning(
@@ -75,27 +66,20 @@ public class Obstaculo : MonoBehaviour
         }
     }
 
-    // =========================================================
-    // OBSTÁCULOS FÍSICOS
-    // =========================================================
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Solo para obstáculos físicos
         if (tipo != TipoObstaculo.Fisico) return;
 
-        // Verificamos que sea el jugador
+
         if (collision.gameObject.CompareTag("Jugador"))
         {
-            // ---- REVISAMOS EL ESCUDO ----
            EscudoTemporal escudo =
     collision.gameObject.GetComponentInParent<EscudoTemporal>();
 
-            // Si tiene escudo activo no recibe daño
             if (escudo != null && escudo.escudoActivo)
             {
                 Debug.Log(" Escudo bloqueó daño físico");
 
-                // Sonido 
                 SFXManager.instancia?.Mancha();
 
                 return;
@@ -103,13 +87,12 @@ public class Obstaculo : MonoBehaviour
 
             Debug.Log("¡Choque con obstáculo físico: " + gameObject.name + "!");
 
-            // Quitamos vida
+
             vidasManager?.QuitarVida();
 
-            // Sonido
+
             SFXManager.instancia?.Mancha();
 
-            // Reducimos velocidad opcionalmente
             if (reducirVelocidadAlChocar)
             {
                 MovimientoNave nave =
@@ -129,22 +112,17 @@ public class Obstaculo : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D otro)
     {
-        // Solo para tóxicos
         if (tipo != TipoObstaculo.Toxico) return;
 
-        // Verificamos jugador
         if (otro.CompareTag("Jugador"))
         {
-            // ---- REVISAMOS EL ESCUDO ----
           EscudoTemporal escudo =
     otro.GetComponentInParent<EscudoTemporal>();
 
-            // Si tiene escudo activo ignoramos daño
             if (escudo != null && escudo.escudoActivo)
             {
                 Debug.Log("🛡️ Escudo protegió zona tóxica");
 
-                // Sonido opcional
                 SFXManager.instancia?.Mancha();
 
                 return;
@@ -152,13 +130,10 @@ public class Obstaculo : MonoBehaviour
 
             Debug.Log("¡Nave entró en zona tóxica: " + gameObject.name + "!");
 
-            // Quitamos vida
             vidasManager?.QuitarVida();
 
-            // Sonido
             SFXManager.instancia?.Mancha();
 
-            // Reducimos velocidad
             MovimientoNave nave =
                 otro.GetComponent<MovimientoNave>();
 

@@ -18,7 +18,7 @@ public class UsarPoderes : MonoBehaviour
     {
         if (instancia == null) instancia = this;
     }
-
+    //f5
     public void AlPresionarMartillo()
     {
         if (InventarioManager.instancia.martillos <= 0)
@@ -34,7 +34,7 @@ public class UsarPoderes : MonoBehaviour
             Cursor.SetCursor(cursorMartillo, Vector2.zero, CursorMode.Auto);
 
     }
-
+    //f5
     public void UsarMartilloEnPieza(Pieza pieza)
     {
         if (!modoMartilloActivo) return;

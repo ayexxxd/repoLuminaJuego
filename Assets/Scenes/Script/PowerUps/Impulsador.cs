@@ -1,7 +1,5 @@
 using UnityEngine;
 
-// Impulsador tipo Spawner
-// Al tocarlo desaparece y reaparece en una posición aleatoria de la pista
 public class Impulsador : MonoBehaviour
 {
     [Header("Configuración del boost")]
@@ -9,10 +7,8 @@ public class Impulsador : MonoBehaviour
     public float duracionBoost = 3f;
 
     [Header("Sistema Spawner")]
-    // Arrastra aquí todos los puntos donde puede reaparecer el impulsador
     public Transform[] puntosSpawn;
 
-    // Tiempo que tarda en reaparecer después de ser tocado
     public float tiempoReaparicion = 5f;
 
     [Header("Efecto visual")]
@@ -20,7 +16,6 @@ public class Impulsador : MonoBehaviour
     public Color colorNormal = new Color(0.2f, 0.8f, 1f, 0.8f);
     public Color colorActivo = new Color(1f, 0.9f, 0.2f, 1f);
 
-    // ---- Variables privadas ----
     private SpriteRenderer spriteRenderer;
     private Collider2D miCollider;
     private bool estaActivo = true;
@@ -33,7 +28,6 @@ public class Impulsador : MonoBehaviour
         if (spriteRenderer != null)
             spriteRenderer.color = colorNormal;
 
-        // Verificamos que hay puntos de spawn definidos
         if (puntosSpawn == null || puntosSpawn.Length == 0)
         {
             Debug.LogWarning(gameObject.name + ": No hay puntos de spawn asignados. " +
@@ -43,7 +37,6 @@ public class Impulsador : MonoBehaviour
 
     void Update()
     {
-        // Rotamos el sprite si está activo
         if (estaActivo)
             transform.Rotate(0f, 0f, velocidadRotacion * Time.deltaTime);
     }
@@ -54,25 +47,20 @@ public class Impulsador : MonoBehaviour
 
         Debug.Log(" Impulsador tocado por el jugador.");
 
-        // Aplicamos el boost
         MovimientoNave nave = otro.GetComponent<MovimientoNave>();
         if (nave != null)
             nave.AplicarEfectoVelocidad(multiplicadorVelocidad, duracionBoost);
 
-        // Mostramos mensaje
         UIManager ui = FindObjectOfType<UIManager>();
         ui?.MostrarMensajeTemporal(" ¡IMPULSADOR!", 1.5f);
 
-        // Damos puntos
         PuntosManager.instancia?.AgregarPuntosPorEstrella();
 
-        // Iniciamos el proceso de desaparecer y reaparecer
         StartCoroutine(CorrutinaSpawner());
     }
 
     System.Collections.IEnumerator CorrutinaSpawner()
     {
-        // Desactivamos el impulsador visualmente
         estaActivo = false;
 
         if (spriteRenderer != null) spriteRenderer.enabled = false;
@@ -81,10 +69,8 @@ public class Impulsador : MonoBehaviour
         Debug.Log("Impulsador desaparecido. Reaparecerá en " +
                   tiempoReaparicion + "s en posición aleatoria.");
 
-        // Esperamos el tiempo de reaparición
         yield return new WaitForSeconds(tiempoReaparicion);
 
-        // Elegimos una posición aleatoria de los puntos de spawn
         if (puntosSpawn != null && puntosSpawn.Length > 0)
         {
             int indiceAleatorio = Random.Range(0, puntosSpawn.Length);
@@ -94,7 +80,6 @@ public class Impulsador : MonoBehaviour
                       puntosSpawn[indiceAleatorio].name);
         }
 
-        // Reactivamos el impulsador
         if (spriteRenderer != null) spriteRenderer.enabled = true;
         if (miCollider != null)     miCollider.enabled = true;
 

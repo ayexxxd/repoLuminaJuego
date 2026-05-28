@@ -26,9 +26,6 @@ public class CarrerasGameManager : MonoBehaviour
         }
     }
 
-    // ============================================================
-    // VICTORIA
-    // ============================================================
 
     public void JugadorGano()
     {
@@ -37,11 +34,11 @@ public class CarrerasGameManager : MonoBehaviour
 
         Debug.Log("¡VICTORIA!");
 
-        // Detenemos la nave
+
         MovimientoNave nave = FindObjectOfType<MovimientoNave>();
         if (nave != null) nave.enabled = false;
 
-        // Obtenemos el tiempo transcurrido desde el TimerManager
+
         TimerManager timerManager = FindObjectOfType<TimerManager>();
         float tiempoTranscurrido = 0f;
         float tiempoRestante = 0f;
@@ -53,7 +50,7 @@ public class CarrerasGameManager : MonoBehaviour
             timerManager.DetenerTimer();
         }
 
-        // Calculamos puntos y tokens
+    
         int puntosTotales = 0;
         int tokens = 0;
 
@@ -67,10 +64,8 @@ public class CarrerasGameManager : MonoBehaviour
         if (SFXManager.instancia != null)
             SFXManager.instancia.Victoria();
 
-        // Comparamos y guardamos el mejor tiempo
         GuardarMejorTiempo(tiempoTranscurrido);
 
-        // Guardamos todo en PlayerPrefs para la pantalla de victoria
         PlayerPrefs.SetInt("PuntosFinales",  puntosTotales);
         PlayerPrefs.SetInt("TokensGanados",  tokens);
         PlayerPrefs.SetFloat("TiempoFinal",  tiempoTranscurrido);
@@ -92,16 +87,11 @@ public class CarrerasGameManager : MonoBehaviour
             });
         }
 
-        // Cargamos la pantalla de victoria después de 2 segundos
         Invoke("CargarVictoria", 2f);
         
     }
 
-    // ============================================================
-    // DERROTA — por tiempo agotado
-    // ============================================================
 
-    // ---- Llamado cuando se acaba el tiempo ----
     public void JugadorPerdioTiempo()
     {
         Debug.Log("GameManager: JugadorPerdioTiempo() recibido. Estado: " + estadoActual);
@@ -112,7 +102,6 @@ public class CarrerasGameManager : MonoBehaviour
         ProcesarDerrota();
     }
 
-    // ---- Llamado cuando se acaban las vidas ----
     public void JugadorPerdioSinVidas()
     {
         Debug.Log("GameManager: JugadorPerdioSinVidas() recibido. Estado: " + estadoActual);
@@ -123,17 +112,14 @@ public class CarrerasGameManager : MonoBehaviour
         ProcesarDerrota();
     }
 
-    // ---- Lógica común de derrota ----
     void ProcesarDerrota()
     {
         estadoActual = EstadoJuego.Derrota;
         Debug.Log("GameManager: Procesando derrota...");
 
-        // Detenemos la nave
         MovimientoNave nave = FindObjectOfType<MovimientoNave>();
         if (nave != null) nave.enabled = false;
 
-        // Guardamos los puntos actuales
         if (PuntosManager.instancia != null)
         {
             PlayerPrefs.SetInt("PuntosFinales",
@@ -150,17 +136,10 @@ public class CarrerasGameManager : MonoBehaviour
     }
 
     
-    // ============================================================
-    // MEJOR TIEMPO
-    // ============================================================
-
-    // ---- Compara el tiempo actual con el mejor guardado ----
-    // Si es mejor (más rápido), lo guarda
     void GuardarMejorTiempo(float tiempoActual)
     {
         float mejorTiempo = PlayerPrefs.GetFloat("MejorTiempo", 0f);
 
-        // Si no hay tiempo guardado (0) o el nuevo es más rápido → guardamos
         if (mejorTiempo <= 0f || tiempoActual < mejorTiempo)
         {
             PlayerPrefs.SetFloat("MejorTiempo", tiempoActual);
@@ -174,9 +153,6 @@ public class CarrerasGameManager : MonoBehaviour
         }
     }
 
-    // ============================================================
-    // MÉTODOS DE CARGA DE ESCENAS
-    // ============================================================
 
     void CargarVictoria()
     {

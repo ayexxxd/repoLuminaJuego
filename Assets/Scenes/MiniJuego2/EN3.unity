@@ -317,7 +317,7 @@ GameObject:
   - component: {fileID: 79581974}
   - component: {fileID: 79581973}
   - component: {fileID: 79581975}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -486,7 +486,7 @@ GameObject:
   - component: {fileID: 163187822}
   - component: {fileID: 163187821}
   - component: {fileID: 163187823}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,7 +624,7 @@ GameObject:
   - component: {fileID: 179691345}
   - component: {fileID: 179691346}
   - component: {fileID: 179691347}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma (21)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1708,7 +1708,7 @@ GameObject:
   - component: {fileID: 543905052}
   - component: {fileID: 543905053}
   - component: {fileID: 543905054}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2015,7 +2015,7 @@ MonoBehaviour:
   - {fileID: 1222527838}
   - {fileID: 2024585475}
   - {fileID: 957565585}
-  tiempoInicial: 150
+  tiempoInicial: 180
   textoTiempo: {fileID: 912790010}
   panelTiempoTerminado: {fileID: 902095891}
   panelAdvertencia: {fileID: 1629027450}
@@ -2046,7 +2046,7 @@ GameObject:
   - component: {fileID: 603034177}
   - component: {fileID: 603034178}
   - component: {fileID: 603034179}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2789,7 +2789,7 @@ GameObject:
   - component: {fileID: 739732347}
   - component: {fileID: 739732348}
   - component: {fileID: 739732349}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2927,7 +2927,7 @@ GameObject:
   - component: {fileID: 746479029}
   - component: {fileID: 746479030}
   - component: {fileID: 746479031}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3358,7 +3358,7 @@ GameObject:
   - component: {fileID: 814473700}
   - component: {fileID: 814473701}
   - component: {fileID: 814473702}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma (19)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4321,7 +4321,7 @@ GameObject:
   - component: {fileID: 934323928}
   - component: {fileID: 934323929}
   - component: {fileID: 934323930}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4925,7 +4925,7 @@ GameObject:
   - component: {fileID: 1135023884}
   - component: {fileID: 1135023885}
   - component: {fileID: 1135023886}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma (18)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6099,7 +6099,7 @@ GameObject:
   - component: {fileID: 1307666930}
   - component: {fileID: 1307666931}
   - component: {fileID: 1307666932}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6347,7 +6347,7 @@ GameObject:
   - component: {fileID: 1455883950}
   - component: {fileID: 1455883951}
   - component: {fileID: 1455883952}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6521,7 +6521,7 @@ GameObject:
   - component: {fileID: 1494257516}
   - component: {fileID: 1494257517}
   - component: {fileID: 1494257518}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -6796,7 +6796,7 @@ GameObject:
   - component: {fileID: 1554147989}
   - component: {fileID: 1554147988}
   - component: {fileID: 1554147990}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7042,7 +7042,7 @@ GameObject:
   - component: {fileID: 1666906699}
   - component: {fileID: 1666906700}
   - component: {fileID: 1666906701}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma (20)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7180,7 +7180,7 @@ GameObject:
   - component: {fileID: 1709427017}
   - component: {fileID: 1709427016}
   - component: {fileID: 1709427018}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7481,7 +7481,7 @@ GameObject:
   - component: {fileID: 1880195108}
   - component: {fileID: 1880195107}
   - component: {fileID: 1880195109}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma_0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7619,7 +7619,7 @@ GameObject:
   - component: {fileID: 1908993842}
   - component: {fileID: 1908993843}
   - component: {fileID: 1908993844}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -7757,7 +7757,7 @@ GameObject:
   - component: {fileID: 1998269193}
   - component: {fileID: 1998269194}
   - component: {fileID: 1998269195}
-  m_Layer: 8
+  m_Layer: 9
   m_Name: Plataforma (22)
   m_TagString: Untagged
   m_Icon: {fileID: 0}

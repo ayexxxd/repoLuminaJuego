@@ -1,17 +1,12 @@
 using UnityEngine;
 
-// Script que va en cada objeto Checkpoint de la pista
-// Detecta cuando la nave lo cruza y avisa al LapManager
 public class Checkpoint : MonoBehaviour
 {
     [Header("Configuración")]
-    // Número de orden — asígnalo manualmente en el Inspector de cada checkpoint
-    // Checkpoint1 = 1, Checkpoint2 = 2, Checkpoint3 = 3
     public int numeroCheckpoint;
 
     void Start()
     {
-        // Verificamos configuración al iniciar
         Collider2D col = GetComponent<Collider2D>();
 
         if (col == null)
@@ -35,14 +30,11 @@ public class Checkpoint : MonoBehaviour
         Debug.Log(gameObject.name + ": Checkpoint " + numeroCheckpoint + " listo.");
     }
 
-    // ---- Se llama cuando cualquier objeto con Rigidbody2D entra al trigger ----
     void OnTriggerEnter2D(Collider2D otro)
     {
-        // Log para diagnosticar — muestra CUALQUIER objeto que entre al trigger
         Debug.Log(gameObject.name + ": algo entró al trigger → " +
                 otro.gameObject.name + " (tag: " + otro.tag + ")");
 
-        // Verificamos que sea el jugador por su tag
         if (!otro.CompareTag("Jugador"))
         {
             Debug.Log(gameObject.name + ": ignorado porque no es el jugador.");
@@ -51,7 +43,6 @@ public class Checkpoint : MonoBehaviour
 
         Debug.Log(" Checkpoint " + numeroCheckpoint + " cruzado por el jugador.");
 
-        // Buscamos el LapManager en la escena
         LapManager lapManager = FindObjectOfType<LapManager>();
 
         if (lapManager == null)
@@ -60,7 +51,7 @@ public class Checkpoint : MonoBehaviour
             return;
         }
 
-        // Avisamos al LapManager
+    
         lapManager.CheckpointCruzado(numeroCheckpoint);
     }
 }

@@ -21,7 +21,7 @@ public class InventarioManager : MonoBehaviour
     private const string CLAVE_MARTILLOS  = "Inv_Martillos";
     private const string CLAVE_SHUFFLES   = "Inv_Shuffles";
     private const string CLAVE_MOV_EXTRAS = "Inv_MovExtras";
-
+    //f5
     void Awake()
     {
         if (instancia == null)
@@ -158,7 +158,7 @@ public class InventarioManager : MonoBehaviour
         Guardar();
         ActualizarUI();
     }
-
+    //f5
     void Guardar()
     {
         PlayerPrefs.SetInt(CLAVE_MARTILLOS,  martillos);
@@ -166,7 +166,7 @@ public class InventarioManager : MonoBehaviour
         PlayerPrefs.SetInt(CLAVE_MOV_EXTRAS, movExtras);
         PlayerPrefs.Save();
     }
-
+    //f5
     void Cargar()
     {
         martillos = PlayerPrefs.GetInt(CLAVE_MARTILLOS,  0);

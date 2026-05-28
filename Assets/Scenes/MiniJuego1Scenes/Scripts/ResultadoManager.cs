@@ -137,28 +137,28 @@ public class ResultadoManager : MonoBehaviour
         if (textoPuntosEnTienda != null)
             textoPuntosEnTienda.text = "Puntos disponibles: " + puntosDisponibles;
     }
-
+    //f5
     public void ComprarMartillo()
     {
         if (!IntentarGastar(costoMartillo)) return;
 
         InventarioManager.instancia.AgregarMartillo();
     }
-
+    //f5
     public void ComprarShuffle()
     {
         if (!IntentarGastar(costoShuffle)) return;
 
         InventarioManager.instancia.AgregarShuffle();
     }
-
+    //f5
     public void ComprarMovimientos()
     {
         if (!IntentarGastar(costoMovimientos)) return;
 
         InventarioManager.instancia.AgregarMovExtras();
     }
-
+    //f5
     bool IntentarGastar(int costo)
     {
         if (puntosDisponibles < costo)
@@ -187,7 +187,7 @@ public class ResultadoManager : MonoBehaviour
         else
             ProcesarDerrota();
     }
-
+    //f3
     void ProcesarVictoria()
     {
         if (esUltimoNivel == 1)
@@ -199,7 +199,7 @@ public class ResultadoManager : MonoBehaviour
             AlPresionarSiguienteNivel();
         }
     }
-
+    //f3
     void ProcesarDerrota()
     {
         AlPresionarReintentar();

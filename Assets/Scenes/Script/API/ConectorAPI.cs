@@ -2,16 +2,11 @@ using UnityEngine;
 using UnityEngine.Networking;
 using System.Collections;
 
-// Conecta Unity con tu endpoint /MJ3/guardarTiempo
-// Va en un GameObject vacío llamado "ConectorAPI" en la escena MenuPrincipal
 public class ConectorAPI : MonoBehaviour
 {
     [Header("URL de tu API")]
-    // Pon tu URL real aquí — sin slash al final
-    // Ejemplo: "https://mi-api.onrender.com"
     public string urlBase = "https://127.0.0.1:5001";
 
-    // Singleton — accesible desde cualquier script
     public static ConectorAPI instancia;
 
     void Awake()
@@ -27,8 +22,6 @@ public class ConectorAPI : MonoBehaviour
         }
     }
 
-    // ---- Envía el tiempo a tu API ----
-    // Llama esto cuando el jugador gana
     public void GuardarTiempo(int tiempo, System.Action<bool> callback = null)
     {
         StartCoroutine(CorrutinaGuardarTiempo(tiempo, callback));
@@ -36,7 +29,6 @@ public class ConectorAPI : MonoBehaviour
 
     IEnumerator CorrutinaGuardarTiempo(int tiempo, System.Action<bool> callback)
     {
-        // Construimos el JSON: { "Tiempo": 38 }
         EnvioTiempo datos = new EnvioTiempo { Tiempo = tiempo };
         string json = JsonUtility.ToJson(datos);
         string url  = urlBase + "/MJ3/guardarTiempo";
@@ -49,7 +41,6 @@ public class ConectorAPI : MonoBehaviour
             byte[] bytes = System.Text.Encoding.UTF8.GetBytes(json);
 
             UploadHandlerRaw uploadHandler = new UploadHandlerRaw(bytes);
-            // Forzamos el Content-Type directamente en el UploadHandler
             uploadHandler.contentType = "application/json";
 
             request.uploadHandler   = uploadHandler;
@@ -75,8 +66,6 @@ public class ConectorAPI : MonoBehaviour
         }
     }
 
-    // ---- Prueba desde el Inspector ----
-    // Clic derecho en el componente → "Probar Guardar Tiempo"
     [ContextMenu("Probar Guardar Tiempo")]
     public void ProbarGuardarTiempo()
     {

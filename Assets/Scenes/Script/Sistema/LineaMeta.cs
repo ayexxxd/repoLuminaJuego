@@ -1,7 +1,5 @@
 using UnityEngine;
 
-// Script que va en el objeto LineaMeta
-// Detecta cuando la nave cruza la meta y avisa al LapManager
 public class LineaMeta : MonoBehaviour
 {
     private LapManager lapManager;
@@ -10,7 +8,6 @@ public class LineaMeta : MonoBehaviour
     {
         lapManager = FindObjectOfType<LapManager>();
 
-        // Verificamos configuración
         Collider2D col = GetComponent<Collider2D>();
 
         if (col == null)
@@ -35,7 +32,6 @@ public class LineaMeta : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D otro)
     {
-        // Log para ver cualquier objeto que cruce la meta
         Debug.Log("LineaMeta: algo cruzó → " + otro.gameObject.name +
                 " (tag: " + otro.tag + ")");
 

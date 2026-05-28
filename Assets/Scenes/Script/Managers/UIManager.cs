@@ -1,26 +1,25 @@
 using UnityEngine;
-using TMPro; // Necesario para usar TextMeshPro desde código
+using TMPro;
 
-// UIManager controla todo lo que se muestra en pantalla
-// Vive en un GameObject vacío en la escena
+
 public class UIManager : MonoBehaviour
 {
     [Header("Referencias a los textos del HUD")]
-    // Arrastra aquí cada texto desde el Hierarchy
+
     public TextMeshProUGUI textoVueltas;
     public TextMeshProUGUI textoTimer;
     public TextMeshProUGUI textoVidas;
-    // Texto para mensajes temporales en pantalla (boost, power-ups, etc.)
+
     public TextMeshProUGUI textoMensaje;
     
-    // Texto que muestra los puntos actuales
+
     public TextMeshProUGUI textoPuntos;
 
     [Header("Configuración")]
-    // Cuántas vueltas totales tiene la carrera (debe coincidir con LapManager)
+
     public int vueltasTotales = 3;
 
-    // ---- Referencias a otros managers ----
+
     private LapManager lapManager;
 
     void Start()
@@ -36,7 +35,6 @@ public class UIManager : MonoBehaviour
             ActualizarVidas(3);
             ActualizarTimer(60f);
         }
-        // Buscamos el LapManager usando el método moderno y eficiente
         lapManager = Object.FindAnyObjectByType<LapManager>();
         
         if (lapManager == null)
@@ -96,8 +94,6 @@ public class UIManager : MonoBehaviour
         }
     }
 
-    // ---- Actualiza el texto de vidas en pantalla ----
-    // Llamado por el VidasManager cuando cambia la cantidad de vidas
     public void ActualizarVidas(int vidasActuales)
     {
         if (textoVidas != null)

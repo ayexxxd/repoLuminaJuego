@@ -86,7 +86,7 @@ public class Board : MonoBehaviour
         float y = fil * tamañoCelda - (filas    * tamañoCelda / 2f) + tamañoCelda / 2f;
         return new Vector2(x, y) + (Vector2)transform.position;
     }
-
+    //f5
     public void AlHacerClicEnPieza(Pieza pieza)
     {
         if (estaProcesando) return;
@@ -124,7 +124,7 @@ public class Board : MonoBehaviour
         int difFil = Mathf.Abs(a.fil - b.fil);
         return (difCol == 1 && difFil == 0) || (difCol == 0 && difFil == 1);
     }
-    //f2
+    //f1
     IEnumerator IntentarIntercambio(Pieza a, Pieza b)
     {
         estaProcesando = true;
@@ -157,7 +157,7 @@ public class Board : MonoBehaviour
 
         estaProcesando = false;
     }
-
+    //f4
     IEnumerator ActivarMonstruoDeIntercambio(Pieza a, Pieza b)
     {
         Pieza monstruo = a.esEspecial ? a : b;
@@ -260,7 +260,7 @@ public class Board : MonoBehaviour
 
                     if (SeCrearaMonstruo(longitud))
                     {
-                        aDestruir[col, fil] = false; // ← celda protegida
+                        aDestruir[col, fil] = false; 
                         ProcesarMonstruo(col, fil, longitud, false);
                     }
 
@@ -311,7 +311,7 @@ public class Board : MonoBehaviour
 
         return conteo;
     }
-
+    //f4
     void ProcesarMonstruo(int col, int fil, int longitud, bool esHorizontal)
     {
 
@@ -328,14 +328,14 @@ public class Board : MonoBehaviour
         }
 
     }
-
+    //f4
     bool SeCrearaMonstruo(int longitud)
     {
         if (longitud == 4 && monstruoRojoActivo)  return true;
         if (longitud >= 5 && monstruoVerdeActivo) return true;
         return false;
     }
-
+    //f4
     void CrearMonstruo(int col, int fil, int tipoMonstruo)
     {
         Pieza pieza = tablero[col, fil];
@@ -396,7 +396,7 @@ public class Board : MonoBehaviour
             }
         }
     }
-
+    //f4
     void ActivarMonstruoRojo(int centroCol, int centroFil, bool[,] aDestruir)
     {
 
@@ -410,7 +410,7 @@ public class Board : MonoBehaviour
             aDestruir[centroCol, f] = true;
         }
     }
-
+    //f4
     void ActivarMonstruoVerde(int col, int fil, int colorObjetivo, bool[,] aDestruir)
     {
 
