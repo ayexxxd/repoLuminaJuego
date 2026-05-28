@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 410a21b9141a50042bff620b699a2747
+guid: f7a3b9c585d972e4ca985df3bf13def9
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8281952731166136713
-    second: compact_red_0
+      213: -7854092717273902537
+    second: Bomb_Light_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,6 +97,22 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+<<<<<<< HEAD:Assets/Sprites/Sprites4/ExInGUI/Space_Exploration_GUI_Kit/Settings_&_Menu_Components/Small/level-icon-small.png.meta
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+=======
+>>>>>>> origin/main:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Compact/compact_red.png.meta
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -109,6 +125,10 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:Assets/Scenes/MiniJuego3/Sprite3/assets/2D TOP DOWN PIXEL CARS/Compact/compact_red.png.meta
+=======
+<<<<<<< HEAD:Assets/Sprites/Sprites4/ExInGUI/Space_Exploration_GUI_Kit/Settings_&_Menu_Components/Small/level-icon-small.png.meta
+>>>>>>> LyaRAMABUENAYA:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Compact/compact_red.png.meta
   - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
@@ -122,6 +142,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:Assets/Scenes/MiniJuego3/Sprite3/assets/2D TOP DOWN PIXEL CARS/Compact/compact_red.png.meta
   - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
@@ -135,17 +156,21 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+=======
+>>>>>>> origin/main:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Compact/compact_red.png.meta
+>>>>>>> LyaRAMABUENAYA:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Compact/compact_red.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: compact_red_0
+      name: Bomb_Light_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 26
-        height: 58
+        width: 300
+        height: 41
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 989dbbb11286fe270800000000000000
-      internalID: 8281952731166136713
+      spriteID: 73218e15948a00390800000000000000
+      internalID: -7854092717273902537
       vertices: []
       indices: 
       edges: []
@@ -174,7 +199,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      compact_red_0: 8281952731166136713
+      Bomb_Light_0: -7854092717273902537
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

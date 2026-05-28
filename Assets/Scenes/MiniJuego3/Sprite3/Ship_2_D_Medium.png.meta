@@ -1,5 +1,12 @@
 fileFormatVersion: 2
-guid: b5a04e7cd6029074c8b3c8e13038673b
+guid: 8ef950a16011c334f98343247b3562aa
+AssetOrigin:
+  serializedVersion: 1
+  productId: 180967
+  packageName: Spaceman
+  packageVersion: 1.0
+  assetPath: Assets/hero/hero.png
+  uploadId: 407638
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -94,7 +101,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: WebGL
+    buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1
@@ -107,7 +114,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
-    buildTarget: Android
+    buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
     textureFormat: -1

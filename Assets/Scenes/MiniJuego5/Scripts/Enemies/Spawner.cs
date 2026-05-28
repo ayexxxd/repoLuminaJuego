@@ -90,7 +90,7 @@ public class Spawner : MonoBehaviour
             if (enemiesAliveInWave <= 0)
             {//si no quedan enemigos vivos
                 enemiesAliveInWave = 0;
-                onWaveComplete.Invoke();
+                //onWaveComplete.Invoke();
             }
         }
     }

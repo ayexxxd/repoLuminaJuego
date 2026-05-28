@@ -1,13 +1,13 @@
 fileFormatVersion: 2
-guid: d25e66faf3afb7644a6b3cbf7ab782b1
+guid: acb841156421d1d459cff2507eef40a2
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 691905212622998910
-    second: victoria_0
+      213: -6068252652030700088
+    second: Turn_2_0
   - first:
-      213: 2590051470947856320
-    second: victoria_1
+      213: 8920317935477594060
+    second: Turn_2_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -142,13 +142,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: victoria_0
+      name: Turn_2_0
       rect:
         serializedVersion: 2
-        x: 280
-        y: 127
-        width: 769
-        height: 463
+        x: 44
+        y: 67
+        width: 104
+        height: 58
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,20 +157,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: e7d82a000242a9900800000000000000
-      internalID: 691905212622998910
+      spriteID: 8c5536c2d5c39cba0800000000000000
+      internalID: -6068252652030700088
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: victoria_1
+      name: Turn_2_1
       rect:
         serializedVersion: 2
-        x: 327
-        y: 590
-        width: 610
-        height: 252
+        x: 236
+        y: 72
+        width: 104
+        height: 47
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -179,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 0cf23d31716b1f320800000000000000
-      internalID: 2590051470947856320
+      spriteID: cc710b386e55bcb70800000000000000
+      internalID: 8920317935477594060
       vertices: []
       indices: 
       edges: []
@@ -199,8 +199,8 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      victoria_0: 691905212622998910
-      victoria_1: 2590051470947856320
+      Turn_2_0: -6068252652030700088
+      Turn_2_1: 8920317935477594060
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

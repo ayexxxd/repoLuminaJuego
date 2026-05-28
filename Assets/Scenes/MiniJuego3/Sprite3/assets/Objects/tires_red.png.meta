@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 1afa9f3afb413104b9d3fb75a2744ed6
+guid: c09fb0aa08bc51347959d19808cfed7b
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4019791197107068826
-    second: tires_red_0
+      213: 5981073916621747739
+    second: Bomb_2_Idle_005_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: tires_red_0
+      name: Bomb_2_Idle_005_0
       rect:
         serializedVersion: 2
-        x: 0
+        x: 22
         y: 0
-        width: 56
-        height: 56
+        width: 298
+        height: 250
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a9f1fc6cbca29c730800000000000000
-      internalID: 4019791197107068826
+      spriteID: b16f79fb90b010350800000000000000
+      internalID: 5981073916621747739
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      tires_red_0: 4019791197107068826
+      Bomb_2_Idle_005_0: 5981073916621747739
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

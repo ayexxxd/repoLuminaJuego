@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 0c7d6ed474df2904a9d08f0281eb33d2
+guid: bb628af47d1b38746b176562b6582d5a
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -5387149059351198067
-    second: ChatGPT Image 13 may 2026, 22_28_19_0
+      213: -8062701538552678422
+    second: Gameover Backround_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,6 +97,19 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -139,13 +152,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: ChatGPT Image 13 may 2026, 22_28_19_0
+      name: Gameover Backround_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 1537
-        height: 1023
+        width: 2528
+        height: 1686
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +167,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d86ca4d09700d35b0800000000000000
-      internalID: -5387149059351198067
+      spriteID: ae772903ba78b1090800000000000000
+      internalID: -8062701538552678422
       vertices: []
       indices: 
       edges: []
@@ -174,7 +187,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      ChatGPT Image 13 may 2026, 22_28_19_0: -5387149059351198067
+      Gameover Backround_0: -8062701538552678422
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d45a2107a7f825d41a7f3ea41ea3d3a2
+guid: 76f0d1009d6a8b9498d11f291d1b1ed1
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8256022355572139212
-    second: coupe_red_0
+      213: 2130355970591261989
+    second: Bomb_02_2_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -97,6 +97,22 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+<<<<<<< HEAD:Assets/Sprites/Sprites4/ExInGUI/Space_Exploration_GUI_Kit/Grid_Components/Extra Large/inventory-highlight-extra-large 1.png.meta
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+=======
+>>>>>>> origin/main:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Coupe/coupe_red.png.meta
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -109,6 +125,10 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:Assets/Scenes/MiniJuego3/Sprite3/assets/2D TOP DOWN PIXEL CARS/Coupe/coupe_red.png.meta
+=======
+<<<<<<< HEAD:Assets/Sprites/Sprites4/ExInGUI/Space_Exploration_GUI_Kit/Grid_Components/Extra Large/inventory-highlight-extra-large 1.png.meta
+>>>>>>> LyaRAMABUENAYA:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Coupe/coupe_red.png.meta
   - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
@@ -122,6 +142,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:Assets/Scenes/MiniJuego3/Sprite3/assets/2D TOP DOWN PIXEL CARS/Coupe/coupe_red.png.meta
   - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
@@ -135,17 +156,21 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+=======
+>>>>>>> origin/main:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Coupe/coupe_red.png.meta
+>>>>>>> LyaRAMABUENAYA:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Coupe/coupe_red.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: coupe_red_0
+      name: Bomb_02_2_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 29
-        height: 75
+        width: 61
+        height: 61
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +179,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: cc4af811798439270800000000000000
-      internalID: 8256022355572139212
+      spriteID: 5258938d77b809d10800000000000000
+      internalID: 2130355970591261989
       vertices: []
       indices: 
       edges: []
@@ -174,7 +199,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      coupe_red_0: 8256022355572139212
+      Bomb_02_2_0: 2130355970591261989
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

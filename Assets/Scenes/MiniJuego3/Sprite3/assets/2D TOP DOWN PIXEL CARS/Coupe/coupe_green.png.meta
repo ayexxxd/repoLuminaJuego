@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3374edb5e1977cf499c2f434773c240a
+guid: 552b61e7e32e2bf4d967fb129d5f1d23
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -4769430967770506521
-    second: coupe_green_0
+      213: -3777264317062036557
+    second: Explosion_01_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: coupe_green_0
+      name: Explosion_01_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 29
-        height: 75
+        width: 600
+        height: 600
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7ea9a49edc39fcdb0800000000000000
-      internalID: -4769430967770506521
+      spriteID: 3b342cecd16749bc0800000000000000
+      internalID: -3777264317062036557
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      coupe_green_0: -4769430967770506521
+      Explosion_01_0: -3777264317062036557
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

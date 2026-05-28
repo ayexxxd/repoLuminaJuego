@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: ed588aea1a29f264c84bb3b1428be68c
+guid: a2150446be9e7334297fae6ac3fb72b0
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 8476764939301271271
-    second: rock2_0
+      213: 1161201145128540330
+    second: Icons_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: rock2_0
+      name: Icons_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 73
-        height: 68
+        width: 160
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 7e6b98becc483a570800000000000000
-      internalID: 8476764939301271271
+      spriteID: aa8d9280a4a6d1010800000000000000
+      internalID: 1161201145128540330
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      rock2_0: 8476764939301271271
+      Icons_0: 1161201145128540330
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

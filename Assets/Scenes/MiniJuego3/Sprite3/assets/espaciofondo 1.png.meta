@@ -1,10 +1,13 @@
 fileFormatVersion: 2
-guid: cb37f733cc7543b40ad28247b19ce14b
+guid: 219b98c58c934ad4fa6bd180ba883431
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -337020448437479335
-    second: espaciofondo 1_0
+      213: -3774150679481273386
+    second: sound-32_0
+  - first:
+      213: 1305805846186351219
+    second: sound-32_1
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -46,7 +49,7 @@ TextureImporter:
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
-  spriteMode: 2
+  spriteMode: 1
   spriteExtrude: 1
   spriteMeshType: 1
   alignment: 0
@@ -70,7 +73,7 @@ TextureImporter:
   swizzle: 50462976
   cookieLightType: 0
   platformSettings:
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -83,7 +86,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
-  - serializedVersion: 4
+  - serializedVersion: 3
     buildTarget: Standalone
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -139,44 +142,69 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: espaciofondo 1_0
+      name: sound-32_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 1537
-        height: 1023
+        x: 2
+        y: 5
+        width: 17
+        height: 22
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
       outline: []
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 95857d010b9a25bf0800000000000000
-      internalID: -337020448437479335
+      spriteID: 6d338bc04f58f9bc0800000000000000
+      internalID: -3774150679481273386
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sound-32_1
+      rect:
+        serializedVersion: 2
+        x: 18
+        y: 5
+        width: 12
+        height: 22
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 37ad097af772f1210800000000000000
+      internalID: 1305805846186351219
       vertices: []
       indices: 
       edges: []
       weights: []
     outline: []
-    customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 5e97eb03825dee720800000000000000
     internalID: 0
     vertices: []
     indices: 
     edges: []
     weights: []
     secondaryTextures: []
-    spriteCustomMetadata:
-      entries: []
     nameFileIdTable:
-      espaciofondo 1_0: -337020448437479335
+      sound-32_0: -3774150679481273386
+      sound-32_1: 1305805846186351219
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 298577
+  packageName: Space Game GUI kit
+  packageVersion: 1.0
+  assetPath: Assets/Space_Exploration_GUI_Kit/Picto_Icons/Light_Purple/sound-32.png
+  uploadId: 700894

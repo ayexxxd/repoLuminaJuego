@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 3f895da52dd24914ebc33621b3de9c46
+guid: 1e5c378b6cd7ade459bbd4fba8d09697
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1662017760087587441
-    second: barrier_red_0
+      213: -4642509215240535892
+    second: Missile_3_Flying_006_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -139,13 +139,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: barrier_red_0
+      name: Missile_3_Flying_006_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
-        width: 210
-        height: 62
+        y: 15
+        width: 146
+        height: 502
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -154,8 +154,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f85c69727a35fe8e0800000000000000
-      internalID: -1662017760087587441
+      spriteID: ca04c1f377e729fb0800000000000000
+      internalID: -4642509215240535892
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      barrier_red_0: -1662017760087587441
+      Missile_3_Flying_006_0: -4642509215240535892
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
