@@ -53,7 +53,7 @@ public class Board : MonoBehaviour
             tipo = Random.Range(0, tiposActivosEnNivel);
             intentos++;
         }
-        while (intentos < 10 && FormaríaMatch(col, fil, tipo));
+        while (intentos < 10 && FormariaMatch(col, fil, tipo));
 
         GameObject obj = Instantiate(prefabPieza, posicion, Quaternion.identity);
         obj.transform.parent = this.transform;
@@ -65,7 +65,7 @@ public class Board : MonoBehaviour
         tablero[col, fil] = pieza;
     }
 
-    bool FormaríaMatch(int col, int fil, int tipo)
+    bool FormariaMatch(int col, int fil, int tipo)
     {
         // Dos piezas a la izquierda del mismo tipo
         if (col >= 2 &&

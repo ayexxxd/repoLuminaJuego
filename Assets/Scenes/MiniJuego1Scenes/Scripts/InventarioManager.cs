@@ -5,32 +5,24 @@ using TMPro;
 
 public class InventarioManager : MonoBehaviour
 {
-    // ── Singleton ─────────────────────────────────────────
     public static InventarioManager instancia;
 
-    // ── Inventario ────────────────────────────────────────
     [HideInInspector] public int martillos = 0;
     [HideInInspector] public int shuffles  = 0;
     [HideInInspector] public int movExtras = 0;
 
-    // ── UI — se reconectan automáticamente por nombre ─────
-    // NO arrastres nada aquí en el Inspector
-    // El script los busca solo al cargar GameScene
     private TextMeshProUGUI MartilloT;
     private TextMeshProUGUI SuffleT;
     private TextMeshProUGUI MovExtT;
 
-    // ── Nombres exactos de los GameObjects en el Canvas ───
     private const string NOMBRE_TEXTO_MARTILLOS  = "MartilloT";
     private const string NOMBRE_TEXTO_SHUFFLES   = "SuffleT";
     private const string NOMBRE_TEXTO_MOV_EXTRAS = "MovExtT";
 
-    // ── Claves PlayerPrefs ────────────────────────────────
     private const string CLAVE_MARTILLOS  = "Inv_Martillos";
     private const string CLAVE_SHUFFLES   = "Inv_Shuffles";
     private const string CLAVE_MOV_EXTRAS = "Inv_MovExtras";
 
-    // ─────────────────────────────────────────────────────
     void Awake()
     {
         if (instancia == null)
@@ -49,7 +41,6 @@ public class InventarioManager : MonoBehaviour
 
     void Start()
     {
-        // Por si ya estamos en GameScene cuando se inicializa
         if (SceneManager.GetActiveScene().name == "EscenadeJuego")
         {
             ReconectarTextos();
@@ -59,7 +50,6 @@ public class InventarioManager : MonoBehaviour
 
     void OnEnable()
     {
-        // Se suscribe al evento de carga de escena
         SceneManager.sceneLoaded += AlCargarEscena;
     }
 
@@ -68,54 +58,39 @@ public class InventarioManager : MonoBehaviour
         SceneManager.sceneLoaded -= AlCargarEscena;
     }
 
-    // Se ejecuta cada vez que carga cualquier escena
     void AlCargarEscena(Scene escena, LoadSceneMode modo)
     {
         if (escena.name != "EscenadeJuego") return;
 
-        // Espera un frame para que todos los GameObjects existan
         StartCoroutine(ReconectarConDelay());
     }
 
     System.Collections.IEnumerator ReconectarConDelay()
     {
-        yield return null; // espera 1 frame
+        yield return null;
 
         ReconectarTextos();
         ActualizarUI();
-
-        Debug.Log($"UI reconectada — " +
-                $"Martillos:{martillos} " +
-                $"Shuffles:{shuffles} " +
-                $"MovExtras:{movExtras}");
     }
 
-    // Busca los TextMeshPro por el nombre del GameObject
     void ReconectarTextos()
     {
         MartilloT = BuscarTexto(NOMBRE_TEXTO_MARTILLOS);
         SuffleT  = BuscarTexto(NOMBRE_TEXTO_SHUFFLES);
         MovExtT = BuscarTexto(NOMBRE_TEXTO_MOV_EXTRAS);
 
-        Debug.Log($"Textos reconectados — " +
-                  $"Martillos:{MartilloT != null} " +
-                  $"Shuffles:{SuffleT != null} " +
-                  $"MovExtras:{MovExtT != null}");
     }
 
-    // Busca un TextMeshProUGUI por el nombre de su GameObject
     TextMeshProUGUI BuscarTexto(string nombreObjeto)
     {
         GameObject obj = GameObject.Find(nombreObjeto);
         if (obj == null)
         {
-            Debug.LogWarning("No encontré el objeto: " + nombreObjeto);
             return null;
         }
         return obj.GetComponent<TextMeshProUGUI>();
     }
 
-    // ── Actualiza los textos en pantalla ──────────────────
     public void ActualizarUI()
     {
         if (MartilloT != null)
@@ -125,10 +100,9 @@ public class InventarioManager : MonoBehaviour
             SuffleT.text = "Shuffle x" + shuffles;
 
         if (MovExtT != null)
-            MovExtT.text = "+5 Mov x" + movExtras;
+            MovExtT.text = "+3 Mov x" + movExtras;
     }
 
-    // ── Agregar items ─────────────────────────────────────
     public void AgregarMartillo(int cantidad = 1)
     {
         martillos += cantidad;
@@ -150,7 +124,6 @@ public class InventarioManager : MonoBehaviour
         ActualizarUI();
     }
 
-    // ── Usar items ────────────────────────────────────────
     public bool UsarMartillo()
     {
         if (martillos <= 0) return false;
@@ -178,7 +151,6 @@ public class InventarioManager : MonoBehaviour
         return true;
     }
 
-    // ── Reiniciar inventario ──────────────────────────────
     public void ReiniciarInventario()
     {
         martillos = 0;
@@ -186,10 +158,8 @@ public class InventarioManager : MonoBehaviour
         movExtras = 0;
         Guardar();
         ActualizarUI();
-        Debug.Log("Inventario reiniciado");
     }
 
-    // ── PlayerPrefs ───────────────────────────────────────
     void Guardar()
     {
         PlayerPrefs.SetInt(CLAVE_MARTILLOS,  martillos);
@@ -203,21 +173,14 @@ public class InventarioManager : MonoBehaviour
         martillos = PlayerPrefs.GetInt(CLAVE_MARTILLOS,  0);
         shuffles  = PlayerPrefs.GetInt(CLAVE_SHUFFLES,   0);
         movExtras = PlayerPrefs.GetInt(CLAVE_MOV_EXTRAS, 0);
-        Debug.Log($"Inventario cargado — " +
-                  $"Martillos:{martillos} " +
-                  $"Shuffles:{shuffles} " +
-                  $"MovExtras:{movExtras}");
     }
 
-    public void AsignarTextos(
-    TextMeshProUGUI txtMartillos,
-    TextMeshProUGUI txtShuffles,
-    TextMeshProUGUI txtMovExtras)
+    public void AsignarTextos(TextMeshProUGUI txtMartillos, TextMeshProUGUI txtShuffles, TextMeshProUGUI txtMovExtras)
     {
         MartilloT = txtMartillos;
         SuffleT  = txtShuffles;
         MovExtT = txtMovExtras;
 
-        ActualizarUI(); // actualiza inmediatamente con los valores reales
+        ActualizarUI();
     }
 }
