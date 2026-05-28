@@ -1,5 +1,17 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Sprites/Sprites4/ExInGUI/Space_Exploration_GUI_Kit/Grid_Components/Extra Large/inventory-highlight-extra-large 1.png.meta
+guid: a83f5caa86e92498b928b5b73a8722f6
+AssetOrigin:
+  serializedVersion: 1
+  productId: 298577
+  packageName: Space Game GUI kit
+  packageVersion: 1.0
+  assetPath: Assets/Space_Exploration_GUI_Kit/Grid_Components/Extra Large/inventory-highlight-extra-large
+    1.png
+  uploadId: 700894
+=======
 guid: d45a2107a7f825d41a7f3ea41ea3d3a2
+>>>>>>> origin/main:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Coupe/coupe_red.png.meta
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -97,6 +109,22 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+<<<<<<< HEAD:Assets/Sprites/Sprites4/ExInGUI/Space_Exploration_GUI_Kit/Grid_Components/Extra Large/inventory-highlight-extra-large 1.png.meta
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+=======
+>>>>>>> origin/main:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Coupe/coupe_red.png.meta
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -109,6 +137,10 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:Assets/Scenes/MiniJuego3/Sprite3/assets/2D TOP DOWN PIXEL CARS/Coupe/coupe_red.png.meta
+=======
+<<<<<<< HEAD:Assets/Sprites/Sprites4/ExInGUI/Space_Exploration_GUI_Kit/Grid_Components/Extra Large/inventory-highlight-extra-large 1.png.meta
+>>>>>>> LyaRAMABUENAYA:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Coupe/coupe_red.png.meta
   - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
@@ -122,6 +154,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:Assets/Scenes/MiniJuego3/Sprite3/assets/2D TOP DOWN PIXEL CARS/Coupe/coupe_red.png.meta
   - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
@@ -135,6 +168,10 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+=======
+>>>>>>> origin/main:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Coupe/coupe_red.png.meta
+>>>>>>> LyaRAMABUENAYA:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Coupe/coupe_red.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites:

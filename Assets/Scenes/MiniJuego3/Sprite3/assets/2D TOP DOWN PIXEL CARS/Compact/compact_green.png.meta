@@ -110,6 +110,7 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+<<<<<<< HEAD:Assets/Scenes/MiniJuego3/Sprite3/assets/2D TOP DOWN PIXEL CARS/Compact/compact_green.png.meta
     buildTarget: iOS
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -123,6 +124,8 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+=======
+>>>>>>> LyaRAMABUENAYA:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Compact/compact_green.png.meta
     buildTarget: Android
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -135,6 +138,22 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:Assets/Scenes/MiniJuego3/Sprite3/assets/2D TOP DOWN PIXEL CARS/Compact/compact_green.png.meta
+=======
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+>>>>>>> LyaRAMABUENAYA:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Compact/compact_green.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites:

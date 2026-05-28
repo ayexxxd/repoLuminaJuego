@@ -171,6 +171,22 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
   - serializedVersion: 4
+<<<<<<< HEAD:Assets/Sprites/Sprites4/ExInObjects/2DSpaceshipsFreeTrial/Textures/2DShipsStandardWeapons/2DShipsStandardWeaponsAtlas.png.meta
+    buildTarget: Android
+    maxTextureSize: 1024
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 1
+  - serializedVersion: 4
+=======
+>>>>>>> origin/main:Assets/Scenes/MiniJuego4/Sprites/ExInObjects/2DSpaceshipsFreeTrial/Textures/2DShipsStandardWeapons/2DShipsStandardWeaponsAtlas.png.meta
     buildTarget: iOS
     maxTextureSize: 1024
     resizeAlgorithm: 0
@@ -183,6 +199,8 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
+<<<<<<< HEAD:Assets/Sprites/Sprites4/ExInObjects/2DSpaceshipsFreeTrial/Textures/2DShipsStandardWeapons/2DShipsStandardWeaponsAtlas.png.meta
+=======
   - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 1024
@@ -196,6 +214,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 1
+>>>>>>> origin/main:Assets/Scenes/MiniJuego4/Sprites/ExInObjects/2DSpaceshipsFreeTrial/Textures/2DShipsStandardWeapons/2DShipsStandardWeaponsAtlas.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites:

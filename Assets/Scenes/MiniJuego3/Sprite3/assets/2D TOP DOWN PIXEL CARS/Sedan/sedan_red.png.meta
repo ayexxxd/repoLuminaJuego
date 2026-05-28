@@ -1,5 +1,16 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Sprites/Sprites4/ExInGUI/Space_Exploration_GUI_Kit/Grid_Components/Small/inventory-add-highlight-small.png.meta
+guid: 3fbf689de703f44419e0953d1d75cdc6
+AssetOrigin:
+  serializedVersion: 1
+  productId: 298577
+  packageName: Space Game GUI kit
+  packageVersion: 1.0
+  assetPath: Assets/Space_Exploration_GUI_Kit/Grid_Components/Small/inventory-add-highlight-small.png
+  uploadId: 700894
+=======
 guid: 9cb4f073a7a7ff046ab7fa7ebf394fa1
+>>>>>>> origin/main:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Sedan/sedan_red.png.meta
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -97,6 +108,22 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+<<<<<<< HEAD:Assets/Sprites/Sprites4/ExInGUI/Space_Exploration_GUI_Kit/Grid_Components/Small/inventory-add-highlight-small.png.meta
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+=======
+>>>>>>> origin/main:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Sedan/sedan_red.png.meta
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -109,6 +136,10 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:Assets/Scenes/MiniJuego3/Sprite3/assets/2D TOP DOWN PIXEL CARS/Sedan/sedan_red.png.meta
+=======
+<<<<<<< HEAD:Assets/Sprites/Sprites4/ExInGUI/Space_Exploration_GUI_Kit/Grid_Components/Small/inventory-add-highlight-small.png.meta
+>>>>>>> LyaRAMABUENAYA:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Sedan/sedan_red.png.meta
   - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
@@ -122,6 +153,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:Assets/Scenes/MiniJuego3/Sprite3/assets/2D TOP DOWN PIXEL CARS/Sedan/sedan_red.png.meta
   - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
@@ -135,6 +167,10 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+=======
+>>>>>>> origin/main:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Sedan/sedan_red.png.meta
+>>>>>>> LyaRAMABUENAYA:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Sedan/sedan_red.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites:

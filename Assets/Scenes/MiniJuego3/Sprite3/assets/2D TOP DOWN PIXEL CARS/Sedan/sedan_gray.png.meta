@@ -1,5 +1,16 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Assets/Sprites/Sprites4/ExInGUI/Space_Exploration_GUI_Kit/Button_Images/Highlighted_Sprite/small/square-purple-highlight-small.png.meta
+guid: 5452c8a5e12bb4f1fae64d448eeca0d0
+AssetOrigin:
+  serializedVersion: 1
+  productId: 298577
+  packageName: Space Game GUI kit
+  packageVersion: 1.0
+  assetPath: Assets/Space_Exploration_GUI_Kit/Button_Images/Highlighted_Sprite/small/square-purple-highlight-small.png
+  uploadId: 700894
+=======
 guid: de7f19d4ca86e534b9ce290b1651804c
+>>>>>>> origin/main:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Sedan/sedan_gray.png.meta
 TextureImporter:
   internalIDToNameTable:
   - first:
@@ -97,6 +108,22 @@ TextureImporter:
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
   - serializedVersion: 4
+<<<<<<< HEAD:Assets/Sprites/Sprites4/ExInGUI/Space_Exploration_GUI_Kit/Button_Images/Highlighted_Sprite/small/square-purple-highlight-small.png.meta
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+=======
+>>>>>>> origin/main:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Sedan/sedan_gray.png.meta
     buildTarget: WebGL
     maxTextureSize: 2048
     resizeAlgorithm: 0
@@ -109,6 +136,10 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:Assets/Scenes/MiniJuego3/Sprite3/assets/2D TOP DOWN PIXEL CARS/Sedan/sedan_gray.png.meta
+=======
+<<<<<<< HEAD:Assets/Sprites/Sprites4/ExInGUI/Space_Exploration_GUI_Kit/Button_Images/Highlighted_Sprite/small/square-purple-highlight-small.png.meta
+>>>>>>> LyaRAMABUENAYA:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Sedan/sedan_gray.png.meta
   - serializedVersion: 4
     buildTarget: iOS
     maxTextureSize: 2048
@@ -122,6 +153,7 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+<<<<<<< HEAD:Assets/Scenes/MiniJuego3/Sprite3/assets/2D TOP DOWN PIXEL CARS/Sedan/sedan_gray.png.meta
   - serializedVersion: 4
     buildTarget: Android
     maxTextureSize: 2048
@@ -135,6 +167,10 @@ TextureImporter:
     ignorePlatformSupport: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+=======
+=======
+>>>>>>> origin/main:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Sedan/sedan_gray.png.meta
+>>>>>>> LyaRAMABUENAYA:Assets/Scenes/Sprite3/assets/2D TOP DOWN PIXEL CARS/Sedan/sedan_gray.png.meta
   spriteSheet:
     serializedVersion: 2
     sprites:
