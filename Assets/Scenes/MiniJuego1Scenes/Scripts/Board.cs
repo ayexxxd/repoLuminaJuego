@@ -7,22 +7,22 @@ public class Board : MonoBehaviour
 
     [Header("Configuración del Tablero")]
     public int columnas = 7;
-    public int filas    = 8;
+    public int filas = 8;
     public float tamañoCelda = 1f;
 
     [Header("Prefabs y Sprites")]
     public GameObject prefabPieza;    
-    public Sprite[]   spritePiezas;    
-    public Sprite     spriteMonstruoRojo;  
-    public Sprite     spriteMonstruoVerde;
+    public Sprite[] spritePiezas;    
+    public Sprite spriteMonstruoRojo;  
+    public Sprite spriteMonstruoVerde;
 
     private Pieza[,] tablero;         
     private Pieza piezaSeleccionada;  
     private bool estaProcesando = false; 
 
-    [HideInInspector] public bool monstruoRojoActivo  = false; 
-    [HideInInspector] public bool monstruoVerdeActivo = false;
-    [HideInInspector] public int tiposActivosEnNivel = 4;
+    public bool monstruoRojoActivo  = false; 
+    public bool monstruoVerdeActivo = false;
+    public int tiposActivosEnNivel = 4;
 
     void Awake()
     {
@@ -67,13 +67,11 @@ public class Board : MonoBehaviour
 
     bool FormaríaMatch(int col, int fil, int tipo)
     {
-        // Dos piezas a la izquierda del mismo tipo
         if (col >= 2 &&
             tablero[col-1, fil] != null && tablero[col-1, fil].tipoPieza == tipo &&
             tablero[col-2, fil] != null && tablero[col-2, fil].tipoPieza == tipo)
             return true;
 
-        // Dos piezas abajo del mismo tipo
         if (fil >= 2 &&
             tablero[col, fil-1] != null && tablero[col, fil-1].tipoPieza == tipo &&
             tablero[col, fil-2] != null && tablero[col, fil-2].tipoPieza == tipo)
@@ -126,7 +124,7 @@ public class Board : MonoBehaviour
         int difFil = Mathf.Abs(a.fil - b.fil);
         return (difCol == 1 && difFil == 0) || (difCol == 0 && difFil == 1);
     }
-
+    //f1
     IEnumerator IntentarIntercambio(Pieza a, Pieza b)
     {
         estaProcesando = true;
@@ -220,7 +218,7 @@ public class Board : MonoBehaviour
         a.transform.position = ObtenerPosicionMundo(a.col, a.fil);
         b.transform.position = ObtenerPosicionMundo(b.col, b.fil);
     }
-
+    //f1
     bool VerificarMatches()
     {
         bool[,] aDestruir   = new bool[columnas, filas];
@@ -237,7 +235,7 @@ public class Board : MonoBehaviour
                     for (int i = 0; i < longitud; i++)
                         aDestruir[col + i, fil] = true;
 
-                    if (SeCrearáMonstruo(longitud))
+                    if (SeCrearaMonstruo(longitud))
                     {
                         aDestruir[col, fil] = false; 
                         ProcesarMonstruo(col, fil, longitud, true);
@@ -260,7 +258,7 @@ public class Board : MonoBehaviour
                     for (int i = 0; i < longitud; i++)
                         aDestruir[col, fil + i] = true;
 
-                    if (SeCrearáMonstruo(longitud))
+                    if (SeCrearaMonstruo(longitud))
                     {
                         aDestruir[col, fil] = false; // ← celda protegida
                         ProcesarMonstruo(col, fil, longitud, false);
@@ -330,14 +328,14 @@ public class Board : MonoBehaviour
         }
 
     }
-
-    bool SeCrearáMonstruo(int longitud)
+    //f4
+    bool SeCrearaMonstruo(int longitud)
     {
         if (longitud == 4 && monstruoRojoActivo)  return true;
         if (longitud >= 5 && monstruoVerdeActivo) return true;
         return false;
     }
-
+    //f4
     void CrearMonstruo(int col, int fil, int tipoMonstruo)
     {
         Pieza pieza = tablero[col, fil];
@@ -378,7 +376,7 @@ public class Board : MonoBehaviour
 
         StartCoroutine(CaerYRellenar());
     }
-
+    //f4
     void ActivarMonstruosMarcados(bool[,] aDestruir)
     {
         for (int col = 0; col < columnas; col++)
@@ -398,7 +396,7 @@ public class Board : MonoBehaviour
             }
         }
     }
-
+    //f4
     void ActivarMonstruoRojo(int centroCol, int centroFil, bool[,] aDestruir)
     {
 
@@ -425,7 +423,7 @@ public class Board : MonoBehaviour
             }
         }
     }
-
+    //f1
     int CalcularPuntos(int cantidad)
     {
         if (cantidad <= 3) return 30;
