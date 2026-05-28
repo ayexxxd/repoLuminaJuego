@@ -7,22 +7,22 @@ public class Board : MonoBehaviour
 
     [Header("Configuración del Tablero")]
     public int columnas = 7;
-    public int filas    = 8;
+    public int filas = 8;
     public float tamañoCelda = 1f;
 
     [Header("Prefabs y Sprites")]
     public GameObject prefabPieza;    
-    public Sprite[]   spritePiezas;    
-    public Sprite     spriteMonstruoRojo;  
-    public Sprite     spriteMonstruoVerde;
+    public Sprite[] spritePiezas;    
+    public Sprite spriteMonstruoRojo;  
+    public Sprite spriteMonstruoVerde;
 
     private Pieza[,] tablero;         
     private Pieza piezaSeleccionada;  
     private bool estaProcesando = false; 
 
-    [HideInInspector] public bool monstruoRojoActivo  = false; 
-    [HideInInspector] public bool monstruoVerdeActivo = false;
-    [HideInInspector] public int tiposActivosEnNivel = 4;
+    public bool monstruoRojoActivo  = false; 
+    public bool monstruoVerdeActivo = false;
+    public int tiposActivosEnNivel = 4;
 
     void Awake()
     {
@@ -67,13 +67,11 @@ public class Board : MonoBehaviour
 
     bool FormariaMatch(int col, int fil, int tipo)
     {
-        // Dos piezas a la izquierda del mismo tipo
         if (col >= 2 &&
             tablero[col-1, fil] != null && tablero[col-1, fil].tipoPieza == tipo &&
             tablero[col-2, fil] != null && tablero[col-2, fil].tipoPieza == tipo)
             return true;
 
-        // Dos piezas abajo del mismo tipo
         if (fil >= 2 &&
             tablero[col, fil-1] != null && tablero[col, fil-1].tipoPieza == tipo &&
             tablero[col, fil-2] != null && tablero[col, fil-2].tipoPieza == tipo)
@@ -503,9 +501,9 @@ public class Board : MonoBehaviour
             {
                 if (tablero[col, fil] != null)
                 {
-                    tablero[col, fil]           = lista[indice];
-                    lista[indice].col           = col;
-                    lista[indice].fil           = fil;
+                    tablero[col, fil] = lista[indice];
+                    lista[indice].col = col;
+                    lista[indice].fil = fil;
                     lista[indice].transform.position = ObtenerPosicionMundo(col, fil);
                     indice++;
                 }

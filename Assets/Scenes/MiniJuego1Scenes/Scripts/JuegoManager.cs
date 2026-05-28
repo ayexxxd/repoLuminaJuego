@@ -121,7 +121,6 @@ public class GameManager : MonoBehaviour
         puntosNecesarios = metasPorNivel[indice];
 
         movimientosRestantes = movimientosIniciales;
-
         puntosActuales = 0;
         puntosGastados = 0;
 
@@ -143,12 +142,12 @@ public class GameManager : MonoBehaviour
     {
         bool gano = puntosActuales >= puntosNecesarios;
 
-        PlayerPrefs.SetInt("Gano",           gano ? 1 : 0);
-        PlayerPrefs.SetInt("PuntosNivel",    puntosActuales);   // puntos de ESTE nivel
-        PlayerPrefs.SetInt("PuntosTotales",  puntosTotales);    // acumulado global
+        PlayerPrefs.SetInt("Gano", gano ? 1 : 0);
+        PlayerPrefs.SetInt("PuntosNivel", puntosActuales);
+        PlayerPrefs.SetInt("PuntosTotales", puntosTotales);
         PlayerPrefs.SetInt("PuntosGastados", puntosGastados);
-        PlayerPrefs.SetInt("NivelActual",    nivelActual);
-        PlayerPrefs.SetInt("EsUltimoNivel",  nivelActual >= nivelMaximo ? 1 : 0);
+        PlayerPrefs.SetInt("NivelActual", nivelActual);
+        PlayerPrefs.SetInt("EsUltimoNivel", nivelActual >= nivelMaximo ? 1 : 0);
         PlayerPrefs.Save();
 
         SceneManager.LoadScene("FinalEscena");

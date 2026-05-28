@@ -1,7 +1,3 @@
-// UIInventarioController.cs
-// Muestra u oculta la UI de inventario y power-ups según el nivel.
-// Ponlo en un GameObject vacío llamado "UIInventarioController" en GameScene.
-
 using UnityEngine;
 
 public class UIInventarioController : MonoBehaviour
@@ -10,13 +6,6 @@ public class UIInventarioController : MonoBehaviour
 
     [Header("Objetos a ocultar en nivel 1")]
     public GameObject[] objetosInventario;
-    // Arrastra aquí:
-    // - TextoMartillos
-    // - TextoShuffles
-    // - TextoMovExtras
-    // - BotonMartillo
-    // - BotonShuffle
-    // - BotonMovExtra
 
     void Awake()
     {
@@ -32,7 +21,6 @@ public class UIInventarioController : MonoBehaviour
     {
         int nivel = PlayerPrefs.GetInt("NivelActual", 1);
 
-        // En nivel 1 se oculta todo, en nivel 2+ se muestra
         bool mostrar = nivel >= 2;
 
         foreach (GameObject obj in objetosInventario)
