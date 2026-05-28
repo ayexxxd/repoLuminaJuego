@@ -3,23 +3,28 @@ using UnityEngine.InputSystem;
 
 public class JugadorMovimiento : MonoBehaviour
 {
+
+    // variables de movimiento que se pueden cambiar desde Unity
     public float velocidad = 5f;
     public float fuerzaSalto = 8f;
-
     public float alturaAgachado = 0.5f;
+    // /////////
 
+
+    // Los componentes que utiliza
     private Rigidbody2D rb;
     private CapsuleCollider2D colisionPersonaje;
     private Animator animator;
-    private SpriteRenderer spriteRenderer;
+    private SpriteRenderer spriteRenderer; // para voltear al personaje
+    // /////////
+    
     private float movimientoActual;
-
     private bool estaEnPiso = false;
-
     private Vector2 tamañoOriginalCollider;
     private Vector2 offsetOriginalCollider;
     
     
+
 
     void Start()
     {
@@ -35,6 +40,10 @@ public class JugadorMovimiento : MonoBehaviour
         offsetOriginalCollider = colisionPersonaje.offset;
     }
 
+
+
+
+    // se llaman a las funciones principales del personaje
     void Update()
     {
         Mover();
@@ -42,7 +51,11 @@ public class JugadorMovimiento : MonoBehaviour
         Agacharse();
         ActualizarAnimaciones();
     }
+    // ////////
 
+
+
+    // para el movimiento con las teclas
     void Mover()
     {
         movimientoActual = 0f;
@@ -58,6 +71,11 @@ public class JugadorMovimiento : MonoBehaviour
 
         rb.linearVelocity = new Vector2(movimientoActual * velocidad, rb.linearVelocity.y);
     }
+    // /////////
+
+
+
+    // saltar con W
     void Saltar()
     {
         if ((Keyboard.current.upArrowKey.wasPressedThisFrame || Keyboard.current.wKey.wasPressedThisFrame) && estaEnPiso)
@@ -65,6 +83,9 @@ public class JugadorMovimiento : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, fuerzaSalto);
         }
     }
+    // /////////
+
+
 
     void Agacharse()
     {
@@ -81,6 +102,8 @@ public class JugadorMovimiento : MonoBehaviour
             colisionPersonaje.offset = offsetOriginalCollider;
         }
     }
+
+
 
     void ActualizarAnimaciones()
     {
@@ -99,6 +122,11 @@ public class JugadorMovimiento : MonoBehaviour
         animator.SetBool("isCrouching", estaAgachado);
     }
 
+
+
+
+    // Para detectar el piso, si toca los objetos con capa "Piso"
+    // sirve para controlar el salto y que pues solo salte una vez sabiendo que ya saltó 
     void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Piso"))
@@ -106,7 +134,6 @@ public class JugadorMovimiento : MonoBehaviour
             estaEnPiso = true;
         }
     }
-
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Piso"))
@@ -114,7 +141,11 @@ public class JugadorMovimiento : MonoBehaviour
             estaEnPiso = false;
         }
     }
+    // /////////
 
+
+
+    // este es el que ayuda a voltear al personaje dependiendo de hacia donde va
     void LateUpdate()
     {
         if (movimientoActual < 0)
@@ -127,5 +158,8 @@ public class JugadorMovimiento : MonoBehaviour
         }
     }
 }
+
+
+
 
     

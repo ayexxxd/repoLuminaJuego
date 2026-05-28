@@ -3,13 +3,21 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager instancia;
+    // esta variable permite que otros scripts puedan llamar al AudioManager
+
+
 
     [Header("Audio Sources")]
     public AudioSource musicaSource;
     public AudioSource efectosSource;
 
+
+
+
     [Header("Música")]
     public AudioClip musicaFondo;
+
+
 
     [Header("Efectos")]
     public AudioClip sonidoMoneda;
@@ -20,12 +28,15 @@ public class AudioManager : MonoBehaviour
     public AudioClip sonidoVictoria;
     public AudioClip sonidoLavadoraRoja;
 
+
+
     void Awake()
     {
+        //si todavía no existe un AudioManager, este objeto se vuelve la instancia principal
         if (instancia == null)
         {
             instancia = this;
-            DontDestroyOnLoad(gameObject);
+            DontDestroyOnLoad(gameObject); // para que el AudioManager no se destruya al cambiar de escena.
         }
         else
         {
@@ -33,10 +44,14 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+
+
     void Start()
     {
         ReproducirMusica();
     }
+
+
 
     public void ReproducirMusica()
     {
@@ -48,40 +63,56 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+
+
     public void ReproducirMoneda()
     {
         ReproducirEfecto(sonidoMoneda);
     }
+
+
 
     public void ReproducirPuerta()
     {
         ReproducirEfecto(sonidoPuerta);
     }
 
+
+
     public void ReproducirCorrecto()
     {
         ReproducirEfecto(sonidoCorrecto);
     }
+
+
 
     public void ReproducirIncorrecto()
     {
         ReproducirEfecto(sonidoIncorrecto);
     }
 
+
+
     public void ReproducirBoton()
     {
         ReproducirEfecto(sonidoBoton);
     }
+
+
 
     public void ReproducirVictoria()
     {
         ReproducirEfecto(sonidoVictoria);
     }
 
+
+
     public void ReproducirLavadoraRoja()
     {
         ReproducirEfecto(sonidoLavadoraRoja);
     }
+
+
 
     void ReproducirEfecto(AudioClip clip)
     {

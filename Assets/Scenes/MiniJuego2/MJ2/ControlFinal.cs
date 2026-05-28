@@ -8,6 +8,9 @@ public class ControlFinal : MonoBehaviour
 
     public TMP_Text textoTokensObtenidos;
 
+
+
+
     void Start()
     {
         tokensObtenidos = DatosJuego.tokensPartida;
@@ -15,10 +18,14 @@ public class ControlFinal : MonoBehaviour
         MostrarTokens();
     }
 
+
+
     void MostrarTokens()
     {
         textoTokensObtenidos.text = tokensObtenidos.ToString();
-    }
+    } // conviert el numero de tokens a texto y lo coloca en la interfaz
+
+
 
     void GuardarTokensTotales()
     {
@@ -30,7 +37,14 @@ public class ControlFinal : MonoBehaviour
 
         PlayerPrefs.Save();
     }
+    // Este método era para guardar tokens localmente con PlayerPrefs
+    //pero después conectamos el juego al API
+    //entonces la actualización real de tokens se hace en TokensApi.cs contra la base de datos
 
+
+
+
+//botones
     public void JugarDeNuevo()
     {
         SceneManager.LoadScene("EMI");

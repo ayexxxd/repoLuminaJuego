@@ -8,6 +8,7 @@ public class PreguntaApi : MonoBehaviour
     public TMP_Text textoPregunta;
 
     private string respuestaCorrecta;
+    // Aquí se guarda internamente la respuesta correcta que viene desde la base de datos
 
     void Start()
     {
@@ -20,7 +21,7 @@ public class PreguntaApi : MonoBehaviour
 
         UnityWebRequest request = UnityWebRequest.Get(url);
 
-        yield return request.SendWebRequest();
+        yield return request.SendWebRequest(); // espera la respuesta 
 
         if (request.result == UnityWebRequest.Result.Success)
         {
@@ -38,6 +39,9 @@ public class PreguntaApi : MonoBehaviour
         }
     }
 
+
+// este metodo lo usa ControlPregunta.cs
+// Cuando el jugador presiona el botón Correcto o Incorrecto, ControlPregunta manda esa respuesta a este método
     public bool RespuestaEsCorrecta(string respuestaJugador)
     {
         return respuestaJugador == respuestaCorrecta;

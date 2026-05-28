@@ -16,13 +16,13 @@ public class TokensApi : MonoBehaviour
         StartCoroutine(GuardarPartida());
     }
 
-    IEnumerator ActualizarTokens()
+    IEnumerator ActualizarTokens() // bloque que manda peticuon PUT an endpoint
     {
         string url = "http://127.0.0.1:5000/mision/tokens/" + idUsuario;
 
         string json = "{\"tokensObtenidos\":" + tokensObtenidos + "}";
 
-        UnityWebRequest request = new UnityWebRequest(url, "PUT");
+        UnityWebRequest request = new UnityWebRequest(url, "PUT"); // este es el unity para crear peticion tipo PUT
 
         byte[] bodyRaw = Encoding.UTF8.GetBytes(json);
 

@@ -5,6 +5,7 @@ using System.Collections;
 public class LavadoraPeligrosa : MonoBehaviour
 {
     private bool yaTocoJugador = false;
+    // se usa esta variable booleana para evitar que el reinicio se active varias veces al mismo tiempo
 
     void OnTriggerEnter2D(Collider2D collision)
     {
