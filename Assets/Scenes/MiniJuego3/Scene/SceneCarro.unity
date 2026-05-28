@@ -119,6 +119,51 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1 &3842376
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3842378}
+  - component: {fileID: 3842377}
+  m_Layer: 0
+  m_Name: ConectorAPI
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &3842377
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3842376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 735ef068084a46542baff009e13985d1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ConectorAPI
+  urlBase: https://10.22.189.195:5001/MJ3/guardarTiempo
+--- !u!4 &3842378
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3842376}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 463.44177, y: 257.55222, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &16144987 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9176053274804429855, guid: 8a71462b0ec692746a0704f6535a40e8, type: 3}
@@ -9621,7 +9666,7 @@ Transform:
   m_GameObject: {fileID: 1834622439}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: 0.71375537, w: 0.7003951}
-  m_LocalPosition: {x: 1.0453, y: -2.7422, z: 0}
+  m_LocalPosition: {x: 1.12, y: -2.45, z: 0}
   m_LocalScale: {x: -0.22946917, y: -0.17161407, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -12070,3 +12115,4 @@ SceneRoots:
   - {fileID: 686881797}
   - {fileID: 766160964}
   - {fileID: 1195474771}
+  - {fileID: 3842378}
