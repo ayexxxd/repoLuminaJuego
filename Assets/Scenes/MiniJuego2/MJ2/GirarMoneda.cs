@@ -11,7 +11,7 @@ public class GirarMoneda : MonoBehaviour
 
     void Start()
     {
-        escalaOriginal = transform.localScale;
+        escalaOriginal = transform.localScale; // sepa cuál era el tamaño normal de la moneda antes de empeza
     }
 
     void Update()
