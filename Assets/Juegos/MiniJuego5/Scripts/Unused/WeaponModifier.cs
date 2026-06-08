@@ -9,7 +9,7 @@ namespace TopDown.Shooting
     {
         [SerializeField] private GunController gunController;
         [SerializeField] private BulletModifier[] modifiers;
-        [SerializeField] private string apiUrl = "https://192.168.100.71:5010/getPower";
+        [SerializeField] private string apiUrl = "https://10.14.255.45:5010/getPower";
 
         public void TryApplyUpgrade(string word)
         {
@@ -18,16 +18,6 @@ namespace TopDown.Shooting
 
         IEnumerator TryApplyUpgradeCoroutine(string word)
         {
-            if (gunController == null)
-            {
-                gunController = FindAnyObjectByType<GunController>();
-            }
-            if (gunController == null)
-            {
-                yield break;
-            }
-
-            // --- Try API directly ---
             bool apiSuccess = false;
             if (!string.IsNullOrEmpty(apiUrl))
             {
@@ -40,27 +30,13 @@ namespace TopDown.Shooting
                     float spd = power.speed;
                     float cd = power.cooldown;
 
-                    if (dmg > 0 || spd > 0 || cd > 0)
-                    {
-                        gunController.SetBulletStats(dmg, spd, cd);
-                        apiSuccess = true;
-                    }
+                    gunController.SetBulletStats(dmg, spd, cd);
+                    apiSuccess = true;
                 }
             }
 
             if (apiSuccess)
                 yield break;
-
-            // --- Fallback to local modifiers ---
-            string lower = word.ToLowerInvariant();
-            foreach (var mod in modifiers)
-            {
-                if (mod.keyword.ToLowerInvariant() == lower)
-                {
-                    gunController.SetBulletStats(mod.damage, mod.speed, mod.cooldown);
-                    yield break;
-                }
-            }
         }
 
         private IEnumerator FetchFromApi(string word, System.Action<PowerData> callback)
@@ -73,41 +49,10 @@ namespace TopDown.Shooting
             web.downloadHandler = new DownloadHandlerBuffer();
             web.SetRequestHeader("Content-Type", "application/json");
             web.certificateHandler = new ForceAcceptAll();
-
+            Debug.Log(web.certificateHandler);
             yield return web.SendWebRequest();
 
-            if (web.result != UnityWebRequest.Result.Success)
-            {
-                callback?.Invoke(null);
-            }
-            else
-            {
-                string json = web.downloadHandler.text;
-                
-                PowerData power = null;
-                try
-                {
-                    power = JsonConvert.DeserializeObject<PowerData>(json);
-                }
-                catch (System.Exception)
-                {
-                }
 
-                if (power == null)
-                {
-                    try
-                    {
-                        power = UnityEngine.JsonUtility.FromJson<PowerData>(json);
-                    }
-                    catch (System.Exception)
-                    {
-                    }
-                }
-
-                callback?.Invoke(power);
-            }
-            web.Dispose();
-        }
     }
 
     [System.Serializable]
@@ -118,4 +63,4 @@ namespace TopDown.Shooting
         public float speed = 10f;
         public float cooldown = 0.4f;
     }
-}
+    }}
