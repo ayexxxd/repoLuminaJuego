@@ -451,7 +451,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &225590433
 Transform:
   m_ObjectHideFlags: 0
@@ -479,7 +479,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3860e9a8fc74449d290f20df0a36a144, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopDown.Shooting.WeaponModifier
-  wordInputPanel: {fileID: 265183448}
   gunController: {fileID: 2100127810}
   modifiers:
   - keyword: rapido
@@ -538,7 +537,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &265183447
 Transform:
   m_ObjectHideFlags: 0
@@ -568,21 +567,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::TopDown.Shooting.WordInputPanel
   input: {fileID: 1631893549}
   panelUI: {fileID: 655929219}
-  onValidWord:
-    m_PersistentCalls:
-      m_Calls:
-      - m_Target: {fileID: 225590434}
-        m_TargetAssemblyTypeName: TopDown.Shooting.WeaponModifier, Assembly-CSharp
-        m_MethodName: OnValidWord
-        m_Mode: 5
-        m_Arguments:
-          m_ObjectArgument: {fileID: 0}
-          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
-          m_IntArgument: 0
-          m_FloatArgument: 0
-          m_StringArgument: 
-          m_BoolArgument: 0
-        m_CallState: 2
+  weaponModifier: {fileID: 225590434}
 --- !u!1 &309582648
 GameObject:
   m_ObjectHideFlags: 0
@@ -594,6 +579,7 @@ GameObject:
   - component: {fileID: 309582651}
   - component: {fileID: 309582650}
   - component: {fileID: 309582649}
+  - component: {fileID: 309582652}
   m_Layer: 0
   m_Name: EventSystem
   m_TagString: Untagged
@@ -662,6 +648,19 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &309582652
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 309582648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c79865022aaf49e993bdae53b84d0a83, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::TopDown.UI.AutoAssignUIActions
+  inputActions: {fileID: -944628639613478452, guid: 98287a6507fe5495381810c810edf350, type: 3}
 --- !u!1 &321213610
 GameObject:
   m_ObjectHideFlags: 0
@@ -2475,7 +2474,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1014789969
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2607,7 +2606,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1066620493
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2624,7 +2623,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108, y: -495}
+  m_AnchoredPosition: {x: 108, y: -33}
   m_SizeDelta: {x: 147.9143, y: 42.6318}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1066620494
@@ -3541,7 +3540,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &1457486548
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5070,7 +5069,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 599297677}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: Leave
+        m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5150,11 +5149,11 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 0}
+  m_Resource: {fileID: 8300000, guid: 670ab36222d614e7c9bd1540f017836d, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0

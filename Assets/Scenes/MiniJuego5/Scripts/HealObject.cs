@@ -5,13 +5,17 @@ namespace TopDown.Shooting{//namespace to organize code and avoid naming conflic
 public class HealObject : MonoBehaviour
 {
     [SerializeField] private int healAmount = 25;
-    private void OnCollisionEnter2D(Collision2D collision)
+    void Start()
     {
-        if(collision.gameObject.CompareTag("Player"))
+        GetComponent<Collider2D>().isTrigger = true;
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if(collision.CompareTag("Player"))
         {
-            Health health = collision.gameObject.GetComponent<Health>();
-                health.Heal(healAmount);
-                Destroy(gameObject);
+            Health health = collision.GetComponent<Health>();
+            health.Heal(healAmount);
+            Destroy(gameObject);
         }
     }
 }

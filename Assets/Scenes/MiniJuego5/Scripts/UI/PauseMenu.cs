@@ -15,29 +15,14 @@ public class PauseMenu : MonoBehaviour
         paused = false;
     }
 
-    private void Update()
+    public void Exit()
     {
-        if (Keyboard.current.qKey.wasPressedThisFrame)
-        {
-            Time.timeScale = 1f;
-            SceneManager.LoadScene("StartScene");
-        }
-    }
-
-    private void LateUpdate()
-    {
-        if (Keyboard.current.pKey.wasPressedThisFrame)
-        {
-            if (paused)
-                Resume();
-            else
-                Pause();
-        }
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("StartScene");
     }
 
     public void Pause()
     {
-        EnsurePausePanelExists();
         if (pausePanel != null)
         {
             pausePanel.SetActive(true);
@@ -48,24 +33,11 @@ public class PauseMenu : MonoBehaviour
 
     public void Resume()
     {
-        EnsurePausePanelExists();
         if (pausePanel != null)
         {
             pausePanel.SetActive(false);
         }
         Time.timeScale = 1f;
         paused = false;
-    }
-
-    private void EnsurePausePanelExists()
-    {
-        if (pausePanel == null)
-        {
-            pausePanel = GameObject.Find("PausePanel");
-            if (pausePanel == null)
-            {
-                pausePanel = FindAnyObjectByType<Canvas>()?.gameObject.transform.Find("PausePanel")?.gameObject;
-            }
-        }
     }
 }

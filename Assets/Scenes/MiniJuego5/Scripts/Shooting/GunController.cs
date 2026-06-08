@@ -72,13 +72,21 @@ namespace TopDown.Shooting
         }
 
     
-        /*public void SetBulletStats(int damage, float speed, float cooldown)
+        public void SetBulletStats(int damage, float speed, float cooldown)
         {
             currentDmg = damage;
             currentSpd = speed;
             currentCd = cooldown;
-        
-        }*/
+            Debug.Log("GunController: Stats updated -> DMG:" + currentDmg + " SPD:" + currentSpd + " CD:" + currentCd);
+        }
+
+        public void GetBulletStats(out int damage, out float speed, out float cooldown)
+        {
+            damage = currentDmg;
+            speed = currentSpd;
+            cooldown = currentCd;
+        }
+
         public void ResetBulletStats()
         {
             currentDmg = baseDmg;
