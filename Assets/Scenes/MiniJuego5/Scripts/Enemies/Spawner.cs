@@ -1,13 +1,11 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.Events;
-using TopDown.Shooting;
 
-namespace TopDown.Enemy{//namespace to organize code and avoid naming conflicts
+namespace TopDown.Enemy
+{
 public class Spawner : MonoBehaviour
 {
-    //evento estatico
-    public static UnityEvent onWaveComplete = new UnityEvent();
     public static UnityEvent<int> onInputWave = new UnityEvent<int>();
     public static bool waitingForInput = false;
     //GameObject for each enemy type to spawn
@@ -15,12 +13,18 @@ public class Spawner : MonoBehaviour
     [SerializeField] private GameObject AlienM; 
     [SerializeField] private GameObject AlienL;
 
-    [SerializeField] private float spawnInterval = 1.5f;
-    [SerializeField] private int enemiesPerWave = 5;
-    [SerializeField] private float pauseBetweenWaves = 1f;
+    [SerializeField] private float spawnInterval = 0.6f;
+    [SerializeField] private int enemiesPerWave = 10;
+    [SerializeField] private float pauseBetweenWaves = 0.5f;
     [SerializeField] private GameObject healPrefab;
-    [SerializeField, Range(0f,1f)] private float healSpawn = 0.7f;//cheance que spanwea un heal item 
+    [SerializeField, Range(0f,1f)] private float healSpawn = 0.7f;//cheance que spanwea un heal item
     [SerializeField] private int totalWaves = 10;//number of waves before game ends
+    [SerializeField] private int spawnClusterSize = 2;//number of enemies spawned per interval
+    
+    [SerializeField] private float minSpawnDistanceFromPlayer = 3f;
+    [SerializeField] private float spawnEdgeMargin = 0.5f;
+    [SerializeField] private Vector2 gridMinBounds = new Vector2(-15f, -10f);
+    [SerializeField] private Vector2 gridMaxBounds = new Vector2(15f, 10f);
 
     private int currentWave = 1;//track de oleada actual
     public int CurrentWave => currentWave;//propiedad para acceder a la oleada actual
@@ -31,7 +35,6 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {//iniciar la rutina de oleadas
-        Debug.Log("Spawner: Starting WaveLoop");
         StartCoroutine(WaveLoop());
         PlayerPrefs.SetInt("CurrentWave", 1);//guardar oleada actual en player prefs
     }
@@ -46,16 +49,10 @@ public class Spawner : MonoBehaviour
             if (currentWave % 2 == 0)
             {
                 waitingForInput = true;
-                Debug.Log("Spawner: Waiting for input panel on wave " + currentWave + " (Press ESC to skip)");
                 onInputWave.Invoke(currentWave);
                 float waitStart = Time.realtimeSinceStartup;
                 yield return new WaitUntil(() => !waitingForInput || Time.realtimeSinceStartup - waitStart > 8f);
-                if (waitingForInput)
-                {
-                    Debug.LogWarning("Spawner: Input panel timed out after 8s. Auto-resuming wave " + currentWave);
-                    waitingForInput = false;
-                }
-                Debug.Log("Spawner: Input panel closed, spawning wave " + currentWave);
+                waitingForInput = false;
             }
             
             yield return StartCoroutine(SpawnWave(enemiesPerWave));
@@ -73,34 +70,107 @@ public class Spawner : MonoBehaviour
 
             //puede aparecer un heal item
             if (Random.value < healSpawn)
-            {//spawnea heal item en posicion aleatoria dentro de los mismos limites que los enemigos
-                Vector3 spawnPos = new Vector3(Random.Range(-3f, 3f), Random.Range(-3.5f, 3.5f), 0f);
-                //instancia el heal item sin rotacion
+            {
+                Vector3 spawnPos = GetSpawnPositionAtCameraEdge();
                 Instantiate(healPrefab, spawnPos, Quaternion.identity);
             }
 
             currentWave++;//sube el numero de oleada
             PlayerPrefs.SetInt("CurrentWave", currentWave);//se guarda en player prefs
-            enemiesPerWave += 3;//incrementa el numero de enemigos por oleada
+            enemiesPerWave += 5;//incrementa el numero de enemigos por oleada
         }
     }
     private IEnumerator SpawnWave(int count)
     {
         enemiesAliveInWave = count;
-        for (int i = 0; i < count; i++)
+        int spawned = 0;
+        while (spawned < count)
         {
-            SpawnRandomEnemy();//spawnea enemigo
-            yield return new WaitForSeconds(spawnInterval);//espera antes de spawnear siguiente enemigo
+            int batch = Mathf.Min(spawnClusterSize, count - spawned);
+            for (int b = 0; b < batch; b++)
+            {
+                SpawnRandomEnemy();
+                spawned++;
+            }
+            yield return new WaitForSeconds(spawnInterval);
         }
     }
     private void SpawnRandomEnemy()
     {
-        //array of enemty types
-        GameObject[] enemies={AlienS,AlienM,AlienL};
-        //spawn random enemy at random position within the given x,y,z bounds
+        GameObject[] enemies = { AlienS, AlienM, AlienL };
         GameObject randomEnemy = enemies[Random.Range(0, enemies.Length)];
-        //instantiates enemy at random position with no rotation
-        Instantiate(randomEnemy, new Vector3(Random.Range(-3f, 3f), Random.Range(-3.5f, 3.5f), 0), Quaternion.identity);
+
+        Vector3 spawnPos = GetSpawnPositionAtCameraEdge();
+        Instantiate(randomEnemy, spawnPos, Quaternion.identity);
+    }
+
+    private Vector3 GetSpawnPositionAtCameraEdge()
+    {
+        Camera cam = Camera.main;
+        if (cam == null)
+        {
+            return new Vector3(Random.Range(-3f, 3f), Random.Range(-3.5f, 3.5f), 0f);
+        }
+
+        GameObject player = GameObject.FindGameObjectWithTag("Player");
+        Vector3 playerPos = player != null ? player.transform.position : Vector3.zero;
+
+        float camHeight = cam.orthographicSize;
+        float camWidth = camHeight * cam.aspect;
+        float halfW = camWidth + spawnEdgeMargin;
+        float halfH = camHeight + spawnEdgeMargin;
+
+        Vector3 candidate = Vector3.zero;
+        int attempts = 0;
+        int maxAttempts = 20;
+
+        while (attempts < maxAttempts)
+        {
+            int edge = Random.Range(0, 4);
+            float x = 0f, y = 0f;
+
+            switch (edge)
+            {
+                case 0: // top
+                    x = Random.Range(-halfW, halfW);
+                    y = halfH;
+                    break;
+                case 1: // bottom
+                    x = Random.Range(-halfW, halfW);
+                    y = -halfH;
+                    break;
+                case 2: // left
+                    x = -halfW;
+                    y = Random.Range(-halfH, halfH);
+                    break;
+                case 3: // right
+                    x = halfW;
+                    y = Random.Range(-halfH, halfH);
+                    break;
+            }
+
+            candidate = new Vector3(playerPos.x + x, playerPos.y + y, 0f);
+
+            // Clamp to grid bounds
+            candidate.x = Mathf.Clamp(candidate.x, gridMinBounds.x, gridMaxBounds.x);
+            candidate.y = Mathf.Clamp(candidate.y, gridMinBounds.y, gridMaxBounds.y);
+
+            // Ensure not too close to player
+            float dist = Vector3.Distance(candidate, playerPos);
+            if (dist >= minSpawnDistanceFromPlayer)
+            {
+                return candidate;
+            }
+
+            attempts++;
+        }
+
+        // Fallback: force position further out on random edge
+        float angle = Random.Range(0f, Mathf.PI * 2f);
+        Vector3 fallback = playerPos + new Vector3(Mathf.Cos(angle) * minSpawnDistanceFromPlayer, Mathf.Sin(angle) * minSpawnDistanceFromPlayer, 0f);
+        fallback.x = Mathf.Clamp(fallback.x, gridMinBounds.x, gridMaxBounds.x);
+        fallback.y = Mathf.Clamp(fallback.y, gridMinBounds.y, gridMaxBounds.y);
+        return fallback;
     }
     public void EnemyDied()
     {
@@ -108,9 +178,8 @@ public class Spawner : MonoBehaviour
         {
             enemiesAliveInWave--;//reducir el numero de enemigos vivos
             if (enemiesAliveInWave <= 0)
-            {//si no quedan enemigos vivos
+            {
                 enemiesAliveInWave = 0;
-                //onWaveComplete.Invoke();
             }
         }
     }

@@ -4,23 +4,18 @@ using System.Collections;//required for Coroutine
 namespace TopDown.Enemy{//namespace to organize code and avoid naming conflicts
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] private int damage = 5;//daño base
-    [SerializeField] private float speed = 1.5f;//velocidad base
-    [SerializeField] private EnemyData data;//referncia a scriptable object con stats base
-
-    //array de posibles sprites
-    [SerializeField] private Sprite[] sprites;
+    [SerializeField] private int damage = 5;
+    [SerializeField] private float speed = 1.5f;
+    [SerializeField] private EnemyData data;
     
-    private GameObject player;//referencia al jugador para seguirlo
-    private Rigidbody2D body;//referencia al rigidbody para moverlo
-    private Coroutine damageCoroutine;//corutina para hacer daño cada cierto tiempo
-    private SpriteRenderer spriteRend;//referencia al sprite renderer para cambiar apariencia
+    private GameObject player;
+    private Rigidbody2D body;
+    private Coroutine damageCoroutine;
 
     void Start()
     {
-        body = GetComponent<Rigidbody2D>();//asignar referencia al rigidbody
-        spriteRend = GetComponent<SpriteRenderer>();//asignar referencia al sprite renderer
-        player = GameObject.FindGameObjectWithTag("Player");//asignar referencia al jugador buscando por su tag
+        body = GetComponent<Rigidbody2D>();
+        player = GameObject.FindGameObjectWithTag("Player");
         SetEnemy();
     }
 

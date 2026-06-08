@@ -1,7 +1,7 @@
-using Unity.VisualScripting;
 using UnityEngine;
-namespace TopDown.Shooting{//namespace to organize code and avoid naming conflicts
 
+namespace TopDown.Shooting
+{
 public class HealObject : MonoBehaviour
 {
     [SerializeField] private int healAmount = 25;

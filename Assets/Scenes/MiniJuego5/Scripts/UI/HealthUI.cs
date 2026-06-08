@@ -6,9 +6,8 @@ namespace TopDown.UI
 {
 using TopDown.Enemy;
 using TopDown.Shooting;
-    using Unity.VisualScripting;
 
-    public class HealthUI : MonoBehaviour
+public class HealthUI : MonoBehaviour
 {
     private Health playerHealth;
     private Spawner spawner;
@@ -24,13 +23,17 @@ using TopDown.Shooting;
     }
     private void UpdateBar(float current)
     {
-        if(current > 0){
-            fillImage.fillAmount = current / 100;}
-        
+        if (fillImage != null && current > 0)
+        {
+            fillImage.fillAmount = current / 100;
+        }
     }
     private void UpdateWave(int currentWave, int totalWaves)
     {
-        waveText.text = "OLEADA: " + currentWave + "/" + totalWaves;
+        if (waveText != null)
+        {
+            waveText.text = "OLEADA: " + currentWave + "/" + totalWaves;
+        }
     }
     private void UpdateStatsText()
     {
@@ -42,19 +45,15 @@ using TopDown.Shooting;
             if (statsText.text != newText)
             {
                 statsText.text = newText;
-                Debug.Log("HealthUI: Stats text updated -> " + newText);
             }
-        }
-        else
-        {
-            if (gun == null) Debug.LogWarning("HealthUI: GunController not found!");
-            if (statsText == null) Debug.LogWarning("HealthUI: statsText is null!");
         }
     }
     private void Update()
     {
-        UpdateBar(playerHealth.getHealth());
-        UpdateWave(spawner.CurrentWave, spawner.TotalWaves);
+        if (playerHealth != null)
+            UpdateBar(playerHealth.getHealth());
+        if (spawner != null)
+            UpdateWave(spawner.CurrentWave, spawner.TotalWaves);
         UpdateStatsText();
     }
 }

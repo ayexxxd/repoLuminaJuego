@@ -1,18 +1,14 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
-using UnityEngine.InputSystem;
 
 public class PauseMenu : MonoBehaviour
 {
     [SerializeField] private GameObject pausePanel;
 
-    private bool paused = false;
-
     private void Start()
     {
         pausePanel.SetActive(false);
         Time.timeScale = 1f;
-        paused = false;
     }
 
     public void Exit()
@@ -28,7 +24,6 @@ public class PauseMenu : MonoBehaviour
             pausePanel.SetActive(true);
         }
         Time.timeScale = 0f;
-        paused = true;
     }
 
     public void Resume()
@@ -38,6 +33,5 @@ public class PauseMenu : MonoBehaviour
             pausePanel.SetActive(false);
         }
         Time.timeScale = 1f;
-        paused = false;
     }
 }

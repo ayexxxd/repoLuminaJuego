@@ -1,33 +1,40 @@
 using UnityEngine;
 using TMPro;
-using UnityEditor.Search;
 using UnityEngine.SceneManagement;
-namespace TopDown.Enemy{//namespace para evitar conflictos de nombres
 
+namespace TopDown.Enemy
+{
 public class EndScript : MonoBehaviour
 {
     [SerializeField] private AudioClip endSFX;
-    [SerializeField] private TextMeshProUGUI scoreText;//reference to score text UI element
-    [SerializeField] private TextMeshProUGUI gameOverText;//reference to game over text UI element
-    [SerializeField] private TextMeshProUGUI waveText;//reference to wave text UI element
+    [SerializeField] private TextMeshProUGUI scoreText;
+    [SerializeField] private TextMeshProUGUI gameOverText;
+    [SerializeField] private TextMeshProUGUI waveText;
 
     public void Retry()
-    {//funcion del boton de jugar
+    {
         SceneManager.LoadScene("ShooterScene");
     }
     public void Quit()
-    {//funcion del boton de jugar
+    {
         SceneManager.LoadScene("StartScene");
     }
     void Start()
     {   
-        GetComponent<AudioSource>().PlayOneShot(endSFX);
-        scoreText.text = "Puntaje Final: " + ScoreManager.instance.GetScore(); 
+        AudioSource audioSource = GetComponent<AudioSource>();
+        if (audioSource != null && endSFX != null)
+            audioSource.PlayOneShot(endSFX);
 
-        waveText.text = "Oleada Final: " + PlayerPrefs.GetInt("CurrentWave");
-        //retirar el numero de oleada final del PlayerPrefs
+        if (ScoreManager.instance != null)
+            scoreText.text = "Puntaje Final: " + ScoreManager.instance.GetScore();
+        else
+            scoreText.text = "Puntaje Final: 0";
 
-        if(PlayerPrefs.GetInt("CurrentWave") > 10)
-            gameOverText.text = "¡Has Ganado!";//imprimir ganaste solamente si llegas a la oleada 10
-}}
+        if (waveText != null)
+            waveText.text = "Oleada Final: " + PlayerPrefs.GetInt("CurrentWave");
+
+        if (PlayerPrefs.GetInt("CurrentWave") > 10 && gameOverText != null)
+            gameOverText.text = "¡Has Ganado!";
+    }
+}
 }

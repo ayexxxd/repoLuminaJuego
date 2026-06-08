@@ -1,4 +1,3 @@
-using TopDown.Shooting;
 using System.Collections;
 using UnityEngine;
 
@@ -77,7 +76,6 @@ namespace TopDown.Shooting
             currentDmg = damage;
             currentSpd = speed;
             currentCd = cooldown;
-            Debug.Log("GunController: Stats updated -> DMG:" + currentDmg + " SPD:" + currentSpd + " CD:" + currentCd);
         }
 
         public void GetBulletStats(out int damage, out float speed, out float cooldown)

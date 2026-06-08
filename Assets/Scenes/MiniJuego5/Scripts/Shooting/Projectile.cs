@@ -6,8 +6,7 @@ using TopDown.Enemy;//namespace to organize code and avoid naming conflicts
 [RequireComponent(typeof(Rigidbody2D))]
 public class Projectile : MonoBehaviour
 {
-   [SerializeField]private float speed = 10f;
-   [SerializeField]private float lifetime = 5f;
+    [SerializeField] private float lifetime = 5f;
     [SerializeField] private int damage = 5;
    private Rigidbody2D body;
    private float lifeTimer;
@@ -31,15 +30,13 @@ public class Projectile : MonoBehaviour
         }
 
     private void Update()
-        {//life timer increases
-          lifeTimer += Time.deltaTime;
-    //Debug.Log("Bullet Alive at: " + transform.position); 
-
-    if(lifeTimer >= lifetime)
-    {//if lifetime is higher than lifetime, destroy bullet
-        Destroy(gameObject);//completely destroy bullet from memory
-    }
+    {
+        lifeTimer += Time.deltaTime;
+        if (lifeTimer >= lifetime)
+        {
+            Destroy(gameObject);
         }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

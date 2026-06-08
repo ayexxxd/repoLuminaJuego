@@ -1,6 +1,5 @@
 using System.Collections;
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 
 public class Health : MonoBehaviour
@@ -12,7 +11,6 @@ public class Health : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private Color originalColor;
 
-    [SerializeField] private AudioClip startSFX;
     [SerializeField] private AudioClip healSFX;
     private AudioSource audioSource;
 
@@ -26,26 +24,11 @@ public class Health : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    private void Start()
-    {
-        // startSFX removed to avoid overlapping with looped background music
-    }
-
-
     void Update()
     {
         if (isDead)
         {
             return;
-        }
-
-        if (Keyboard.current != null && Keyboard.current.kKey.wasPressedThisFrame)
-        {
-            Damage(10);
-        }
-        if (Keyboard.current != null && Keyboard.current.hKey.wasPressedThisFrame)
-        {
-            Heal(10);
         }
         if(health <= 0)
         {
