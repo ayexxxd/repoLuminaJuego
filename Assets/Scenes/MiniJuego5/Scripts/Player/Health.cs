@@ -28,10 +28,7 @@ public class Health : MonoBehaviour
 
     private void Start()
     {
-        if(startSFX != null && audioSource != null)
-        {
-            audioSource.PlayOneShot(startSFX);
-        }
+        // startSFX removed to avoid overlapping with looped background music
     }
 
 

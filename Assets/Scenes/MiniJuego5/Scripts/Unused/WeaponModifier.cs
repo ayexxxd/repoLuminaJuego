@@ -1,30 +1,45 @@
 using UnityEngine;
-using System.Collections.Generic;
 
-namespace TopDown.Shooting{//namespace to organize code and avoid naming conflicts
-using TopDown.UI;//namespace to organize code and avoid naming conflicts
-
-public class WeaponModifier : MonoBehaviour
+namespace TopDown.Shooting
 {
-    [SerializeField] private WordInputPanel wordInputPanel;//referencia al panel de input de palabras
-    [SerializeField] private GunController gunController;//referecia al controlador de armas para modificar balas
+    public class WeaponModifier : MonoBehaviour
+    {
+        [SerializeField] private GunController gunController;
+        [SerializeField] private BulletModifier[] modifiers;
 
-    [SerializeField] private BulletModifier[] modifiers;//array de modificadores de bala, cada uno con un keyword
+        public void TryApplyUpgrade(string word)
+        {
+            if (gunController == null)
+            {
+                gunController = FindAnyObjectByType<GunController>();
+            }
+            if (gunController == null)
+            {
+                Debug.LogWarning("WeaponModifier: No GunController found!");
+                return;
+            }
 
+            string lower = word.ToLowerInvariant();
+            foreach (var mod in modifiers)
+            {
+                if (mod.keyword.ToLowerInvariant() == lower)
+                {
+                    gunController.SetBulletStats(mod.damage, mod.speed, mod.cooldown);
+                    Debug.Log($"WeaponModifier: Upgraded with '{word}' -> DMG:{mod.damage} SPD:{mod.speed} CD:{mod.cooldown}");
+                    return;
+                }
+            }
 
+            Debug.Log($"WeaponModifier: Word '{word}' not found in modifiers.");
+        }
+    }
 
-    
-}
-//clase para definir los modificadores de bala, con un keyword para activarlos
-[System.Serializable]
-public class BulletModifier
-{
-    public string keyword;
-
-    public int damage = 5;
-
-    public float speed = 10f;
-
-    public float cooldown = 0.4f;
-}
+    [System.Serializable]
+    public class BulletModifier
+    {
+        public string keyword;
+        public int damage = 5;
+        public float speed = 10f;
+        public float cooldown = 0.4f;
+    }
 }

@@ -8,6 +8,8 @@ public class Spawner : MonoBehaviour
 {
     //evento estatico
     public static UnityEvent onWaveComplete = new UnityEvent();
+    public static UnityEvent<int> onInputWave = new UnityEvent<int>();
+    public static bool waitingForInput = false;
     //GameObject for each enemy type to spawn
     [SerializeField] private GameObject AlienS; 
     [SerializeField] private GameObject AlienM; 
@@ -29,6 +31,7 @@ public class Spawner : MonoBehaviour
 
     void Start()
     {//iniciar la rutina de oleadas
+        Debug.Log("Spawner: Starting WaveLoop");
         StartCoroutine(WaveLoop());
         PlayerPrefs.SetInt("CurrentWave", 1);//guardar oleada actual en player prefs
     }
@@ -38,6 +41,23 @@ public class Spawner : MonoBehaviour
         while (currentWave <= totalWaves)//mientras no se hayan completado todas las oleadas
         {
             waveInProgress = true;
+            
+            // Show input panel on even waves (2,4,6,8,10)
+            if (currentWave % 2 == 0)
+            {
+                waitingForInput = true;
+                Debug.Log("Spawner: Waiting for input panel on wave " + currentWave + " (Press ESC to skip)");
+                onInputWave.Invoke(currentWave);
+                float waitStart = Time.realtimeSinceStartup;
+                yield return new WaitUntil(() => !waitingForInput || Time.realtimeSinceStartup - waitStart > 8f);
+                if (waitingForInput)
+                {
+                    Debug.LogWarning("Spawner: Input panel timed out after 8s. Auto-resuming wave " + currentWave);
+                    waitingForInput = false;
+                }
+                Debug.Log("Spawner: Input panel closed, spawning wave " + currentWave);
+            }
+            
             yield return StartCoroutine(SpawnWave(enemiesPerWave));
             
             while (enemiesAliveInWave > 0)//espera a que todos los enemigos de la oleada mueran
@@ -54,7 +74,7 @@ public class Spawner : MonoBehaviour
             //puede aparecer un heal item
             if (Random.value < healSpawn)
             {//spawnea heal item en posicion aleatoria dentro de los mismos limites que los enemigos
-                Vector3 spawnPos = new Vector3(Random.Range(-5f, 5f), Random.Range(-6f, 6f), 0f);
+                Vector3 spawnPos = new Vector3(Random.Range(-3f, 3f), Random.Range(-3.5f, 3.5f), 0f);
                 //instancia el heal item sin rotacion
                 Instantiate(healPrefab, spawnPos, Quaternion.identity);
             }
@@ -80,7 +100,7 @@ public class Spawner : MonoBehaviour
         //spawn random enemy at random position within the given x,y,z bounds
         GameObject randomEnemy = enemies[Random.Range(0, enemies.Length)];
         //instantiates enemy at random position with no rotation
-        Instantiate(randomEnemy, new Vector3(Random.Range(-5f, 5f), Random.Range(-6f, 6f), 0), Quaternion.identity);
+        Instantiate(randomEnemy, new Vector3(Random.Range(-3f, 3f), Random.Range(-3.5f, 3.5f), 0), Quaternion.identity);
     }
     public void EnemyDied()
     {
