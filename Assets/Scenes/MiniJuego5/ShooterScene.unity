@@ -568,6 +568,7 @@ MonoBehaviour:
   input: {fileID: 1631893549}
   panelUI: {fileID: 655929219}
   weaponModifier: {fileID: 225590434}
+  submitSFX: {fileID: 8300000, guid: aa2b5570edcc94466b7dcb27b57c2444, type: 3}
 --- !u!1 &309582648
 GameObject:
   m_ObjectHideFlags: 0
@@ -2623,7 +2624,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 108, y: -33}
+  m_AnchoredPosition: {x: 108, y: -495}
   m_SizeDelta: {x: 147.9143, y: 42.6318}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1066620494
@@ -2646,7 +2647,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'PUNTOS: --'
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c18d470c4d95ced49aa122411cabfd3b, type: 2}
   m_sharedMaterial: {fileID: -6471479325630977397, guid: c18d470c4d95ced49aa122411cabfd3b, type: 2}

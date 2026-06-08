@@ -10,6 +10,8 @@ namespace TopDown.Shooting
         [SerializeField] private TMP_InputField input;
         [SerializeField] private GameObject panelUI;
         [SerializeField] private WeaponModifier weaponModifier;
+        [SerializeField] private AudioClip submitSFX;
+        private AudioSource audioSource;
 
         private void Awake()
         {
@@ -27,6 +29,9 @@ namespace TopDown.Shooting
                 panelUI.SetActive(false);
             if (input != null)
                 input.onEndEdit.AddListener(OnInputEndEdit);
+            audioSource = GetComponent<AudioSource>();
+            if (audioSource == null)
+                audioSource = gameObject.AddComponent<AudioSource>();
         }
 
         private void OnInputEndEdit(string text)
@@ -61,6 +66,7 @@ namespace TopDown.Shooting
         public void SubmitFromButton()
         {
             Debug.Log("WordInputPanel: Submit button clicked.");
+            PlaySubmitSound();
             SubmitWord();
         }
 
@@ -71,6 +77,7 @@ namespace TopDown.Shooting
                 if (Keyboard.current != null && Keyboard.current.enterKey.wasPressedThisFrame)
                 {
                     Debug.Log("WordInputPanel: Enter key pressed.");
+                    PlaySubmitSound();
                     SubmitWord();
                 }
                 if (Keyboard.current != null && Keyboard.current.escapeKey.wasPressedThisFrame)
@@ -112,6 +119,12 @@ namespace TopDown.Shooting
                 panelUI.SetActive(false);
             Time.timeScale = 1f;
             Spawner.waitingForInput = false;
+        }
+
+        private void PlaySubmitSound()
+        {
+            if (submitSFX != null && audioSource != null)
+                audioSource.PlayOneShot(submitSFX);
         }
     }
 }
