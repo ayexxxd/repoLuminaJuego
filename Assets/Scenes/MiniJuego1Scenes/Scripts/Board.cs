@@ -222,7 +222,7 @@ public class Board : MonoBehaviour
     bool VerificarMatches()
     {
         bool[,] aDestruir   = new bool[columnas, filas];
-        bool    encontróMatch = false;
+        bool    encontroMatch = false;
 
         for (int fil = 0; fil < filas; fil++)
         {
@@ -241,7 +241,7 @@ public class Board : MonoBehaviour
                         ProcesarMonstruo(col, fil, longitud, true);
                     }
 
-                    encontróMatch = true;
+                    encontroMatch = true;
                     col += longitud - 1;
                 }
             }
@@ -264,16 +264,16 @@ public class Board : MonoBehaviour
                         ProcesarMonstruo(col, fil, longitud, false);
                     }
 
-                    encontróMatch = true;
+                    encontroMatch = true;
                     fil += longitud - 1;
                 }
             }
         }
 
-        if (encontróMatch)
+        if (encontroMatch)
             DestruirMatches(aDestruir);
 
-        return encontróMatch;
+        return encontroMatch;
     }
 
     int ContarLineaHorizontal(int colInicio, int fil)
