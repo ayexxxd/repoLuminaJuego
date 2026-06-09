@@ -15,10 +15,18 @@ namespace TopDown.Enemy
 
         public void Retry()
         {
+            if (endSFX != null){
+                AudioSource audioSource = GetComponent<AudioSource>();
+                audioSource.PlayOneShot(endSFX);
+            }
             SceneManager.LoadScene("ShooterScene");
         }
         public void Quit()
         {
+            if (endSFX != null){
+                AudioSource audioSource = GetComponent<AudioSource>();
+                audioSource.PlayOneShot(endSFX);
+            }
             SceneManager.LoadScene("StartScene");
         }
 
@@ -44,8 +52,7 @@ namespace TopDown.Enemy
         void Start()
         {
             AudioSource audioSource = GetComponent<AudioSource>();
-            if (audioSource != null && endSFX != null)
-                audioSource.PlayOneShot(endSFX);
+            audioSource.PlayOneShot(endSFX);
 
             if (ScoreManager.instance != null)
                 scoreText.text = "Puntaje Final: " + ScoreManager.instance.GetScore();

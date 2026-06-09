@@ -8,6 +8,7 @@ namespace Login
 {   
 public class LoginController : MonoBehaviour
 {
+    [SerializeField] private AudioClip clickSFX;
     public TMP_InputField emailInput;
     public TMP_InputField passwordInput;
     public Button submitButton;
@@ -15,6 +16,11 @@ public class LoginController : MonoBehaviour
 
     public void OnSubmit()
     {
+        if (clickSFX != null)
+        {
+            AudioSource.PlayClipAtPoint(clickSFX, Camera.main.transform.position);
+        }
+
         StartCoroutine(Login());
     }
 

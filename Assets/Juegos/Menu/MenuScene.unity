@@ -280,6 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c2071b8d992b44b58930452a5c0da325, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::menu
+  clickSFX: {fileID: 8300000, guid: aa2b5570edcc94466b7dcb27b57c2444, type: 3}
 --- !u!4 &340493428
 Transform:
   m_ObjectHideFlags: 0
