@@ -480,48 +480,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopDown.Shooting.WeaponModifier
   gunController: {fileID: 2100127810}
-  modifiers:
-  - keyword: rapido
-    damage: 12
-    speed: 10
-    cooldown: 0.1
-  - keyword: veloz
-    damage: 7
-    speed: 10
-    cooldown: 0.05
-  - keyword: agil
-    damage: 10
-    speed: 10
-    cooldown: 0.2
-  - keyword: fuerte
-    damage: 15
-    speed: 10
-    cooldown: 0.3
-  - keyword: letal
-    damage: 25
-    speed: 10
-    cooldown: 0.4
-  - keyword: critico
-    damage: 40
-    speed: 10
-    cooldown: 0.5
-  - keyword: fuego
-    damage: 12
-    speed: 10
-    cooldown: 0.2
-  - keyword: hielo
-    damage: 6
-    speed: 10
-    cooldown: 0.02
-  - keyword: veneno
-    damage: 30
-    speed: 10
-    cooldown: 0.3
-  - keyword: super
-    damage: 100
-    speed: 10
-    cooldown: 0
-  apiUrl: https://192.168.100.71:5010/getPower
 --- !u!1 &265183445
 GameObject:
   m_ObjectHideFlags: 0
@@ -4045,7 +4003,7 @@ Transform:
   m_GameObject: {fileID: 1799873688}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.3, y: 0, z: 0}
+  m_LocalPosition: {x: -17.35, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -4150,7 +4108,7 @@ Transform:
   m_GameObject: {fileID: 1860294420}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.3, y: 0, z: 0}
+  m_LocalPosition: {x: -17.32, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5509,7 +5467,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5650774970161864208, guid: 2a8245cbbf0124916a4eba941941ac5f, type: 3}
       propertyPath: baseDmg
-      value: 15
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 5650774970161864208, guid: 2a8245cbbf0124916a4eba941941ac5f, type: 3}
       propertyPath: baseSpd
@@ -5561,7 +5519,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6703413820812549544, guid: 2a8245cbbf0124916a4eba941941ac5f, type: 3}
       propertyPath: moveSpeed
-      value: 1.5
+      value: 1.2
       objectReference: {fileID: 0}
     - target: {fileID: 6878317122931243717, guid: 2a8245cbbf0124916a4eba941941ac5f, type: 3}
       propertyPath: m_LocalPosition.x

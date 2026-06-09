@@ -41,7 +41,7 @@ public class LoginController : MonoBehaviour
             int userId = int.Parse(web.downloadHandler.text);
             if (userId > 0)
             {
-                PlayerPrefs.SetInt("user_id", userId);
+                PlayerPrefs.SetInt("userid", userId);
                 Debug.Log("Login OK, user: " + userId);
                 // Load your next scene here
                 UnityEngine.SceneManagement.SceneManager.LoadScene("MenuScene");
