@@ -4,10 +4,13 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {
+    [SerializeField] private AudioClip clickSFX;
     [SerializeField] private GameObject instructionsPanel;
 
     public void Start()
     {
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(clickSFX);
         instructionsPanel.SetActive(false);
     }
     public void StartToPlay()
@@ -16,12 +19,16 @@ public class MenuController : MonoBehaviour
     }
     public void ExitGame()
     {
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(clickSFX);
         SceneManager.LoadScene("MenuScene");
         //UnityEditor.EditorApplication.isPlaying = false;
         //Application.Quit();//funcion del boton para salir en app
     }
-    public void OpenInstructions()
+    public void OpenInventory()
     {
-        instructionsPanel.SetActive(!instructionsPanel.activeSelf);//funcion del boton de instrucciones  
+        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource.PlayOneShot(clickSFX);
+        instructionsPanel.SetActive(instructionsPanel.activeSelf);//funcion del boton de instrucciones  
     }
 }
