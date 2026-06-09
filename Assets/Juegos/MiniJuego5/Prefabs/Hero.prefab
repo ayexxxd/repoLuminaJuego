@@ -362,7 +362,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f247f6d42cf9146c7ba0b1d1dc35941e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TopDown.Movement.PlayerControl
-  moveSpeed: 2.5
+  moveSpeed: 2
   rig: {fileID: 5233936652518512599}
 --- !u!114 &5650774970161864208
 MonoBehaviour:
