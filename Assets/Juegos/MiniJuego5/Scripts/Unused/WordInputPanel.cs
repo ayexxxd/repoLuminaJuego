@@ -27,8 +27,10 @@ namespace TopDown.Shooting
         {
             if (panelUI != null)
                 panelUI.SetActive(false);
+
             if (input != null)
                 input.onEndEdit.AddListener(OnInputEndEdit);
+                
             audioSource = GetComponent<AudioSource>();
             if (audioSource == null)
                 audioSource = gameObject.AddComponent<AudioSource>();

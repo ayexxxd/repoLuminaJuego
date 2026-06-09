@@ -20,7 +20,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Juegos/MiniJuego5/ShooterEnd.unity
     guid: bacc538d0a1214fa190309d96b64aa4a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Juegos/MiniJuego4/ExInInicio.unity
     guid: 046f99b2c33ec9243ba877f4318599ea
   - enabled: 1
@@ -65,5 +65,11 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Juegos/MiniJuego2/EFW.unity
     guid: 08de28200819e4f02a2bb5c718e03156
+  - enabled: 1
+    path: Assets/Juegos/MiniJuego1Scenes/ScenesMJ1/MenuMJ1Escena.unity
+    guid: 521669f5420a8904aa06e2a6b4061d30
+  - enabled: 1
+    path: Assets/Juegos/Login/LoginScene.unity
+    guid: 7d4759c5f742f4e3d95484b78608f9fd
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

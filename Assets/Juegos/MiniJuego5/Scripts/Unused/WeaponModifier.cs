@@ -9,7 +9,7 @@ namespace TopDown.Shooting
     {
         [SerializeField] private GunController gunController;
         [SerializeField] private BulletModifier[] modifiers;
-        [SerializeField] private string apiUrl = "https://192.168.100.71:5010/getPower";
+        [SerializeField] private string apiUrl = "https://10.14.255.45:5010/getPower";
 
         public void TryApplyUpgrade(string word)
         {
@@ -26,8 +26,6 @@ namespace TopDown.Shooting
             {
                 yield break;
             }
-
-            // --- Try API directly ---
             bool apiSuccess = false;
             if (!string.IsNullOrEmpty(apiUrl))
             {
@@ -51,17 +49,7 @@ namespace TopDown.Shooting
             if (apiSuccess)
                 yield break;
 
-            // --- Fallback to local modifiers ---
-            string lower = word.ToLowerInvariant();
-            foreach (var mod in modifiers)
-            {
-                if (mod.keyword.ToLowerInvariant() == lower)
-                {
-                    gunController.SetBulletStats(mod.damage, mod.speed, mod.cooldown);
-                    yield break;
-                }
-            }
-        }
+    }
 
         private IEnumerator FetchFromApi(string word, System.Action<PowerData> callback)
         {

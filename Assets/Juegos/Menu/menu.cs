@@ -13,7 +13,7 @@ public class menu : MonoBehaviour
     // Button function: opens MiniJuego4 start scene
     public void OpenMiniJuego4Start()
     {
-        SceneManager.LoadScene("ExInGameScene");
+        SceneManager.LoadScene("ExInInicio");
     }
 
     public void OpenMiniJuego1Start()
@@ -28,6 +28,6 @@ public class menu : MonoBehaviour
 
     public void OpenMiniJuego3Start()
     {
-        SceneManager.LoadScene("SceneCar");
+        SceneManager.LoadScene("MenuPrincipal");
     }
 }
