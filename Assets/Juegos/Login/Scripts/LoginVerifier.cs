@@ -11,6 +11,7 @@ public class LoginController : MonoBehaviour
     public TMP_InputField emailInput;
     public TMP_InputField passwordInput;
     public Button submitButton;
+    public TextMeshProUGUI feedbackText;
 
     public void OnSubmit()
     {
@@ -34,7 +35,7 @@ public class LoginController : MonoBehaviour
 
         if (web.result != UnityWebRequest.Result.Success)
         {
-            Debug.Log("Error API: " + web.error);
+            feedbackText.text = "Credenciales incorrectas. Inténtalo de nuevo.";
         }
         else
         {
@@ -42,13 +43,8 @@ public class LoginController : MonoBehaviour
             if (userId > 0)
             {
                 PlayerPrefs.SetInt("userid", userId);
-                Debug.Log("Login OK, user: " + userId);
                 // Load your next scene here
                 UnityEngine.SceneManagement.SceneManager.LoadScene("MenuScene");
-            }
-            else
-            {
-                Debug.Log("Invalid credentials");
             }
         }
     }

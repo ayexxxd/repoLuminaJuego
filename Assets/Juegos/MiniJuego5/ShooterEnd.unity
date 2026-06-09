@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 115182014}
   - component: {fileID: 115182013}
   m_Layer: 0
-  m_Name: Gameover Backround_0
+  m_Name: Gameover Backround
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
