@@ -37,12 +37,9 @@ namespace DefensoresDeSoftware
             PlayerPrefs.Save();
 
             if (ExInGameControl.Instance != null)
-            {
-
                 Destroy(ExInGameControl.Instance.gameObject);
-                ExInGameControl.Instance = null; 
-            }
-
+            if (ExInSFXManager.Instance != null)
+                Destroy(ExInSFXManager.Instance.gameObject);
             SceneManager.LoadScene("ExInInicio"); 
         }
     }

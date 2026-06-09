@@ -32,12 +32,18 @@ namespace DefensoresDeSoftware
         }
         public void ExitGame()
         {
+            if (ExInGameControl.Instance != null)
+                Destroy(ExInGameControl.Instance.gameObject);
+            if (ExInSFXManager.Instance != null)
+                Destroy(ExInSFXManager.Instance.gameObject);
             SceneManager.LoadScene("MenuScene");
             //UnityEditor.EditorApplication.isPlaying = false;
             //Application.Quit();//funcion del boton para salir en app
         }
         public void StartToPlay()
         {//funcion del boton de jugar
+            if (ExInGameControl.Instance != null)
+                    Destroy(ExInGameControl.Instance.gameObject);
             SceneManager.LoadScene("ExInGameScene");
         }
     }
