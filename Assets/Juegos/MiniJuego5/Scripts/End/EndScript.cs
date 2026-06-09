@@ -30,8 +30,9 @@ public class EndScript : MonoBehaviour
         else
             scoreText.text = "Puntaje Final: 0";
 
+        int finalWave = Mathf.Min(PlayerPrefs.GetInt("CurrentWave"), 10);
         if (waveText != null)
-            waveText.text = "Oleada Final: " + PlayerPrefs.GetInt("CurrentWave");
+            waveText.text = "Oleada Final: " + finalWave;
 
         if (PlayerPrefs.GetInt("CurrentWave") > 10 && gameOverText != null)
             gameOverText.text = "¡Has Ganado!";

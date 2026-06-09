@@ -54,7 +54,7 @@ namespace DefensoresDeSoftware
         
         [Header("Tiempos y Dificultad")]
         public float timeBetweenSpawns = 2f; 
-        public float timeBetweenWaves = 3f; 
+        public float timeBetweenWaves = 6f; 
         public float speedUpPerWave = 0.2f; 
 
         private bool isSpawning = false;
