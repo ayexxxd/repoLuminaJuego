@@ -61,26 +61,29 @@ namespace TopDown.Enemy
 
             int userId = PlayerPrefs.GetInt("user_id");
 
-            int sco = ScoreManager.instance != null ? ScoreManager.instance.GetScore() : 0;
+            int sco = ScoreManager.instance.GetScore();//score manager will never be null brehhh
             int score = sco / 100;
 
             if (userId > 0)
                 StartCoroutine(UpdatePoints(userId, score));
                 StartCoroutine(SaveTransaccion(userId, score, null,  "Puntaje Final en Cazador de Errores"));
         }
-    IEnumerator SaveTransaccion(int idUser, int monto, int? idReward, string description)
-{
-    string jsonBody = "{\"idUser\":" + idUser + ",\"idReward\":null,\"monto\":" + monto + ",\"description\":\"" + description + "\"}";
-    UnityWebRequest web = new UnityWebRequest("https://10.14.255.45:5010/transaccion", "POST");
-    byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonBody);
-    web.uploadHandler = new UploadHandlerRaw(bodyRaw);
-    web.downloadHandler = new DownloadHandlerBuffer();
-    web.SetRequestHeader("Content-Type", "application/json");
-    web.certificateHandler = new ForceAcceptAll();
-    yield return web.SendWebRequest();
+        IEnumerator SaveTransaccion(int idUser, int monto, int? idReward, string description)
+        {
+            if (monto <= 0)
+                yield break;
 
-    if (web.result != UnityWebRequest.Result.Success)
-        Debug.Log("Error API: " + web.error);
-    else
-        Debug.Log("Transacción guardada");
-}}}
+            string jsonBody = "{\"idUser\":" + idUser + ",\"idReward\":null,\"monto\":" + monto + ",\"description\":\"" + description + "\"}";
+            UnityWebRequest web = new UnityWebRequest("https://10.14.255.45:5010/transaccion", "POST");
+            byte[] bodyRaw = System.Text.Encoding.UTF8.GetBytes(jsonBody);
+            web.uploadHandler = new UploadHandlerRaw(bodyRaw);
+            web.downloadHandler = new DownloadHandlerBuffer();
+            web.SetRequestHeader("Content-Type", "application/json");
+            web.certificateHandler = new ForceAcceptAll();
+            yield return web.SendWebRequest();
+
+            if (web.result != UnityWebRequest.Result.Success)
+                Debug.Log("Error API: " + web.error);
+            else
+                Debug.Log("Transacción guardada");
+        }}}
