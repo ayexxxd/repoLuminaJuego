@@ -6,7 +6,7 @@ namespace DefensoresDeSoftware
     {
         [Header("Configuración de Vuelo")]
         public float speed = 15f;
-        public float lifeTime = 2f; 
+        public float lifeTime = 3f; 
         
         [Header("Físicas")]
         public Rigidbody2D rig;
