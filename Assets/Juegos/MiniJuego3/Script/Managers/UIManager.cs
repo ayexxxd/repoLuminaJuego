@@ -17,7 +17,7 @@ public class UIManager : MonoBehaviour
 
     [Header("Configuración")]
 
-    public int vueltasTotales = 3;
+    public int vueltasTotales = 2;
 
 
     private LapManager lapManager;
@@ -31,7 +31,7 @@ public class UIManager : MonoBehaviour
 
             MostrarMensajeTemporal("FUNCIONA!");
 
-            ActualizarVueltas(1);
+            ActualizarVueltas(0);
             ActualizarVidas(3);
             ActualizarTimer(60f);
         }
@@ -43,7 +43,7 @@ public class UIManager : MonoBehaviour
         }
 
         // Actualizamos la UI con los valores iniciales
-        ActualizarVueltas(1);
+        ActualizarVueltas(0);
         ActualizarVidas(3);
         ActualizarTimer(60f);
     }
@@ -63,8 +63,8 @@ public class UIManager : MonoBehaviour
     {
         if (textoVueltas != null)
         {
-            // Mostramos "VUELTA 2 / 3" por ejemplo
-            textoVueltas.text = "VUELTA " + vueltaActual + " / " + vueltasTotales;
+            
+            textoVueltas.text = "Vuelta " + vueltaActual + " / 2";
         }
         else
         {

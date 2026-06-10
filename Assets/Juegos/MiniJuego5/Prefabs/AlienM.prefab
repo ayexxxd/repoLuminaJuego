@@ -173,9 +173,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemy
   damage: 16
-  speed: 3.6
+  speed: 4
   data: {fileID: 11400000, guid: c0ff703f9524649d88c1908355b75ac0, type: 2}
-  sprites: []
 --- !u!114 &-2806748977648078835
 MonoBehaviour:
   m_ObjectHideFlags: 0

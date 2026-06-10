@@ -32,7 +32,7 @@ public class HealthUI : MonoBehaviour
     {
         if (waveText != null)
         {
-            waveText.text = "OLEADA: " + currentWave + "/" + totalWaves;
+            waveText.text = "OLEADA: " + Mathf.Min(currentWave, totalWaves) + "/" + totalWaves;
         }
     }
     private void UpdateStatsText()

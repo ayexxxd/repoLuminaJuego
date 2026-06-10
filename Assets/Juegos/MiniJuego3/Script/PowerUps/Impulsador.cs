@@ -12,7 +12,6 @@ public class Impulsador : MonoBehaviour
     public float tiempoReaparicion = 5f;
 
     [Header("Efecto visual")]
-    public float velocidadRotacion = 60f;
     public Color colorNormal = new Color(0.2f, 0.8f, 1f, 0.8f);
     public Color colorActivo = new Color(1f, 0.9f, 0.2f, 1f);
 
@@ -37,8 +36,7 @@ public class Impulsador : MonoBehaviour
 
     void Update()
     {
-        if (estaActivo)
-            transform.Rotate(0f, 0f, velocidadRotacion * Time.deltaTime);
+        
     }
 
     void OnTriggerEnter2D(Collider2D otro)

@@ -34,7 +34,7 @@ public class LapManager : MonoBehaviour
         if (uiManager == null)
             Debug.LogWarning("LapManager: No se encontró el UIManager.");
 
-        vueltaActual        = 1;
+        vueltaActual        = 0;
         checkpointsCruzados = 0;
         ultimoCheckpoint    = 0;
         puedeCruzarMeta     = false;
@@ -92,7 +92,7 @@ public class LapManager : MonoBehaviour
             return;
         }
 
-        Debug.Log(" LapManager: ¡Vuelta " + vueltaActual + " completada!");
+        Debug.Log(" LapManager: ¡Vuelta completada!");
 
         if (PuntosManager.instancia != null)
             PuntosManager.instancia.AgregarPuntosPorVuelta();
@@ -122,8 +122,7 @@ public class LapManager : MonoBehaviour
         ActualizarUIVueltas();
 
         if (uiManager != null)
-            uiManager.MostrarMensajeTemporal("¡Vuelta " + (vueltaActual - 1) +
-                                            " completada!", 2f);
+            uiManager.MostrarMensajeTemporal("¡Vuelta completada!", 2f);
 
         Debug.Log("LapManager: Vuelta " + vueltaActual + " iniciada.");
     }

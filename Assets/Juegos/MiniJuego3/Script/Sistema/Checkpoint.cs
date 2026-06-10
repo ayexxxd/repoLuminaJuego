@@ -43,6 +43,18 @@ public class Checkpoint : MonoBehaviour
 
         Debug.Log(" Checkpoint " + numeroCheckpoint + " cruzado por el jugador.");
 
+        
+        Rigidbody2D rb = otro.GetComponent<Rigidbody2D>();
+        if (rb != null)
+        {
+            float dot = Vector2.Dot(rb.linearVelocity.normalized, transform.up);
+            if (dot < -0.5f)
+            {
+                Debug.Log("Checkpoint " + numeroCheckpoint + ": jugador va en reversa, ignorado.");
+                return;
+            }
+        }
+
         LapManager lapManager = FindObjectOfType<LapManager>();
 
         if (lapManager == null)

@@ -1,33 +1,61 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class menu : MonoBehaviour
 {
-
-    // Button function: opens MiniJuego5 start scene
+    [SerializeField] private AudioClip clickSFX;
     public void OpenMiniJuego5Start()
     {
+        AudioSource audioSource = GetComponent<AudioSource>();
+        clickSFX = Resources.Load<AudioClip>("ClickSFX");
         SceneManager.LoadScene("StartScene");
     }
-
-    // Button function: opens MiniJuego4 start scene
     public void OpenMiniJuego4Start()
     {
-        SceneManager.LoadScene("ExInInicio");
+        AudioSource audioSource = GetComponent<AudioSource>();
+        clickSFX = Resources.Load<AudioClip>("ClickSFX");
+        SceneManager.LoadScene("ExInGameScene");
     }
 
     public void OpenMiniJuego1Start()
     {
+        AudioSource audioSource = GetComponent<AudioSource>();
+        clickSFX = Resources.Load<AudioClip>("ClickSFX");
         SceneManager.LoadScene("MenuMJ1Escena");
     }
 
     public void OpenMiniJuego2Start()
     {
+        AudioSource audioSource = GetComponent<AudioSource>();
+        clickSFX = Resources.Load<AudioClip>("ClickSFX");
         SceneManager.LoadScene("EMI");
     }
 
     public void OpenMiniJuego3Start()
     {
-        SceneManager.LoadScene("SceneCar");
+        AudioSource audioSource = GetComponent<AudioSource>();
+        clickSFX = Resources.Load<AudioClip>("ClickSFX");
+        SceneManager.LoadScene("MenuPrincipal");
+    }
+
+    public void Start()
+    {
+        clickSFX = Resources.Load<AudioClip>("ClickSFX");
+        AudioSource audioSource = GetComponent<AudioSource>();
+            if (audioSource == null)
+            {
+                audioSource = gameObject.AddComponent<AudioSource>();
+            }
+            DontDestroyOnLoad(gameObject);
+    }
+
+    public void ExitGame()
+    {
+        AudioSource audioSource = GetComponent<AudioSource>();
+        clickSFX = Resources.Load<AudioClip>("ClickSFX");
+        audioSource.PlayOneShot(clickSFX);
+        PlayerPrefs.DeleteKey("userid");
+        Application.Quit();
     }
 }
