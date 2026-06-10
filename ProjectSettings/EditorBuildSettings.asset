@@ -9,7 +9,7 @@ EditorBuildSettings:
     path: Assets/Juegos/Menu/MenuScene.unity
     guid: dd4ca52751bbbd744b79cb9a8f6160fb
   - enabled: 1
-    path: Assets/Juegos/MiniJuego4/ExInGameScene.unity
+    path: Assets/Juegos/MiniJuego4/Scenes/ExInGameScene.unity
     guid: 67f6e48845155b74ab76bcaab42b2fcd
   - enabled: 1
     path: Assets/Juegos/MiniJuego5/StartScene.unity
@@ -27,7 +27,7 @@ EditorBuildSettings:
     path: Assets/Juegos/MiniJuego4/ExInDerrota.unity
     guid: dc3d185b1075d0d44b6bbad450f2256c
   - enabled: 1
-    path: Assets/Juegos/MiniJuego4/ExInVictoria.unity
+    path: Assets/Juegos/MiniJuego4/Scenes/ExInEndScene.unity
     guid: 36c77746a45af4f4fab996b0b986a762
   - enabled: 1
     path: Assets/Juegos/MiniJuego1Scenes/ScenesMJ1/EscenadeJuego.unity
