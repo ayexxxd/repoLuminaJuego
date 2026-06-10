@@ -29,7 +29,7 @@ public class TriviaController : MonoBehaviour
 
     public IEnumerator GetData()
     {
-        string JSONurl = "https://127.0.0.1:5002/MJ1/preguntas";
+        string JSONurl = "https://10.14.255.45:8002/MJ1/preguntas";
 
         
         using (UnityWebRequest web = UnityWebRequest.Get(JSONurl))
