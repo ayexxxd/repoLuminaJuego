@@ -15,7 +15,7 @@ public class menu : MonoBehaviour
     {
         AudioSource audioSource = GetComponent<AudioSource>();
         clickSFX = Resources.Load<AudioClip>("ClickSFX");
-        SceneManager.LoadScene("ExInGameScene");
+        SceneManager.LoadScene("ExInInicio");
     }
 
     public void OpenMiniJuego1Start()
