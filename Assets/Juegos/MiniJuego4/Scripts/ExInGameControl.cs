@@ -24,7 +24,7 @@ namespace DefensoresDeSoftware
 
         // Conexión al API
         [Header("API")]
-        public string apiBaseUrl = "https://10.22.186.108:5001";
+        public string apiBaseUrl = "https://10.14.255.45:5001";
         public int idUsuario = 4;
 
         // Aseguramos que solo haya una objeto gamecontrol
