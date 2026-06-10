@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour
     public int nivelActual = 1;
     public int nivelMaximo = 3;
 
-    private int[] metasPorNivel = { 1000, 1500, 6000 };
+    private int[] metasPorNivel = { 1000, 1500, 2000 };
 
     private int puntosNecesarios;
 
@@ -48,7 +48,7 @@ public class GameManager : MonoBehaviour
         }
         else
         {
-            nivelActual = 1;
+            nivelActual = 3; // Para pruebas rápidas, iniciar en el nivel 3
         }
 
         movimientosRestantes = movimientosIniciales;
