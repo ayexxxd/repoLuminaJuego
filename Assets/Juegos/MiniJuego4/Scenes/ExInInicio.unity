@@ -1999,6 +1999,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ExInMenuController
   instructionsPanel: {fileID: 487104346}
+  feedbackText: {fileID: 0}
+  apiBaseUrl: https://10.22.186.108:5001
+  costoJuego: 5
 --- !u!1 &786293615
 GameObject:
   m_ObjectHideFlags: 0
@@ -4101,9 +4104,7 @@ MonoBehaviour:
 
 
     COSTO
-    POR JUEGO: 10 WhirpoolTokens
-
-'
+    POR JUEGO: 5 WhirpoolTokens'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c18d470c4d95ced49aa122411cabfd3b, type: 2}
   m_sharedMaterial: {fileID: -6471479325630977397, guid: c18d470c4d95ced49aa122411cabfd3b, type: 2}
