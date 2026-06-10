@@ -14,7 +14,7 @@ namespace DefensoresDeSoftware
         [SerializeField] private TextMeshProUGUI feedbackText;
 
         [Header("API")]
-        public string apiBaseUrl = "https://10.22.186.108:5001";
+        public string apiBaseUrl = "https://10.14.255.45:5001";
         public int costoJuego = 5;
 
         public void Start()
