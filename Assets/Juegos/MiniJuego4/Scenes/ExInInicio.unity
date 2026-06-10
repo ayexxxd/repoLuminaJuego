@@ -4100,6 +4100,9 @@ MonoBehaviour:
     usando el poder de la IA, pero solo podras hacerlo lo si lo sabes usar correctamente.
 
 
+    COSTO
+    POR JUEGO: 10 WhirpoolTokens
+
 '
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: c18d470c4d95ced49aa122411cabfd3b, type: 2}
