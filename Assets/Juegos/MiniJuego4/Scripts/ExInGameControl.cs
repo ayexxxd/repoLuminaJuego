@@ -21,7 +21,12 @@ namespace DefensoresDeSoftware
         public int costoDamage = 2;
         public int costoVelocidad = 1;
         public int costoVida = 1;
-        
+
+        // Conexión al API
+        [Header("API")]
+        public string apiBaseUrl = "https://10.22.186.108:5001";
+        public int idUsuario = 4;
+
         // Aseguramos que solo haya una objeto gamecontrol
         void Awake()
         {
@@ -29,6 +34,7 @@ namespace DefensoresDeSoftware
             {
                 Instance = this;
                 DontDestroyOnLoad(gameObject);
+                idUsuario = PlayerPrefs.GetInt("userid", 4);
                 ResetearProgreso();
             }
             else

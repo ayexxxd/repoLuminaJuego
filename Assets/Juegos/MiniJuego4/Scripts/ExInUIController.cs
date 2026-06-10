@@ -31,10 +31,6 @@ namespace DefensoresDeSoftware
         public Button[] botonesOpciones;
         public TextMeshProUGUI textoTokens;
 
-        [Header("API Trivia")]
-        [Tooltip("Ej: https://10.14.255.45:5010/juego/4/pregunta")]
-        public string triviaApiUrl = "https://10.22.186.108:5001/juego/4/pregunta";
-
         // Fallback en caso de que la API no responda
         public PreguntaTrivia[] bancoPreguntas;
 
@@ -49,8 +45,11 @@ namespace DefensoresDeSoftware
         public Button botonCompraVida;
         public Button botonContinuarTienda;
 
-        // Pregunta pre-cargada en background para evitar el delay visible
         private PreguntaTrivia _preguntaPrecargada = null;
+
+        // URL construida en runtime para evitar NullRef en el constructor
+        private string TriviaUrl =>
+            $"{ExInGameControl.Instance.apiBaseUrl}/juego/4/pregunta";
 
         void Start()
         {
@@ -61,10 +60,7 @@ namespace DefensoresDeSoftware
 
             UpdateTokens();
             ConfigurarBotonesTienda();
-
-            // Pre-cargar desde el inicio para que la primera trivia sea instantánea
-            if (!string.IsNullOrEmpty(triviaApiUrl))
-                StartCoroutine(PrecargarPregunta());
+            StartCoroutine(PrecargarPregunta());
         }
 
         public void UpdateLives()
@@ -112,27 +108,20 @@ namespace DefensoresDeSoftware
 
             if (_preguntaPrecargada != null)
             {
-                // Pregunta lista: sin delay
                 PoblarPanel(_preguntaPrecargada);
                 _preguntaPrecargada = null;
             }
-            else if (!string.IsNullOrEmpty(triviaApiUrl))
-            {
-                // No llegó a tiempo, cargar ahora (raro después de la primera vez)
-                StartCoroutine(CargarPreguntaDesdeApi());
-            }
             else
             {
-                MostrarTriviaLocal();
+                StartCoroutine(CargarPreguntaDesdeApi());
             }
         }
 
-        // Fetch en background — no bloquea, no pausa el juego
         private IEnumerator PrecargarPregunta()
         {
             _preguntaPrecargada = null;
 
-            using var req = UnityWebRequest.Get(triviaApiUrl);
+            using var req = UnityWebRequest.Get(TriviaUrl);
             req.SetRequestHeader("Accept", "application/json");
             req.certificateHandler = new SkipCertHandler();
 
@@ -152,10 +141,9 @@ namespace DefensoresDeSoftware
             }
         }
 
-        // Solo se usa si la pre-carga no llegó a tiempo
         private IEnumerator CargarPreguntaDesdeApi()
         {
-            using var req = UnityWebRequest.Get(triviaApiUrl);
+            using var req = UnityWebRequest.Get(TriviaUrl);
             req.SetRequestHeader("Accept", "application/json");
             req.certificateHandler = new SkipCertHandler();
 
@@ -223,11 +211,7 @@ namespace DefensoresDeSoftware
             }
 
             if (panelTrivia != null) panelTrivia.SetActive(false);
-
-            // Aprovechar el tiempo de la tienda para pre-cargar la siguiente pregunta
-            if (!string.IsNullOrEmpty(triviaApiUrl))
-                StartCoroutine(PrecargarPregunta());
-
+            StartCoroutine(PrecargarPregunta());
             MostrarTienda();
         }
 
